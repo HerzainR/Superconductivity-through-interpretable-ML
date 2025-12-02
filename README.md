@@ -1,0 +1,2 @@
+# Describing-superconductivity-through-interpretable-AI
+This repository contains the data analysis and visualization associated with the modeling of the critical temperature of conventional superconductors using the SISSO (Sure Independence Screening and Sparsifying Operator) artificial intelligence approach. It is intended to support the reproducibility of the results presented in the associated study.
