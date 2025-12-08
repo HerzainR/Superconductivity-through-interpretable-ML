@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.056237 s
+Time to generate feat space: 1.42457 s
+Projection time: 0.101088 s
+Time to get best features on rank : 0.000145912 s
+|---Complete final combination/selection from all ranks: 0.012053 s
+Time for SIS: 0.119328 s
+Time for l0-norm: 0.030071 s
+Projection time: 0.00186586 s
+Time to get best features on rank : 5.72205e-05 s
+|---Complete final combination/selection from all ranks: 0.042181 s
+Time for SIS: 0.0454838 s
+Time for l0-norm: 0.00646114 s
+Projection time: 0.00623298 s
+Time to get best features on rank : 4.29153e-05 s
+|---Complete final combination/selection from all ranks: 0.00728512 s
+Time for SIS: 0.014961 s
+Time for l0-norm: 0.00592709 s
+Projection time: 0.00492406 s
+Time to get best features on rank : 5.00679e-05 s
+|---Complete final combination/selection from all ranks: 0.00896192 s
+Time for SIS: 0.0154271 s
+Time for l0-norm: 0.162368 s
+Projection time: 0.00655389 s
+Time to get best features on rank : 6.38962e-05 s
+|---Complete final combination/selection from all ranks: 0.00840092 s
+Time for SIS: 0.0162199 s
+Time for l0-norm: 13.6855 s
+Train RMSE: 4.72075 K; Test RMSE: 7.69482 K
+c0 + a0 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.47233 K; Test RMSE: 6.87207 K
+c0 + a0 * cbrt(lambda) + a1 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.16423 K; Test RMSE: 7.34769 K
+c0 + a0 * (wtd_range_PE / lambda) + a1 * (lambda + 2.393259e-01*density) + a2 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 2.83802 K; Test RMSE: 6.55062 K
+c0 + a0 * (wtd_mean_IP + 1.003520e-01*V_molar) + a1 * (wtd_range_PE / lambda) + a2 * (lambda + 2.393259e-01*density) + a3 * (w_log / mean_at_mass)
+
+Train RMSE: 2.61239 K; Test RMSE: 6.02025 K
+c0 + a0 * (wtd_mean_EA + 1.135165e-02*wtd_range_at_mass) + a1 * (std_ThermalCond - (4.496838e-01*range_ThermalCond)) + a2 * (wtd_std_EA / mean_at_mass) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

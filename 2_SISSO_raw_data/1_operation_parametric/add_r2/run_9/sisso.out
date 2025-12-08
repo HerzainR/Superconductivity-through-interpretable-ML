@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0572789 s
+Time to generate feat space: 1008.1 s
+Projection time: 0.0763781 s
+Time to get best features on rank : 0.000106096 s
+|---Complete final combination/selection from all ranks: 0.02018 s
+Time for SIS: 0.118063 s
+Time for l0-norm: 0.01753 s
+Projection time: 0.074811 s
+Time to get best features on rank : 9.98974e-05 s
+|---Complete final combination/selection from all ranks: 0.0143051 s
+Time for SIS: 0.103242 s
+Time for l0-norm: 0.00786304 s
+Projection time: 0.0809879 s
+Time to get best features on rank : 0.000338078 s
+|---Complete final combination/selection from all ranks: 0.0158281 s
+Time for SIS: 0.110939 s
+Time for l0-norm: 0.00761414 s
+Projection time: 0.076757 s
+Time to get best features on rank : 9.48906e-05 s
+|---Complete final combination/selection from all ranks: 0.0180011 s
+Time for SIS: 0.109041 s
+Time for l0-norm: 0.1678 s
+Projection time: 0.0770051 s
+Time to get best features on rank : 8.91685e-05 s
+|---Complete final combination/selection from all ranks: 0.0169132 s
+Time for SIS: 0.107668 s
+Time for l0-norm: 13.2129 s
+Train RMSE: 3.1821 K; Test RMSE: 5.38396 K
+c0 + a0 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+
+Train RMSE: 2.30976 K; Test RMSE: 4.57844 K
+c0 + a0 * (((mean_IP+2.954261e+02) / (lambda3+1.204558e+00)) + 8.636363e+00*((wtd_std_at_mass+6.259098e+01) / (wtd_mean_ThermalCond-1.045983e+02))) + a1 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+
+Train RMSE: 1.83151 K; Test RMSE: 4.86845 K
+c0 + a0 * (((wtd_mean_IP-1.391944e+02) * (L_avg-1.302547e+02)) + 1.055667e+01*((range_EA-7.127701e+00) / (lambda3-6.180687e-01))) + a1 * (((mean_IP+1.993217e+02) / (lambda3+8.209681e-01)) + 4.516610e+02*((mean_EA+1.036823e+00) / (wtd_mean_ThermalCond-1.051382e+02))) + a2 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+
+Train RMSE: 1.4792 K; Test RMSE: 3.98567 K
+c0 + a0 * (((bulk_mod-5.193290e+02) / (lambda4w_low-9.707339e-02)) + 2.172230e-04*((range_EA+6.927776e+05) / (mean_IP-8.067571e+00))) + a1 * (((wtd_mean_IP-7.127858e+01) * (L_avg-6.534187e+01)) + 1.994832e+01*((std_at_mass-3.526137e+01) / (wtd_mean_at_mass-7.664207e+01))) + a2 * (((mean_IP+1.889610e+02) / (lambda3+9.919108e-01)) + 1.945797e+03*((wtd_mean_PE-1.501906e+00) / (wtd_mean_ThermalCond-1.058776e+02))) + a3 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+
+Train RMSE: 1.20094 K; Test RMSE: 4.71413 K
+c0 + a0 * (((std_ThermalCond-1.566792e+01) * (std_at_mass-2.213128e+01)) + 1.671557e+03*(sin(-1.027774e+01*range_PE+3.141593e+00))) + a1 * (((density+3.293020e+01) / (L_avg-2.763640e+00)) + 1.233137e-02*((std_EA-4.607165e+03) / (lambda3-6.218292e-01))) + a2 * (((wtd_mean_IP-7.127858e+01) * (L_avg-6.534187e+01)) + 1.994832e+01*((std_at_mass-3.526137e+01) / (wtd_mean_at_mass-7.664207e+01))) + a3 * (((wtd_mean_IP+2.184199e+02) / (lambda3+8.985513e-01)) + 4.409059e+02*((wtd_mean_PE+2.927172e-01) / (wtd_mean_ThermalCond-1.052887e+02))) + a4 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+

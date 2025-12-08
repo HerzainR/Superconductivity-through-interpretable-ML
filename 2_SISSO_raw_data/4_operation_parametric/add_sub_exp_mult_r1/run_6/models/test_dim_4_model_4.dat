@@ -1,0 +1,23 @@
+# c0 + a0 * (wtd_range_PE + 1.793514e-02*wtd_range_at_mass) + a1 * (|range_EA - mean_EA|) + a2 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a3 * (w_log^2)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.87086006721647; Max AE: 14.4917860596968
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.118100521364433e+00,  7.184809484508726e+00,  3.505700356451269e-02,  3.489365887234443e-05, -7.085460813543278e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         35|11|add:1.7935140945449e-02,0.0000000000000e+00; (wtd_range_PE + 1.793514e-02*wtd_range_at_mass); $\left(wtd_{range, PE} + 0.0179wtd_{range, at, mass}\right)$; (wtd_range_PE + (1.793514e-02.*wtd_range_at_mass)); (newdata$wtd_range_PE + (1.793514e-02*newdata$wtd_range_at_mass)); wtd_range_PE,wtd_range_at_mass
+# 1;  1; eV;                                               28|26|abd; (|range_EA - mean_EA|); $\left(\left|range_{EA} - mean_{EA}\right|\right)$; abs(range_EA - mean_EA); abs(newdata$range_EA - newdata$mean_EA); range_EA,mean_EA
+# 2;  1; K;                                                4|5|mult:4.7385632775455e+01,-2.6414530077618e-01; ((w_log+4.738563e+01) * (lambda-2.641453e-01)); $\left(\left(w_{log}+4.739e+01\right) * \left(lambda-2.641e-01\right)\right)$; ((w_log+4.738563e+01) .* (lambda-2.641453e-01)); ((newdata$w_log+4.738563e+01) * (newdata$lambda-2.641453e-01)); w_log,lambda
+# 3;  1; K^2;                                              4|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Rh1V3       ,  1.900000000000000e-01,  2.038093844379990e+00,  8.763269719710092e-01,  2.190000000000000e-01,  7.151206363191146e+01,  9.133275781161000e+04
+Fe1Li1P1    ,  4.965000000000000e+00, -1.954707549576659e+00,  6.956840482349864e-01,  7.399999999999995e-02, -2.766717977665887e+01,  1.173702377235600e+05
+Ga1Si1Sr1   ,  5.000000000000000e+00,  7.953387093576210e+00,  6.726174915201435e-01,  8.233000000000000e-01,  2.188849709052660e+02,  7.299777276100000e+02
+Nb1S2       ,  5.821818182000000e+00,  2.266076096595404e+00,  1.358807406026619e+00,  3.010000000000002e-01,  1.878813859601051e+01,  1.046655139202500e+05
+Ge1V3       ,  6.680000000000000e+00,  5.920497104762113e+00,  1.079574466758920e+00,  1.125000000000000e-01,  2.727080694397031e+02,  1.005030310144000e+04
+Mo1Ni1P1    ,  1.550000000000000e+01,  1.008213940303235e+00,  4.817518371951872e-01,  4.727000000000001e-01,  3.114421538968302e+01,  7.408777716648999e+04

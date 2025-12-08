@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0623131 s
+Time to generate feat space: 0.495196 s
+Projection time: 0.484614 s
+Time to get best features on rank : 0.000858068 s
+|---Complete final combination/selection from all ranks: 0.0102689 s
+Time for SIS: 0.501695 s
+Time for l0-norm: 0.0321069 s
+Projection time: 0.00320697 s
+Time to get best features on rank : 0.00072813 s
+|---Complete final combination/selection from all ranks: 0.00868702 s
+Time for SIS: 0.0135601 s
+Time for l0-norm: 0.00555682 s
+Projection time: 0.00372386 s
+Time to get best features on rank : 0.000352859 s
+|---Complete final combination/selection from all ranks: 0.0419641 s
+Time for SIS: 0.0470579 s
+Time for l0-norm: 0.00593781 s
+Projection time: 0.00365996 s
+Time to get best features on rank : 4.79221e-05 s
+|---Complete final combination/selection from all ranks: 0.00806403 s
+Time for SIS: 0.0126572 s
+Time for l0-norm: 0.161371 s
+Projection time: 0.00100589 s
+Time to get best features on rank : 0.000209093 s
+|---Complete final combination/selection from all ranks: 0.00813508 s
+Time for SIS: 0.010252 s
+Time for l0-norm: 12.962 s
+Train RMSE: 4.72075 K; Test RMSE: 7.69482 K
+c0 + a0 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.47233 K; Test RMSE: 6.87207 K
+c0 + a0 * cbrt(lambda) + a1 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.17269 K; Test RMSE: 7.27829 K
+c0 + a0 * (wtd_range_PE / lambda) + a1 * (wtd_range_PE * lambda) + a2 * (w_log / mean_at_mass)
+
+Train RMSE: 2.95887 K; Test RMSE: 6.92543 K
+c0 + a0 * (wtd_mean_IP * mean_at_rad) + a1 * (wtd_range_PE / lambda) + a2 * cbrt(lambda4w_low) + a3 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 2.63794 K; Test RMSE: 5.32395 K
+c0 + a0 * (range_EA - wtd_mean_EA) + a1 * (std_at_rad * density) + a2 * (range_at_rad * density) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

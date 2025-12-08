@@ -1,0 +1,22 @@
+# c0 + a0 * ((wtd_mean_EA / w_log) * (|mean_EA - std_IP|)) + a1 * (|(wtd_std_PE * wtd_range_IP) - (|wtd_std_IP|)|) + a2 * ((wtd_range_PE * lambda4w_low) * (w_log / lambda))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.40911940075591; Max AE: 5.80478904283314
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.458449858581378e+02,  5.164673169686386e+00,  1.516617419919313e-04, -4.832489592024689e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K^-1 * eV^2;                                      27|4|div|26|24|abd|mult; ((wtd_mean_EA / w_log) * (|mean_EA - std_IP|)); $\left(\left(\frac{ wtd_{mean, EA} }{ w_{log} } \right) \left(\left|mean_{EA} - std_{IP}\right|\right)\right)$; ((wtd_mean_EA ./ w_log) .* abs(mean_EA - std_IP)); ((newdata$wtd_mean_EA / newdata$w_log) * abs(newdata$mean_EA - newdata$std_IP)); wtd_mean_EA,w_log,mean_EA,std_IP
+# 1;  2; eV;                                               37|23|mult|25|abs|abd; (|(wtd_std_PE * wtd_range_IP) - (|wtd_std_IP|)|); $\left(\left|\left(wtd_{std, PE} wtd_{range, IP}\right) - \left(\left|wtd_{std, IP}\right|\right)\right|\right)$; abs((wtd_std_PE .* wtd_range_IP) - abs(wtd_std_IP)); abs((newdata$wtd_std_PE * newdata$wtd_range_IP) - abs(newdata$wtd_std_IP)); wtd_std_PE,wtd_range_IP,wtd_std_IP
+# 2;  2; K^2;                                              35|6|mult|4|5|div|mult; ((wtd_range_PE * lambda4w_low) * (w_log / lambda)); $\left(\left(wtd_{range, PE} lambda4w_{low}\right) \left(\frac{ w_{log} }{ lambda } \right)\right)$; ((wtd_range_PE .* lambda4w_low) .* (w_log ./ lambda)); ((newdata$wtd_range_PE * newdata$lambda4w_low) * (newdata$w_log / newdata$lambda)); wtd_range_PE,lambda4w_low,w_log,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  6.060789042833142e+00,  4.073064633547201e-04,  3.243359500000000e-01,  3.117519199600495e+04
+Al1Os1      ,  3.900000000000000e-01,  5.572152047345650e+00,  2.561646409798122e-03,  9.566850000000000e-01,  1.506662694463014e+03
+Al1Mo3      ,  5.800000000000000e-01,  2.211442934175971e+00,  9.156351514464162e-05,  3.938115000000000e-01,  4.148161656007088e+03
+La1Se1      ,  1.020000000000000e+00,  5.656397412004954e+00,  8.966221208422678e-03,  5.740624999999999e-01,  4.871270218588523e+02
+Co1Si2      ,  1.306666667000000e+00,  1.421053811987188e+00,  2.965008945850221e-03,  9.245378000000000e-02,  2.646519365853659e+03
+Al1Ge1Sr1   ,  6.700000000000000e+00,  1.234985453252306e+01,  2.362558021204348e-02,  6.568315000000000e-01,  8.373865390612194e+03

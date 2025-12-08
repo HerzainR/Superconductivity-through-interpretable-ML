@@ -1,0 +1,20 @@
+# c0 + a0 * (((range_at_rad+7.849685e+00) / (lambda3-4.787876e-02)) - (6.255647e+02*((wtd_mean_EA-6.997190e-01) / (mean_IP-7.035498e+00)))) + a1 * (((range_IP-2.753163e+00) / (wtd_mean_at_mass-1.437540e+01)) - (1.075602e+00*((lambda-2.731305e+01) / (wtd_mean_IP+4.941328e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.91354246079801; Max AE: 3.97594977334637
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.139417482024897e-03, -1.476586728437424e+01,  3.721238260098758e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA;                                               16|7|div|27|20|div|sub:6.2556465242553e+02,0.0000000000000e+00,-6.9971897708407e-01,-7.0354983072716e+00,7.8496846472706e+00,-4.7878764480182e-02; (((range_at_rad+7.849685e+00) / (lambda3-4.787876e-02)) - (6.255647e+02*((wtd_mean_EA-6.997190e-01) / (mean_IP-7.035498e+00)))); $\left(\left(\frac{ range_{at, rad} +7.850e+00 }{ lambda3-4.788e-02 } \right) - \left(6.256e+02\left(\frac{ wtd_{mean, EA} -6.997e-01 }{ mean_{IP}-7.035e+00 } \right)\right)\right)$; (((range_at_rad+7.849685e+00) ./ (lambda3-4.787876e-02)) - (6.255647e+02.*((wtd_mean_EA-6.997190e-01) ./ (mean_IP-7.035498e+00)))); (((newdata$range_at_rad+7.849685e+00) / (newdata$lambda3-4.787876e-02)) - (6.255647e+02*((newdata$wtd_mean_EA-6.997190e-01) / (newdata$mean_IP-7.035498e+00)))); range_at_rad,lambda3,wtd_mean_EA,mean_IP
+# 1;  2; eV * g^-1 * mol;                                  22|9|div|5|21|div|sub:1.0756017308818e+00,0.0000000000000e+00,-2.7313047974028e+01,4.9413280564467e+00,-2.7531626796630e+00,-1.4375399859282e+01; (((range_IP-2.753163e+00) / (wtd_mean_at_mass-1.437540e+01)) - (1.075602e+00*((lambda-2.731305e+01) / (wtd_mean_IP+4.941328e+00)))); $\left(\left(\frac{ range_{IP} -2.753e+00 }{ wtd_{mean, at, mass}-1.438e+01 } \right) - \left(1.076e+00\left(\frac{ lambda -2.731e+01 }{ wtd_{mean, IP}+4.941e+00 } \right)\right)\right)$; (((range_IP-2.753163e+00) ./ (wtd_mean_at_mass-1.437540e+01)) - (1.075602e+00.*((lambda-2.731305e+01) ./ (wtd_mean_IP+4.941328e+00)))); (((newdata$range_IP-2.753163e+00) / (newdata$wtd_mean_at_mass-1.437540e+01)) - (1.075602e+00*((newdata$lambda-2.731305e+01) / (newdata$wtd_mean_IP+4.941328e+00)))); range_IP,wtd_mean_at_mass,lambda,wtd_mean_IP
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  2.308621791165238e+00, -1.091377603706192e+02,  2.372235481149533e+00
+Sn1         ,  3.740729412000000e+00,  4.057142392501348e+00, -1.260680939317554e+03,  2.342678655022611e+00
+Al1Si1Sr1   ,  4.750000000000000e+00,  7.740502266536279e-01, -9.257736471634060e+01,  2.474884538668683e+00
+Sn1Ta3      ,  6.692500000000000e+00,  6.484050429248230e+00,  1.706079709866807e+02,  2.067873012737722e+00
+Re3W1       ,  8.733333332999999e+00,  1.004870372913055e+01,  2.681923306945627e+02,  1.818931141968262e+00

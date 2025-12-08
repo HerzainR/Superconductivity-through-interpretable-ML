@@ -1,0 +1,21 @@
+# c0 + a0 * (|std_EA - mean_EA|) + a1 * ((wtd_mean_IP+1.883806e+00) * (lambda+1.181755e+01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15.0982109778817; Max AE: 35.4245149119241
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  4.734140054209802e+00,  1.514373224635223e-01, -1.590729327407805e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               30|26|abd; (|std_EA - mean_EA|); $\left(\left|std_{EA} - mean_{EA}\right|\right)$; abs(std_EA - mean_EA); abs(newdata$std_EA - newdata$mean_EA); std_EA,mean_EA
+# 1;  1; eV;                                               21|5|mult:1.8838064863271e+00,1.1817553354616e+01; ((wtd_mean_IP+1.883806e+00) * (lambda+1.181755e+01)); $\left(\left(wtd_{mean, IP}+1.884e+00\right) * \left(lambda+1.182e+01\right)\right)$; ((wtd_mean_IP+1.883806e+00) .* (lambda+1.181755e+01)); ((newdata$wtd_mean_IP+1.883806e+00) * (newdata$lambda+1.181755e+01)); wtd_mean_IP,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.001529544060987e+00,  5.249999999999999e-01,  1.150535350615155e+02
+B2Ru1       ,  8.000000000000000e-01,  3.624355879160551e+00,  2.770000000000000e-01,  1.203157323559476e+02
+Nb1O1       ,  1.380000000000000e+00,  1.076938021733229e+01,  8.930000000000000e-01,  1.482401171508328e+02
+B1Ta1       ,  4.000000000000000e+00,  3.605798286325514e+00,  2.770000000000000e-01,  1.201931892963296e+02
+N1Zr1       ,  9.850000000000000e+00,  7.544788648067080e+00,  0.000000000000000e+00,  1.548632895816960e+02
+B2Mg0.98    ,  3.840000000000000e+01,  2.975485088075938e+00,  0.000000000000000e+00,  1.246903871184226e+02

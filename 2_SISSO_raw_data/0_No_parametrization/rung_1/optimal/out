@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.00223303 s
+Time to generate feat space: 0.0233898 s
+Projection time: 0.00114703 s
+Time to get best features on rank : 2.40803e-05 s
+|---Complete final combination/selection from all ranks: 0.001266 s
+Time for SIS: 0.0026381 s
+Time for l0-norm: 0.00117993 s
+Projection time: 0.00177097 s
+Time to get best features on rank : 2.40803e-05 s
+|---Complete final combination/selection from all ranks: 0.00067997 s
+Time for SIS: 0.00304079 s
+Time for l0-norm: 0.00137901 s
+Projection time: 0.000298023 s
+Time to get best features on rank : 4.50611e-05 s
+|---Complete final combination/selection from all ranks: 0.000543118 s
+Time for SIS: 0.00153613 s
+Time for l0-norm: 0.0304332 s
+Projection time: 0.00922799 s
+Time to get best features on rank : 3.60012e-05 s
+|---Complete final combination/selection from all ranks: 0.000638008 s
+Time for SIS: 0.0104909 s
+Time for l0-norm: 2.08979 s
+Projection time: 0.000391006 s
+Time to get best features on rank : 0.000113964 s
+|---Complete final combination/selection from all ranks: 0.000500917 s
+Time for SIS: 0.00142407 s
+Time for l0-norm: 173.89 s
+Train RMSE: 5.02804 K
+c0 + a0 * (lambda * w_log)
+
+Train RMSE: 3.91922 K
+c0 + a0 * ln(lambda) + a1 * (w_log / mean_at_mass)
+
+Train RMSE: 3.64837 K
+c0 + a0 * (wtd_mean_EA * wtd_range_at_mass) + a1 * cbrt(lambda) + a2 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.29792 K
+c0 + a0 * (range_at_rad * wtd_mean_at_mass) + a1 * (|std_EA - wtd_mean_EA|) + a2 * cbrt(lambda) + a3 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.01882 K
+c0 + a0 * (|std_EA - wtd_mean_EA|) + a1 * (range_at_rad * density) + a2 * (std_at_rad * density) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

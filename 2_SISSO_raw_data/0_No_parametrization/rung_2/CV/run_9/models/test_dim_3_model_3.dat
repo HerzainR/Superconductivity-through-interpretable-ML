@@ -1,0 +1,21 @@
+# c0 + a0 * ((wtd_std_IP / lambda) / (|wtd_range_PE - lambda3|)) + a1 * ((|mean_EA - std_IP|) * (wtd_range_at_rad * lambda)) + a2 * ((lambda4w_low * lambda) / (|std_PE - lambda3|))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 19.248053420904; Max AE: 42.8955401845546
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.197299876030823e-01,  4.122077334600586e+00,  7.647973647964000e-03,  1.173071729998505e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               25|5|div|35|7|abd|div; ((wtd_std_IP / lambda) / (|wtd_range_PE - lambda3|)); $\left(\frac{ \left(\frac{ wtd_{std, IP} }{ lambda } \right) }{ \left(\left|wtd_{range, PE} - lambda3\right|\right) } \right)$; ((wtd_std_IP ./ lambda) ./ abs(wtd_range_PE - lambda3)); ((newdata$wtd_std_IP / newdata$lambda) / abs(newdata$wtd_range_PE - newdata$lambda3)); wtd_std_IP,lambda,wtd_range_PE,lambda3
+# 1;  2; AA * eV;                                          26|24|abd|17|5|mult|mult; ((|mean_EA - std_IP|) * (wtd_range_at_rad * lambda)); $\left(\left(\left|mean_{EA} - std_{IP}\right|\right) \left(wtd_{range, at, rad} lambda\right)\right)$; (abs(mean_EA - std_IP) .* (wtd_range_at_rad .* lambda)); (abs(newdata$mean_EA - newdata$std_IP) * (newdata$wtd_range_at_rad * newdata$lambda)); mean_EA,std_IP,wtd_range_at_rad,lambda
+# 2;  2; K;                                                6|5|mult|36|7|abd|div; ((lambda4w_low * lambda) / (|std_PE - lambda3|)); $\left(\frac{ \left(lambda4w_{low} lambda\right) }{ \left(\left|std_{PE} - lambda3\right|\right) } \right)$; ((lambda4w_low .* lambda) ./ abs(std_PE - lambda3)); ((newdata$lambda4w_low * newdata$lambda) / abs(newdata$std_PE - newdata$lambda3)); lambda4w_low,lambda,std_PE,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Os1      ,  6.633333330000000e-01,  2.521615079841558e+00,  2.909462693687657e+00,  1.316710200000001e-02,  1.236821213592233e+02
+Ge1Mo3      ,  2.179200000000000e+00,  4.596668401680610e+00,  6.905938480066509e-01,  2.483296200000000e-01,  3.029924117647058e+02
+Sn1V3       ,  4.462500000000000e+00,  5.851849014366318e+00,  2.691387753869220e-02,  8.034157600000003e-01,  1.783234428311499e+02
+Hf1N1       ,  8.830000000000000e+00,  7.742443317503504e+00,  9.835336889313483e+00,  1.235074308000000e+00,  3.931956698113207e+01
+C1Nb1       ,  1.002500000000000e+01,  5.292054018455457e+01,  1.234361373621249e+02,  4.228955412500001e-01,  4.605828256521735e+03

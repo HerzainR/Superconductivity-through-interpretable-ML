@@ -1,0 +1,23 @@
+# c0 + a0 * (range_EA * wtd_range_IP) + a1 * ((std_ThermalCond+2.877775e+01) * (mean_IP-7.387255e+00)) + a2 * (wtd_mean_EA + 1.103153e-01*V_molar) + a3 * ((lambda-1.778162e-01) * (w_log+5.895501e+01)) + a4 * (w_log^2)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.63834884594947; Max AE: 9.32619125875368
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.128765678770950e+00,  4.493692291983278e-02,  2.987696533587504e+00,  2.336589189496770e-02,  3.797232430453417e-05, -9.717023365089219e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             28|23|mult; (range_EA * wtd_range_IP); $\left(range_{EA} wtd_{range, IP}\right)$; (range_EA .* wtd_range_IP); (newdata$range_EA * newdata$wtd_range_IP); range_EA,wtd_range_IP
+# 1;  1; W * eV * mK^-1;                                   42|20|mult:2.8777751872624e+01,-7.3872546998527e+00; ((std_ThermalCond+2.877775e+01) * (mean_IP-7.387255e+00)); $\left(\left(std_{ThermalCond}+2.878e+01\right) * \left(mean_{IP}-7.387e+00\right)\right)$; ((std_ThermalCond+2.877775e+01) .* (mean_IP-7.387255e+00)); ((newdata$std_ThermalCond+2.877775e+01) * (newdata$mean_IP-7.387255e+00)); std_ThermalCond,mean_IP
+# 2;  1; eV;                                               27|3|add:1.1031534584026e-01,0.0000000000000e+00; (wtd_mean_EA + 1.103153e-01*V_molar); $\left(wtd_{mean, EA} + 0.110V_{molar}\right)$; (wtd_mean_EA + (1.103153e-01.*V_molar)); (newdata$wtd_mean_EA + (1.103153e-01*newdata$V_molar)); wtd_mean_EA,V_molar
+# 3;  1; K;                                                5|4|mult:-1.7781621480869e-01,5.8955012267476e+01; ((lambda-1.778162e-01) * (w_log+5.895501e+01)); $\left(\left(lambda-1.778e-01\right) * \left(w_{log}+5.896e+01\right)\right)$; ((lambda-1.778162e-01) .* (w_log+5.895501e+01)); ((newdata$lambda-1.778162e-01) * (newdata$w_log+5.895501e+01)); lambda,w_log
+# 4;  1; K^2;                                              4|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Os1      ,  6.633333330000000e-01,  9.989524591753682e+00,  5.991200999999999e-01,  1.549609777964019e+01,  5.538847276606883e+00,  1.008963006621671e+02,  3.633331576900000e+04
+Ge1Mo3      ,  2.179200000000000e+00,  5.993630418611067e+00,  2.019776000000000e+00,  7.424884620770004e+00,  4.901679819381095e+00,  9.151668066387930e+01,  7.620106286115998e+04
+Sn1V3       ,  4.462500000000000e+00,  3.319437642533539e+00,  2.175862500000000e+00, -1.600990542694989e+01,  4.693055613826130e+00,  1.820407841149574e+02,  2.971296492160000e+03
+Hf1N1       ,  8.830000000000000e+00,  7.293747640460889e+00,  0.000000000000000e+00,  1.325617693387722e+02,  1.525529957709221e+00,  1.492452662586693e+02,  7.923622601449001e+04
+C1Nb1       ,  1.002500000000000e+01,  1.156675692152768e+01,  8.326850000000000e-01,  1.164411206305016e+02,  2.598893403723554e+00,  2.443556231270204e+02,  1.145458979836900e+05

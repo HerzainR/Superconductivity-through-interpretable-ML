@@ -1,0 +1,24 @@
+# c0 + a0 * (|range_EA - wtd_mean_EA|) + a1 * (wtd_range_PE * range_EA) + a2 * (|wtd_range_IP - range_IP|) + a3 * (wtd_mean_EA + 6.256594e-01*wtd_mean_IP) + a4 * (mean_EA * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15.131953350361; Max AE: 35.7068213841513
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.773660901196162e+00, -5.681503541130624e+00,  1.112915244393335e+00,  2.400453278641853e+00,  2.108440530865846e+00, -1.157931058168600e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               28|27|abd; (|range_EA - wtd_mean_EA|); $\left(\left|range_{EA} - wtd_{mean, EA}\right|\right)$; abs(range_EA - wtd_mean_EA); abs(newdata$range_EA - newdata$wtd_mean_EA); range_EA,wtd_mean_EA
+# 1;  1; eV;                                               35|28|mult; (wtd_range_PE * range_EA); $\left(wtd_{range, PE} range_{EA}\right)$; (wtd_range_PE .* range_EA); (newdata$wtd_range_PE * newdata$range_EA); wtd_range_PE,range_EA
+# 2;  1; eV;                                               23|22|abd; (|wtd_range_IP - range_IP|); $\left(\left|wtd_{range, IP} - range_{IP}\right|\right)$; abs(wtd_range_IP - range_IP); abs(newdata$wtd_range_IP - newdata$range_IP); wtd_range_IP,range_IP
+# 3;  1; eV;                                               27|21|add:6.2565935857849e-01,0.0000000000000e+00; (wtd_mean_EA + 6.256594e-01*wtd_mean_IP); $\left(wtd_{mean, EA} + 0.626wtd_{mean, IP}\right)$; (wtd_mean_EA + (6.256594e-01.*wtd_mean_IP)); (newdata$wtd_mean_EA + (6.256594e-01*newdata$wtd_mean_IP)); wtd_mean_EA,wtd_mean_IP
+# 4;  1; eV;                                               26|5|mult; (mean_EA * lambda); $\left(mean_{EA} lambda\right)$; (mean_EA .* lambda); (newdata$mean_EA * newdata$lambda); mean_EA,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Sb1V3       ,  6.500000000000000e-01,  1.590950742055817e+00,  1.163000000000000e-01,  3.869500000000000e-01,  1.005500000000000e+00,  5.178247739257437e+00,  6.548272500000001e-01
+B2Ru1       ,  8.000000000000000e-01,  2.749618268160458e+00,  2.383000000000001e-01,  4.844391000000001e-01,  2.141300000000000e+00,  5.531027939800279e+00,  2.475518500000000e-01
+Nb1O1       ,  1.380000000000000e+00,  1.083977990880327e+01,  6.090000000000001e-01,  5.225600000000000e-01,  3.429500000000000e+00,  7.551530374876986e+00,  5.435386000000000e-01
+B1Ta1       ,  4.000000000000000e+00,  2.558422903924593e+00,  2.545000000000000e-01,  1.215000000000000e-02,  2.040000000000000e-01,  5.363586848334330e+00,  6.843575000000000e-02
+N1Zr1       ,  9.850000000000000e+00,  8.229197825804446e+00,  2.130000000000000e-01,  3.642300000000000e-01,  3.950000000000000e+00,  6.834978651194780e+00,  1.285455000000000e-01
+B2Mg0.98    ,  3.840000000000000e+01,  2.693178615848738e+00,  9.230000000000002e-02,  2.557541000000000e-01,  2.331300000000000e+00,  5.240465578865237e+00,  9.638215000000000e-02

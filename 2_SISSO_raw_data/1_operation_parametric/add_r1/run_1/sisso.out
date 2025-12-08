@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0637479 s
+Time to generate feat space: 0.702242 s
+Projection time: 0.104664 s
+Time to get best features on rank : 6.48499e-05 s
+|---Complete final combination/selection from all ranks: 0.0530009 s
+Time for SIS: 0.158864 s
+Time for l0-norm: 0.0236261 s
+Projection time: 0.00141406 s
+Time to get best features on rank : 5.91278e-05 s
+|---Complete final combination/selection from all ranks: 0.00828004 s
+Time for SIS: 0.010982 s
+Time for l0-norm: 0.00725722 s
+Projection time: 0.00369096 s
+Time to get best features on rank : 4.50611e-05 s
+|---Complete final combination/selection from all ranks: 0.00773311 s
+Time for SIS: 0.0125511 s
+Time for l0-norm: 0.00555205 s
+Projection time: 0.00299501 s
+Time to get best features on rank : 6.38962e-05 s
+|---Complete final combination/selection from all ranks: 0.00887799 s
+Time for SIS: 0.013454 s
+Time for l0-norm: 0.161714 s
+Projection time: 0.00798202 s
+Time to get best features on rank : 5.29289e-05 s
+|---Complete final combination/selection from all ranks: 0.0081799 s
+Time for SIS: 0.0173509 s
+Time for l0-norm: 13.0522 s
+Train RMSE: 3.47424 K; Test RMSE: 14.1381 K
+c0 + a0 * (mean_IP + 7.141148e-01*lambda)
+
+Train RMSE: 3.15005 K; Test RMSE: 15.1263 K
+c0 + a0 * (|std_EA - mean_EA|) + a1 * (wtd_mean_IP + 7.115646e-01*lambda)
+
+Train RMSE: 2.92047 K; Test RMSE: 14.4505 K
+c0 + a0 * (wtd_range_PE * wtd_std_EA) + a1 * (mean_EA + 5.868188e-01*wtd_mean_IP) + a2 * cbrt(lambda4w_low)
+
+Train RMSE: 2.6686 K; Test RMSE: 15.3237 K
+c0 + a0 * (mean_EA / mean_PE) + a1 * (wtd_range_PE * wtd_std_EA) + a2 * (|wtd_range_IP - range_IP|) + a3 * (wtd_mean_IP + 7.115646e-01*lambda)
+
+Train RMSE: 2.51643 K; Test RMSE: 15.1111 K
+c0 + a0 * (|range_EA - wtd_mean_EA|) + a1 * (wtd_range_PE * wtd_std_EA) + a2 * (|wtd_range_IP - range_IP|) + a3 * (wtd_mean_EA + 6.256594e-01*wtd_mean_IP) + a4 * (mean_EA * lambda)
+

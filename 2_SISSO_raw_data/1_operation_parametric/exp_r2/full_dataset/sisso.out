@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0571859 s
+Time to generate feat space: 1.85663 s
+Projection time: 0.0329859 s
+Time to get best features on rank : 7.70092e-05 s
+|---Complete final combination/selection from all ranks: 0.0158348 s
+Time for SIS: 0.0620759 s
+Time for l0-norm: 0.0174441 s
+Projection time: 0.028403 s
+Time to get best features on rank : 0.000184059 s
+|---Complete final combination/selection from all ranks: 0.0482621 s
+Time for SIS: 0.0813189 s
+Time for l0-norm: 0.00571513 s
+Projection time: 0.0282631 s
+Time to get best features on rank : 0.000682831 s
+|---Complete final combination/selection from all ranks: 0.0151918 s
+Time for SIS: 0.0485859 s
+Time for l0-norm: 0.00785613 s
+Projection time: 0.029258 s
+Time to get best features on rank : 0.000553131 s
+|---Complete final combination/selection from all ranks: 0.015919 s
+Time for SIS: 0.050374 s
+Time for l0-norm: 0.167687 s
+Projection time: 0.0327671 s
+Time to get best features on rank : 6.8903e-05 s
+|---Complete final combination/selection from all ranks: 0.0136459 s
+Time for SIS: 0.0511088 s
+Time for l0-norm: 13.5058 s
+Train RMSE: 3.76931 K
+c0 + a0 * ((lambda4w_low * w_log) / (wtd_mean_at_rad^6))
+
+Train RMSE: 3.10772 K
+c0 + a0 * ((mean_EA * lambda) + (|wtd_range_IP - range_IP|)) + a1 * ((lambda4w_low * w_log) * (wtd_range_EA * w_log))
+
+Train RMSE: 2.68987 K
+c0 + a0 * ((wtd_range_at_rad * lambda) * (|mean_EA - wtd_std_IP|)) + a1 * (|(|wtd_range_EA - range_IP|) - (range_PE * wtd_range_IP)|) + a2 * ((lambda4w_low * w_log) * (wtd_range_EA * w_log))
+
+Train RMSE: 2.32147 K
+c0 + a0 * (|(|wtd_std_IP - std_IP|) - (|range_EA - mean_EA|)|) + a1 * (|(wtd_std_PE * wtd_range_IP) - (|std_EA - wtd_std_IP|)|) + a2 * ((wtd_range_at_rad * lambda) * (|mean_EA - wtd_std_IP|)) + a3 * ((lambda4w_low * w_log) * (wtd_range_EA * w_log))
+
+Train RMSE: 1.94732 K
+c0 + a0 * (|(wtd_mean_ThermalCond - mean_ThermalCond) - (wtd_range_ThermalCond * std_PE)|) + a1 * ((wtd_mean_EA * V_molar) * (|range_EA - mean_EA|)) + a2 * (|(wtd_std_PE * wtd_range_IP) - (|wtd_std_EA - wtd_std_IP|)|) + a3 * ((mean_at_mass * lambda) * (|wtd_mean_EA - wtd_std_IP|)) + a4 * ((lambda4w_low * w_log) * (wtd_range_EA * w_log))
+

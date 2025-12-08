@@ -1,0 +1,23 @@
+# c0 + a0 * (wtd_mean_IP + 1.003520e-01*V_molar) + a1 * (wtd_range_PE / lambda) + a2 * (lambda + 2.393259e-01*density) + a3 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.58837274916511; Max AE: 10.8748295963637
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  1.443839758455151e+00, -1.615175838492741e+00,  1.036557896682363e+00,  7.061127168251079e-01, -1.521670174511364e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               21|3|add:1.0035202306516e-01,0.0000000000000e+00; (wtd_mean_IP + 1.003520e-01*V_molar); $\left(wtd_{mean, IP} + 0.100V_{molar}\right)$; (wtd_mean_IP + (1.003520e-01.*V_molar)); (newdata$wtd_mean_IP + (1.003520e-01*newdata$V_molar)); wtd_mean_IP,V_molar
+# 1;  1; Unitless;                                         35|5|div; (wtd_range_PE / lambda); $\left(\frac{ wtd_{range, PE} }{ lambda } \right)$; (wtd_range_PE ./ lambda); (newdata$wtd_range_PE / newdata$lambda); wtd_range_PE,lambda
+# 2;  1; Unitless;                                         5|2|add:2.3932587848599e-01,0.0000000000000e+00; (lambda + 2.393259e-01*density); $\left(lambda + 0.239density\right)$; (lambda + (2.393259e-01.*density)); (newdata$lambda + (2.393259e-01*newdata$density)); lambda,density
+# 3;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  2.736119423117498e+00,  1.020669159638601e+01,  7.668923587121736e-01,  2.504284535935779e+00,  2.632475087957086e+00
+La1         ,  5.343000000000000e+00,  1.189810148843731e+00,  7.847268835404266e+00,  0.000000000000000e+00,  4.764960893903989e+00,  1.942399688997196e-01
+C1Ta1       ,  8.637499999999999e+00,  5.796583104854371e+00,  1.092251693051666e+01,  5.185697352824971e-01,  4.451512873843701e+00,  2.076511431938532e+00
+C1I1Y1      ,  9.917500000000000e+00,  7.130135988081978e+00,  1.391864102486247e+01,  5.346997883480004e-01,  2.084756357290519e+00,  1.349945878752604e+00
+Nb1Ru3      ,  1.350000000000000e+01,  2.625170403636301e+00,  1.075418181800869e+01,  1.688960951222808e+00,  3.425336356612827e+00,  2.112929431853869e+00
+Nb3Sn1      ,  1.670900000000000e+01,  6.397380169729146e+00,  1.146855134770910e+01,  2.426852611430134e-01,  5.017308177967568e+00,  3.492083621434963e-01

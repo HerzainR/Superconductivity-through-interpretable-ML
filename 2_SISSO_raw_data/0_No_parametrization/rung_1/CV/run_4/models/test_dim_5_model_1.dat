@@ -1,0 +1,24 @@
+# c0 + a0 * (wtd_mean_EA * V_molar) + a1 * (wtd_range_PE * wtd_std_EA) + a2 * (range_at_rad * density) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.33657905191502; Max AE: 6.10308968864302
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.118350115485797e-01, -1.651836347639096e+01,  6.102735502587454e-01,  9.435837973619147e+00,  7.194865568624602e-01, -1.076842780759284e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^3 * eV * mol^-1;                               27|3|mult; (wtd_mean_EA * V_molar); $\left(wtd_{mean, EA} V_{molar}\right)$; (wtd_mean_EA .* V_molar); (newdata$wtd_mean_EA * newdata$V_molar); wtd_mean_EA,V_molar
+# 1;  1; eV;                                               35|31|mult; (wtd_range_PE * wtd_std_EA); $\left(wtd_{range, PE} wtd_{std, EA}\right)$; (wtd_range_PE .* wtd_std_EA); (newdata$wtd_range_PE * newdata$wtd_std_EA); wtd_range_PE,wtd_std_EA
+# 2;  1; AA * cm^-3 * g;                                   16|2|mult; (range_at_rad * density); $\left(range_{at, rad} density\right)$; (range_at_rad .* density); (newdata$range_at_rad * newdata$density); range_at_rad,density
+# 3;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B1Mo1       ,  2.500000000000000e-01,  6.353089688643018e+00,  6.357131715000000e+00,  1.407000000000000e-02,  6.013000000000000e+00,  8.040420429653392e-01,  6.603156731237589e+00
+Hg2Na1      ,  1.620000000000000e+00, -2.735176786623320e+00,  8.183295602999999e+00,  2.412941400000000e-01,  3.219800000000001e+00,  8.507260232928537e-01,  4.075894344277194e-01
+Ga2Y1       ,  1.680000000000000e+00,  4.264240898786347e+00,  1.139121418600000e+01,  2.400000000000000e-03,  4.120800000000000e+00,  1.053097429768361e+00,  2.885152258422198e-01
+B2Nb1       ,  4.597500000000000e+00,  5.679028097668793e+00,  8.146910317000000e+00,  2.191581700000000e-01,  5.424000000000000e+00,  8.879885559762081e-01,  9.246523702741220e+00
+Nb0.75Si0.25,  9.000000000000000e+00,  1.027245055584416e+01,  4.206652496000000e+01,  1.410125000000000e-01,  3.927300000000000e+00,  1.138421947078910e+00,  1.835084933371403e+00
+Ta1B2       ,  9.500000000000000e+00,  8.444464324795208e+00,  4.820686400000000e+00,  1.668400000000000e-02,  1.055220000000000e+01,  9.597699101349483e-01,  4.129795616113745e+00

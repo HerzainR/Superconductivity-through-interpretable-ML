@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0615039 s
+Time to generate feat space: 3.30575 s
+Projection time: 0.100627 s
+Time to get best features on rank : 0.00052309 s
+|---Complete final combination/selection from all ranks: 0.0131452 s
+Time for SIS: 0.120683 s
+Time for l0-norm: 0.0300581 s
+Projection time: 0.00293899 s
+Time to get best features on rank : 5.91278e-05 s
+|---Complete final combination/selection from all ranks: 0.0518479 s
+Time for SIS: 0.0563021 s
+Time for l0-norm: 0.00724292 s
+Projection time: 0.00292993 s
+Time to get best features on rank : 4.79221e-05 s
+|---Complete final combination/selection from all ranks: 0.00757599 s
+Time for SIS: 0.012255 s
+Time for l0-norm: 0.00708318 s
+Projection time: 0.00345993 s
+Time to get best features on rank : 5.4121e-05 s
+|---Complete final combination/selection from all ranks: 0.00867701 s
+Time for SIS: 0.0135751 s
+Time for l0-norm: 0.165166 s
+Projection time: 0.00322604 s
+Time to get best features on rank : 5.60284e-05 s
+|---Complete final combination/selection from all ranks: 0.00837898 s
+Time for SIS: 0.0130031 s
+Time for l0-norm: 13.2536 s
+Train RMSE: 4.81313 K; Test RMSE: 3.73761 K
+c0 + a0 * ((lambda4w_low+4.601394e+01) * (w_log-4.771170e+00))
+
+Train RMSE: 3.9381 K; Test RMSE: 3.54868 K
+c0 + a0 * ((lambda-7.637545e-02) * (w_log+6.541864e+01)) + a1 * (w_log / density)
+
+Train RMSE: 3.64337 K; Test RMSE: 3.54846 K
+c0 + a0 * (|range_EA - mean_EA|) + a1 * (w_log / wtd_mean_at_mass) + a2 * ((lambda-7.637545e-02) * (w_log+6.541864e+01))
+
+Train RMSE: 3.29592 K; Test RMSE: 4.71078 K
+c0 + a0 * ((wtd_mean_at_mass-9.086156e+01) * (std_EA-1.924102e-01)) + a1 * (|range_EA - mean_EA|) + a2 * ((lambda-7.637545e-02) * (w_log+6.541864e+01)) + a3 * (w_log / density)
+
+Train RMSE: 2.98232 K; Test RMSE: 8.80387 K
+c0 + a0 * (wtd_mean_IP * density) + a1 * ((w_log-1.625595e+01) * (std_EA-8.615381e-02)) + a2 * (|range_EA - wtd_mean_EA|) + a3 * ((lambda-5.854300e-01) * (mean_EA-3.492581e-01)) + a4 * (w_log / density)
+

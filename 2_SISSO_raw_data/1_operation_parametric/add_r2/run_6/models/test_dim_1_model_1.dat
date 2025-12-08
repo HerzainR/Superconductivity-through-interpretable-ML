@@ -1,0 +1,20 @@
+# c0 + a0 * ((wtd_mean_IP + 9.009389e-01*lambda) + 9.610576e-01*((V_molar-3.543052e+01) / (wtd_mean_at_mass-1.601305e+01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.78045861155794; Max AE: 11.0420852373466
+# Coefficients
+# Task   a0                      c0
+# all ,  1.377729275362196e+00, -7.182287618411152e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|5|add|3|9|div|add:9.6105757792485e-01,0.0000000000000e+00,-3.5430524610914e+01,-1.6013054336504e+01,9.0093889811672e-01,0.0000000000000e+00; ((wtd_mean_IP + 9.009389e-01*lambda) + 9.610576e-01*((V_molar-3.543052e+01) / (wtd_mean_at_mass-1.601305e+01))); $\left(\left(wtd_{mean, IP} + 0.901lambda\right) + 0.961\left(\frac{ V_{molar} -3.543e+01 }{ wtd_{mean, at, mass}-1.601e+01 } \right)\right)$; ((wtd_mean_IP + (9.009389e-01.*lambda)) + (9.610576e-01.*((V_molar-3.543052e+01) ./ (wtd_mean_at_mass-1.601305e+01)))); ((newdata$wtd_mean_IP + (9.009389e-01*newdata$lambda)) + (9.610576e-01*((newdata$V_molar-3.543052e+01) / (newdata$wtd_mean_at_mass-1.601305e+01)))); wtd_mean_IP,lambda,V_molar,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Rh1V3       ,  1.900000000000000e-01,  2.853624360326270e+00,  7.284386096897773e+00
+Fe1Li1P1    ,  4.965000000000000e+00,  2.953539611650438e+00,  7.356907783930882e+00
+Ga1Si1Sr1   ,  5.000000000000000e+00,  6.133651560717631e+00,  9.665134810776314e+00
+Nb1S2       ,  5.821818182000000e+00,  5.902787558759538e+00,  9.497566329735363e+00
+Ge1V3       ,  6.680000000000000e+00,  5.019737579727476e+00,  8.856620394402810e+00
+Mo1Ni1P1    ,  1.550000000000000e+01,  4.457914762653361e+00,  8.448831413562278e+00

@@ -1,0 +1,22 @@
+# c0 + a0 * ln(lambda3) + a1 * (w_log / density) + a2 * (mean_at_rad / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.23555024076461; Max AE: 14.2773703946106
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.465645749660901e+00,  1.800449512783732e-01, -3.631781356786603e+02,  8.308817708778639e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         7|log; ln(lambda3); $\left(\ln{ lambda3 }\right)$; log(lambda3); log(newdata$lambda3); lambda3
+# 1;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# 2;  1; AA * g^-1 * mol;                                  14|9|div; (mean_at_rad / wtd_mean_at_mass); $\left(\frac{ mean_{at, rad} }{ wtd_{mean, at, mass} } \right)$; (mean_at_rad ./ wtd_mean_at_mass); (newdata$mean_at_rad / newdata$wtd_mean_at_mass); mean_at_rad,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  5.031419992068235e+00, -2.748872195622465e+00,  3.177363963963964e+01,  1.368256450351837e-02
+Os0.5V0.5   ,  5.150000000000000e+00,  6.209148243992317e+00,  8.801087732271337e-02,  1.246263193968472e+01,  1.231488284690237e-02
+Ir1Mo1      ,  5.325000000000000e+00,  3.660873103183990e+00, -2.364460496712133e+00,  1.408212121212121e+01,  1.023711944809781e-02
+N1Ti1       ,  5.387500000000000e+00,  5.806625506674091e+00, -1.087672348629775e+00,  7.026502782931355e+01,  3.733405738777964e-02
+B6Y1        ,  5.692857143000000e+00, -8.584513251610566e+00, -1.313043899380298e+00,  4.268498659517427e+01,  6.237735110253106e-02
+N1V1        ,  8.528333333499999e+00,  3.875156704773026e+00, -6.907755278982137e+00,  1.011765134706815e+02,  3.448902356031423e-02

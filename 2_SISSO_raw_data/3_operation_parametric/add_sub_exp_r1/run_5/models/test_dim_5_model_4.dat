@@ -1,0 +1,24 @@
+# c0 + a0 * (std_at_rad * wtd_range_at_mass) + a1 * (|std_EA - wtd_mean_EA|) + a2 * (std_at_rad - (4.716188e-01*range_at_rad)) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.54003915195933; Max AE: 5.52458544309351
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.073312028020695e-01,  7.066167329196158e+00, -8.263321355015361e+01,  1.168385288151204e+01,  7.340390118393930e-01, -1.296196660507844e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  18|11|mult; (std_at_rad * wtd_range_at_mass); $\left(std_{at, rad} wtd_{range, at, mass}\right)$; (std_at_rad .* wtd_range_at_mass); (newdata$std_at_rad * newdata$wtd_range_at_mass); std_at_rad,wtd_range_at_mass
+# 1;  1; eV;                                               30|27|abd; (|std_EA - wtd_mean_EA|); $\left(\left|std_{EA} - wtd_{mean, EA}\right|\right)$; abs(std_EA - wtd_mean_EA); abs(newdata$std_EA - newdata$wtd_mean_EA); std_EA,wtd_mean_EA
+# 2;  1; AA;                                               18|16|sub:4.7161875662660e-01,0.0000000000000e+00; (std_at_rad - (4.716188e-01*range_at_rad)); $\left(std_{at, rad} - \left(4.716e-01range_{at, rad}\right)\right)$; (std_at_rad - (4.716188e-01.*range_at_rad)); (newdata$std_at_rad - (4.716188e-01*newdata$range_at_rad)); std_at_rad,range_at_rad
+# 3;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  4.541952218964668e+00,  9.057200000000000e-02,  4.413000000000000e-01,  5.676248674679266e-04,  1.153148273142648e+00,  1.281308837432640e+00
+Al1Os1      ,  3.900000000000000e-01,  2.311591041030955e+00,  9.386783000000001e+00,  4.409999999999999e-01,  6.527685975881159e-03,  8.180779890690784e-01,  1.624308278195087e+00
+Al1Mo3      ,  5.800000000000000e-01,  3.057048133914715e+00,  1.076082150000000e+01,  5.173000000000000e-01,  9.365810313220785e-03,  6.969939118202801e-01,  3.764084672567811e+00
+La1Se1      ,  1.020000000000000e+00,  3.873527578618411e-01,  1.303573200000000e+01,  5.000000000000000e-01,  2.469168173485481e-02,  7.164147904006603e-01,  1.067231696503155e+00
+Co1Si2      ,  1.306666667000000e+00,  6.831252110093505e+00,  6.902999999999999e-02,  7.817000000000000e-01,  4.257186506009453e-03,  6.896434480765461e-01,  8.922381438892421e+00
+Al1Ge1Sr1   ,  6.700000000000000e+00,  1.070902860097741e+01,  7.098735360000001e+00,  3.489999999999993e-02, -2.514067469952752e-03,  1.851408715203178e+00,  1.543025612677354e-01

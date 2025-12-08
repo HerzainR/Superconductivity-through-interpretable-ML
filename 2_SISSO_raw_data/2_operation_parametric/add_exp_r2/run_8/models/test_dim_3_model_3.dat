@@ -1,0 +1,21 @@
+# c0 + a0 * (((wtd_mean_at_rad+7.324261e+01) / (mean_PE-2.407531e+00)) + 7.355750e-01*((mean_EA+1.643829e+00) / (lambda3-4.772618e-02))) + a1 * (((mean_at_mass-7.544343e+01) / (mean_IP-7.086814e+00)) + 2.144045e+00*|wtd_range_at_mass - (-1.473817e-01*wtd_mean_at_mass+9.928615e+01)|) + a2 * (((wtd_mean_IP-7.855022e-01) * (lambda+9.252675e+00)) + 2.047115e+03*((mean_at_rad-1.243076e+00) / (mean_at_mass-1.916875e+01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.65890853488498; Max AE: 4.12347331274745
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.108522357682521e-03, -1.226682718297881e-02,  2.289685688627107e-01, -1.209192275309280e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA;                                               15|32|div|26|7|div|add:7.3557503279993e-01,0.0000000000000e+00,1.6438289885227e+00,-4.7726181395757e-02,7.3242612891885e+01,-2.4075309124683e+00; (((wtd_mean_at_rad+7.324261e+01) / (mean_PE-2.407531e+00)) + 7.355750e-01*((mean_EA+1.643829e+00) / (lambda3-4.772618e-02))); $\left(\left(\frac{ wtd_{mean, at, rad} +7.324e+01 }{ mean_{PE}-2.408e+00 } \right) + 0.736\left(\frac{ mean_{EA} +1.644e+00 }{ lambda3-4.773e-02 } \right)\right)$; (((wtd_mean_at_rad+7.324261e+01) ./ (mean_PE-2.407531e+00)) + (7.355750e-01.*((mean_EA+1.643829e+00) ./ (lambda3-4.772618e-02)))); (((newdata$wtd_mean_at_rad+7.324261e+01) / (newdata$mean_PE-2.407531e+00)) + (7.355750e-01*((newdata$mean_EA+1.643829e+00) / (newdata$lambda3-4.772618e-02)))); wtd_mean_at_rad,mean_PE,mean_EA,lambda3
+# 1;  2; eV^-1 * g * mol^-1;                               8|20|div|11|9|abd|add:2.1440450809109e+00,0.0000000000000e+00,-1.4738170844554e-01,9.9286152144642e+01,-7.5443426948906e+01,-7.0868136299372e+00; (((mean_at_mass-7.544343e+01) / (mean_IP-7.086814e+00)) + 2.144045e+00*|wtd_range_at_mass - (-1.473817e-01*wtd_mean_at_mass+9.928615e+01)|); $\left(\left(\frac{ mean_{at, mass} -7.544e+01 }{ mean_{IP}-7.087e+00 } \right) + 2.14\left(\left|wtd_{range, at, mass} - \left(-1.474e-01wtd_{mean, at, mass}+9.929e+01\right)\right|\right)\right)$; (((mean_at_mass-7.544343e+01) ./ (mean_IP-7.086814e+00)) + (2.144045e+00.*abs(wtd_range_at_mass - (-1.473817e-01.*wtd_mean_at_mass+9.928615e+01)))); (((newdata$mean_at_mass-7.544343e+01) / (newdata$mean_IP-7.086814e+00)) + (2.144045e+00*abs(newdata$wtd_range_at_mass - (-1.473817e-01*newdata$wtd_mean_at_mass+9.928615e+01)))); mean_at_mass,mean_IP,wtd_range_at_mass,wtd_mean_at_mass
+# 2;  2; eV;                                               21|5|mult|14|8|div|add:2.0471149603302e+03,0.0000000000000e+00,-1.2430759387588e+00,-1.9168748271618e+01,-7.8550222652490e-01,9.2526751614406e+00; (((wtd_mean_IP-7.855022e-01) * (lambda+9.252675e+00)) + 2.047115e+03*((mean_at_rad-1.243076e+00) / (mean_at_mass-1.916875e+01))); $\left(\left(\left(wtd_{mean, IP}-7.855e-01\right) * \left(lambda+9.253e+00\right)\right) + 2.05e+03\left(\frac{ mean_{at, rad} -1.243e+00 }{ mean_{at, mass}-1.917e+01 } \right)\right)$; (((wtd_mean_IP-7.855022e-01) .* (lambda+9.252675e+00)) + (2.047115e+03.*((mean_at_rad-1.243076e+00) ./ (mean_at_mass-1.916875e+01)))); (((newdata$wtd_mean_IP-7.855022e-01) * (newdata$lambda+9.252675e+00)) + (2.047115e+03*((newdata$mean_at_rad-1.243076e+00) / (newdata$mean_at_mass-1.916875e+01)))); wtd_mean_IP,lambda,mean_at_rad,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  2.423575014206450e+00, -2.196476622905557e+02,  1.204303814127186e+02,  6.590585418465892e+01
+Sn1         ,  3.740729412000000e+00, -3.827439007474492e-01, -2.326997591139075e+02,  3.435928816374427e+02,  6.537107369842312e+01
+Al1Si1Sr1   ,  4.750000000000000e+00,  1.759928512963285e+00, -7.316796957965840e+01,  2.131037317288234e+02,  7.060071937659663e+01
+Sn1Ta3      ,  6.692500000000000e+00,  6.030035200228953e+00, -1.104102460242529e+02,  2.070285983389568e+02,  8.825630140916348e+01
+Re3W1       ,  8.733333332999999e+00,  1.165035286559644e+01, -2.694379538646686e+02,  1.766255943407063e+02,  1.083201922704403e+02

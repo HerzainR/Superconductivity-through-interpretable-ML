@@ -1,0 +1,23 @@
+# c0 + a0 * ((wtd_mean_EA - mean_EA) * (mean_EA - std_IP)) + a1 * (sqrt(mean_PE) / (|std_IP - wtd_mean_IP|)) + a2 * ((|range_EA - std_IP|) / (wtd_range_PE + lambda3)) + a3 * ((|range_EA - mean_EA|) * (V_molar * density)) + a4 * ((lambda4w_low * w_log) / (wtd_mean_at_rad^6))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.96632615274287; Max AE: 13.9171201815526
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.170338092201150e+01, -7.542083925946322e+01,  1.624134112861448e+00,  4.066750481935819e-02,  2.501768986661328e-04,  1.453765691881639e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             27|26|sub|26|24|sub|mult; ((wtd_mean_EA - mean_EA) * (mean_EA - std_IP)); $\left(\left(wtd_{mean, EA} - mean_{EA}\right) \left(mean_{EA} - std_{IP}\right)\right)$; ((wtd_mean_EA - mean_EA) .* (mean_EA - std_IP)); ((newdata$wtd_mean_EA - newdata$mean_EA) * (newdata$mean_EA - newdata$std_IP)); wtd_mean_EA,mean_EA,mean_EA,std_IP
+# 1;  2; eV^-1;                                            32|sqrt|24|21|abd|div; (sqrt(mean_PE) / (|std_IP - wtd_mean_IP|)); $\left(\frac{ \left(\sqrt{ mean_{PE} }\right) }{ \left(\left|std_{IP} - wtd_{mean, IP}\right|\right) } \right)$; (sqrt(mean_PE) ./ abs(std_IP - wtd_mean_IP)); (sqrt(newdata$mean_PE) / abs(newdata$std_IP - newdata$wtd_mean_IP)); mean_PE,std_IP,wtd_mean_IP
+# 2;  2; eV;                                               28|24|abd|35|7|add|div; ((|range_EA - std_IP|) / (wtd_range_PE + lambda3)); $\left(\frac{ \left(\left|range_{EA} - std_{IP}\right|\right) }{ \left(wtd_{range, PE} + lambda3\right) } \right)$; (abs(range_EA - std_IP) ./ (wtd_range_PE + lambda3)); (abs(newdata$range_EA - newdata$std_IP) / (newdata$wtd_range_PE + newdata$lambda3)); range_EA,std_IP,wtd_range_PE,lambda3
+# 3;  2; eV * g * mol^-1;                                  28|26|abd|3|2|mult|mult; ((|range_EA - mean_EA|) * (V_molar * density)); $\left(\left(\left|range_{EA} - mean_{EA}\right|\right) \left(V_{molar} density\right)\right)$; (abs(range_EA - mean_EA) .* (V_molar .* density)); (abs(newdata$range_EA - newdata$mean_EA) * (newdata$V_molar * newdata$density)); range_EA,mean_EA,V_molar,density
+# 4;  2; AA^-6 * K^2;                                      6|4|mult|15|sp|div; ((lambda4w_low * w_log) / (wtd_mean_at_rad^6)); $\left(\frac{ \left(lambda4w_{low} w_{log}\right) }{ \left(wtd_{mean, at, rad}^6\right) } \right)$; ((lambda4w_low .* w_log) ./ (wtd_mean_at_rad).^6); ((newdata$lambda4w_low * newdata$w_log) / (newdata$wtd_mean_at_rad)^6); lambda4w_low,w_log,wtd_mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Os1      ,  6.633333330000000e-01,  1.458045351455257e+01, -1.344200000000003e-03,  2.197081314688103e-01,  9.014167650531288e-01,  3.702116269236000e+02,  2.581762697731082e+02
+Ge1Mo3      ,  2.179200000000000e+00,  7.702716678792915e+00, -9.724400000000001e-02,  2.095722652858295e-01,  1.653575857792476e-01,  1.600530988212000e+02,  3.322819007467826e+02
+Sn1V3       ,  4.462500000000000e+00,  4.120255631387559e+00, -9.506245000000006e-02,  2.031040856056130e-01,  5.880972863064051e-02,  5.091272261250000e+01,  2.684878048997840e+03
+Hf1N1       ,  8.830000000000000e+00,  4.754813929248765e+00, -0.000000000000000e+00,  2.158376536652928e-01,  3.491394927536231e+00,  0.000000000000000e+00,  3.298947244047940e+03
+C1Nb1       ,  1.002500000000000e+01,  8.710177972433645e+00, -0.000000000000000e+00,  2.131211760746847e-01,  1.932682425488181e+00,  7.428151622640002e+01,  1.633452034633243e+04

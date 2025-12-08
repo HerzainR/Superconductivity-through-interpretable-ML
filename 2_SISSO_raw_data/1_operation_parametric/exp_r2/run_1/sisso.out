@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0636489 s
+Time to generate feat space: 0.931122 s
+Projection time: 0.0333691 s
+Time to get best features on rank : 7.41482e-05 s
+|---Complete final combination/selection from all ranks: 0.0663621 s
+Time for SIS: 0.107363 s
+Time for l0-norm: 0.020669 s
+Projection time: 0.0311239 s
+Time to get best features on rank : 7.31945e-05 s
+|---Complete final combination/selection from all ranks: 0.014848 s
+Time for SIS: 0.050741 s
+Time for l0-norm: 0.00460196 s
+Projection time: 0.0258791 s
+Time to get best features on rank : 7.51019e-05 s
+|---Complete final combination/selection from all ranks: 0.0146739 s
+Time for SIS: 0.0453038 s
+Time for l0-norm: 0.00711393 s
+Projection time: 0.019304 s
+Time to get best features on rank : 7.20024e-05 s
+|---Complete final combination/selection from all ranks: 0.0159881 s
+Time for SIS: 0.046103 s
+Time for l0-norm: 0.165389 s
+Projection time: 0.0247531 s
+Time to get best features on rank : 6.8903e-05 s
+|---Complete final combination/selection from all ranks: 0.013308 s
+Time for SIS: 0.042958 s
+Time for l0-norm: 13.5541 s
+Train RMSE: 3.26636 K; Test RMSE: 14.086 K
+c0 + a0 * ((wtd_mean_EA * lambda) - (range_EA - wtd_mean_IP))
+
+Train RMSE: 2.64136 K; Test RMSE: 13.9893 K
+c0 + a0 * ((std_EA - wtd_mean_IP) + (wtd_range_PE * wtd_std_IP)) + a1 * ((mean_EA * lambda) * (|wtd_mean_EA - wtd_std_IP|))
+
+Train RMSE: 2.2381 K; Test RMSE: 13.7198 K
+c0 + a0 * ((w_log * L_avg) / (|range_PE - lambda3|)) + a1 * ((std_EA - wtd_mean_IP) + (wtd_range_PE * wtd_std_IP)) + a2 * ((mean_EA * lambda) * (|wtd_mean_EA - wtd_std_IP|))
+
+Train RMSE: 1.88705 K; Test RMSE: 13.7342 K
+c0 + a0 * ((|mean_EA - wtd_std_IP|) / (range_PE - lambda)) + a1 * ((|range_PE - lambda|) / (|range_PE - lambda3|)) + a2 * ((std_EA - wtd_mean_IP) + (wtd_range_PE * wtd_std_IP)) + a3 * ((mean_EA * lambda) * (|wtd_mean_EA - wtd_std_IP|))
+
+Train RMSE: 1.59798 K; Test RMSE: 14.0245 K
+c0 + a0 * ((wtd_range_ThermalCond * density) / (exp(1.702499e+01*std_EA))) + a1 * ((wtd_std_ThermalCond - wtd_range_ThermalCond) / (|wtd_range_PE - lambda3|)) + a2 * ((wtd_mean_at_rad / mean_at_mass) / (|range_PE - lambda3|)) + a3 * ((wtd_std_EA - wtd_mean_IP) + (wtd_range_PE * wtd_std_IP)) + a4 * ((mean_EA * lambda) * (|wtd_mean_EA - wtd_std_IP|))
+

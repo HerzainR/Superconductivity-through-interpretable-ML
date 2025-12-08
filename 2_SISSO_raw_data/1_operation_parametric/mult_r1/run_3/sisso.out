@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0597219 s
+Time to generate feat space: 1.92084 s
+Projection time: 0.101544 s
+Time to get best features on rank : 5.60284e-05 s
+|---Complete final combination/selection from all ranks: 0.0625849 s
+Time for SIS: 0.165345 s
+Time for l0-norm: 0.025295 s
+Projection time: 0.00212598 s
+Time to get best features on rank : 7.20024e-05 s
+|---Complete final combination/selection from all ranks: 0.00873494 s
+Time for SIS: 0.0122879 s
+Time for l0-norm: 0.00410414 s
+Projection time: 0.00209379 s
+Time to get best features on rank : 5.60284e-05 s
+|---Complete final combination/selection from all ranks: 0.00843191 s
+Time for SIS: 0.011961 s
+Time for l0-norm: 0.00798607 s
+Projection time: 0.00542307 s
+Time to get best features on rank : 6.60419e-05 s
+|---Complete final combination/selection from all ranks: 0.00823903 s
+Time for SIS: 0.0151179 s
+Time for l0-norm: 0.163411 s
+Projection time: 0.00282097 s
+Time to get best features on rank : 5.48363e-05 s
+|---Complete final combination/selection from all ranks: 0.00798798 s
+Time for SIS: 0.0122361 s
+Time for l0-norm: 13.1564 s
+Train RMSE: 5.14845 K; Test RMSE: 3.98093 K
+c0 + a0 * (lambda * w_log)
+
+Train RMSE: 3.90547 K; Test RMSE: 2.80506 K
+c0 + a0 * (w_log / mean_at_mass) + a1 * ((lambda-2.606461e-01) * (w_log+5.718208e+01))
+
+Train RMSE: 3.68283 K; Test RMSE: 3.04743 K
+c0 + a0 * ((wtd_mean_at_mass+2.420534e+01) * (wtd_mean_IP-4.810704e+00)) + a1 * (w_log / mean_at_mass) + a2 * ((lambda-2.606461e-01) * (w_log+5.718208e+01))
+
+Train RMSE: 3.30722 K; Test RMSE: 2.84813 K
+c0 + a0 * ((range_at_rad-2.905475e-01) * (range_at_mass-3.950827e+01)) + a1 * (|std_EA - wtd_mean_EA|) + a2 * ln(lambda3) + a3 * (w_log / mean_at_mass)
+
+Train RMSE: 3.03413 K; Test RMSE: 3.90961 K
+c0 + a0 * (wtd_mean_EA / V_molar) + a1 * ((range_at_rad-2.905475e-01) * (range_at_mass-3.950827e+01)) + a2 * (|std_EA - wtd_mean_EA|) + a3 * cbrt(lambda) + a4 * (w_log / mean_at_mass)
+

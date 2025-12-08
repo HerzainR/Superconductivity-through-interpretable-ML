@@ -1,0 +1,20 @@
+# c0 + a0 * ((((wtd_range_IP-4.135370e+01) / (lambda4w_low-5.159898e+00))+3.706140e+00) * (((lambda-1.714682e-01) / (wtd_mean_at_mass-1.412402e+01))+2.778055e-03))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.93051779159063; Max AE: 10.0277942571686
+# Coefficients
+# Task   a0                      c0
+# all ,  2.169009509943651e+01,  4.146984185696057e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K^-1 * eV * g^-1 * mol;                           23|6|div|5|9|div|mult:3.7061398364278e+00,2.7780554875338e-03,-1.7146818483393e-01,-1.4124021093090e+01,-4.1353696426811e+01,-5.1598979259397e+00; ((((wtd_range_IP-4.135370e+01) / (lambda4w_low-5.159898e+00))+3.706140e+00) * (((lambda-1.714682e-01) / (wtd_mean_at_mass-1.412402e+01))+2.778055e-03)); $\left(\left(\left(\frac{ wtd_{range, IP} -4.135e+01 }{ lambda4w_{low}-5.160e+00 } \right)+3.706e+00\right) * \left(\left(\frac{ lambda -1.715e-01 }{ wtd_{mean, at, mass}-1.412e+01 } \right)+2.778e-03\right)\right)$; ((((wtd_range_IP-4.135370e+01) ./ (lambda4w_low-5.159898e+00))+3.706140e+00) .* (((lambda-1.714682e-01) ./ (wtd_mean_at_mass-1.412402e+01))+2.778055e-03)); ((((newdata$wtd_range_IP-4.135370e+01) / (newdata$lambda4w_low-5.159898e+00))+3.706140e+00) * (((newdata$lambda-1.714682e-01) / (newdata$wtd_mean_at_mass-1.412402e+01))+2.778055e-03)); wtd_range_IP,lambda4w_low,lambda,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  5.842200169272591e+00,  7.815622641601853e-02
+Al1Os1      ,  3.900000000000000e-01,  4.141856729837035e+00, -2.363961907735058e-04
+Al1Mo3      ,  5.800000000000000e-01,  8.028941459855581e+00,  1.789737323125141e-01
+La1Se1      ,  1.020000000000000e+00,  5.897091240515152e+00,  8.068692399898986e-02
+Co1Si2      ,  1.306666667000000e+00,  1.133446092416865e+01,  3.313713796791659e-01
+Al1Ge1Sr1   ,  6.700000000000000e+00,  1.464235446200633e+01,  4.838784813157840e-01

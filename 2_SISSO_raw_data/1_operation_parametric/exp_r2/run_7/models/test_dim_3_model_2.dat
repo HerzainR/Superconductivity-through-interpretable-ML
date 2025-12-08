@@ -1,0 +1,21 @@
+# c0 + a0 * ((wtd_range_IP - range_IP) / (wtd_range_PE + lambda3)) + a1 * ((|std_IP - wtd_range_IP|) * (wtd_range_EA * lambda)) + a2 * ((wtd_std_at_rad * w_log) * (lambda4w_low * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 48.0066889606304; Max AE: 107.239716009875
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -5.839207886824588e-01,  4.836438291536864e+00,  1.041313527430058e-06,  1.655312022861902e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               23|22|sub|35|7|add|div; ((wtd_range_IP - range_IP) / (wtd_range_PE + lambda3)); $\left(\frac{ \left(wtd_{range, IP} - range_{IP}\right) }{ \left(wtd_{range, PE} + lambda3\right) } \right)$; ((wtd_range_IP - range_IP) ./ (wtd_range_PE + lambda3)); ((newdata$wtd_range_IP - newdata$range_IP) / (newdata$wtd_range_PE + newdata$lambda3)); wtd_range_IP,range_IP,wtd_range_PE,lambda3
+# 1;  2; eV^2;                                             24|23|abd|29|5|mult|mult; ((|std_IP - wtd_range_IP|) * (wtd_range_EA * lambda)); $\left(\left(\left|std_{IP} - wtd_{range, IP}\right|\right) \left(wtd_{range, EA} lambda\right)\right)$; (abs(std_IP - wtd_range_IP) .* (wtd_range_EA .* lambda)); (abs(newdata$std_IP - newdata$wtd_range_IP) * (newdata$wtd_range_EA * newdata$lambda)); std_IP,wtd_range_IP,wtd_range_EA,lambda
+# 2;  2; AA * K^3;                                         19|4|mult|6|4|mult|mult; ((wtd_std_at_rad * w_log) * (lambda4w_low * w_log)); $\left(\left(wtd_{std, at, rad} w_{log}\right) \left(lambda4w_{low} w_{log}\right)\right)$; ((wtd_std_at_rad .* w_log) .* (lambda4w_low .* w_log)); ((newdata$wtd_std_at_rad * newdata$w_log) * (newdata$lambda4w_low * newdata$w_log)); wtd_std_at_rad,w_log,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ti1O1       ,  7.200000000000000e-01,  3.756724187439301e+00, -3.566176470588236e+00,  0.000000000000000e+00,  1.829188499807302e+04
+Ga1Mo3      ,  7.600000000000000e-01,  3.570907639068214e+00,  2.206636989073250e+00,  6.474297142800000e-01,  6.995296235040913e+04
+Pt0.25V0.75 ,  3.102500000000000e+00,  3.022281361393020e+00,  4.717622080679404e-01,  1.876875523500000e-01,  7.055529528360096e+05
+C1Mo1       ,  1.015200000000000e+01,  7.759322763290996e+00, -1.026600985221675e+01,  0.000000000000000e+00,  1.051308448580104e+05
+Ga0.25Nb0.75,  1.816296296333330e+01,  1.254026789732079e+02,  1.177039127595943e-03,  2.535095268834000e+01,  1.094517557980373e+06

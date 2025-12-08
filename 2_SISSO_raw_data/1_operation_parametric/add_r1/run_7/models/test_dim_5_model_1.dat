@@ -1,0 +1,23 @@
+# c0 + a0 * (|wtd_range_IP - range_IP|) + a1 * (|range_EA - mean_EA|) + a2 * (w_log / mean_at_mass) + a3 * (lambda4w_low * w_log) + a4 * (mean_PE / mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 16.4365856501558; Max AE: 35.7044848134178
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.895835581989628e+00,  5.270695924731974e+00,  9.769417642061315e-01,  4.701482957739650e-05, -2.523993495142605e+02,  1.322054501354792e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               23|22|abd; (|wtd_range_IP - range_IP|); $\left(\left|wtd_{range, IP} - range_{IP}\right|\right)$; abs(wtd_range_IP - range_IP); abs(newdata$wtd_range_IP - newdata$range_IP); wtd_range_IP,range_IP
+# 1;  1; eV;                                               28|26|abd; (|range_EA - mean_EA|); $\left(\left|range_{EA} - mean_{EA}\right|\right)$; abs(range_EA - mean_EA); abs(newdata$range_EA - newdata$mean_EA); range_EA,mean_EA
+# 2;  1; K * g^-1 * mol;                                   4|8|div; (w_log / mean_at_mass); $\left(\frac{ w_{log} }{ mean_{at, mass} } \right)$; (w_log ./ mean_at_mass); (newdata$w_log / newdata$mean_at_mass); w_log,mean_at_mass
+# 3;  1; K^2;                                              6|4|mult; (lambda4w_low * w_log); $\left(lambda4w_{low} w_{log}\right)$; (lambda4w_low .* w_log); (newdata$lambda4w_low * newdata$w_log); lambda4w_low,w_log
+# 4;  1; g^-1 * mol;                                       32|8|div; (mean_PE / mean_at_mass); $\left(\frac{ mean_{PE} }{ mean_{at, mass} } \right)$; (mean_PE ./ mean_at_mass); (newdata$mean_PE / newdata$mean_at_mass); mean_PE,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ti1O1       ,  7.200000000000000e-01,  8.045724358381504e+00,  3.395000000000000e+00,  6.119999999999999e-01,  1.713429283629577e+01,  7.112986400000000e+01,  7.797527338318741e-02
+Ga1Mo3      ,  7.600000000000000e-01,  4.140038201121428e+00,  2.726300000000000e+00,  7.700000000000001e-02,  3.271219812522258e+00,  2.040723268400000e+03,  2.396286661073319e-02
+Pt0.25V0.75 ,  3.102500000000000e+00,  2.142220212429787e+00,  5.554999999999999e-01,  2.765000000000000e-01,  1.593267529883069e+00,  1.625971720030000e+04,  1.589265507329319e-02
+C1Mo1       ,  1.015200000000000e+01,  6.992336964721416e+00,  2.084000000000000e+00,  4.874999999999999e-01,  1.037876059636019e+01,  4.633298925999999e+02,  4.362662279921749e-02
+Ga0.25Nb0.75,  1.816296296333330e+01,  5.386744777675115e+01,  2.809500000000000e+00,  3.500000000000059e-03,  7.272239828714858e-02,  1.115006470886800e+06,  2.096791846984617e-02

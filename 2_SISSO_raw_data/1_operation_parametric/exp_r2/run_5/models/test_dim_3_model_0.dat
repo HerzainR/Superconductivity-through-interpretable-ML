@@ -1,0 +1,22 @@
+# c0 + a0 * ((|range_EA - wtd_std_IP|) / (|mean_EA - wtd_range_IP|)) + a1 * ((wtd_range_EA - wtd_std_IP) / (exp(1.181490e+00*range_IP))) + a2 * ((lambda3 * w_log) * (wtd_range_PE * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.14995104745062; Max AE: 20.6616345341568
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.156160038826906e+00,  4.151491337959143e+01,  1.631676387021422e-04,  3.131764800862025e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         28|25|abd|26|23|abd|div; ((|range_EA - wtd_std_IP|) / (|mean_EA - wtd_range_IP|)); $\left(\frac{ \left(\left|range_{EA} - wtd_{std, IP}\right|\right) }{ \left(\left|mean_{EA} - wtd_{range, IP}\right|\right) } \right)$; (abs(range_EA - wtd_std_IP) ./ abs(mean_EA - wtd_range_IP)); (abs(newdata$range_EA - newdata$wtd_std_IP) / abs(newdata$mean_EA - newdata$wtd_range_IP)); range_EA,wtd_std_IP,mean_EA,wtd_range_IP
+# 1;  2; eV;                                               29|25|sub|22|exp:1.1814903758315e+00,0.0000000000000e+00|div; ((wtd_range_EA - wtd_std_IP) / (exp(1.181490e+00*range_IP))); $\left(\frac{ \left(wtd_{range, EA} - wtd_{std, IP}\right) }{ \left(\exp{ \left(1.181e+00range_{IP} \right)}\right) } \right)$; ((wtd_range_EA - wtd_std_IP) ./ exp(1.181490e+00.*range_IP)); ((newdata$wtd_range_EA - newdata$wtd_std_IP) / exp(1.181490e+00*newdata$range_IP)); wtd_range_EA,wtd_std_IP,range_IP
+# 2;  2; K^2;                                              7|4|mult|35|4|mult|mult; ((lambda3 * w_log) * (wtd_range_PE * w_log)); $\left(\left(lambda3 w_{log}\right) \left(wtd_{range, PE} w_{log}\right)\right)$; ((lambda3 .* w_log) .* (wtd_range_PE .* w_log)); ((newdata$lambda3 * newdata$w_log) * (newdata$wtd_range_PE * newdata$w_log)); lambda3,w_log,wtd_range_PE,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  6.102694662542318e+00,  1.377018043684710e-02, -5.169807059219410e-02,  3.117946739861154e+04
+Al1Os1      ,  3.900000000000000e-01,  4.216100477189713e+00,  1.190110826939471e+00, -4.160910719915484e-02,  1.505597265699586e+03
+Al1Mo3      ,  5.800000000000000e-01,  4.036046245729747e+00,  4.094146794673274e-02,  3.275521512713661e-03,  4.167628466562101e+03
+La1Se1      ,  1.020000000000000e+00,  4.291669866936874e+00,  6.850060459492141e-01, -9.563499487273979e-03,  4.899884370467624e+02
+Co1Si2      ,  1.306666667000000e+00,  2.196830120115678e+01,  3.403373115929847e-01,  4.257354988525508e-01,  2.625167191500000e+03
+Al1Ge1Sr1   ,  6.700000000000000e+00,  8.688849087286023e+00,  2.694927536231885e+00, -3.902097729972295e-02,  8.373852368764012e+03

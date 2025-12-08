@@ -1,0 +1,22 @@
+# c0 + a0 * (((L_avg+9.474723e-01)^6) + 2.123198e+03*((wtd_std_IP-3.598079e+00) / (wtd_mean_at_rad-1.149441e+00))) + a1 * (((wtd_mean_IP+5.925972e+01) / (lambda3-4.803434e-02)) - (6.216695e+01*((mean_ThermalCond-2.266980e+01) / (wtd_mean_IP-8.845491e+00)))) + a2 * (((wtd_mean_IP+3.901520e+00) * (lambda+1.686163e+01)) - (1.110130e+03*((wtd_mean_PE-1.812385e+00) / (mean_at_mass-1.749069e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.5175929866989; Max AE: 11.3279564596793
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  6.805845590227127e-06, -1.723030755366333e-04,  1.234040551309935e-01, -2.105229438722315e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^6;                                             0|sp|25|15|div|add:2.1231975368389e+03,0.0000000000000e+00,-3.5980786128937e+00,-1.1494411455706e+00,1.0000000000000e+00,9.4747225839896e-01; (((L_avg+9.474723e-01)^6) + 2.123198e+03*((wtd_std_IP-3.598079e+00) / (wtd_mean_at_rad-1.149441e+00))); $\left(\left(\left(L_{avg}+9.475e-01\right)^6\right) + 2.12e+03\left(\frac{ wtd_{std, IP} -3.598e+00 }{ wtd_{mean, at, rad}-1.149e+00 } \right)\right)$; ((L_avg+9.474723e-01).^6 + (2.123198e+03.*((wtd_std_IP-3.598079e+00) ./ (wtd_mean_at_rad-1.149441e+00)))); ((newdata$L_avg+9.474723e-01)^6 + (2.123198e+03*((newdata$wtd_std_IP-3.598079e+00) / (newdata$wtd_mean_at_rad-1.149441e+00)))); L_avg,wtd_std_IP,wtd_mean_at_rad
+# 1;  2; eV;                                               21|7|div|38|21|div|sub:6.2166948990214e+01,0.0000000000000e+00,-2.2669797223511e+01,-8.8454906248350e+00,5.9259722983442e+01,-4.8034340919211e-02; (((wtd_mean_IP+5.925972e+01) / (lambda3-4.803434e-02)) - (6.216695e+01*((mean_ThermalCond-2.266980e+01) / (wtd_mean_IP-8.845491e+00)))); $\left(\left(\frac{ wtd_{mean, IP} +5.926e+01 }{ lambda3-4.803e-02 } \right) - \left(6.217e+01\left(\frac{ mean_{ThermalCond} -2.267e+01 }{ wtd_{mean, IP}-8.845e+00 } \right)\right)\right)$; (((wtd_mean_IP+5.925972e+01) ./ (lambda3-4.803434e-02)) - (6.216695e+01.*((mean_ThermalCond-2.266980e+01) ./ (wtd_mean_IP-8.845491e+00)))); (((newdata$wtd_mean_IP+5.925972e+01) / (newdata$lambda3-4.803434e-02)) - (6.216695e+01*((newdata$mean_ThermalCond-2.266980e+01) / (newdata$wtd_mean_IP-8.845491e+00)))); wtd_mean_IP,lambda3,mean_ThermalCond,wtd_mean_IP
+# 2;  2; eV;                                               21|5|mult|33|8|div|sub:1.1101299451508e+03,0.0000000000000e+00,-1.8123854019596e+00,-1.7490690279454e+01,3.9015199957140e+00,1.6861626114011e+01; (((wtd_mean_IP+3.901520e+00) * (lambda+1.686163e+01)) - (1.110130e+03*((wtd_mean_PE-1.812385e+00) / (mean_at_mass-1.749069e+01)))); $\left(\left(\left(wtd_{mean, IP}+3.902e+00\right) * \left(lambda+1.686e+01\right)\right) - \left(1.110e+03\left(\frac{ wtd_{mean, PE} -1.812e+00 }{ mean_{at, mass}-1.749e+01 } \right)\right)\right)$; (((wtd_mean_IP+3.901520e+00) .* (lambda+1.686163e+01)) - (1.110130e+03.*((wtd_mean_PE-1.812385e+00) ./ (mean_at_mass-1.749069e+01)))); (((newdata$wtd_mean_IP+3.901520e+00) * (newdata$lambda+1.686163e+01)) - (1.110130e+03*((newdata$wtd_mean_PE-1.812385e+00) / (newdata$mean_at_mass-1.749069e+01)))); wtd_mean_IP,lambda,wtd_mean_PE,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  2.661091564919940e+00,  7.400017320252386e+04,  3.715445937001075e+03,  1.932670278646459e+02
+La1         ,  5.343000000000000e+00,  4.509893048379287e+00,  1.688942200077387e+05, -1.821062821215131e+02,  1.975732641426007e+02
+C1Ta1       ,  8.637499999999999e+00,  9.156319458372938e+00, -3.667703048500940e+04, -6.392526187280959e+03,  2.378915352344450e+02
+C1I1Y1      ,  9.917500000000000e+00,  9.843327022332167e+00,  3.008764107817415e+05, -3.894440401341940e+03,  2.283302516070312e+02
+Nb1Ru3      ,  1.350000000000000e+01,  2.172043540320670e+00, -7.249726783782406e+03,  2.632224527385005e+03,  1.922726024277769e+02
+Nb3Sn1      ,  1.670900000000000e+01,  5.615439544354646e+00,  4.391150939605614e+04,  1.214790243624751e+03,  2.153753460199513e+02

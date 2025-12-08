@@ -1,0 +1,24 @@
+# c0 + a0 * (wtd_mean_EA + 1.135165e-02*wtd_range_at_mass) + a1 * (std_ThermalCond - (4.496838e-01*range_ThermalCond)) + a2 * (wtd_std_EA / mean_at_mass) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.02025189801965; Max AE: 8.21968595653845
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  4.036178600844097e+00, -6.270749326332692e-01, -4.441339556029224e+02,  9.759716259738818e+00,  8.009327657098548e-01, -9.361952725657277e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               27|11|add:1.1351651138354e-02,0.0000000000000e+00; (wtd_mean_EA + 1.135165e-02*wtd_range_at_mass); $\left(wtd_{mean, EA} + 0.0114wtd_{range, at, mass}\right)$; (wtd_mean_EA + (1.135165e-02.*wtd_range_at_mass)); (newdata$wtd_mean_EA + (1.135165e-02*newdata$wtd_range_at_mass)); wtd_mean_EA,wtd_range_at_mass
+# 1;  1; W * mK^-1;                                        42|40|sub:4.4968384217762e-01,0.0000000000000e+00; (std_ThermalCond - (4.496838e-01*range_ThermalCond)); $\left(std_{ThermalCond} - \left(4.497e-01range_{ThermalCond}\right)\right)$; (std_ThermalCond - (4.496838e-01.*range_ThermalCond)); (newdata$std_ThermalCond - (4.496838e-01*newdata$range_ThermalCond)); std_ThermalCond,range_ThermalCond
+# 2;  1; eV * g^-1 * mol;                                  31|8|div; (wtd_std_EA / mean_at_mass); $\left(\frac{ wtd_{std, EA} }{ mean_{at, mass} } \right)$; (wtd_std_EA ./ mean_at_mass); (newdata$wtd_std_EA / newdata$mean_at_mass); wtd_std_EA,mean_at_mass
+# 3;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  6.322407260477380e+00,  1.168062072873273e+00, -3.314475434149500e+00,  4.456793628448219e-03,  8.978136229592979e-01,  2.632475087957086e+00
+La1         ,  5.343000000000000e+00,  7.335421797810087e+00,  5.000000000000000e-01,  0.000000000000000e+00,  0.000000000000000e+00,  1.488128515319332e+00,  1.942399688997196e-01
+C1Ta1       ,  8.637499999999999e+00,  4.385142817513407e+00,  1.751352403519574e+00,  4.176241099257410e+00,  4.876673538578582e-03,  1.004116365617564e+00,  2.076511431938532e+00
+C1I1Y1      ,  9.917500000000000e+00,  2.759621726125374e+00,  1.977740994636214e+00, -5.021298597292585e-01,  1.502226740373397e-02,  9.646662290801257e-01,  1.349945878752604e+00
+Nb1Ru3      ,  1.350000000000000e+01,  5.280314043461555e+00,  1.607623275084970e+00,  3.320866416276978e+00,  6.402840757947874e-04,  9.045449112469409e-01,  2.112929431853869e+00
+Nb3Sn1      ,  1.670900000000000e+01,  9.703675617732731e+00,  1.423892154331766e+00,  6.541100516909202e-01,  1.147359089371145e-03,  1.430227032921702e+00,  3.492083621434963e-01

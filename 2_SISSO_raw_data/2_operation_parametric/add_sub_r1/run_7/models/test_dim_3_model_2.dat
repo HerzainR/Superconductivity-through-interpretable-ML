@@ -1,0 +1,21 @@
+# c0 + a0 * (range_at_rad + 1.581354e-02*wtd_mean_at_mass) + a1 * (exp(-1.0 * lambda)) + a2 * (w_log / density)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.35476255813513; Max AE: 10.9827171098412
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.241886348656014e+00, -1.175225335926179e+01,  1.215694102282082e-01,  1.266279208494328e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               16|9|add:1.5813536698482e-02,0.0000000000000e+00; (range_at_rad + 1.581354e-02*wtd_mean_at_mass); $\left(range_{at, rad} + 0.0158wtd_{mean, at, mass}\right)$; (range_at_rad + (1.581354e-02.*wtd_mean_at_mass)); (newdata$range_at_rad + (1.581354e-02*newdata$wtd_mean_at_mass)); range_at_rad,wtd_mean_at_mass
+# 1;  1; Unitless;                                         5|nexp; (exp(-1.0 * lambda)); $\left(\exp{ \left(-lambda \right) } \right)$; exp(-1.0 * (lambda)); exp(-1.0 * (newdata$lambda)); lambda
+# 2;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ti1O1       ,  7.200000000000000e-01,  7.686101296944912e+00,  1.444976830099957e+00,  8.832915073154146e-01,  9.966353369763205e+01
+Ga1Mo3      ,  7.600000000000000e-01,  2.428463226568708e+00,  1.733624230148387e+00,  6.647794150798125e-01,  2.759433808553971e+01
+Pt0.25V0.75 ,  3.102500000000000e+00,  4.557527587568822e+00,  1.935415562777516e+00,  4.463731578443175e-01,  1.861275403608737e+01
+C1Mo1       ,  1.015200000000000e+01,  4.873030532548429e+00,  1.663627361813403e+00,  8.220122346781865e-01,  6.476922543352600e+01
+Ga0.25Nb0.75,  1.816296296333330e+01,  7.180245853492085e+00,  1.797525088573093e+00,  1.572411704043684e-06,  7.124578313253012e-01

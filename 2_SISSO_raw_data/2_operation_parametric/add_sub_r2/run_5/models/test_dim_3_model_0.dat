@@ -1,0 +1,22 @@
+# c0 + a0 * ((wtd_mean_IP + 3.337568e+00*mean_at_rad) + 4.339570e+01*(1.0 / (lambda4w_low-1.088603e+02))) + a1 * (((wtd_range_at_mass+7.779798e+00) / (wtd_mean_PE-2.431325e+00)) - (1.239683e+02*((wtd_std_PE-7.251168e+00) / (wtd_mean_at_mass-1.000032e+02)))) + a2 * (((lambda-3.677678e-01) / (wtd_mean_at_mass-1.449335e+01)) - (6.986689e-01*((lambda3+3.968699e-02) / (lambda4w_low-5.089139e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.18899759238572; Max AE: 6.9197269329194
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.465854543677362e+00, -8.275704365098894e-03,  8.453704703846064e+01, -1.427861866226696e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|14|add|6|inv|add:4.3395703092753e+01,0.0000000000000e+00,1.0000000000000e+00,-1.0886031024301e+02,3.3375684069789e+00,0.0000000000000e+00; ((wtd_mean_IP + 3.337568e+00*mean_at_rad) + 4.339570e+01*(1.0 / (lambda4w_low-1.088603e+02))); $\left(\left(wtd_{mean, IP} + 3.34mean_{at, rad}\right) + 43.4\left(\frac{1}{ lambda4w_{low}-1.089e+02 }\right)\right)$; ((wtd_mean_IP + (3.337568e+00.*mean_at_rad)) + (4.339570e+01.*(lambda4w_low-1.088603e+02).^(-1))); ((newdata$wtd_mean_IP + (3.337568e+00*newdata$mean_at_rad)) + (4.339570e+01*(newdata$lambda4w_low-1.088603e+02)^(-1))); wtd_mean_IP,mean_at_rad,lambda4w_low
+# 1;  2; g * mol^-1;                                       11|33|div|37|9|div|sub:1.2396828596581e+02,0.0000000000000e+00,-7.2511680756965e+00,-1.0000315136547e+02,7.7797980604798e+00,-2.4313251022420e+00; (((wtd_range_at_mass+7.779798e+00) / (wtd_mean_PE-2.431325e+00)) - (1.239683e+02*((wtd_std_PE-7.251168e+00) / (wtd_mean_at_mass-1.000032e+02)))); $\left(\left(\frac{ wtd_{range, at, mass} +7.780e+00 }{ wtd_{mean, PE}-2.431e+00 } \right) - \left(1.240e+02\left(\frac{ wtd_{std, PE} -7.251e+00 }{ wtd_{mean, at, mass}-1.000e+02 } \right)\right)\right)$; (((wtd_range_at_mass+7.779798e+00) ./ (wtd_mean_PE-2.431325e+00)) - (1.239683e+02.*((wtd_std_PE-7.251168e+00) ./ (wtd_mean_at_mass-1.000032e+02)))); (((newdata$wtd_range_at_mass+7.779798e+00) / (newdata$wtd_mean_PE-2.431325e+00)) - (1.239683e+02*((newdata$wtd_std_PE-7.251168e+00) / (newdata$wtd_mean_at_mass-1.000032e+02)))); wtd_range_at_mass,wtd_mean_PE,wtd_std_PE,wtd_mean_at_mass
+# 2;  2; g^-1 * mol;                                       5|9|div|7|6|div|sub:6.9866890714845e-01,0.0000000000000e+00,3.9686987084827e-02,-5.0891391688493e+00,-3.6776776088012e-01,-1.4493354165349e+01; (((lambda-3.677678e-01) / (wtd_mean_at_mass-1.449335e+01)) - (6.986689e-01*((lambda3+3.968699e-02) / (lambda4w_low-5.089139e+00)))); $\left(\left(\frac{ lambda -3.678e-01 }{ wtd_{mean, at, mass}-1.449e+01 } \right) - \left(6.987e-01\left(\frac{ lambda3 +3.969e-02 }{ lambda4w_{low}-5.089e+00 } \right)\right)\right)$; (((lambda-3.677678e-01) ./ (wtd_mean_at_mass-1.449335e+01)) - (6.986689e-01.*((lambda3+3.968699e-02) ./ (lambda4w_low-5.089139e+00)))); (((newdata$lambda-3.677678e-01) / (newdata$wtd_mean_at_mass-1.449335e+01)) - (6.986689e-01*((newdata$lambda3+3.968699e-02) / (newdata$lambda4w_low-5.089139e+00)))); lambda,wtd_mean_at_mass,lambda3,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  5.252887695020841e+00,  1.210835290132883e+01, -9.382058675279245e+01,  1.189999930612734e-02
+Al1Os1      ,  3.900000000000000e-01,  1.903384390416031e+00,  1.129870438464799e+01, -6.962287794574478e+01, -1.131376710747676e-02
+Al1Mo3      ,  5.800000000000000e-01,  7.499726932919400e+00,  1.099123149976221e+01, -2.194992903691951e+02,  4.554556682650644e-02
+La1Se1      ,  1.020000000000000e+00,  5.912415747594126e+00,  1.271485127232021e+01,  2.829117734853961e+01,  2.113915002510897e-02
+Co1Si2      ,  1.306666667000000e+00,  6.756981499020819e+00,  1.160302550094025e+01, -3.073786604160287e+01,  4.462984159405765e-02
+Al1Ge1Sr1   ,  6.700000000000000e+00,  1.242456746761535e+01,  1.138028602442235e+01, -5.329857118213704e+01,  1.133261601873873e-01

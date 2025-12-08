@@ -1,0 +1,22 @@
+# c0 + a0 * ((density-4.558620e+00) * (wtd_mean_IP-6.639097e+00)) + a1 * (w_log / density) + a2 * ((lambda4w_low-2.329548e+01) * (w_log-4.272643e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.73415545998112; Max AE: 12.2800616233959
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.714982469631013e-01,  8.680125600334868e-02,  6.218525106623920e-05, -9.826656479386963e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^-3 * eV * g;                                   2|21|mult:-4.5586198942111e+00,-6.6390970783339e+00; ((density-4.558620e+00) * (wtd_mean_IP-6.639097e+00)); $\left(\left(density-4.559e+00\right) * \left(wtd_{mean, IP}-6.639e+00\right)\right)$; ((density-4.558620e+00) .* (wtd_mean_IP-6.639097e+00)); ((newdata$density-4.558620e+00) * (newdata$wtd_mean_IP-6.639097e+00)); density,wtd_mean_IP
+# 1;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# 2;  1; K^2;                                              6|4|mult:-2.3295481910860e+01,-4.2726430429619e+00; ((lambda4w_low-2.329548e+01) * (w_log-4.272643e+00)); $\left(\left(lambda4w_{low}-2.330e+01\right) * \left(w_{log}-4.273e+00\right)\right)$; ((lambda4w_low-2.329548e+01) .* (w_log-4.272643e+00)); ((newdata$lambda4w_low-2.329548e+01) * (newdata$w_log-4.272643e+00)); lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  1.310966317320690e+00,  1.058051193276346e+00,  2.098857526881720e+01,  2.967556178826344e+03
+La1         ,  5.343000000000000e+00,  3.403693743135733e+00, -1.679579190093644e+00,  4.394299674267102e+00,  7.173616555937553e+04
+C1Ta1       ,  8.637499999999999e+00,  1.033012838515492e+01,  2.880525951816249e+01,  1.394162839248434e+01,  3.669786124952500e+04
+C1I1Y1      ,  9.917500000000000e+00,  1.366780076313871e+00,  1.071766331176069e+00,  2.066848790322581e+01,  4.252010403761520e+03
+Nb1Ru3      ,  1.350000000000000e+01,  2.172747037513647e+00,  3.806332054776417e+00,  1.864897504456328e+01,  8.092686602516653e+03
+Nb3Sn1      ,  1.670900000000000e+01,  4.428938376604076e+00,  1.113095600757648e+00,  3.969839816933638e+00,  7.662288655741455e+04

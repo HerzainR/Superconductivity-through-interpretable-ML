@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.00135589 s
+Time to generate feat space: 0.020349 s
+Projection time: 0.000532866 s
+Time to get best features on rank : 6.91414e-06 s
+|---Complete final combination/selection from all ranks: 0.000488997 s
+Time for SIS: 0.0011909 s
+Time for l0-norm: 0.00088191 s
+Projection time: 0.000263929 s
+Time to get best features on rank : 7.86781e-06 s
+|---Complete final combination/selection from all ranks: 0.000406981 s
+Time for SIS: 0.00116014 s
+Time for l0-norm: 0.00112414 s
+Projection time: 0.000290871 s
+Time to get best features on rank : 6.38962e-05 s
+|---Complete final combination/selection from all ranks: 0.000397921 s
+Time for SIS: 0.00122309 s
+Time for l0-norm: 0.0250401 s
+Projection time: 0.000344992 s
+Time to get best features on rank : 9.05991e-06 s
+|---Complete final combination/selection from all ranks: 0.000448942 s
+Time for SIS: 0.00135589 s
+Time for l0-norm: 2.07326 s
+Projection time: 0.000349998 s
+Time to get best features on rank : 0.0001719 s
+|---Complete final combination/selection from all ranks: 0.000650883 s
+Time for SIS: 0.00153303 s
+Time for l0-norm: 160.829 s
+Train RMSE: 4.72075 K; Test RMSE: 7.69482 K
+c0 + a0 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.47233 K; Test RMSE: 6.87207 K
+c0 + a0 * cbrt(lambda) + a1 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.17269 K; Test RMSE: 7.27829 K
+c0 + a0 * (wtd_range_PE / lambda) + a1 * (wtd_range_PE * lambda) + a2 * (w_log / mean_at_mass)
+
+Train RMSE: 2.95887 K; Test RMSE: 6.92543 K
+c0 + a0 * (wtd_mean_IP * mean_at_rad) + a1 * (wtd_range_PE / lambda) + a2 * cbrt(lambda4w_low) + a3 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 2.63794 K; Test RMSE: 5.32395 K
+c0 + a0 * (range_EA - wtd_mean_EA) + a1 * (std_at_rad * density) + a2 * (range_at_rad * density) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

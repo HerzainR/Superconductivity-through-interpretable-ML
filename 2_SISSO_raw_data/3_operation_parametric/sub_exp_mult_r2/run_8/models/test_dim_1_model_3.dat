@@ -1,0 +1,19 @@
+# c0 + a0 * ((((mean_IP-5.051269e+00) * (lambda+9.153956e-01))-2.055537e+00) * (((wtd_range_at_mass-1.796304e+01) / (mean_at_mass-1.839113e+01))+9.875326e-01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.13999111766247; Max AE: 8.3163134886605
+# Coefficients
+# Task   a0                      c0
+# all ,  6.262905931284980e-01,  2.477092674918798e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               20|5|mult|11|8|div|mult:-2.0555365915988e+00,9.8753259233134e-01,-1.7963041128737e+01,-1.8391132427650e+01,-5.0512687110005e+00,9.1539557133403e-01; ((((mean_IP-5.051269e+00) * (lambda+9.153956e-01))-2.055537e+00) * (((wtd_range_at_mass-1.796304e+01) / (mean_at_mass-1.839113e+01))+9.875326e-01)); $\left(\left(\left(\left(mean_{IP}-5.051e+00\right) * \left(lambda+9.154e-01\right)\right)-2.056e+00\right) * \left(\left(\frac{ wtd_{range, at, mass} -1.796e+01 }{ mean_{at, mass}-1.839e+01 } \right)+9.875e-01\right)\right)$; ((((mean_IP-5.051269e+00) .* (lambda+9.153956e-01))-2.055537e+00) .* (((wtd_range_at_mass-1.796304e+01) ./ (mean_at_mass-1.839113e+01))+9.875326e-01)); ((((newdata$mean_IP-5.051269e+00) * (newdata$lambda+9.153956e-01))-2.055537e+00) * (((newdata$wtd_range_at_mass-1.796304e+01) / (newdata$mean_at_mass-1.839113e+01))+9.875326e-01)); mean_IP,lambda,wtd_range_at_mass,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  3.484641910926845e+00,  1.608756776906156e+00
+Sn1         ,  3.740729412000000e+00,  2.793844873546267e+00,  5.057591509481294e-01
+Al1Si1Sr1   ,  4.750000000000000e+00,  2.720054888263448e+00,  3.879384681973035e-01
+Sn1Ta3      ,  6.692500000000000e+00,  1.006464254510048e+01,  1.211506280539795e+01
+Re3W1       ,  8.733333332999999e+00,  1.704964682166050e+01,  2.326803932013043e+01

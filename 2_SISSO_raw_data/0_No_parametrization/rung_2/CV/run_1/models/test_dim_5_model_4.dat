@@ -1,0 +1,24 @@
+# c0 + a0 * ((range_EA - wtd_mean_EA) * (range_EA - wtd_range_IP)) + a1 * ((mean_EA / mean_at_mass) / (range_PE - lambda)) + a2 * ((|lambda4w_low - w_log|) / (|range_PE - lambda3|)) + a3 * ((wtd_range_PE * wtd_std_IP) + (wtd_std_EA - wtd_mean_IP)) + a4 * ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15.6631558378734; Max AE: 36.2991125767966
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.280374949395491e+00, -1.725592629875542e+01, -4.607343093713374e-04, -3.617623050972335e+00,  4.664397467714338e+00, -2.073495990065151e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             28|27|sub|28|23|sub|mult; ((range_EA - wtd_mean_EA) * (range_EA - wtd_range_IP)); $\left(\left(range_{EA} - wtd_{mean, EA}\right) \left(range_{EA} - wtd_{range, IP}\right)\right)$; ((range_EA - wtd_mean_EA) .* (range_EA - wtd_range_IP)); ((newdata$range_EA - newdata$wtd_mean_EA) * (newdata$range_EA - newdata$wtd_range_IP)); range_EA,wtd_mean_EA,range_EA,wtd_range_IP
+# 1;  2; eV * g^-1 * mol;                                  26|8|div|34|5|sub|div; ((mean_EA / mean_at_mass) / (range_PE - lambda)); $\left(\frac{ \left(\frac{ mean_{EA} }{ mean_{at, mass} } \right) }{ \left(range_{PE} - lambda\right) } \right)$; ((mean_EA ./ mean_at_mass) ./ (range_PE - lambda)); ((newdata$mean_EA / newdata$mean_at_mass) / (newdata$range_PE - newdata$lambda)); mean_EA,mean_at_mass,range_PE,lambda
+# 2;  2; K;                                                6|4|abd|34|7|abd|div; ((|lambda4w_low - w_log|) / (|range_PE - lambda3|)); $\left(\frac{ \left(\left|lambda4w_{low} - w_{log}\right|\right) }{ \left(\left|range_{PE} - lambda3\right|\right) } \right)$; (abs(lambda4w_low - w_log) ./ abs(range_PE - lambda3)); (abs(newdata$lambda4w_low - newdata$w_log) / abs(newdata$range_PE - newdata$lambda3)); lambda4w_low,w_log,range_PE,lambda3
+# 3;  2; eV;                                               35|25|mult|31|21|sub|add; ((wtd_range_PE * wtd_std_IP) + (wtd_std_EA - wtd_mean_IP)); $\left(\left(wtd_{range, PE} wtd_{std, IP}\right) + \left(wtd_{std, EA} - wtd_{mean, IP}\right)\right)$; ((wtd_range_PE .* wtd_std_IP) + (wtd_std_EA - wtd_mean_IP)); ((newdata$wtd_range_PE * newdata$wtd_std_IP) + (newdata$wtd_std_EA - newdata$wtd_mean_IP)); wtd_range_PE,wtd_std_IP,wtd_std_EA,wtd_mean_IP
+# 4;  2; eV^2;                                             27|25|abd|26|5|mult|mult; ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda)); $\left(\left(\left|wtd_{mean, EA} - wtd_{std, IP}\right|\right) \left(mean_{EA} lambda\right)\right)$; (abs(wtd_mean_EA - wtd_std_IP) .* (mean_EA .* lambda)); (abs(newdata$wtd_mean_EA - newdata$wtd_std_IP) * (newdata$mean_EA * newdata$lambda)); wtd_mean_EA,wtd_std_IP,mean_EA,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Sb1V3       ,  6.500000000000000e-01,  3.432258994886789e+00,  2.738283499999999e-01, -2.302563756079061e-02,  5.704231343283581e+02, -6.472523000000001e+00,  5.723190165000003e-02
+B2Ru1       ,  8.000000000000000e-01,  4.895179338141825e+00, -5.493529900000002e-01, -5.566094082945858e-02,  3.365746296296296e+03, -7.400414560000000e+00,  3.255306827499999e-02
+Nb1O1       ,  1.380000000000000e+00,  1.127171170542226e+01,  1.742653500000000e+00,  1.568350776627944e-02,  1.764650401836969e+02, -6.749359999999998e+00,  1.224320696500000e+00
+B1Ta1       ,  4.000000000000000e+00,  7.831911790438169e+00,  4.046549999999999e-02,  1.002824168826557e-02,  7.439498106060605e+02, -8.016419999999998e+00,  6.535614125000000e-03
+N1Zr1       ,  9.850000000000000e+00,  5.685847794924067e+00, -7.506119999999999e-01,  3.658672726702080e-03,  2.092370469798658e+02, -6.993750000000000e+00,  4.803745335000000e-01
+B2Mg0.98    ,  3.840000000000000e+01,  2.100887423203375e+00, -2.497914900000000e-01,  2.313633482035094e-01,  1.648476590330789e+03, -7.702422020000000e+00,  9.243048185000002e-03

@@ -1,0 +1,20 @@
+# c0 + a0 * (wtd_range_at_rad * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.2690293623901; Max AE: 33.9252501947616
+# Coefficients
+# Task   a0                      c0
+# all ,  1.221308224419235e+00,  4.398258049834792e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               17|5|mult; (wtd_range_at_rad * lambda); $\left(wtd_{range, at, rad} lambda\right)$; (wtd_range_at_rad .* lambda); (newdata$wtd_range_at_rad * newdata$lambda); wtd_range_at_rad,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  5.200510996291299e+00,  6.568800000000001e-01
+B2Ru1       ,  8.000000000000000e-01,  4.431658668057101e+00,  2.734823000000000e-02
+Nb1O1       ,  1.380000000000000e+00,  4.674618117472825e+00,  2.262820000000000e-01
+B1Ta1       ,  4.000000000000000e+00,  4.518257689425104e+00,  9.825500000000001e-02
+N1Zr1       ,  9.850000000000000e+00,  4.781528996822036e+00,  3.138200000000000e-01
+B2Mg0.98    ,  3.840000000000000e+01,  4.474749805238392e+00,  6.263099999999999e-02

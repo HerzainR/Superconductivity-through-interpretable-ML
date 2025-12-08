@@ -1,0 +1,23 @@
+# c0 + a0 * ((wtd_std_ThermalCond^2) * (wtd_range_at_rad * bulk_mod)) + a1 * (|(std_PE * range_at_mass) - (|wtd_std_at_mass - wtd_mean_at_mass|)|) + a2 * ((range_ThermalCond / lambda3) / (|wtd_range_PE - lambda3|)) + a3 * ((wtd_range_EA * wtd_range_IP) * cbrt(lambda4w_low)) + a4 * ((wtd_std_at_rad * lambda4w_low) * (w_log^2))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 39.2462012716987; Max AE: 87.116808604848
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -8.425911714357710e-06,  4.582285158290432e-02,  2.186013425005260e-04,  8.331126530389975e-01,  1.061066451151524e-06, -6.424923643642033e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * GPa * W^2 * mK^-2;                           43|sq|17|1|mult|mult; ((wtd_std_ThermalCond^2) * (wtd_range_at_rad * bulk_mod)); $\left(\left(wtd_{std, ThermalCond}^2\right) \left(wtd_{range, at, rad} bulk_{mod}\right)\right)$; ((wtd_std_ThermalCond)^2 .* (wtd_range_at_rad .* bulk_mod)); ((newdata$wtd_std_ThermalCond)^2 * (newdata$wtd_range_at_rad * newdata$bulk_mod)); wtd_std_ThermalCond,wtd_range_at_rad,bulk_mod
+# 1;  2; g * mol^-1;                                       36|10|mult|13|9|abd|abd; (|(std_PE * range_at_mass) - (|wtd_std_at_mass - wtd_mean_at_mass|)|); $\left(\left|\left(std_{PE} range_{at, mass}\right) - \left(\left|wtd_{std, at, mass} - wtd_{mean, at, mass}\right|\right)\right|\right)$; abs((std_PE .* range_at_mass) - abs(wtd_std_at_mass - wtd_mean_at_mass)); abs((newdata$std_PE * newdata$range_at_mass) - abs(newdata$wtd_std_at_mass - newdata$wtd_mean_at_mass)); std_PE,range_at_mass,wtd_std_at_mass,wtd_mean_at_mass
+# 2;  2; W * mK^-1;                                        40|7|div|35|7|abd|div; ((range_ThermalCond / lambda3) / (|wtd_range_PE - lambda3|)); $\left(\frac{ \left(\frac{ range_{ThermalCond} }{ lambda3 } \right) }{ \left(\left|wtd_{range, PE} - lambda3\right|\right) } \right)$; ((range_ThermalCond ./ lambda3) ./ abs(wtd_range_PE - lambda3)); ((newdata$range_ThermalCond / newdata$lambda3) / abs(newdata$wtd_range_PE - newdata$lambda3)); range_ThermalCond,lambda3,wtd_range_PE,lambda3
+# 3;  2; K^0.333333 * eV^2;                                29|23|mult|6|cbrt|mult; ((wtd_range_EA * wtd_range_IP) * cbrt(lambda4w_low)); $\left(\left(wtd_{range, EA} wtd_{range, IP}\right) \left(\sqrt[3]{ lambda4w_{low} }\right)\right)$; ((wtd_range_EA .* wtd_range_IP) .* nthroot(lambda4w_low, 3)); ((newdata$wtd_range_EA * newdata$wtd_range_IP) * nthroot(newdata$lambda4w_low, 3)); wtd_range_EA,wtd_range_IP,lambda4w_low
+# 4;  2; AA * K^3;                                         19|6|mult|4|sq|mult; ((wtd_std_at_rad * lambda4w_low) * (w_log^2)); $\left(\left(wtd_{std, at, rad} lambda4w_{low}\right) \left(w_{log}^2\right)\right)$; ((wtd_std_at_rad .* lambda4w_low) .* (w_log)^2); ((newdata$wtd_std_at_rad * newdata$lambda4w_low) * (newdata$w_log)^2); wtd_std_at_rad,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ti1O1       ,  7.200000000000000e-01,  3.437352118219009e+00,  1.390968933988839e+04,  1.427482000000000e+01,  1.158934599156118e+04,  1.188408118797463e+00,  1.829188499807302e+04
+Ga1Mo3      ,  7.600000000000000e-01,  3.066265658068953e+00,  3.702596963872896e+05,  7.443647499999999e+01,  1.471256988470695e+03,  3.627118714285897e+00,  6.995296235040913e+04
+Pt0.25V0.75 ,  3.102500000000000e+00,  2.128370378496399e+00,  3.467661381576426e+04,  1.684651250000001e+01,  5.975723622782449e+02,  1.694633845612187e+00,  7.055529528360097e+05
+C1Mo1       ,  1.015200000000000e+01,  2.357790736473170e-01,  3.543648750000001e+01,  4.356387999999999e+00,  6.684491978609626e+02,  5.056617444502318e-01,  1.051308448580104e+05
+Ga0.25Nb0.75,  1.816296296333330e+01,  1.052797715681813e+02,  1.522360272889000e+04,  7.551224300000000e+01,  4.392096361086318e-06,  1.217470340049621e+02,  1.094517557980373e+06

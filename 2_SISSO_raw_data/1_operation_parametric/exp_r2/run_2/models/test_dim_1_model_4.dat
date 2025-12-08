@@ -1,0 +1,20 @@
+# c0 + a0 * ((lambda4w_low * w_log) / (wtd_mean_at_mass * density))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.91915488274523; Max AE: 11.7905352450607
+# Coefficients
+# Task   a0                      c0
+# all ,  8.419988682250924e-03,  4.063340963038904e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K^2 * cm^3 * g^-2 * mol;                          6|4|mult|9|2|mult|div; ((lambda4w_low * w_log) / (wtd_mean_at_mass * density)); $\left(\frac{ \left(lambda4w_{low} w_{log}\right) }{ \left(wtd_{mean, at, mass} density\right) } \right)$; ((lambda4w_low .* w_log) ./ (wtd_mean_at_mass .* density)); ((newdata$lambda4w_low * newdata$w_log) / (newdata$wtd_mean_at_mass * newdata$density)); lambda4w_low,w_log,wtd_mean_at_mass,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  4.190952951087665e+00,  1.515583842977874e+01
+La1         ,  5.343000000000000e+00,  4.911007499625859e+00,  1.006731206627166e+02
+C1Ta1       ,  8.637499999999999e+00,  4.319415788977028e+00,  3.041272804533829e+01
+C1I1Y1      ,  9.917500000000000e+00,  4.215909115475463e+00,  1.811975742415995e+01
+Nb1Ru3      ,  1.350000000000000e+01,  4.162884053320695e+00,  1.182223563929788e+01
+Nb3Sn1      ,  1.670900000000000e+01,  4.918464754939274e+00,  1.015587816291184e+02

@@ -1,0 +1,20 @@
+# c0 + a0 * ((mean_IP + 6.917753e-01*lambda) + 2.766448e+00*|range_EA - (9.846446e-01*mean_EA+3.476537e-01)|)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15.10750213895; Max AE: 35.4091528890637
+# Coefficients
+# Task   a0                      c0
+# all ,  1.945631623196133e+00, -1.457068800345131e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               20|5|add|28|26|abd|add:2.7664478242790e+00,0.0000000000000e+00,9.8464460244858e-01,3.4765368043296e-01,6.9177533307497e-01,0.0000000000000e+00; ((mean_IP + 6.917753e-01*lambda) + 2.766448e+00*|range_EA - (9.846446e-01*mean_EA+3.476537e-01)|); $\left(\left(mean_{IP} + 0.692lambda\right) + 2.77\left(\left|range_{EA} - \left(9.846e-01mean_{EA}+3.477e-01\right)\right|\right)\right)$; ((mean_IP + (6.917753e-01.*lambda)) + (2.766448e+00.*abs(range_EA - (9.846446e-01.*mean_EA+3.476537e-01)))); ((newdata$mean_IP + (6.917753e-01*newdata$lambda)) + (2.766448e+00*abs(newdata$range_EA - (9.846446e-01*newdata$mean_EA+3.476537e-01)))); mean_IP,lambda,range_EA,mean_EA
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.666614010651496e+00,  9.887432844302387e+00
+B2Ru1       ,  8.000000000000000e-01,  2.391825966354798e+00,  8.718255690119493e+00
+Nb1O1       ,  1.380000000000000e+00,  1.092583283201198e+01,  1.310449549210121e+01
+B1Ta1       ,  4.000000000000000e+00,  4.701133069400679e+00,  9.905174670831952e+00
+N1Zr1       ,  9.850000000000000e+00,  7.541319230875143e+00,  1.136495057476634e+01
+B2Mg0.98    ,  3.840000000000000e+01,  2.990847110936290e+00,  9.026135731459213e+00

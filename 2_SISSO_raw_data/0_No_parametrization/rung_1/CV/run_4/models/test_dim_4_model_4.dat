@@ -1,0 +1,23 @@
+# c0 + a0 * (|std_EA - wtd_mean_EA|) + a1 * (range_at_rad * density) + a2 * cbrt(lambda) + a3 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.73733741933695; Max AE: 5.13631557473212
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  6.702658880251232e+00,  5.756237744030495e-01,  1.151904982902283e+01,  6.777943196687743e-01, -1.366892917244553e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               30|27|abd; (|std_EA - wtd_mean_EA|); $\left(\left|std_{EA} - wtd_{mean, EA}\right|\right)$; abs(std_EA - wtd_mean_EA); abs(newdata$std_EA - newdata$wtd_mean_EA); std_EA,wtd_mean_EA
+# 1;  1; AA * cm^-3 * g;                                   16|2|mult; (range_at_rad * density); $\left(range_{at, rad} density\right)$; (range_at_rad .* density); (newdata$range_at_rad * newdata$density); range_at_rad,density
+# 2;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 3;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+B1Mo1       ,  2.500000000000000e-01,  5.386315574732125e+00,  2.770000000000000e-01,  6.013000000000000e+00,  8.040420429653392e-01,  6.603156731237589e+00
+Hg2Na1      ,  1.620000000000000e+00, -1.127765731286719e+00,  9.130000000000002e-02,  3.219800000000001e+00,  8.507260232928537e-01,  4.075894344277194e-01
+Ga2Y1       ,  1.680000000000000e+00,  3.032091500065051e+00,  2.988000000000000e-01,  4.120800000000000e+00,  1.053097429768361e+00,  2.885152258422198e-01
+B2Nb1       ,  4.597500000000000e+00,  7.117553289037050e+00,  1.743000000000000e-01,  5.424000000000000e+00,  8.879885559762081e-01,  9.246523702741220e+00
+Nb0.75Si0.25,  9.000000000000000e+00,  8.110114693365055e+00,  7.700000000000000e-01,  3.927300000000000e+00,  1.138421947078910e+00,  1.835084933371403e+00
+Ta1B2       ,  9.500000000000000e+00,  8.066324017274171e+00,  2.695000000000000e-01,  1.055220000000000e+01,  9.597699101349483e-01,  4.129795616113745e+00

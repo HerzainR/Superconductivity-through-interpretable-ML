@@ -1,0 +1,20 @@
+# c0 + a0 * (((wtd_mean_IP + 7.821399e-01*lambda)-8.891167e+00) * (((wtd_range_at_mass-1.945915e+02) / (wtd_mean_at_mass-1.508382e+01))+1.329803e+01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.5185456945471; Max AE: 4.84784584927424
+# Coefficients
+# Task   a0                      c0
+# all ,  1.457203721783730e-01,  5.176230730831912e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|5|add|11|9|div|mult:-8.8911666449302e+00,1.3298034279029e+01,-1.9459154091885e+02,-1.5083817369220e+01,7.8213989550898e-01,0.0000000000000e+00; (((wtd_mean_IP + 7.821399e-01*lambda)-8.891167e+00) * (((wtd_range_at_mass-1.945915e+02) / (wtd_mean_at_mass-1.508382e+01))+1.329803e+01)); $\left(\left(\left(wtd_{mean, IP} + 0.782lambda\right)-8.891e+00\right) * \left(\left(\frac{ wtd_{range, at, mass} -1.946e+02 }{ wtd_{mean, at, mass}-1.508e+01 } \right)+1.330e+01\right)\right)$; (((wtd_mean_IP + (7.821399e-01.*lambda))-8.891167e+00) .* (((wtd_range_at_mass-1.945915e+02) ./ (wtd_mean_at_mass-1.508382e+01))+1.329803e+01)); (((newdata$wtd_mean_IP + (7.821399e-01*newdata$lambda))-8.891167e+00) * (((newdata$wtd_range_at_mass-1.945915e+02) / (newdata$wtd_mean_at_mass-1.508382e+01))+1.329803e+01)); wtd_mean_IP,lambda,wtd_range_at_mass,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B1Mo1       ,  2.500000000000000e-01,  4.102900420180512e+00, -7.365684664444587e+00
+Hg2Na1      ,  1.620000000000000e+00,  5.663399495510750e+00,  3.343175407776930e+00
+Ga2Y1       ,  1.680000000000000e+00,  2.291643647219135e+00, -1.979535901872265e+01
+B2Nb1       ,  4.597500000000000e+00,  4.696097816045651e+00, -3.294892180199356e+00
+Nb0.75Si0.25,  9.000000000000000e+00,  4.152154150725756e+00, -7.027682984865061e+00
+Ta1B2       ,  9.500000000000000e+00,  5.118034363355427e+00, -3.993701539908781e-01

@@ -1,0 +1,19 @@
+# c0 + a0 * ((w_log / mean_at_mass) * (wtd_range_PE * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.7423434676419; Max AE: 25.0418465903803
+# Coefficients
+# Task   a0                      c0
+# all ,  3.802133330860988e-03,  4.233332783270118e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K^2 * g^-1 * mol;                                 4|8|div|35|6|mult|mult; ((w_log / mean_at_mass) * (wtd_range_PE * lambda4w_low)); $\left(\left(\frac{ w_{log} }{ mean_{at, mass} } \right) \left(wtd_{range, PE} lambda4w_{low}\right)\right)$; ((w_log ./ mean_at_mass) .* (wtd_range_PE .* lambda4w_low)); ((newdata$w_log / newdata$mean_at_mass) * (newdata$wtd_range_PE * newdata$lambda4w_low)); w_log,mean_at_mass,wtd_range_PE,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Ti1O1       ,  7.200000000000000e-01,  4.241378421207979e+00,  2.116085165282527e+00
+Ga1Mo3      ,  7.600000000000000e-01,  4.342689788162727e+00,  2.876201210646273e+01
+Pt0.25V0.75 ,  3.102500000000000e+00,  4.561254774300778e+00,  8.624684157417560e+01
+C1Mo1       ,  1.015200000000000e+01,  4.239696531036519e+00,  1.673730827572025e+00
+Ga0.25Nb0.75,  1.816296296333330e+01,  4.320480955371357e+01,  1.024989745996583e+04

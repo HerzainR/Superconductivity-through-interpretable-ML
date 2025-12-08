@@ -1,0 +1,22 @@
+# c0 + a0 * ((((bulk_mod-1.489542e+01) / (density-8.707721e+00))+1.699456e+02) * ((exp(1.076858e+00*L_avg))-1.108631e+02)) + a1 * ((((density-6.328121e-01) / (lambda3-4.771726e-02))+2.567726e+01) * (((mean_IP-7.226312e+00) / (wtd_mean_IP-7.208854e+00))-3.670260e-01)) + a2 * ((((wtd_mean_IP-7.304455e+00) / (wtd_mean_at_rad-1.014773e+00))+5.031340e+00) * ((cbrt(lambda4w_low-3.439963e+01))+3.224828e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.06362518109355; Max AE: 10.1979506866382
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.075678650982082e-05, -1.988504099838033e-03,  6.970936676728277e-02,  1.422664483898519e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; GPa * cm^3 * g^-1;                                1|2|div|0|exp|mult:1.6994555678195e+02,-1.1086307048864e+02,1.0768577545667e+00,0.0000000000000e+00,-1.4895421870232e+01,-8.7077209601340e+00; ((((bulk_mod-1.489542e+01) / (density-8.707721e+00))+1.699456e+02) * ((exp(1.076858e+00*L_avg))-1.108631e+02)); $\left(\left(\left(\frac{ bulk_{mod} -1.490e+01 }{ density-8.708e+00 } \right)+1.699e+02\right) * \left(\left(\exp{ \left(1.077e+00L_{avg} \right)}\right)-1.109e+02\right)\right)$; ((((bulk_mod-1.489542e+01) ./ (density-8.707721e+00))+1.699456e+02) .* (exp(1.076858e+00.*L_avg)-1.108631e+02)); ((((newdata$bulk_mod-1.489542e+01) / (newdata$density-8.707721e+00))+1.699456e+02) * (exp(1.076858e+00*newdata$L_avg)-1.108631e+02)); bulk_mod,density,L_avg
+# 1;  2; cm^-3 * g;                                        2|7|div|20|21|div|mult:2.5677256733396e+01,-3.6702600718524e-01,-7.2263123649141e+00,-7.2088544260235e+00,-6.3281214009228e-01,-4.7717260953566e-02; ((((density-6.328121e-01) / (lambda3-4.771726e-02))+2.567726e+01) * (((mean_IP-7.226312e+00) / (wtd_mean_IP-7.208854e+00))-3.670260e-01)); $\left(\left(\left(\frac{ density -6.328e-01 }{ lambda3-4.772e-02 } \right)+2.568e+01\right) * \left(\left(\frac{ mean_{IP} -7.226e+00 }{ wtd_{mean, IP}-7.209e+00 } \right)-3.670e-01\right)\right)$; ((((density-6.328121e-01) ./ (lambda3-4.771726e-02))+2.567726e+01) .* (((mean_IP-7.226312e+00) ./ (wtd_mean_IP-7.208854e+00))-3.670260e-01)); ((((newdata$density-6.328121e-01) / (newdata$lambda3-4.771726e-02))+2.567726e+01) * (((newdata$mean_IP-7.226312e+00) / (newdata$wtd_mean_IP-7.208854e+00))-3.670260e-01)); density,lambda3,mean_IP,wtd_mean_IP
+# 2;  2; AA^-1 * K^0.333333 * eV;                          21|15|div|6|cbrt|mult:5.0313401885275e+00,3.2248279380399e+00,1.0000000000000e+00,-3.4399629136646e+01,-7.3044551379223e+00,-1.0147734239546e+00; ((((wtd_mean_IP-7.304455e+00) / (wtd_mean_at_rad-1.014773e+00))+5.031340e+00) * ((cbrt(lambda4w_low-3.439963e+01))+3.224828e+00)); $\left(\left(\left(\frac{ wtd_{mean, IP} -7.304e+00 }{ wtd_{mean, at, rad}-1.015e+00 } \right)+5.031e+00\right) * \left(\left(\sqrt[3]{lambda4w_{low}-3.440e+01 }\right)+3.225e+00\right)\right)$; ((((wtd_mean_IP-7.304455e+00) ./ (wtd_mean_at_rad-1.014773e+00))+5.031340e+00) .* (nthroot(lambda4w_low-3.439963e+01, 3)+3.224828e+00)); ((((newdata$wtd_mean_IP-7.304455e+00) / (newdata$wtd_mean_at_rad-1.014773e+00))+5.031340e+00) * (nthroot(newdata$lambda4w_low-3.439963e+01, 3)+3.224828e+00)); wtd_mean_IP,wtd_mean_at_rad,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  9.519059029368372e-01,  1.716645624926477e+04,  3.900583833158826e+02,  1.724563197309775e+00
+Os0.5V0.5   ,  5.150000000000000e+00,  4.812102492661621e+00, -1.697786365340006e+04,  2.338724396591747e+01,  5.190939269418300e+01
+Ir1Mo1      ,  5.325000000000000e+00,  1.049844306764378e+00, -7.480431499414647e+03,  2.216319019501623e+02,  2.128281751353266e+00
+N1Ti1       ,  5.387500000000000e+00,  1.558545068663824e+01, -1.298742649986819e+03,  2.645035746651563e+01,  2.041239765084130e+02
+B6Y1        ,  5.692857143000000e+00, -8.944189639376022e-01, -4.006058500894967e+03, -1.299871560195412e+01, -3.299182359152711e+01
+N1V1        ,  8.528333333499999e+00,  1.442470074312290e+00, -3.258119850578315e+03, -6.017973726638611e+01, -9.297913209843374e-01

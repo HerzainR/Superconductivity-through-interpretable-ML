@@ -1,0 +1,21 @@
+# c0 + a0 * ((|mean_EA - std_IP|) * (mean_EA * lambda)) + a1 * ((wtd_range_PE * lambda3) * (w_log^2))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.62293160582338; Max AE: 13.1153006191928
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  3.108699932355431e+00,  1.579002392394786e-04,  1.732594056169861e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             26|24|abd|26|5|mult|mult; ((|mean_EA - std_IP|) * (mean_EA * lambda)); $\left(\left(\left|mean_{EA} - std_{IP}\right|\right) \left(mean_{EA} lambda\right)\right)$; (abs(mean_EA - std_IP) .* (mean_EA .* lambda)); (abs(newdata$mean_EA - newdata$std_IP) * (newdata$mean_EA * newdata$lambda)); mean_EA,std_IP,mean_EA,lambda
+# 1;  2; K^2;                                              35|7|mult|4|sq|mult; ((wtd_range_PE * lambda3) * (w_log^2)); $\left(\left(wtd_{range, PE} lambda3\right) \left(w_{log}^2\right)\right)$; ((wtd_range_PE .* lambda3) .* (w_log)^2); ((newdata$wtd_range_PE * newdata$lambda3) * (newdata$w_log)^2); wtd_range_PE,lambda3,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Rh1V3       ,  1.900000000000000e-01,  3.276352352325673e+00,  1.848128626500000e-01,  6.138246320623778e+03
+Fe1Li1P1    ,  4.965000000000000e+00,  2.265208386940522e+00,  1.545000886800000e-01,  3.313479181173822e+02
+Ga1Si1Sr1   ,  5.000000000000000e+00,  5.913741369451334e+00,  9.580310263999998e-01,  7.618204583547169e+03
+Nb1S2       ,  5.821818182000000e+00,  2.799073699075346e+00,  1.474893090000000e-01,  3.850403526443981e+03
+Ge1V3       ,  6.680000000000000e+00,  1.470383168472123e+01,  7.135534218750000e-01,  6.810004979110933e+04
+Mo1Ni1P1    ,  1.550000000000000e+01,  2.384699380807218e+00,  1.932661057600000e-01,  3.248823116527752e+02

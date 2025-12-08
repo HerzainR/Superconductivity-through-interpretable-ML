@@ -1,0 +1,20 @@
+# c0 + a0 * (mean_IP + 7.141148e-01*lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.1381186690629; Max AE: 33.5348450939996
+# Coefficients
+# Task   a0                      c0
+# all ,  1.628325309594266e+00, -8.925054824491379e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               20|5|add:7.1411484093063e-01,0.0000000000000e+00; (mean_IP + 7.141148e-01*lambda); $\left(mean_{IP} + 0.714lambda\right)$; (mean_IP + (7.141148e-01.*lambda)); (newdata$mean_IP + (7.141148e-01*newdata$lambda)); mean_IP,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.556436115557967e+00,  8.279359695888143e+00
+B2Ru1       ,  8.000000000000000e-01,  4.257763071606570e+00,  8.095936247151220e+00
+Nb1O1       ,  1.380000000000000e+00,  8.202123836539144e+00,  1.051827823354177e+01
+B1Ta1       ,  4.000000000000000e+00,  4.520312606432613e+00,  8.257175241152648e+00
+N1Zr1       ,  9.850000000000000e+00,  9.010896853363922e+00,  1.101496830650164e+01
+B2Mg0.98    ,  3.840000000000000e+01,  4.865154906000349e+00,  8.468952517803627e+00

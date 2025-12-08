@@ -1,0 +1,20 @@
+# c0 + a0 * ((((lambda+1.065358e+01) * (mean_IP+3.075434e+00))-1.090653e+02) * (|std_EA - (3.647368e-01*mean_EA+2.579311e-01)|+9.339456e-02))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.7675136546578; Max AE: 34.1999075090179
+# Coefficients
+# Task   a0                      c0
+# all ,  5.107314369447596e-01,  2.005461296045219e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             5|20|mult|30|26|abd|mult:-1.0906530811188e+02,9.3394557256868e-02,3.6473678366980e-01,2.5793114953714e-01,1.0653581063363e+01,3.0754340380732e+00; ((((lambda+1.065358e+01) * (mean_IP+3.075434e+00))-1.090653e+02) * (|std_EA - (3.647368e-01*mean_EA+2.579311e-01)|+9.339456e-02)); $\left(\left(\left(\left(lambda+1.065e+01\right) * \left(mean_{IP}+3.075e+00\right)\right)-1.091e+02\right) * \left(\left(\left|std_{EA} - \left(3.647e-01mean_{EA}+2.579e-01\right)\right|\right)+9.339e-02\right)\right)$; ((((lambda+1.065358e+01) .* (mean_IP+3.075434e+00))-1.090653e+02) .* (abs(std_EA - (3.647368e-01.*mean_EA+2.579311e-01))+9.339456e-02)); ((((newdata$lambda+1.065358e+01) * (newdata$mean_IP+3.075434e+00))-1.090653e+02) * (abs(newdata$std_EA - (3.647368e-01*newdata$mean_EA+2.579311e-01))+9.339456e-02)); lambda,mean_IP,std_EA,mean_EA
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.743156512165757e+00,  5.360342086043637e+00
+B2Ru1       ,  8.000000000000000e-01,  3.186439440807352e+00,  2.312327104489293e+00
+Nb1O1       ,  1.380000000000000e+00,  1.173721186588247e+01,  1.905453603571661e+01
+B1Ta1       ,  4.000000000000000e+00,  4.797960639300317e+00,  5.467647262835581e+00
+N1Zr1       ,  9.850000000000000e+00,  6.937015042387940e+00,  9.655864882419827e+00
+B2Mg0.98    ,  3.840000000000000e+01,  4.200092490982066e+00,  4.297035655500910e+00

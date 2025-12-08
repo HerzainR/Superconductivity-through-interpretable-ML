@@ -1,0 +1,20 @@
+# c0 + a0 * ((mean_EA * lambda) - (range_EA - wtd_mean_IP)) + a1 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.22103232575626; Max AE: 4.16716628661179
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.513901797647586e+00,  1.320493325286239e-06, -8.244267861117411e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               26|5|mult|28|21|sub|sub; ((mean_EA * lambda) - (range_EA - wtd_mean_IP)); $\left(\left(mean_{EA} lambda\right) - \left(range_{EA} - wtd_{mean, IP}\right)\right)$; ((mean_EA .* lambda) - (range_EA - wtd_mean_IP)); ((newdata$mean_EA * newdata$lambda) - (newdata$range_EA - newdata$wtd_mean_IP)); mean_EA,lambda,range_EA,wtd_mean_IP
+# 1;  2; K^3 * eV;                                         4|sq|29|6|mult|mult; ((w_log^2) * (wtd_range_EA * lambda4w_low)); $\left(\left(w_{log}^2\right) \left(wtd_{range, EA} lambda4w_{low}\right)\right)$; ((w_log)^2 .* (wtd_range_EA .* lambda4w_low)); ((newdata$w_log)^2 * (newdata$wtd_range_EA * newdata$lambda4w_low)); w_log,wtd_range_EA,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  1.826181300776546e+00,  6.633852730000000e+00,  2.078585941482376e+04
+Sn1         ,  3.740729412000000e+00,  3.335264208729444e+00,  7.648800000000000e+00,  0.000000000000000e+00
+Al1Si1Sr1   ,  4.750000000000000e+00,  5.828337133882129e-01,  5.613194070000000e+00,  2.493590653451277e+05
+Sn1Ta3      ,  6.692500000000000e+00,  5.432341547598457e+00,  8.956378400000000e+00,  8.900616632680272e+04
+Re3W1       ,  8.733333332999999e+00,  6.752264766472377e+00,  9.847333500000001e+00,  6.712395905922582e+04

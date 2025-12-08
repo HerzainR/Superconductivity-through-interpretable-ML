@@ -1,0 +1,21 @@
+# c0 + a0 * ((|range_EA - mean_EA|) + (|wtd_range_IP - range_IP|)) + a1 * ((lambda3 * w_log) * (w_log / mean_IP))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.9113241349894; Max AE: 12.0340742931306
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.489755086393826e+00,  1.140352169116299e-03, -1.082410101472030e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               28|26|abd|23|22|abd|add; ((|range_EA - mean_EA|) + (|wtd_range_IP - range_IP|)); $\left(\left(\left|range_{EA} - mean_{EA}\right|\right) + \left(\left|wtd_{range, IP} - range_{IP}\right|\right)\right)$; (abs(range_EA - mean_EA) + abs(wtd_range_IP - range_IP)); (abs(newdata$range_EA - newdata$mean_EA) + abs(newdata$wtd_range_IP - newdata$range_IP)); range_EA,mean_EA,wtd_range_IP,range_IP
+# 1;  2; K^2 * eV^-1;                                      7|4|mult|4|20|div|mult; ((lambda3 * w_log) * (w_log / mean_IP)); $\left(\left(lambda3 w_{log}\right) \left(\frac{ w_{log} }{ mean_{IP} } \right)\right)$; ((lambda3 .* w_log) .* (w_log ./ mean_IP)); ((newdata$lambda3 * newdata$w_log) * (newdata$w_log / newdata$mean_IP)); lambda3,w_log,w_log,mean_IP
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Rh1V3       ,  1.900000000000000e-01,  4.451518939715372e+00,  2.700800000000000e+00,  1.324501802829402e+03
+Fe1Li1P1    ,  4.965000000000000e+00,  4.206274353630956e+00,  3.470700000000000e+00,  1.036447160419982e+02
+Ga1Si1Sr1   ,  5.000000000000000e+00,  6.730941981300054e+00,  2.461300000000000e+00,  3.636260798139514e+03
+Nb1S2       ,  5.821818182000000e+00,  1.366542159931393e+00,  1.353700000000000e+00,  3.790678113824114e+02
+Ge1V3       ,  6.680000000000000e+00,  1.668987566582514e+01,  2.043000000000000e+00,  1.291593643146959e+04
+Mo1Ni1P1    ,  1.550000000000000e+01,  3.465925706869426e+00,  2.736000000000000e+00,  4.142280821318571e+02

@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0634758 s
+Time to generate feat space: 0.921566 s
+Projection time: 0.0301888 s
+Time to get best features on rank : 6.50883e-05 s
+|---Complete final combination/selection from all ranks: 0.0154762 s
+Time for SIS: 0.0598171 s
+Time for l0-norm: 0.016459 s
+Projection time: 0.026947 s
+Time to get best features on rank : 7.29561e-05 s
+|---Complete final combination/selection from all ranks: 0.0484531 s
+Time for SIS: 0.079937 s
+Time for l0-norm: 0.00419211 s
+Projection time: 0.0290289 s
+Time to get best features on rank : 7.20024e-05 s
+|---Complete final combination/selection from all ranks: 0.0154419 s
+Time for SIS: 0.048871 s
+Time for l0-norm: 0.00803781 s
+Projection time: 0.0246699 s
+Time to get best features on rank : 7.70092e-05 s
+|---Complete final combination/selection from all ranks: 0.0129759 s
+Time for SIS: 0.0423019 s
+Time for l0-norm: 0.16265 s
+Projection time: 0.0199149 s
+Time to get best features on rank : 6.29425e-05 s
+|---Complete final combination/selection from all ranks: 0.0128229 s
+Time for SIS: 0.0374131 s
+Time for l0-norm: 13.4253 s
+Train RMSE: 3.90318 K; Test RMSE: 2.41132 K
+c0 + a0 * ((lambda4w_low / wtd_mean_at_mass) / (|range_PE - lambda|))
+
+Train RMSE: 3.26643 K; Test RMSE: 1.67138 K
+c0 + a0 * ((mean_EA * lambda) + (|range_EA - wtd_mean_IP|)) + a1 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+
+Train RMSE: 2.62378 K; Test RMSE: 4.25958 K
+c0 + a0 * ((range_EA - wtd_std_IP) / (wtd_range_PE + lambda3)) + a1 * ((wtd_range_IP * lambda) * (|range_EA - wtd_mean_EA|)) + a2 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+
+Train RMSE: 2.25625 K; Test RMSE: 6.53219 K
+c0 + a0 * (|sin(lambda) - (|wtd_range_PE - range_PE|)|) + a1 * ((range_EA - wtd_std_IP) / (wtd_range_PE + lambda3)) + a2 * ((wtd_range_IP * lambda) * (|range_EA - wtd_mean_EA|)) + a3 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+
+Train RMSE: 1.87452 K; Test RMSE: 2.164 K
+c0 + a0 * ((exp(3.518196e-01*std_EA)) / (wtd_mean_IP * mean_at_rad)) + a1 * ((wtd_range_at_rad - range_at_rad) / (wtd_range_PE + lambda3)) + a2 * ((|range_EA - wtd_mean_EA|) * cos(range_PE)) + a3 * ((mean_EA * lambda) + (|wtd_range_IP - range_IP|)) + a4 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+

@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.0115371 s
+Time to generate feat space: 0.0117569 s
+Projection time: 0.000494003 s
+Time to get best features on rank : 8.10623e-06 s
+|---Complete final combination/selection from all ranks: 0.000494003 s
+Time for SIS: 0.001158 s
+Time for l0-norm: 0.000912905 s
+Projection time: 0.00171804 s
+Time to get best features on rank : 1.00136e-05 s
+|---Complete final combination/selection from all ranks: 0.000383854 s
+Time for SIS: 0.00257611 s
+Time for l0-norm: 0.00113916 s
+Projection time: 0.00031805 s
+Time to get best features on rank : 3.50475e-05 s
+|---Complete final combination/selection from all ranks: 0.000377178 s
+Time for SIS: 0.00117421 s
+Time for l0-norm: 0.0280449 s
+Projection time: 0.000323057 s
+Time to get best features on rank : 2.5034e-05 s
+|---Complete final combination/selection from all ranks: 0.000380993 s
+Time for SIS: 0.00111318 s
+Time for l0-norm: 1.95513 s
+Projection time: 0.000337839 s
+Time to get best features on rank : 0.000133038 s
+|---Complete final combination/selection from all ranks: 0.000468016 s
+Time for SIS: 0.00130796 s
+Time for l0-norm: 164.84 s
+Train RMSE: 4.63881 K; Test RMSE: 8.45681 K
+c0 + a0 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.81397 K; Test RMSE: 6.35236 K
+c0 + a0 * (exp(-1.0 * lambda)) + a1 * (w_log / mean_at_mass)
+
+Train RMSE: 3.58846 K; Test RMSE: 5.6922 K
+c0 + a0 * (wtd_mean_EA * wtd_range_at_mass) + a1 * (exp(-1.0 * lambda)) + a2 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.14275 K; Test RMSE: 7.85065 K
+c0 + a0 * (|range_EA - mean_EA|) + a1 * (wtd_mean_IP * density) + a2 * (exp(-1.0 * lambda)) + a3 * (w_log / density)
+
+Train RMSE: 2.97762 K; Test RMSE: 16.4366 K
+c0 + a0 * (|wtd_range_IP - range_IP|) + a1 * (|range_EA - mean_EA|) + a2 * (w_log / mean_at_mass) + a3 * (lambda4w_low * w_log) + a4 * (mean_PE / mean_at_mass)
+

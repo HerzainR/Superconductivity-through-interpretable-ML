@@ -1,0 +1,20 @@
+# c0 + a0 * cbrt(lambda) + a1 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.12928858234057; Max AE: 5.37155381502836
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  9.476218065130480e+00,  5.732227756975550e-01, -6.281890272441395e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 1;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Nb3Os1      ,  6.633333330000000e-01,  2.562363959842361e+00,  8.349603767636989e-01,  1.625873335533998e+00
+Ge1Mo3      ,  2.179200000000000e+00,  2.741031312622790e+00,  7.668766490569060e-01,  3.063086995117621e+00
+Sn1V3       ,  4.462500000000000e+00,  5.667531052705638e+00,  1.212417360719122e+00,  8.029862882934906e-01
+Hf1N1       ,  8.830000000000000e+00,  3.458446184971637e+00,  8.509562479261139e-01,  2.924673546231340e+00
+C1Nb1       ,  1.002500000000000e+01,  6.186436051519279e+00,  9.254855011586057e-01,  6.451634609885815e+00

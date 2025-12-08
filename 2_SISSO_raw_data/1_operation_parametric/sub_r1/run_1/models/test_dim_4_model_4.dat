@@ -1,0 +1,23 @@
+# c0 + a0 * (wtd_range_ThermalCond - (3.604305e+00*V_molar)) + a1 * (wtd_range_PE * std_IP) + a2 * (|std_EA - wtd_mean_IP|) + a3 * (wtd_mean_EA * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 13.7686868998134; Max AE: 32.7076718190226
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -3.081068231395386e-02, -3.161391549392758e+00,  3.803729040457005e+00,  1.761578502085162e+00, -2.461398046017382e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        41|3|sub:3.6043051441808e+00,0.0000000000000e+00; (wtd_range_ThermalCond - (3.604305e+00*V_molar)); $\left(wtd_{range, ThermalCond} - \left(3.604e+00V_{molar}\right)\right)$; (wtd_range_ThermalCond - (3.604305e+00.*V_molar)); (newdata$wtd_range_ThermalCond - (3.604305e+00*newdata$V_molar)); wtd_range_ThermalCond,V_molar
+# 1;  1; eV;                                               35|24|mult; (wtd_range_PE * std_IP); $\left(wtd_{range, PE} std_{IP}\right)$; (wtd_range_PE .* std_IP); (newdata$wtd_range_PE * newdata$std_IP); wtd_range_PE,std_IP
+# 2;  1; eV;                                               30|21|abd; (|std_EA - wtd_mean_IP|); $\left(\left|std_{EA} - wtd_{mean, IP}\right|\right)$; abs(std_EA - wtd_mean_IP); abs(newdata$std_EA - newdata$wtd_mean_IP); std_EA,wtd_mean_IP
+# 3;  1; eV;                                               27|5|mult; (wtd_mean_EA * lambda); $\left(wtd_{mean, EA} lambda\right)$; (wtd_mean_EA .* lambda); (newdata$wtd_mean_EA * newdata$lambda); wtd_mean_EA,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.064923307001817e+00, -1.111139757062140e+02,  6.723699999999999e-01,  6.947000000000000e+00,  5.429934300000000e-01
+B2Ru1       ,  8.000000000000000e-01,  4.839368577171079e+00, -3.650796454445761e+01,  2.936089500000000e-01,  7.599200000000000e+00,  1.994965700000000e-01
+Nb1O1       ,  1.380000000000000e+00,  4.922044879755457e+00, -2.853354788129184e+01,  3.155140000000000e+00,  9.904499999999999e+00,  5.435386000000000e-01
+B1Ta1       ,  4.000000000000000e+00,  7.078089931422442e+00, -3.387935169619021e+01,  5.508000000000000e-02,  8.071499999999999e+00,  6.843575000000000e-02
+N1Zr1       ,  9.850000000000000e+00,  5.646463560452058e+00, -4.097075001553866e+01,  3.377250000000000e+00,  1.037100000000000e+01,  1.285455000000000e-01
+B2Mg0.98    ,  3.840000000000000e+01,  5.692328180977410e+00, -2.666208207281259e+01,  3.009958000000000e-01,  7.942200000000001e+00,  1.285327300000000e-01

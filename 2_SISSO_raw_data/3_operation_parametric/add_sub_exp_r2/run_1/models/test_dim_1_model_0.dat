@@ -1,0 +1,20 @@
+# c0 + a0 * (((lambda-7.672126e+01) / (wtd_mean_IP+4.328743e+01)) + 3.644566e-06*((range_ThermalCond-2.547688e+04) / (mean_at_mass-1.063288e+02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.0740193905446; Max AE: 33.3981805093138
+# Coefficients
+# Task   a0                      c0
+# all ,  5.966994244466402e+01,  9.325185694011320e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^-1;                                            5|21|div|40|8|div|add:3.6445660237894e-06,0.0000000000000e+00,-2.5476880727112e+04,-1.0632880862614e+02,-7.6721258724573e+01,4.3287431932938e+01; (((lambda-7.672126e+01) / (wtd_mean_IP+4.328743e+01)) + 3.644566e-06*((range_ThermalCond-2.547688e+04) / (mean_at_mass-1.063288e+02))); $\left(\left(\frac{ lambda -7.672e+01 }{ wtd_{mean, IP}+4.329e+01 } \right) + 3.64e-06\left(\frac{ range_{ThermalCond} -2.548e+04 }{ mean_{at, mass}-1.063e+02 } \right)\right)$; (((lambda-7.672126e+01) ./ (wtd_mean_IP+4.328743e+01)) + (3.644566e-06.*((range_ThermalCond-2.547688e+04) ./ (mean_at_mass-1.063288e+02)))); (((newdata$lambda-7.672126e+01) / (newdata$wtd_mean_IP+4.328743e+01)) + (3.644566e-06*((newdata$range_ThermalCond-2.547688e+04) / (newdata$mean_at_mass-1.063288e+02)))); lambda,wtd_mean_IP,range_ThermalCond,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  3.859079857660678e+00, -1.498120719076485e+00
+B2Ru1       ,  8.000000000000000e-01,  4.509992562383425e+00, -1.487212166494481e+00
+Nb1O1       ,  1.380000000000000e+00,  8.265993622128326e+00, -1.424265883896201e+00
+B1Ta1       ,  4.000000000000000e+00,  4.949264473466506e+00, -1.479850471592723e+00
+N1Zr1       ,  9.850000000000000e+00,  9.044134037517354e+00, -1.411225140374274e+00
+B2Mg0.98    ,  3.840000000000000e+01,  5.001819490686157e+00, -1.478969709603244e+00

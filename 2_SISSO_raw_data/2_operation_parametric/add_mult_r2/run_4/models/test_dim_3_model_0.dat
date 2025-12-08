@@ -1,0 +1,22 @@
+# c0 + a0 * ((((wtd_mean_EA-2.580825e-01) * (std_PE-8.494195e-01))-2.950838e-02) * (((wtd_std_IP+1.573647e+00)^6)-1.218827e+02)) + a1 * (((density+6.673039e+01) / (lambda3-4.791485e-02)) + 1.623033e+03*((wtd_range_at_mass-3.672798e+01) / (wtd_mean_at_mass-9.941565e+01))) + a2 * ((((mean_at_mass-3.115918e+01) / (wtd_mean_at_mass-1.531779e+01))+9.260313e-01) * ((wtd_mean_IP + 1.253199e+00*lambda)-8.900867e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.53423262898494; Max AE: 5.69550024449011
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.826846558199270e-03, -1.265091668048421e-04,  6.174237636750588e-01,  3.243148987285462e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^7;                                             27|36|mult|25|sp|mult:-2.9508382104724e-02,-1.2188270422656e+02,1.0000000000000e+00,1.5736466108289e+00,-2.5808251453860e-01,-8.4941952369282e-01; ((((wtd_mean_EA-2.580825e-01) * (std_PE-8.494195e-01))-2.950838e-02) * (((wtd_std_IP+1.573647e+00)^6)-1.218827e+02)); $\left(\left(\left(\left(wtd_{mean, EA}-2.581e-01\right) * \left(std_{PE}-8.494e-01\right)\right)-2.951e-02\right) * \left(\left(\left(wtd_{std, IP}+1.574e+00\right)^6\right)-1.219e+02\right)\right)$; ((((wtd_mean_EA-2.580825e-01) .* (std_PE-8.494195e-01))-2.950838e-02) .* ((wtd_std_IP+1.573647e+00).^6-1.218827e+02)); ((((newdata$wtd_mean_EA-2.580825e-01) * (newdata$std_PE-8.494195e-01))-2.950838e-02) * ((newdata$wtd_std_IP+1.573647e+00)^6-1.218827e+02)); wtd_mean_EA,std_PE,wtd_std_IP
+# 1;  2; cm^-3 * g;                                        2|7|div|11|9|div|add:1.6230330465692e+03,0.0000000000000e+00,-3.6727983887005e+01,-9.9415648175099e+01,6.6730387414485e+01,-4.7914847831794e-02; (((density+6.673039e+01) / (lambda3-4.791485e-02)) + 1.623033e+03*((wtd_range_at_mass-3.672798e+01) / (wtd_mean_at_mass-9.941565e+01))); $\left(\left(\frac{ density +6.673e+01 }{ lambda3-4.791e-02 } \right) + 1.62e+03\left(\frac{ wtd_{range, at, mass} -3.673e+01 }{ wtd_{mean, at, mass}-9.942e+01 } \right)\right)$; (((density+6.673039e+01) ./ (lambda3-4.791485e-02)) + (1.623033e+03.*((wtd_range_at_mass-3.672798e+01) ./ (wtd_mean_at_mass-9.941565e+01)))); (((newdata$density+6.673039e+01) / (newdata$lambda3-4.791485e-02)) + (1.623033e+03*((newdata$wtd_range_at_mass-3.672798e+01) / (newdata$wtd_mean_at_mass-9.941565e+01)))); density,lambda3,wtd_range_at_mass,wtd_mean_at_mass
+# 2;  2; eV;                                               8|9|div|21|5|add|mult:9.2603131607882e-01,-8.9008673211649e+00,1.2531987192260e+00,0.0000000000000e+00,-3.1159176133309e+01,-1.5317787386314e+01; ((((mean_at_mass-3.115918e+01) / (wtd_mean_at_mass-1.531779e+01))+9.260313e-01) * ((wtd_mean_IP + 1.253199e+00*lambda)-8.900867e+00)); $\left(\left(\left(\frac{ mean_{at, mass} -3.116e+01 }{ wtd_{mean, at, mass}-1.532e+01 } \right)+9.260e-01\right) * \left(\left(wtd_{mean, IP} + 1.25lambda\right)-8.901e+00\right)\right)$; ((((mean_at_mass-3.115918e+01) ./ (wtd_mean_at_mass-1.531779e+01))+9.260313e-01) .* ((wtd_mean_IP + (1.253199e+00.*lambda))-8.900867e+00)); ((((newdata$mean_at_mass-3.115918e+01) / (newdata$wtd_mean_at_mass-1.531779e+01))+9.260313e-01) * ((newdata$wtd_mean_IP + (1.253199e+00*newdata$lambda))-8.900867e+00)); mean_at_mass,wtd_mean_at_mass,wtd_mean_IP,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Mo1       ,  2.500000000000000e-01,  2.631663079882389e+00,  3.566263583745514e+00,  6.119150912384080e+02, -8.371223499301108e-01
+Hg2Na1      ,  1.620000000000000e+00,  3.366814696764661e+00, -1.831880260517092e+01,  3.866003257166253e+03,  8.492198421098568e-01
+Ga2Y1       ,  1.680000000000000e+00,  1.587250818570182e+00,  5.423356092176570e+00,  1.432100988005438e+03, -2.346114036221738e+00
+B2Nb1       ,  4.597500000000000e+00,  2.901129528983579e+00, -5.249753160008305e-01,  5.926608717946841e+02, -4.366148768001718e-01
+Nb0.75Si0.25,  9.000000000000000e+00,  3.441571910764390e+00,  1.678881311078674e+01, -1.829395248554969e+03,  7.778236348030958e-02
+Ta1B2       ,  9.500000000000000e+00,  3.804499755509885e+00,  4.583457229216094e+00, -7.108665484889294e+02,  7.993590581604103e-01

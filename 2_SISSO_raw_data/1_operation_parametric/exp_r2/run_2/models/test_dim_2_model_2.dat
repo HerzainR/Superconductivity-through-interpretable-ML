@@ -1,0 +1,21 @@
+# c0 + a0 * ((|range_EA - wtd_std_IP|) / (wtd_range_PE + lambda3)) + a1 * ((w_log / wtd_mean_at_mass) * (mean_ThermalCond * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.8393681327168; Max AE: 12.8227381466972
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.223659385154695e+00,  3.409551018107813e-05,  2.051688848544492e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               28|25|abd|35|7|add|div; ((|range_EA - wtd_std_IP|) / (wtd_range_PE + lambda3)); $\left(\frac{ \left(\left|range_{EA} - wtd_{std, IP}\right|\right) }{ \left(wtd_{range, PE} + lambda3\right) } \right)$; (abs(range_EA - wtd_std_IP) ./ (wtd_range_PE + lambda3)); (abs(newdata$range_EA - newdata$wtd_std_IP) / (newdata$wtd_range_PE + newdata$lambda3)); range_EA,wtd_std_IP,wtd_range_PE,lambda3
+# 1;  2; K^2 * W * g^-1 * mK^-1 * mol;                     4|9|div|38|6|mult|mult; ((w_log / wtd_mean_at_mass) * (mean_ThermalCond * lambda4w_low)); $\left(\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right) \left(mean_{ThermalCond} lambda4w_{low}\right)\right)$; ((w_log ./ wtd_mean_at_mass) .* (mean_ThermalCond .* lambda4w_low)); ((newdata$w_log / newdata$wtd_mean_at_mass) * (newdata$mean_ThermalCond * newdata$lambda4w_low)); w_log,wtd_mean_at_mass,mean_ThermalCond,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  2.672172473075125e+00,  1.091006423982869e-01,  1.428286589487141e+04
+La1         ,  5.343000000000000e+00,  2.325671111131924e+00,  0.000000000000000e+00,  8.035728491298042e+03
+C1Ta1       ,  8.637499999999999e+00,  4.101888080120357e+00,  4.760076775431862e-01,  4.304754384813386e+04
+C1I1Y1      ,  9.917500000000000e+00,  2.762396336972383e+00,  4.493765586034913e-01,  4.716856975305246e+03
+Nb1Ru3      ,  1.350000000000000e+01,  2.505045461940354e+00,  4.894259818731117e-02,  1.154015709694423e+04
+Nb3Sn1      ,  1.670900000000000e+01,  3.886261853302813e+00,  2.943575006795853e-03,  5.370123696202897e+04

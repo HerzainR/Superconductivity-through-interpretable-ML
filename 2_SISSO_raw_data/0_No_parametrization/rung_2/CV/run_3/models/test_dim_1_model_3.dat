@@ -1,0 +1,20 @@
+# c0 + a0 * ((lambda4w_low * w_log) / (wtd_mean_at_rad^6))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.12085780164684; Max AE: 4.52054461154354
+# Coefficients
+# Task   a0                      c0
+# all ,  2.255027655689598e-04,  4.002901887718389e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^-6 * K^2;                                      6|4|mult|15|sp|div; ((lambda4w_low * w_log) / (wtd_mean_at_rad^6)); $\left(\frac{ \left(lambda4w_{low} w_{log}\right) }{ \left(wtd_{mean, at, rad}^6\right) } \right)$; ((lambda4w_low .* w_log) ./ (wtd_mean_at_rad).^6); ((newdata$lambda4w_low * newdata$w_log) / (newdata$wtd_mean_at_rad)^6); lambda4w_low,w_log,wtd_mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B1Hf1       ,  3.100000000000000e+00,  4.156671465582861e+00,  6.818966387241435e+02
+Os0.5V0.5   ,  5.150000000000000e+00,  4.785077737399924e+00,  3.468586505837518e+03
+Ir1Mo1      ,  5.325000000000000e+00,  4.051608003812376e+00,  2.159889967251540e+02
+N1Ti1       ,  5.387500000000000e+00,  7.194473494960335e+00,  1.415313732046426e+04
+B6Y1        ,  5.692857143000000e+00,  5.047488974804273e+00,  4.632258431289371e+03
+N1V1        ,  8.528333333499999e+00,  4.007788721956460e+00,  2.167083949387913e+01

@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.00232005 s
+Time to generate feat space: 0.8302 s
+Projection time: 0.127628 s
+Time to get best features on rank : 2.7895e-05 s
+|---Complete final combination/selection from all ranks: 0.000828028 s
+Time for SIS: 0.197832 s
+Time for l0-norm: 0.0010829 s
+Projection time: 0.0600851 s
+Time to get best features on rank : 0.000942945 s
+|---Complete final combination/selection from all ranks: 0.00060606 s
+Time for SIS: 0.131789 s
+Time for l0-norm: 0.00123906 s
+Projection time: 0.158522 s
+Time to get best features on rank : 0.0036881 s
+|---Complete final combination/selection from all ranks: 0.000832081 s
+Time for SIS: 0.2321 s
+Time for l0-norm: 0.03175 s
+Projection time: 0.189991 s
+Time to get best features on rank : 2.59876e-05 s
+|---Complete final combination/selection from all ranks: 0.000682116 s
+Time for SIS: 0.261112 s
+Time for l0-norm: 1.858 s
+Projection time: 0.14712 s
+Time to get best features on rank : 0.000701189 s
+|---Complete final combination/selection from all ranks: 0.000714064 s
+Time for SIS: 0.219337 s
+Time for l0-norm: 161.071 s
+Train RMSE: 3.26636 K; Test RMSE: 14.086 K
+c0 + a0 * ((|range_EA - wtd_mean_IP|) + (wtd_mean_EA * lambda))
+
+Train RMSE: 2.64136 K; Test RMSE: 13.9893 K
+c0 + a0 * ((wtd_range_PE * wtd_std_IP) + (std_EA - wtd_mean_IP)) + a1 * ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda))
+
+Train RMSE: 2.2381 K; Test RMSE: 13.7198 K
+c0 + a0 * ((w_log * L_avg) / (|range_PE - lambda3|)) + a1 * ((wtd_range_PE * wtd_std_IP) + (std_EA - wtd_mean_IP)) + a2 * ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda))
+
+Train RMSE: 1.88705 K; Test RMSE: 13.7342 K
+c0 + a0 * ((|mean_EA - wtd_std_IP|) / (range_PE - lambda)) + a1 * ((|range_PE - lambda|) / (|range_PE - lambda3|)) + a2 * ((wtd_range_PE * wtd_std_IP) + (std_EA - wtd_mean_IP)) + a3 * ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda))
+
+Train RMSE: 1.62078 K; Test RMSE: 14.0269 K
+c0 + a0 * ((range_EA - wtd_mean_EA) * (range_EA - wtd_range_IP)) + a1 * ((|range_EA - wtd_std_IP|) / (range_PE - lambda)) + a2 * ((|lambda4w_low - w_log|) / (|range_PE - lambda3|)) + a3 * ((wtd_range_PE * wtd_std_IP) + (std_EA - wtd_mean_IP)) + a4 * ((|wtd_mean_EA - wtd_std_IP|) * (mean_EA * lambda))
+

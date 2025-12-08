@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.00166893 s
+Time to generate feat space: 0.0216072 s
+Projection time: 0.000505924 s
+Time to get best features on rank : 8.10623e-06 s
+|---Complete final combination/selection from all ranks: 0.000505209 s
+Time for SIS: 0.00155497 s
+Time for l0-norm: 0.000827074 s
+Projection time: 0.000953913 s
+Time to get best features on rank : 4.41074e-05 s
+|---Complete final combination/selection from all ranks: 0.000387192 s
+Time for SIS: 0.00181699 s
+Time for l0-norm: 0.00114298 s
+Projection time: 0.000313997 s
+Time to get best features on rank : 6.60419e-05 s
+|---Complete final combination/selection from all ranks: 0.000426054 s
+Time for SIS: 0.00125003 s
+Time for l0-norm: 0.034483 s
+Projection time: 0.000454903 s
+Time to get best features on rank : 1.5974e-05 s
+|---Complete final combination/selection from all ranks: 0.000419855 s
+Time for SIS: 0.00125623 s
+Time for l0-norm: 1.90508 s
+Projection time: 0.000393867 s
+Time to get best features on rank : 9.70364e-05 s
+|---Complete final combination/selection from all ranks: 0.000431061 s
+Time for SIS: 0.00145793 s
+Time for l0-norm: 166.042 s
+Train RMSE: 3.65213 K; Test RMSE: 14.4023 K
+c0 + a0 * (wtd_mean_EA * lambda)
+
+Train RMSE: 3.23907 K; Test RMSE: 14.1387 K
+c0 + a0 * (|range_EA - wtd_mean_IP|) + a1 * (wtd_mean_EA * lambda)
+
+Train RMSE: 2.963 K; Test RMSE: 13.5989 K
+c0 + a0 * (wtd_range_PE * std_IP) + a1 * (|std_EA - wtd_mean_IP|) + a2 * (wtd_mean_EA * lambda)
+
+Train RMSE: 2.69452 K; Test RMSE: 13.4861 K
+c0 + a0 * (V_molar / mean_PE) + a1 * (wtd_range_PE * std_IP) + a2 * (|std_EA - wtd_mean_IP|) + a3 * (wtd_mean_EA * lambda)
+
+Train RMSE: 2.4852 K; Test RMSE: 14.6899 K
+c0 + a0 * cbrt(range_at_rad) + a1 * cbrt(std_at_rad) + a2 * (range_EA - mean_EA) + a3 * sqrt(wtd_mean_IP) + a4 * cbrt(lambda4w_low)
+

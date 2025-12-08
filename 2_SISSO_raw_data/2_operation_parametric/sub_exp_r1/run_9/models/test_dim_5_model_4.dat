@@ -1,0 +1,23 @@
+# c0 + a0 * (range_EA / V_molar) + a1 * (std_at_rad - (5.557718e-01*range_at_rad)) + a2 * (wtd_mean_EA * density) + a3 * sqrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.86216322767292; Max AE: 5.80603395696567
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.160760111210753e+02, -7.099538924516773e+01,  7.595921344707948e-01,  5.305951164104335e+00,  7.117397697174991e-01, -7.031852386315359e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^-3 * eV * mol;                                 28|3|div; (range_EA / V_molar); $\left(\frac{ range_{EA} }{ V_{molar} } \right)$; (range_EA ./ V_molar); (newdata$range_EA / newdata$V_molar); range_EA,V_molar
+# 1;  1; AA;                                               18|16|sub:5.5577184733000e-01,0.0000000000000e+00; (std_at_rad - (5.557718e-01*range_at_rad)); $\left(std_{at, rad} - \left(5.558e-01range_{at, rad}\right)\right)$; (std_at_rad - (5.557718e-01.*range_at_rad)); (newdata$std_at_rad - (5.557718e-01*newdata$range_at_rad)); std_at_rad,range_at_rad
+# 2;  1; cm^-3 * eV * g;                                   27|2|mult; (wtd_mean_EA * density); $\left(wtd_{mean, EA} density\right)$; (wtd_mean_EA .* density); (newdata$wtd_mean_EA * newdata$density); wtd_mean_EA,density
+# 3;  1; Unitless;                                         5|sqrt; sqrt(lambda); $\left(\sqrt{ lambda }\right)$; sqrt(lambda); sqrt(newdata$lambda); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Os1      ,  6.633333330000000e-01,  6.469367289965670e+00,  4.970622898290969e-03, -1.115436946599928e-02,  1.063844800000000e+01,  7.629547824084989e-01,  1.625873335533998e+00
+Ge1Mo3      ,  2.179200000000000e+00,  4.892362700488768e+00,  1.663815133610691e-02, -1.896242809219878e-02,  8.907209999999999e+00,  6.715653356152326e-01,  3.063086995117621e+00
+Sn1V3       ,  4.462500000000000e+00,  2.963423699749700e+00,  1.861917957550477e-02, -7.808058626199502e-03,  5.196562000000000e+00,  1.334990636671284e+00,  8.029862882934906e-01
+Hf1N1       ,  8.830000000000000e+00,  3.332767033794707e+00,  0.000000000000000e+00, -5.800272122319627e-02,  0.000000000000000e+00,  7.849840762716146e-01,  2.924673546231340e+00
+C1Nb1       ,  1.002500000000000e+01,  9.003510010584439e+00,  2.683730356181791e-02, -5.075238107029673e-02,  8.203580000000001e+00,  8.903370148432558e-01,  6.451634609885815e+00

@@ -1,0 +1,22 @@
+# c0 + a0 * (wtd_mean_EA * wtd_range_at_mass) + a1 * ln(lambda) + a2 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.82092556990043; Max AE: 13.3830040156812
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  7.720106103564511e-02,  3.797543042162675e+00,  6.529884883352641e-01,  1.631335485857861e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g * mol^-1;                                  27|11|mult; (wtd_mean_EA * wtd_range_at_mass); $\left(wtd_{mean, EA} wtd_{range, at, mass}\right)$; (wtd_mean_EA .* wtd_range_at_mass); (newdata$wtd_mean_EA * newdata$wtd_range_at_mass); wtd_mean_EA,wtd_range_at_mass
+# 1;  1; Unitless;                                         5|log; ln(lambda); $\left(\ln{ lambda }\right)$; log(lambda); log(newdata$lambda); lambda
+# 2;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Rh1V3       ,  1.900000000000000e-01,  2.493527206889407e+00,  8.461304400000000e+00, -7.577923740534765e-01,  4.727065264145779e+00
+Fe1Li1P1    ,  4.965000000000000e+00,  3.186846303874657e+00,  8.297870699999999e+00, -1.644029357203719e+00,  1.096218198340602e+01
+Ga1Si1Sr1   ,  5.000000000000000e+00,  7.201539472018593e+00,  1.114676799000000e+01,  1.165024054187361e+00,  4.371174750888615e-01
+Nb1S2       ,  5.821818182000000e+00,  2.524457591254209e+00,  1.614351903000000e+01, -1.155817762438889e+00,  6.180955838101697e+00
+Ge1V3       ,  6.680000000000000e+00,  6.762579573747320e+00,  1.466154118000000e+01,  7.473038715119003e-01,  1.778651470097723e+00
+Mo1Ni1P1    ,  1.550000000000000e+01,  2.116995984318762e+00,  1.911813449000000e+01, -1.017216650464116e+00,  4.399226472546725e+00

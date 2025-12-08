@@ -1,0 +1,21 @@
+# c0 + a0 * ((|range_ThermalCond - wtd_mean_ThermalCond|) * (|wtd_range_IP - range_IP|)) + a1 * ((lambda3 * w_log) * (w_log / mean_PE))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.03840554437452; Max AE: 7.03581201437441
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  3.126206499436142e-02,  2.223316554599280e-04,  1.251419999656574e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * eV * mK^-1;                                   40|39|abd|23|22|abd|mult; ((|range_ThermalCond - wtd_mean_ThermalCond|) * (|wtd_range_IP - range_IP|)); $\left(\left(\left|range_{ThermalCond} - wtd_{mean, ThermalCond}\right|\right) \left(\left|wtd_{range, IP} - range_{IP}\right|\right)\right)$; (abs(range_ThermalCond - wtd_mean_ThermalCond) .* abs(wtd_range_IP - range_IP)); (abs(newdata$range_ThermalCond - newdata$wtd_mean_ThermalCond) * abs(newdata$wtd_range_IP - newdata$range_IP)); range_ThermalCond,wtd_mean_ThermalCond,wtd_range_IP,range_IP
+# 1;  2; K^2;                                              7|4|mult|4|32|div|mult; ((lambda3 * w_log) * (w_log / mean_PE)); $\left(\left(lambda3 w_{log}\right) \left(\frac{ w_{log} }{ mean_{PE} } \right)\right)$; ((lambda3 .* w_log) .* (w_log ./ mean_PE)); ((newdata$lambda3 * newdata$w_log) * (newdata$w_log / newdata$mean_PE)); lambda3,w_log,w_log,mean_PE
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  7.179139641906803e+00,  2.429959999999999e+01,  2.324484094279013e+04
+Al1Os1      ,  3.900000000000000e-01,  2.398566799710925e+00,  1.764100000000000e+01,  2.679117871256882e+03
+Al1Mo3      ,  5.800000000000000e-01,  7.345035387921546e+00,  1.820055000000000e+02,  1.815970007053241e+03
+La1Se1      ,  1.020000000000000e+00,  1.707040021905369e+00,  1.194050000000000e+01,  3.703266411312329e+02
+Co1Si2      ,  1.306666667000000e+00,  8.342478681374415e+00,  2.113915821100000e+02,  2.170277109375000e+03
+Al1Ge1Sr1   ,  6.700000000000000e+00,  8.846765239637326e+00,  1.323000000000000e+02,  1.555952090614571e+04

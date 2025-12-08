@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.054816 s
+Time to generate feat space: 1.03199 s
+Projection time: 0.030308 s
+Time to get best features on rank : 6.91414e-05 s
+|---Complete final combination/selection from all ranks: 0.0166562 s
+Time for SIS: 0.062166 s
+Time for l0-norm: 0.017065 s
+Projection time: 0.0276752 s
+Time to get best features on rank : 7.41482e-05 s
+|---Complete final combination/selection from all ranks: 0.013911 s
+Time for SIS: 0.0461509 s
+Time for l0-norm: 0.00472808 s
+Projection time: 0.0283449 s
+Time to get best features on rank : 7.10487e-05 s
+|---Complete final combination/selection from all ranks: 0.0141201 s
+Time for SIS: 0.046957 s
+Time for l0-norm: 0.00740099 s
+Projection time: 0.020216 s
+Time to get best features on rank : 6.91414e-05 s
+|---Complete final combination/selection from all ranks: 0.0135012 s
+Time for SIS: 0.0382981 s
+Time for l0-norm: 0.164457 s
+Projection time: 0.0270622 s
+Time to get best features on rank : 6.8903e-05 s
+|---Complete final combination/selection from all ranks: 0.0130739 s
+Time for SIS: 0.0447221 s
+Time for l0-norm: 13.9823 s
+Train RMSE: 3.367 K; Test RMSE: 6.74271 K
+c0 + a0 * ((lambda4w_low * w_log) * sqrt(w_log))
+
+Train RMSE: 2.85933 K; Test RMSE: 6.51201 K
+c0 + a0 * ((wtd_mean_EA * lambda) * (|mean_EA - std_IP|)) + a1 * ((w_log^2) * (wtd_range_PE * lambda3))
+
+Train RMSE: 2.40079 K; Test RMSE: 5.26336 K
+c0 + a0 * (|(|wtd_std_IP|) - (std_PE * wtd_range_IP)|) + a1 * ((wtd_mean_EA * lambda) * (|mean_EA - std_IP|)) + a2 * ((w_log^2) * (wtd_range_PE * lambda3))
+
+Train RMSE: 1.89844 K; Test RMSE: 6.01034 K
+c0 + a0 * ((|wtd_mean_EA - wtd_std_IP|) - (wtd_range_PE * wtd_std_IP)) + a1 * ((wtd_mean_EA * lambda) * (|mean_EA - std_IP|)) + a2 * (|(std_PE * wtd_mean_IP) - (mean_PE * wtd_std_IP)|) + a3 * ((w_log^2) * (wtd_range_PE * lambda3))
+
+Train RMSE: 1.65397 K; Test RMSE: 6.19219 K
+c0 + a0 * ((wtd_mean_EA * lambda3) * (exp(-1.0 * lambda3))) + a1 * ((|wtd_mean_EA - wtd_std_IP|) - (wtd_range_PE * wtd_std_IP)) + a2 * ((wtd_mean_EA * lambda) * (|mean_EA - std_IP|)) + a3 * (|(std_PE * wtd_mean_IP) - (mean_PE * wtd_std_IP)|) + a4 * ((w_log^2) * (wtd_range_PE * lambda3))
+

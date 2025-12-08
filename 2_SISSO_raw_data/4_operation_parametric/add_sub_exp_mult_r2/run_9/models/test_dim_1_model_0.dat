@@ -1,0 +1,19 @@
+# c0 + a0 * ((((wtd_mean_at_rad+7.270566e-01) / (mean_at_mass-1.747472e+01))+3.220856e-02) * (((wtd_range_at_rad-4.572924e-01) / (L_avg-5.151502e+00))-1.011265e-01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.0064718779898; Max AE: 23.6171343823789
+# Coefficients
+# Task   a0                      c0
+# all ,  1.717870188105188e+01,  4.868179139954109e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * g^-1 * mol;                                  15|8|div|17|0|div|mult:3.2208562667249e-02,-1.0112646751489e-01,-4.5729243634477e-01,-5.1515016164343e+00,7.2705664365857e-01,-1.7474717657441e+01; ((((wtd_mean_at_rad+7.270566e-01) / (mean_at_mass-1.747472e+01))+3.220856e-02) * (((wtd_range_at_rad-4.572924e-01) / (L_avg-5.151502e+00))-1.011265e-01)); $\left(\left(\left(\frac{ wtd_{mean, at, rad} +7.271e-01 }{ mean_{at, mass}-1.747e+01 } \right)+3.221e-02\right) * \left(\left(\frac{ wtd_{range, at, rad} -4.573e-01 }{ L_{avg}-5.152e+00 } \right)-1.011e-01\right)\right)$; ((((wtd_mean_at_rad+7.270566e-01) ./ (mean_at_mass-1.747472e+01))+3.220856e-02) .* (((wtd_range_at_rad-4.572924e-01) ./ (L_avg-5.151502e+00))-1.011265e-01)); ((((newdata$wtd_mean_at_rad+7.270566e-01) / (newdata$mean_at_mass-1.747472e+01))+3.220856e-02) * (((newdata$wtd_range_at_rad-4.572924e-01) / (newdata$L_avg-5.151502e+00))-1.011265e-01)); wtd_mean_at_rad,mean_at_mass,wtd_range_at_rad,L_avg
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb3Os1      ,  6.633333330000000e-01,  2.428046771537892e+01,  1.130020691309428e+00
+Ge1Mo3      ,  2.179200000000000e+00,  2.660116737720205e+00, -1.285348810127149e-01
+Sn1V3       ,  4.462500000000000e+00,  2.940011293387423e+00, -1.122417665733787e-01
+Hf1N1       ,  8.830000000000000e+00,  4.673259018653165e+00, -1.134661528272643e-02
+C1Nb1       ,  1.002500000000000e+01,  4.722610801425302e+00, -8.473768247260260e-03

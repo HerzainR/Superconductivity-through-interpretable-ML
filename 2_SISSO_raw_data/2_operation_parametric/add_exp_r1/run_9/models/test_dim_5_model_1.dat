@@ -1,0 +1,23 @@
+# c0 + a0 * (wtd_range_PE * wtd_std_EA) + a1 * (wtd_mean_EA * V_molar) + a2 * (wtd_mean_IP + 2.965282e-02*wtd_mean_at_mass) + a3 * sqrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.26935233104842; Max AE: 8.68686066682642
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.837273901522820e+01,  2.179235836747212e-01,  1.309494722830186e+00,  5.058343431576669e+00,  7.172423258314162e-01, -1.731147993264949e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               35|31|mult; (wtd_range_PE * wtd_std_EA); $\left(wtd_{range, PE} wtd_{std, EA}\right)$; (wtd_range_PE .* wtd_std_EA); (newdata$wtd_range_PE * newdata$wtd_std_EA); wtd_range_PE,wtd_std_EA
+# 1;  1; cm^3 * eV * mol^-1;                               27|3|mult; (wtd_mean_EA * V_molar); $\left(wtd_{mean, EA} V_{molar}\right)$; (wtd_mean_EA .* V_molar); (newdata$wtd_mean_EA * newdata$V_molar); wtd_mean_EA,V_molar
+# 2;  1; eV;                                               21|9|add:2.9652820509607e-02,0.0000000000000e+00; (wtd_mean_IP + 2.965282e-02*wtd_mean_at_mass); $\left(wtd_{mean, IP} + 0.0297wtd_{mean, at, mass}\right)$; (wtd_mean_IP + (2.965282e-02.*wtd_mean_at_mass)); (newdata$wtd_mean_IP + (2.965282e-02*newdata$wtd_mean_at_mass)); wtd_mean_IP,wtd_mean_at_mass
+# 3;  1; Unitless;                                         5|sqrt; sqrt(lambda); $\left(\sqrt{ lambda }\right)$; sqrt(lambda); sqrt(newdata$lambda); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Os1      ,  6.633333330000000e-01,  9.350193999826418e+00,  5.317000000000000e-02,  3.934589366400000e+01,  1.072071661393095e+01,  7.629547824084989e-01,  1.625873335533998e+00
+Ge1Mo3      ,  2.179200000000000e+00,  3.526650320644620e+00,  2.668590000000000e-01,  3.256299267000000e+01,  9.966312184325783e+00,  6.715653356152326e-01,  3.063086995117621e+00
+Sn1V3       ,  4.462500000000000e+00,  3.573526743711913e+00,  1.954310000000000e-01,  2.515228977200000e+01,  8.908440206345958e+00,  1.334990636671284e+00,  8.029862882934906e-01
+Hf1N1       ,  8.830000000000000e+00,  6.478955776282009e+00,  0.000000000000000e+00,  0.000000000000000e+00,  1.353347722389584e+01,  7.849840762716146e-01,  2.924673546231340e+00
+C1Nb1       ,  1.002500000000000e+01,  7.278730961939727e+00,  8.787499999999999e-02,  1.486214884000000e+01,  1.056505731111347e+01,  8.903370148432558e-01,  6.451634609885815e+00

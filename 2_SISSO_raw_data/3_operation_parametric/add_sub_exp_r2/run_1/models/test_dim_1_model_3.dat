@@ -1,0 +1,20 @@
+# c0 + a0 * ((wtd_mean_EA + 5.343209e-01*lambda) - (1.311040e+01*((wtd_std_PE+7.355836e-02) / (wtd_mean_at_mass-9.995169e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.8528017250857; Max AE: 35.3202545699876
+# Coefficients
+# Task   a0                      c0
+# all ,  1.954291522648730e+00,  1.874775929587551e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               27|5|add|37|9|div|sub:1.3110395437334e+01,0.0000000000000e+00,7.3558356687426e-02,-9.9951694061644e+01,5.3432094324222e-01,0.0000000000000e+00; ((wtd_mean_EA + 5.343209e-01*lambda) - (1.311040e+01*((wtd_std_PE+7.355836e-02) / (wtd_mean_at_mass-9.995169e+01)))); $\left(\left(wtd_{mean, EA} + 0.534lambda\right) - \left(1.311e+01\left(\frac{ wtd_{std, PE} +7.356e-02 }{ wtd_{mean, at, mass}-9.995e+01 } \right)\right)\right)$; ((wtd_mean_EA + (5.343209e-01.*lambda)) - (1.311040e+01.*((wtd_std_PE+7.355836e-02) ./ (wtd_mean_at_mass-9.995169e+01)))); ((newdata$wtd_mean_EA + (5.343209e-01*newdata$lambda)) - (1.311040e+01*((newdata$wtd_std_PE+7.355836e-02) / (newdata$wtd_mean_at_mass-9.995169e+01)))); wtd_mean_EA,lambda,wtd_std_PE,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.220619534424719e+00,  1.200355002132820e+00
+B2Ru1       ,  8.000000000000000e-01,  3.371137674513221e+00,  7.656799037318601e-01
+Nb1O1       ,  1.380000000000000e+00,  5.216695457990571e+00,  1.710041459870625e+00
+B1Ta1       ,  4.000000000000000e+00,  4.858920249178502e+00,  1.526969894208220e+00
+N1Zr1       ,  9.850000000000000e+00,  3.423812733292170e+00,  7.926334355711406e-01
+B2Mg0.98    ,  3.840000000000000e+01,  3.079745430012414e+00,  6.165761282082007e-01

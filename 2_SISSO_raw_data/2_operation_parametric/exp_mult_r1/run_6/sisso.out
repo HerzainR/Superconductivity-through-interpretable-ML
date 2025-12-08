@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0564878 s
+Time to generate feat space: 1.96289 s
+Projection time: 0.11571 s
+Time to get best features on rank : 7.00951e-05 s
+|---Complete final combination/selection from all ranks: 0.012531 s
+Time for SIS: 0.136341 s
+Time for l0-norm: 0.0251009 s
+Projection time: 0.00219989 s
+Time to get best features on rank : 8.70228e-05 s
+|---Complete final combination/selection from all ranks: 0.042089 s
+Time for SIS: 0.0456319 s
+Time for l0-norm: 0.00562596 s
+Projection time: 0.00212908 s
+Time to get best features on rank : 4.88758e-05 s
+|---Complete final combination/selection from all ranks: 0.009413 s
+Time for SIS: 0.0126579 s
+Time for l0-norm: 0.0047431 s
+Projection time: 0.0021348 s
+Time to get best features on rank : 5.79357e-05 s
+|---Complete final combination/selection from all ranks: 0.00837398 s
+Time for SIS: 0.0116749 s
+Time for l0-norm: 0.16521 s
+Projection time: 0.00214195 s
+Time to get best features on rank : 5.79357e-05 s
+|---Complete final combination/selection from all ranks: 0.00822115 s
+Time for SIS: 0.0115259 s
+Time for l0-norm: 13.1219 s
+Train RMSE: 4.91366 K; Test RMSE: 6.85452 K
+c0 + a0 * ((lambda4w_low-2.020694e+01) * (w_log-4.299936e+00))
+
+Train RMSE: 3.47457 K; Test RMSE: 5.92559 K
+c0 + a0 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a1 * (w_log^2)
+
+Train RMSE: 3.14565 K; Test RMSE: 6.12841 K
+c0 + a0 * (|range_EA - mean_EA|) + a1 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a2 * (w_log^2)
+
+Train RMSE: 2.81496 K; Test RMSE: 7.80678 K
+c0 + a0 * (|range_at_mass - mean_at_mass|) + a1 * ((wtd_range_IP-2.263473e+00) * (range_EA-3.003350e-01)) + a2 * ((lambda4w_low-2.020694e+01) * (w_log-4.299936e+00)) + a3 * (w_log / mean_at_mass)
+
+Train RMSE: 2.54046 K; Test RMSE: 6.96288 K
+c0 + a0 * (mean_EA * V_molar) + a1 * (|range_at_mass - mean_at_mass|) + a2 * ((wtd_range_IP-2.263473e+00) * (range_EA-3.003350e-01)) + a3 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a4 * (w_log^2)
+

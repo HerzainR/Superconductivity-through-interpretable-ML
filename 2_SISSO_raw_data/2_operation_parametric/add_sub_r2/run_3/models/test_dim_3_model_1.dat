@@ -1,0 +1,22 @@
+# c0 + a0 * ((sin(5.223590e+01*lambda-1.281197e+00)) + 3.358969e-01*((range_EA-2.244221e-02) * (range_at_rad+3.053294e-01))) + a1 * (((bulk_mod+4.438290e+01) / (mean_ThermalCond-7.692890e+01)) + 6.940122e+00*(1.0 / (mean_IP-7.065290e+00))) + a2 * ((mean_IP + 8.830089e-01*lambda) - (8.490850e-01*((wtd_std_EA-3.047194e-01) / (wtd_mean_at_rad-1.023024e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.40851723809913; Max AE: 14.4573633687565
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.273176314375605e+00, -9.182293040446373e-03,  1.611604008603355e+00, -1.026719936956179e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         5|sin|28|16|mult|add:3.3589691148304e-01,0.0000000000000e+00,-2.2442210356402e-02,3.0532943769650e-01,5.2235895783297e+01,-1.2811973396104e+00; ((sin(5.223590e+01*lambda-1.281197e+00)) + 3.358969e-01*((range_EA-2.244221e-02) * (range_at_rad+3.053294e-01))); $\left(\left(\sin{ \left(5.224e+01lambda-1.281e+00 \right)}\right) + 0.336\left(\left(range_{EA}-2.244e-02\right) * \left(range_{at, rad}+3.053e-01\right)\right)\right)$; (sin(5.223590e+01.*lambda-1.281197e+00) + (3.358969e-01.*((range_EA-2.244221e-02) .* (range_at_rad+3.053294e-01)))); (sin(5.223590e+01*newdata$lambda-1.281197e+00) + (3.358969e-01*((newdata$range_EA-2.244221e-02) * (newdata$range_at_rad+3.053294e-01)))); lambda,range_EA,range_at_rad
+# 1;  2; GPa * W^-1 * mK;                                  1|38|div|20|inv|add:6.9401217640896e+00,0.0000000000000e+00,1.0000000000000e+00,-7.0652903622262e+00,4.4382900020099e+01,-7.6928896553753e+01; (((bulk_mod+4.438290e+01) / (mean_ThermalCond-7.692890e+01)) + 6.940122e+00*(1.0 / (mean_IP-7.065290e+00))); $\left(\left(\frac{ bulk_{mod} +4.438e+01 }{ mean_{ThermalCond}-7.693e+01 } \right) + 6.94\left(\frac{1}{ mean_{IP}-7.065e+00 }\right)\right)$; (((bulk_mod+4.438290e+01) ./ (mean_ThermalCond-7.692890e+01)) + (6.940122e+00.*(mean_IP-7.065290e+00).^(-1))); (((newdata$bulk_mod+4.438290e+01) / (newdata$mean_ThermalCond-7.692890e+01)) + (6.940122e+00*(newdata$mean_IP-7.065290e+00)^(-1))); bulk_mod,mean_ThermalCond,mean_IP
+# 2;  2; eV;                                               20|5|add|31|15|div|sub:8.4908504660439e-01,0.0000000000000e+00,-3.0471937894963e-01,-1.0230239473797e+00,8.8300892409728e-01,0.0000000000000e+00; ((mean_IP + 8.830089e-01*lambda) - (8.490850e-01*((wtd_std_EA-3.047194e-01) / (wtd_mean_at_rad-1.023024e+00)))); $\left(\left(mean_{IP} + 0.883lambda\right) - \left(8.491e-01\left(\frac{ wtd_{std, EA} -3.047e-01 }{ wtd_{mean, at, rad}-1.023e+00 } \right)\right)\right)$; ((mean_IP + (8.830089e-01.*lambda)) - (8.490850e-01.*((wtd_std_EA-3.047194e-01) ./ (wtd_mean_at_rad-1.023024e+00)))); ((newdata$mean_IP + (8.830089e-01*newdata$lambda)) - (8.490850e-01*((newdata$wtd_std_EA-3.047194e-01) / (newdata$wtd_mean_at_rad-1.023024e+00)))); mean_IP,lambda,wtd_std_EA,wtd_mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  5.127864042651097e+00,  8.322190774918339e-01,  9.780270332825534e+00,  8.434508696015055e+00
+Os0.5V0.5   ,  5.150000000000000e+00,  5.652891969171623e+00,  8.507751790523028e-01, -2.515381263646828e+00,  8.664059105364482e+00
+Ir1Mo1      ,  5.325000000000000e+00,  2.175907443725114e+00, -3.631327343448542e-01,  1.191193115200563e+01,  8.301015829616222e+00
+N1Ti1       ,  5.387500000000000e+00,  9.672892490412865e+00, -4.582926747074772e-01, -3.091683368201438e+00,  1.300163257142497e+01
+B6Y1        ,  5.692857143000000e+00, -8.764506225756520e+00,  8.534333990864582e-01,  3.212092853384789e+01, -8.833911159695340e-02
+N1V1        ,  8.528333333499999e+00,  6.348265000439811e+00, -5.768929210149547e-01, -4.284173479515844e+00,  1.109919376110287e+01

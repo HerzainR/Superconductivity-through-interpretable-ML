@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.087765 s
+Time to generate feat space: 3.2311 s
+Projection time: 0.117129 s
+Time to get best features on rank : 0.000201941 s
+|---Complete final combination/selection from all ranks: 0.062098 s
+Time for SIS: 0.183783 s
+Time for l0-norm: 0.032238 s
+Projection time: 0.00292301 s
+Time to get best features on rank : 5.91278e-05 s
+|---Complete final combination/selection from all ranks: 0.00892186 s
+Time for SIS: 0.013483 s
+Time for l0-norm: 0.00419402 s
+Projection time: 0.004673 s
+Time to get best features on rank : 6.69956e-05 s
+|---Complete final combination/selection from all ranks: 0.00904298 s
+Time for SIS: 0.0153589 s
+Time for l0-norm: 0.010489 s
+Projection time: 0.00458813 s
+Time to get best features on rank : 0.001055 s
+|---Complete final combination/selection from all ranks: 0.00798392 s
+Time for SIS: 0.015902 s
+Time for l0-norm: 0.163982 s
+Projection time: 0.00519514 s
+Time to get best features on rank : 5.6982e-05 s
+|---Complete final combination/selection from all ranks: 0.00866079 s
+Time for SIS: 0.015265 s
+Time for l0-norm: 13.332 s
+Train RMSE: 3.47424 K; Test RMSE: 14.1381 K
+c0 + a0 * (mean_IP + 7.141148e-01*lambda)
+
+Train RMSE: 3.15005 K; Test RMSE: 15.1263 K
+c0 + a0 * (|std_EA - mean_EA|) + a1 * (wtd_mean_IP + 7.115646e-01*lambda)
+
+Train RMSE: 2.89101 K; Test RMSE: 14.9837 K
+c0 + a0 * ((std_EA-1.017490e-01) * (wtd_range_PE-2.634220e-01)) + a1 * (|std_EA - mean_EA|) + a2 * (wtd_mean_IP + 7.115646e-01*lambda)
+
+Train RMSE: 2.64175 K; Test RMSE: 15.3637 K
+c0 + a0 * ((wtd_range_PE-2.605989e-01) * (wtd_std_EA-6.343892e-02)) + a1 * ((mean_ThermalCond-1.935619e+01) * (range_at_rad-9.424615e-01)) + a2 * (|std_EA - mean_EA|) + a3 * ((lambda+1.217720e+01) * (wtd_mean_IP+2.171951e+00))
+
+Train RMSE: 2.4387 K; Test RMSE: 14.8358 K
+c0 + a0 * (wtd_std_PE^3) + a1 * (|range_EA - mean_EA|) + a2 * ((V_molar-2.130995e+01) * (range_at_mass-9.329934e+01)) + a3 * (wtd_range_EA - wtd_mean_IP) + a4 * (wtd_mean_EA * lambda)
+

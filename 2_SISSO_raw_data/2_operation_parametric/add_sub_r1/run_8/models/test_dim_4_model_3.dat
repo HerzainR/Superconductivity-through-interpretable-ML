@@ -1,0 +1,22 @@
+# c0 + a0 * (|std_EA - wtd_mean_EA|) + a1 * (mean_IP * wtd_range_at_mass) + a2 * ln(lambda) + a3 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.27729634455881; Max AE: 5.1756678942784
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  6.296029181774698e+00,  8.931188176384849e-03,  4.444507254000718e+00,  7.490650369270065e-01, -1.866493709340068e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               30|27|abd; (|std_EA - wtd_mean_EA|); $\left(\left|std_{EA} - wtd_{mean, EA}\right|\right)$; abs(std_EA - wtd_mean_EA); abs(newdata$std_EA - newdata$wtd_mean_EA); std_EA,wtd_mean_EA
+# 1;  1; eV * g * mol^-1;                                  20|11|mult; (mean_IP * wtd_range_at_mass); $\left(mean_{IP} wtd_{range, at, mass}\right)$; (mean_IP .* wtd_range_at_mass); (newdata$mean_IP * newdata$wtd_range_at_mass); mean_IP,wtd_range_at_mass
+# 2;  1; Unitless;                                         5|log; ln(lambda); $\left(\ln{ lambda }\right)$; log(lambda); log(newdata$lambda); lambda
+# 3;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C1In1Ti2    ,  3.100000000000000e+00, -2.075667894278396e+00,  8.370000000000000e-02,  2.045333328000000e+02, -1.346689106527531e+00,  4.569018473820517e+00
+Sn1         ,  3.740729412000000e+00,  2.809798981472181e-01,  1.200000000000000e+00,  0.000000000000000e+00, -1.370421011963600e+00,  9.119164350096876e-01
+Al1Si1Sr1   ,  4.750000000000000e+00, -1.441083074372730e-01,  3.100000000000003e-02,  1.336268208000000e+02, -4.523994952973785e-01,  3.129841787122208e+00
+Sn1Ta3      ,  6.692500000000000e+00,  1.059919829382827e+01,  1.025000000000000e-01,  8.076564078000000e+02,  1.005912033379189e+00,  1.818724892435020e-01
+Re3W1       ,  8.733333332999999e+00,  1.240815680651338e+01,  1.619999999999999e-02,  7.430037290000000e+02,  1.687102409790578e+00,  5.127702296093048e-02

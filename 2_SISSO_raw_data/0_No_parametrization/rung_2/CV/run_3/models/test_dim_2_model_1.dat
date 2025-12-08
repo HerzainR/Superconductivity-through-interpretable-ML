@@ -1,0 +1,21 @@
+# c0 + a0 * (|(std_PE * wtd_range_IP) - (|wtd_std_IP|)|) + a1 * ((lambda4w_low * w_log) * sqrt(w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.96600743919602; Max AE: 4.89283612867601
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  5.176237320349558e+00,  6.477276699292127e-06,  5.543964650270989e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               36|23|mult|25|abs|abd; (|(std_PE * wtd_range_IP) - (|wtd_std_IP|)|); $\left(\left|\left(std_{PE} wtd_{range, IP}\right) - \left(\left|wtd_{std, IP}\right|\right)\right|\right)$; abs((std_PE .* wtd_range_IP) - abs(wtd_std_IP)); abs((newdata$std_PE * newdata$wtd_range_IP) - abs(newdata$wtd_std_IP)); std_PE,wtd_range_IP,wtd_std_IP
+# 1;  2; K^2.5;                                            6|4|mult|4|sqrt|mult; ((lambda4w_low * w_log) * sqrt(w_log)); $\left(\left(lambda4w_{low} w_{log}\right) \left(\sqrt{ w_{log} }\right)\right)$; ((lambda4w_low .* w_log) .* sqrt(w_log)); ((newdata$lambda4w_low * newdata$w_log) * sqrt(newdata$w_log)); lambda4w_low,w_log,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B1Hf1       ,  3.100000000000000e+00,  3.347367883552996e+00,  4.639950000000000e-01,  6.039933157604009e+04
+Os0.5V0.5   ,  5.150000000000000e+00,  7.419182091079681e+00,  6.985550000000000e-01,  5.015841248669914e+05
+Ir1Mo1      ,  5.325000000000000e+00,  5.864802746697618e+00,  9.839200000000000e-01,  3.356392933714571e+04
+N1Ti1       ,  5.387500000000000e+00,  9.775871793243219e+00,  9.632499999999999e-01,  6.538959081140201e+05
+B6Y1        ,  5.692857143000000e+00,  1.058569327167601e+01,  1.868504000000000e+00,  5.549811831657103e+04
+N1V1        ,  8.528333333499999e+00,  6.507496090980346e+00,  1.148730000000000e+00,  1.080782753786609e+03

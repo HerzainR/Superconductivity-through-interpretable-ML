@@ -1,0 +1,20 @@
+# c0 + a0 * (mean_PE + 4.625695e-01*lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.4337282974845; Max AE: 34.2936194812587
+# Coefficients
+# Task   a0                      c0
+# all ,  2.443423929345408e+00, -7.728979547554837e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         32|5|add:4.6256953588799e-01,0.0000000000000e+00; (mean_PE + 4.625695e-01*lambda); $\left(mean_{PE} + 0.463lambda\right)$; (mean_PE + (4.625695e-01.*lambda)); (newdata$mean_PE + (4.625695e-01*newdata$lambda)); mean_PE,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Sb1V3       ,  6.500000000000000e-01,  4.651053201899768e+00,  2.219815845917628e+00
+B2Ru1       ,  8.000000000000000e-01,  4.828858346223722e+00,  2.292584693839809e+00
+Nb1O1       ,  1.380000000000000e+00,  5.906481401014759e+00,  2.733614611673073e+00
+B1Ta1       ,  4.000000000000000e+00,  3.810225318760657e+00,  1.875697138950406e+00
+N1Zr1       ,  9.850000000000000e+00,  5.248091301804593e+00,  2.464160714908401e+00
+B2Mg0.98    ,  3.840000000000000e+01,  4.106380518741317e+00,  1.996902140024452e+00

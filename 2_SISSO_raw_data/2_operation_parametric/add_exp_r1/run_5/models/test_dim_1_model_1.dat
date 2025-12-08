@@ -1,0 +1,20 @@
+# c0 + a0 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.52684021577196; Max AE: 7.48143427400439
+# Coefficients
+# Task   a0                      c0
+# all ,  4.106608795793638e-02,  7.146663142826053e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; K;                                                6|7|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  7.737434274004390e+00,  1.710113699389906e+02
+Al1Os1      ,  3.900000000000000e-01,  4.683803876607298e+00,  9.665243902439025e+01
+Al1Mo3      ,  5.800000000000000e-01,  4.814957250390408e+00,  9.984615384615385e+01
+La1Se1      ,  1.020000000000000e+00,  2.459975052494902e+00,  4.250000000000000e+01
+Co1Si2      ,  1.306666667000000e+00,  5.363347471121004e+00,  1.132000000000000e+02
+Al1Ge1Sr1   ,  6.700000000000000e+00,  3.224365770567799e+00,  6.111367264531881e+01

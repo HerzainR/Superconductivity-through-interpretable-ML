@@ -1,0 +1,21 @@
+# c0 + a0 * (((L_avg+1.951053e+00)^6) - (9.333779e+02*((std_ThermalCond-1.037274e+01) / (wtd_mean_at_rad-1.129620e+00)))) + a1 * (((mean_IP+6.847818e+01) / (lambda3-4.781981e-02)) - (5.713813e+00*((bulk_mod-1.328682e+02) / (mean_IP-7.049704e+00)))) + a2 * (((wtd_mean_IP+2.087045e+00) * (lambda+1.265586e+01)) - (1.646738e+00*((wtd_std_EA-2.524393e-01) / (wtd_mean_EA-1.837184e-01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.66337795070264; Max AE: 5.75078504479043
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.691969634635742e-06, -1.200074831282379e-04,  1.404083781008585e-01, -1.497277000755328e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^6;                                             0|sp|42|15|div|sub:9.3337790559908e+02,0.0000000000000e+00,-1.0372741935004e+01,-1.1296201368310e+00,1.0000000000000e+00,1.9510530177022e+00; (((L_avg+1.951053e+00)^6) - (9.333779e+02*((std_ThermalCond-1.037274e+01) / (wtd_mean_at_rad-1.129620e+00)))); $\left(\left(\left(L_{avg}+1.951e+00\right)^6\right) - \left(9.334e+02\left(\frac{ std_{ThermalCond} -1.037e+01 }{ wtd_{mean, at, rad}-1.130e+00 } \right)\right)\right)$; ((L_avg+1.951053e+00).^6 - (9.333779e+02.*((std_ThermalCond-1.037274e+01) ./ (wtd_mean_at_rad-1.129620e+00)))); ((newdata$L_avg+1.951053e+00)^6 - (9.333779e+02*((newdata$std_ThermalCond-1.037274e+01) / (newdata$wtd_mean_at_rad-1.129620e+00)))); L_avg,std_ThermalCond,wtd_mean_at_rad
+# 1;  2; eV;                                               20|7|div|1|20|div|sub:5.7138131598946e+00,0.0000000000000e+00,-1.3286821357999e+02,-7.0497036998326e+00,6.8478182329822e+01,-4.7819809110386e-02; (((mean_IP+6.847818e+01) / (lambda3-4.781981e-02)) - (5.713813e+00*((bulk_mod-1.328682e+02) / (mean_IP-7.049704e+00)))); $\left(\left(\frac{ mean_{IP} +6.848e+01 }{ lambda3-4.782e-02 } \right) - \left(5.714e+00\left(\frac{ bulk_{mod} -1.329e+02 }{ mean_{IP}-7.050e+00 } \right)\right)\right)$; (((mean_IP+6.847818e+01) ./ (lambda3-4.781981e-02)) - (5.713813e+00.*((bulk_mod-1.328682e+02) ./ (mean_IP-7.049704e+00)))); (((newdata$mean_IP+6.847818e+01) / (newdata$lambda3-4.781981e-02)) - (5.713813e+00*((newdata$bulk_mod-1.328682e+02) / (newdata$mean_IP-7.049704e+00)))); mean_IP,lambda3,bulk_mod,mean_IP
+# 2;  2; eV;                                               21|5|mult|31|27|div|sub:1.6467379680935e+00,0.0000000000000e+00,-2.5243934231054e-01,-1.8371842644377e-01,2.0870447453556e+00,1.2655860582522e+01; (((wtd_mean_IP+2.087045e+00) * (lambda+1.265586e+01)) - (1.646738e+00*((wtd_std_EA-2.524393e-01) / (wtd_mean_EA-1.837184e-01)))); $\left(\left(\left(wtd_{mean, IP}+2.087e+00\right) * \left(lambda+1.266e+01\right)\right) - \left(1.647e+00\left(\frac{ wtd_{std, EA} -2.524e-01 }{ wtd_{mean, EA}-1.837e-01 } \right)\right)\right)$; (((wtd_mean_IP+2.087045e+00) .* (lambda+1.265586e+01)) - (1.646738e+00.*((wtd_std_EA-2.524393e-01) ./ (wtd_mean_EA-1.837184e-01)))); (((newdata$wtd_mean_IP+2.087045e+00) * (newdata$lambda+1.265586e+01)) - (1.646738e+00*((newdata$wtd_std_EA-2.524393e-01) / (newdata$wtd_mean_EA-1.837184e-01)))); wtd_mean_IP,lambda,wtd_std_EA,wtd_mean_EA
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Os1      ,  6.633333330000000e-01,  2.895225069654340e+00,  1.179738608354924e+05, -3.019531580172815e+02,  1.238971830748581e+02
+Ge1Mo3      ,  2.179200000000000e+00,  2.335271415492949e+00,  2.352743197531646e+04,  3.941535941152169e+02,  1.229875344547017e+02
+Sn1V3       ,  4.462500000000000e+00, -9.235255962710257e-01,  8.759713364349972e+04,  3.730840912393774e+04,  1.296441635355689e+02
+Hf1N1       ,  8.830000000000000e+00,  8.706749513106571e+00,  6.238598277529619e+04,  1.972285409802405e+02,  1.671756456767100e+02
+C1Nb1       ,  1.002500000000000e+01,  4.274214955209566e+00, -4.771553667044694e+05, -3.140703635179236e+02,  1.493567376636484e+02

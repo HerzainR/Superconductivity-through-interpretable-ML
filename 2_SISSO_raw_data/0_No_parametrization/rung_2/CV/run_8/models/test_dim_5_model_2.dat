@@ -1,0 +1,23 @@
+# c0 + a0 * ((std_PE * wtd_mean_EA) * (wtd_mean_EA - wtd_std_IP)) + a1 * ((|range_EA - mean_EA|) * (|range_at_mass - wtd_mean_at_mass|)) + a2 * ((range_EA - wtd_std_IP) / (wtd_range_PE + lambda3)) + a3 * ((mean_EA * lambda) + (|wtd_range_IP - range_IP|)) + a4 * ((wtd_range_EA * w_log) * (lambda4w_low * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.10924209125166; Max AE: 9.04145344454316
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.903841419979140e+00,  1.010597142736783e-01, -1.365525263535452e+00,  1.403976496880873e+00,  1.423289015503995e-06, -2.041907597420147e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             36|27|mult|27|25|sub|mult; ((std_PE * wtd_mean_EA) * (wtd_mean_EA - wtd_std_IP)); $\left(\left(std_{PE} wtd_{mean, EA}\right) \left(wtd_{mean, EA} - wtd_{std, IP}\right)\right)$; ((std_PE .* wtd_mean_EA) .* (wtd_mean_EA - wtd_std_IP)); ((newdata$std_PE * newdata$wtd_mean_EA) * (newdata$wtd_mean_EA - newdata$wtd_std_IP)); std_PE,wtd_mean_EA,wtd_mean_EA,wtd_std_IP
+# 1;  2; eV * g * mol^-1;                                  28|26|abd|10|9|abd|mult; ((|range_EA - mean_EA|) * (|range_at_mass - wtd_mean_at_mass|)); $\left(\left(\left|range_{EA} - mean_{EA}\right|\right) \left(\left|range_{at, mass} - wtd_{mean, at, mass}\right|\right)\right)$; (abs(range_EA - mean_EA) .* abs(range_at_mass - wtd_mean_at_mass)); (abs(newdata$range_EA - newdata$mean_EA) * abs(newdata$range_at_mass - newdata$wtd_mean_at_mass)); range_EA,mean_EA,range_at_mass,wtd_mean_at_mass
+# 2;  2; eV;                                               28|25|sub|35|7|add|div; ((range_EA - wtd_std_IP) / (wtd_range_PE + lambda3)); $\left(\frac{ \left(range_{EA} - wtd_{std, IP}\right) }{ \left(wtd_{range, PE} + lambda3\right) } \right)$; ((range_EA - wtd_std_IP) ./ (wtd_range_PE + lambda3)); ((newdata$range_EA - newdata$wtd_std_IP) / (newdata$wtd_range_PE + newdata$lambda3)); range_EA,wtd_std_IP,wtd_range_PE,lambda3
+# 3;  2; eV;                                               26|5|mult|23|22|abd|add; ((mean_EA * lambda) + (|wtd_range_IP - range_IP|)); $\left(\left(mean_{EA} lambda\right) + \left(\left|wtd_{range, IP} - range_{IP}\right|\right)\right)$; ((mean_EA .* lambda) + abs(wtd_range_IP - range_IP)); ((newdata$mean_EA * newdata$lambda) + abs(newdata$wtd_range_IP - newdata$range_IP)); mean_EA,lambda,wtd_range_IP,range_IP
+# 4;  2; K^3 * eV;                                         29|4|mult|6|4|mult|mult; ((wtd_range_EA * w_log) * (lambda4w_low * w_log)); $\left(\left(wtd_{range, EA} w_{log}\right) \left(lambda4w_{low} w_{log}\right)\right)$; ((wtd_range_EA .* w_log) .* (lambda4w_low .* w_log)); ((newdata$wtd_range_EA * newdata$w_log) * (newdata$lambda4w_low * newdata$w_log)); wtd_range_EA,w_log,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  8.789376181791202e+00, -3.039194269800000e-01,  3.003027384999999e+01, -2.582507288629737e+00,  3.648852730000000e+00,  2.078585941482376e+04
+Sn1         ,  3.740729412000000e+00,  1.278218285654316e+01,  0.000000000000000e+00,  1.424520000000000e+02,  0.000000000000000e+00,  3.048000000000000e-01,  0.000000000000000e+00
+Al1Si1Sr1   ,  4.750000000000000e+00,  1.152080843085986e+00, -1.179304510500000e-01,  1.015089880000000e+01,  5.035732961478123e-01,  2.025194070000000e+00,  2.493590653451277e+05
+Sn1Ta3      ,  6.692500000000000e+00,  7.264583463284982e+00,  4.056430650000000e-02,  1.206860850000000e+01,  3.141366223908918e-02,  5.616378400000000e+00,  8.900616632680272e+04
+Re3W1       ,  8.733333332999999e+00,  1.050324583328375e+01,  2.013692320000001e-02,  3.344281475000001e+01,  3.943088405870191e-03,  6.422333500000001e+00,  6.712395905922583e+04

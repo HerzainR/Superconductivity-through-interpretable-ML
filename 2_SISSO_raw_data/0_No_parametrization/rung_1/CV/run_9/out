@@ -1,0 +1,45 @@
+Commit: f0d14a02f9673d0a48c753824c25f7109aac49f7
+Compiler: AppleClang version 17.0.0.17000013
+Compiler flags: -O3 -arch arm64 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/clp/include/clp -I/opt/homebrew/include/coinutils/coin -Xclang -fopenmp
+time input_parsing: 0.00182986 s
+Time to generate feat space: 0.0217969 s
+Projection time: 0.00049305 s
+Time to get best features on rank : 9.05991e-06 s
+|---Complete final combination/selection from all ranks: 0.00066185 s
+Time for SIS: 0.00132203 s
+Time for l0-norm: 0.000641108 s
+Projection time: 0.000365973 s
+Time to get best features on rank : 2.90871e-05 s
+|---Complete final combination/selection from all ranks: 0.000408173 s
+Time for SIS: 0.00117302 s
+Time for l0-norm: 0.000952959 s
+Projection time: 0.000427008 s
+Time to get best features on rank : 2.7895e-05 s
+|---Complete final combination/selection from all ranks: 0.000381947 s
+Time for SIS: 0.00117207 s
+Time for l0-norm: 0.0337591 s
+Projection time: 0.00040102 s
+Time to get best features on rank : 8.39233e-05 s
+|---Complete final combination/selection from all ranks: 0.000387907 s
+Time for SIS: 0.00115395 s
+Time for l0-norm: 1.94515 s
+Projection time: 0.000365019 s
+Time to get best features on rank : 0.000140905 s
+|---Complete final combination/selection from all ranks: 0.000462055 s
+Time for SIS: 0.001369 s
+Time for l0-norm: 164.565 s
+Train RMSE: 5.20127 K; Test RMSE: 2.66418 K
+c0 + a0 * (lambda * w_log)
+
+Train RMSE: 4.00285 K; Test RMSE: 3.12929 K
+c0 + a0 * cbrt(lambda) + a1 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.64721 K; Test RMSE: 3.73445 K
+c0 + a0 * (wtd_mean_EA * wtd_range_at_mass) + a1 * cbrt(lambda) + a2 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 3.34286 K; Test RMSE: 4.33082 K
+c0 + a0 * (std_EA * bulk_mod) + a1 * (wtd_mean_EA * density) + a2 * cbrt(lambda) + a3 * (w_log / wtd_mean_at_mass)
+
+Train RMSE: 2.97728 K; Test RMSE: 3.69193 K
+c0 + a0 * (wtd_range_PE * std_EA) + a1 * (mean_IP * wtd_range_at_mass) + a2 * (wtd_mean_EA * V_molar) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

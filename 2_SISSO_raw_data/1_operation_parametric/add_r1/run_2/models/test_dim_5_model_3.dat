@@ -1,0 +1,24 @@
+# c0 + a0 * (wtd_range_PE * std_IP) + a1 * (mean_IP + 9.967774e-02*V_molar) + a2 * (wtd_range_at_rad / lambda) + a3 * (w_log^2) + a4 * (lambda4w_low * w_log)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.71804376407189; Max AE: 10.5185799019362
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.619861767741540e+00,  2.741585672000242e+00, -3.316478273315318e+00,  4.587861036203090e-05,  1.357847720545794e-05, -2.453218286732330e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               35|24|mult; (wtd_range_PE * std_IP); $\left(wtd_{range, PE} std_{IP}\right)$; (wtd_range_PE .* std_IP); (newdata$wtd_range_PE * newdata$std_IP); wtd_range_PE,std_IP
+# 1;  1; eV;                                               20|3|add:9.9677739255494e-02,0.0000000000000e+00; (mean_IP + 9.967774e-02*V_molar); $\left(mean_{IP} + 0.0997V_{molar}\right)$; (mean_IP + (9.967774e-02.*V_molar)); (newdata$mean_IP + (9.967774e-02*newdata$V_molar)); mean_IP,V_molar
+# 2;  1; AA;                                               17|5|div; (wtd_range_at_rad / lambda); $\left(\frac{ wtd_{range, at, rad} }{ lambda } \right)$; (wtd_range_at_rad ./ lambda); (newdata$wtd_range_at_rad / newdata$lambda); wtd_range_at_rad,lambda
+# 3;  1; K^2;                                              4|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# 4;  1; K^2;                                              6|4|mult; (lambda4w_low * w_log); $\left(lambda4w_{low} w_{log}\right)$; (lambda4w_low .* w_log); (newdata$lambda4w_low * newdata$w_log); lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  1.959161245387292e+00,  3.750135000000000e-01,  9.973887573127492e+00,  4.387177007047119e-01,  2.438438402500000e+04,  6.688743270000001e+03
+La1         ,  5.343000000000000e+00, -1.860769603463920e+00,  0.000000000000000e+00,  7.832014479064014e+00,  0.000000000000000e+00,  7.279743610000000e+02,  8.586206799600000e+04
+C1Ta1       ,  8.637499999999999e+00,  4.780191441239074e+00,  8.846250000000001e-01,  1.091346271494885e+01,  4.790596602133544e-01,  4.013659641743999e+04,  4.216461031680000e+04
+C1I1Y1      ,  9.917500000000000e+00,  1.095662773705972e+01,  1.061472000000000e+00,  1.388767000971638e+01,  4.344435780327504e-01,  1.050946874649000e+04,  6.825085243199999e+03
+Nb1Ru3      ,  1.350000000000000e+01,  2.981420098063833e+00,  3.762500000000000e-01,  1.057987116423704e+01,  9.255506012700987e-01,  4.378200532225000e+04,  1.313576288700000e+04
+Nb3Sn1      ,  1.670900000000000e+01,  7.142522301105643e+00,  2.076750000000000e-01,  1.158409001763112e+01,  3.016475252939568e-01,  1.203840172960000e+03,  8.819189935879999e+04

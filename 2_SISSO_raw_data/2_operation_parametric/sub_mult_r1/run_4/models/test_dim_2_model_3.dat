@@ -1,0 +1,21 @@
+# c0 + a0 * ((lambda-1.635950e-01) * (w_log+5.810312e+01)) + a1 * (w_log / density)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.09178426435788; Max AE: 5.6011277288616
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  2.494969377315173e-02,  7.282909728903522e-02, -7.859702206533243e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; K;                                                5|4|mult:-1.6359503990456e-01,5.8103122047111e+01; ((lambda-1.635950e-01) * (w_log+5.810312e+01)); $\left(\left(lambda-1.636e-01\right) * \left(w_{log}+5.810e+01\right)\right)$; ((lambda-1.635950e-01) .* (w_log+5.810312e+01)); ((newdata$lambda-1.635950e-01) * (newdata$w_log+5.810312e+01)); lambda,w_log
+# 1;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B1Mo1       ,  2.500000000000000e-01,  5.851127728861604e+00,  1.462457959818209e+02,  4.103181606519208e+01
+Hg2Na1      ,  1.620000000000000e+00,  9.626818495822713e-01,  5.232333768284651e+01,  6.085491024287223e+00
+Ga2Y1       ,  1.680000000000000e+00,  1.484131949364194e+00,  8.040879489760097e+01,  3.623927392739274e+00
+B2Nb1       ,  4.597500000000000e+00,  8.508943363119236e+00,  2.205815688510718e+02,  5.205983775811210e+01
+Nb0.75Si0.25,  9.000000000000000e+00,  7.105824273158101e+00,  2.608609719687299e+02,  1.899506072874494e+01
+Ta1B2       ,  9.500000000000000e+00,  6.926204072233282e+00,  2.427719286238370e+02,  2.272565607171964e+01

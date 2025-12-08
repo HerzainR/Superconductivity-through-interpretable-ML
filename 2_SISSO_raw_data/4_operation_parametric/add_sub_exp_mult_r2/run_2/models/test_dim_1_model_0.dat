@@ -1,0 +1,20 @@
+# c0 + a0 * (((lambda+8.172698e+01) * (wtd_mean_IP+6.800878e+01)) + 1.615448e-01*((wtd_mean_at_mass-3.788496e+01) / (mean_at_rad-1.126802e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.54634718293052; Max AE: 11.3320199462152
+# Coefficients
+# Task   a0                      c0
+# all ,  1.684316005750245e-02, -1.018676643680805e+02, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               5|21|mult|9|14|div|add:1.6154480802795e-01,0.0000000000000e+00,-3.7884955725058e+01,-1.1268022385725e+00,8.1726984309835e+01,6.8008784568961e+01; (((lambda+8.172698e+01) * (wtd_mean_IP+6.800878e+01)) + 1.615448e-01*((wtd_mean_at_mass-3.788496e+01) / (mean_at_rad-1.126802e+00))); $\left(\left(\left(lambda+8.173e+01\right) * \left(wtd_{mean, IP}+6.801e+01\right)\right) + 0.162\left(\frac{ wtd_{mean, at, mass} -3.788e+01 }{ mean_{at, rad}-1.127e+00 } \right)\right)$; (((lambda+8.172698e+01) .* (wtd_mean_IP+6.800878e+01)) + (1.615448e-01.*((wtd_mean_at_mass-3.788496e+01) ./ (mean_at_rad-1.126802e+00)))); (((newdata$lambda+8.172698e+01) * (newdata$wtd_mean_IP+6.800878e+01)) + (1.615448e-01*((newdata$wtd_mean_at_mass-3.788496e+01) / (newdata$mean_at_rad-1.126802e+00)))); lambda,wtd_mean_IP,wtd_mean_at_mass,mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  2.554636365129035e+00,  6.199685829542226e+03
+La1         ,  5.343000000000000e+00,  3.802083402060557e+00,  6.273748358941267e+03
+C1Ta1       ,  8.637499999999999e+00,  8.060194785567345e+00,  6.526557889277001e+03
+C1I1Y1      ,  9.917500000000000e+00,  6.218564837109885e+00,  6.417217958873790e+03
+Nb1Ru3      ,  1.350000000000000e+01,  3.005518488716992e+00,  6.226455279102086e+03
+Nb3Sn1      ,  1.670900000000000e+01,  5.376980053784774e+00,  6.367251991653153e+03

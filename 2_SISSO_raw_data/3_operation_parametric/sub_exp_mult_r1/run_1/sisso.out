@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0565622 s
+Time to generate feat space: 2.40318 s
+Projection time: 0.946451 s
+Time to get best features on rank : 0.00199103 s
+|---Complete final combination/selection from all ranks: 0.0509348 s
+Time for SIS: 1.00231 s
+Time for l0-norm: 0.03246 s
+Projection time: 0.00257707 s
+Time to get best features on rank : 0.00184107 s
+|---Complete final combination/selection from all ranks: 0.00892806 s
+Time for SIS: 0.014915 s
+Time for l0-norm: 0.00409508 s
+Projection time: 0.00579309 s
+Time to get best features on rank : 6.50883e-05 s
+|---Complete final combination/selection from all ranks: 0.00926781 s
+Time for SIS: 0.016623 s
+Time for l0-norm: 0.00918412 s
+Projection time: 0.00486207 s
+Time to get best features on rank : 6.29425e-05 s
+|---Complete final combination/selection from all ranks: 0.010778 s
+Time for SIS: 0.017004 s
+Time for l0-norm: 0.163878 s
+Projection time: 0.00987101 s
+Time to get best features on rank : 6.29425e-05 s
+|---Complete final combination/selection from all ranks: 0.0116072 s
+Time for SIS: 0.0228531 s
+Time for l0-norm: 12.9604 s
+Train RMSE: 3.47684 K; Test RMSE: 14.0311 K
+c0 + a0 * ((lambda+1.217720e+01) * (wtd_mean_IP+2.171951e+00))
+
+Train RMSE: 3.1591 K; Test RMSE: 15.0985 K
+c0 + a0 * (|std_EA - mean_EA|) + a1 * ((lambda+1.217720e+01) * (wtd_mean_IP+2.171951e+00))
+
+Train RMSE: 2.89191 K; Test RMSE: 14.9533 K
+c0 + a0 * ((std_EA-1.017490e-01) * (wtd_range_PE-2.634220e-01)) + a1 * (|std_EA - mean_EA|) + a2 * ((lambda+1.217720e+01) * (wtd_mean_IP+2.171951e+00))
+
+Train RMSE: 2.60664 K; Test RMSE: 15.4738 K
+c0 + a0 * (|range_EA - wtd_mean_EA|) + a1 * ((std_at_mass-5.016803e+01) * (V_molar-2.356020e+01)) + a2 * (range_EA - wtd_mean_IP) + a3 * (mean_EA * lambda)
+
+Train RMSE: 2.41952 K; Test RMSE: 15.6395 K
+c0 + a0 * ((range_IP-2.062037e+00) * (range_ThermalCond-7.062177e+01)) + a1 * (|range_EA - wtd_mean_EA|) + a2 * ((V_molar-2.130995e+01) * (range_at_mass-9.329934e+01)) + a3 * (range_EA - wtd_mean_IP) + a4 * (mean_EA * lambda)
+

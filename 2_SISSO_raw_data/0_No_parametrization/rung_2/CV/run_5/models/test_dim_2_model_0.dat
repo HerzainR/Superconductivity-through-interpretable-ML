@@ -1,0 +1,21 @@
+# c0 + a0 * (|(range_PE * wtd_range_IP) - (|wtd_range_EA - range_IP|)|) + a1 * ((lambda4w_low * w_log) * sqrt(w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.87506335675181; Max AE: 7.0903220571081
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  2.327879907732946e+00,  6.283654948671851e-06,  1.122977800781806e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               34|23|mult|29|22|abd|abd; (|(range_PE * wtd_range_IP) - (|wtd_range_EA - range_IP|)|); $\left(\left|\left(range_{PE} wtd_{range, IP}\right) - \left(\left|wtd_{range, EA} - range_{IP}\right|\right)\right|\right)$; abs((range_PE .* wtd_range_IP) - abs(wtd_range_EA - range_IP)); abs((newdata$range_PE * newdata$wtd_range_IP) - abs(newdata$wtd_range_EA - newdata$range_IP)); range_PE,wtd_range_IP,wtd_range_EA,range_IP
+# 1;  2; K^2.5;                                            6|4|mult|4|sqrt|mult; ((lambda4w_low * w_log) * sqrt(w_log)); $\left(\left(lambda4w_{low} w_{log}\right) \left(\sqrt{ w_{log} }\right)\right)$; ((lambda4w_low .* w_log) .* sqrt(w_log)); ((newdata$lambda4w_low * newdata$w_log) * sqrt(newdata$w_log)); lambda4w_low,w_log,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  7.346322057108098e+00,  7.125380000000003e-01,  7.264309386680886e+05
+Al1Os1      ,  3.900000000000000e-01,  5.043410273043333e+00,  1.583870000000000e+00,  3.713974187107020e+04
+Al1Mo3      ,  5.800000000000000e-01,  4.613109799642485e+00,  1.445675000000000e+00,  1.985694858614497e+04
+La1Se1      ,  1.020000000000000e+00,  2.042061254613950e+00,  3.876249999999999e-01,  2.663896209116214e+03
+Co1Si2      ,  1.306666667000000e+00,  2.155593735341322e+00,  3.758460000000000e-01,  2.509551909610345e+04
+Al1Ge1Sr1   ,  6.700000000000000e+00,  6.327788986263134e+00,  9.759000000000001e-01,  4.667718401922577e+05

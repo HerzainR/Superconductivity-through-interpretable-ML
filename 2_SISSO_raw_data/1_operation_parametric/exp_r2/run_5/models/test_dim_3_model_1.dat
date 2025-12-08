@@ -1,0 +1,22 @@
+# c0 + a0 * ((|range_EA - wtd_std_IP|) / (|mean_EA - wtd_range_IP|)) + a1 * ((wtd_range_EA - wtd_std_IP) / (exp(1.181490e+00*range_IP))) + a2 * ((w_log / lambda) * (wtd_range_PE * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.1509232551502; Max AE: 20.6650862231238
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.156124766054304e+00,  4.151497807827999e+01,  1.631636512328447e-04,  3.131727518985445e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         28|25|abd|26|23|abd|div; ((|range_EA - wtd_std_IP|) / (|mean_EA - wtd_range_IP|)); $\left(\frac{ \left(\left|range_{EA} - wtd_{std, IP}\right|\right) }{ \left(\left|mean_{EA} - wtd_{range, IP}\right|\right) } \right)$; (abs(range_EA - wtd_std_IP) ./ abs(mean_EA - wtd_range_IP)); (abs(newdata$range_EA - newdata$wtd_std_IP) / abs(newdata$mean_EA - newdata$wtd_range_IP)); range_EA,wtd_std_IP,mean_EA,wtd_range_IP
+# 1;  2; eV;                                               29|25|sub|22|exp:1.1814903758315e+00,0.0000000000000e+00|div; ((wtd_range_EA - wtd_std_IP) / (exp(1.181490e+00*range_IP))); $\left(\frac{ \left(wtd_{range, EA} - wtd_{std, IP}\right) }{ \left(\exp{ \left(1.181e+00range_{IP} \right)}\right) } \right)$; ((wtd_range_EA - wtd_std_IP) ./ exp(1.181490e+00.*range_IP)); ((newdata$wtd_range_EA - newdata$wtd_std_IP) / exp(1.181490e+00*newdata$range_IP)); wtd_range_EA,wtd_std_IP,range_IP
+# 2;  2; K^2;                                              4|5|div|35|6|mult|mult; ((w_log / lambda) * (wtd_range_PE * lambda4w_low)); $\left(\left(\frac{ w_{log} }{ lambda } \right) \left(wtd_{range, PE} lambda4w_{low}\right)\right)$; ((w_log ./ lambda) .* (wtd_range_PE .* lambda4w_low)); ((newdata$w_log / newdata$lambda) * (newdata$wtd_range_PE * newdata$lambda4w_low)); w_log,lambda,wtd_range_PE,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 3, 4, 2, 10, 12, 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Cr3Ir1      ,  2.560000000000000e-01,  6.101831632687182e+00,  1.377018043684710e-02, -5.169807059219410e-02,  3.117519199600495e+04
+Al1Os1      ,  3.900000000000000e-01,  4.216186360474193e+00,  1.190110826939471e+00, -4.160910719915484e-02,  1.506662694463014e+03
+Al1Mo3      ,  5.800000000000000e-01,  4.032814837477456e+00,  4.094146794673274e-02,  3.275521512713661e-03,  4.148161656007088e+03
+La1Se1      ,  1.020000000000000e+00,  4.291138971488330e+00,  6.850060459492141e-01, -9.563499487273979e-03,  4.871270218588523e+02
+Co1Si2      ,  1.306666667000000e+00,  2.197175289012377e+01,  3.403373115929847e-01,  4.257354988525508e-01,  2.646519365853659e+03
+Al1Ge1Sr1   ,  6.700000000000000e+00,  8.688682957450295e+00,  2.694927536231885e+00, -3.902097729972295e-02,  8.373865390612194e+03

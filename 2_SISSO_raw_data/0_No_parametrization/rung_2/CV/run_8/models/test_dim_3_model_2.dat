@@ -1,0 +1,21 @@
+# c0 + a0 * (|(range_PE * wtd_range_IP) - (|std_EA - range_IP|)|) + a1 * ((|mean_EA - wtd_std_IP|) * (wtd_range_at_rad * lambda)) + a2 * ((wtd_range_EA * w_log) * (lambda4w_low * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.37288231455549; Max AE: 5.46000628185059
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.421914356642005e+00,  3.724900769985590e+00,  1.288476007673574e-06,  4.224414928428605e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               34|23|mult|30|22|abd|abd; (|(range_PE * wtd_range_IP) - (|std_EA - range_IP|)|); $\left(\left|\left(range_{PE} wtd_{range, IP}\right) - \left(\left|std_{EA} - range_{IP}\right|\right)\right|\right)$; abs((range_PE .* wtd_range_IP) - abs(std_EA - range_IP)); abs((newdata$range_PE * newdata$wtd_range_IP) - abs(newdata$std_EA - newdata$range_IP)); range_PE,wtd_range_IP,std_EA,range_IP
+# 1;  2; AA * eV;                                          26|25|abd|17|5|mult|mult; ((|mean_EA - wtd_std_IP|) * (wtd_range_at_rad * lambda)); $\left(\left(\left|mean_{EA} - wtd_{std, IP}\right|\right) \left(wtd_{range, at, rad} lambda\right)\right)$; (abs(mean_EA - wtd_std_IP) .* (wtd_range_at_rad .* lambda)); (abs(newdata$mean_EA - newdata$wtd_std_IP) * (newdata$wtd_range_at_rad * newdata$lambda)); mean_EA,wtd_std_IP,wtd_range_at_rad,lambda
+# 2;  2; K^3 * eV;                                         29|4|mult|6|4|mult|mult; ((wtd_range_EA * w_log) * (lambda4w_low * w_log)); $\left(\left(wtd_{range, EA} w_{log}\right) \left(lambda4w_{low} w_{log}\right)\right)$; ((wtd_range_EA .* w_log) .* (lambda4w_low .* w_log)); ((newdata$wtd_range_EA * newdata$w_log) * (newdata$lambda4w_low * newdata$w_log)); wtd_range_EA,w_log,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  8.560006281850589e+00,  2.972825000000000e+00,  2.445313893750000e-01,  2.078585941482376e+04
+Sn1         ,  3.740729412000000e+00,  4.224414928428605e-01,  0.000000000000000e+00,  0.000000000000000e+00,  0.000000000000000e+00
+Al1Si1Sr1   ,  4.750000000000000e+00,  3.734225887966378e+00,  1.101250000000000e+00,  8.680983920000002e-02,  2.493590653451277e+05
+Sn1Ta3      ,  6.692500000000000e+00,  9.975564881144443e+00,  1.770490000000000e+00,  1.382712251200000e+00,  8.900616632680272e+04
+Re3W1       ,  8.733333332999999e+00,  1.079456116282675e+01,  1.568400000000000e+00,  1.741550173500000e+00,  6.712395905922583e+04

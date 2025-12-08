@@ -1,0 +1,20 @@
+# c0 + a0 * ((lambda4w_low * w_log) / (wtd_mean_at_mass * V_molar))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.19417902252625; Max AE: 4.82715925667219
+# Coefficients
+# Task   a0                      c0
+# all ,  5.135134174654222e-02,  4.375147323687396e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K^2 * cm^-3 * g^-1 * mol^2;                       6|4|mult|9|3|mult|div; ((lambda4w_low * w_log) / (wtd_mean_at_mass * V_molar)); $\left(\frac{ \left(lambda4w_{low} w_{log}\right) }{ \left(wtd_{mean, at, mass} V_{molar}\right) } \right)$; ((lambda4w_low .* w_log) ./ (wtd_mean_at_mass .* V_molar)); ((newdata$lambda4w_low * newdata$w_log) / (newdata$wtd_mean_at_mass * newdata$V_molar)); lambda4w_low,w_log,wtd_mean_at_mass,V_molar
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B1Mo1       ,  2.500000000000000e-01,  5.077159256672190e+00,  1.367076125196018e+01
+Hg2Na1      ,  1.620000000000000e+00,  4.379017406404225e+00,  7.536478279244668e-02
+Ga2Y1       ,  1.680000000000000e+00,  4.391211770175675e+00,  3.128340164424493e-01
+B2Nb1       ,  4.597500000000000e+00,  6.760077916899034e+00,  4.644339392304639e+01
+Nb0.75Si0.25,  9.000000000000000e+00,  5.893116213477681e+00,  2.956045233019638e+01
+Ta1B2       ,  9.500000000000000e+00,  6.563523394064060e+00,  4.261575249928146e+01

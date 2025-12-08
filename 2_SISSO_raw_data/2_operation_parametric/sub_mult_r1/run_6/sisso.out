@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0534561 s
+Time to generate feat space: 2.53548 s
+Projection time: 0.928849 s
+Time to get best features on rank : 0.000607014 s
+|---Complete final combination/selection from all ranks: 0.0110159 s
+Time for SIS: 0.945499 s
+Time for l0-norm: 0.031641 s
+Projection time: 0.00257397 s
+Time to get best features on rank : 5.91278e-05 s
+|---Complete final combination/selection from all ranks: 0.0424421 s
+Time for SIS: 0.0463879 s
+Time for l0-norm: 0.00839186 s
+Projection time: 0.00605989 s
+Time to get best features on rank : 5.19753e-05 s
+|---Complete final combination/selection from all ranks: 0.00878096 s
+Time for SIS: 0.016067 s
+Time for l0-norm: 0.00495481 s
+Projection time: 0.00534296 s
+Time to get best features on rank : 6.29425e-05 s
+|---Complete final combination/selection from all ranks: 0.0092442 s
+Time for SIS: 0.0158889 s
+Time for l0-norm: 0.162175 s
+Projection time: 0.00505209 s
+Time to get best features on rank : 5.48363e-05 s
+|---Complete final combination/selection from all ranks: 0.0080471 s
+Time for SIS: 0.0143828 s
+Time for l0-norm: 13.6143 s
+Train RMSE: 4.91366 K; Test RMSE: 6.85452 K
+c0 + a0 * ((w_log-4.299936e+00) * (lambda4w_low-2.020694e+01))
+
+Train RMSE: 3.47457 K; Test RMSE: 5.92559 K
+c0 + a0 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a1 * (w_log^2)
+
+Train RMSE: 3.14565 K; Test RMSE: 6.12841 K
+c0 + a0 * (|range_EA - mean_EA|) + a1 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a2 * (w_log^2)
+
+Train RMSE: 2.81496 K; Test RMSE: 7.80678 K
+c0 + a0 * (|range_at_mass - mean_at_mass|) + a1 * ((wtd_range_IP-2.263473e+00) * (range_EA-3.003350e-01)) + a2 * ((w_log-4.299936e+00) * (lambda4w_low-2.020694e+01)) + a3 * (w_log / mean_at_mass)
+
+Train RMSE: 2.52375 K; Test RMSE: 6.72828 K
+c0 + a0 * (std_ThermalCond - (2.542402e+00*V_molar)) + a1 * (|range_EA - mean_EA|) + a2 * (wtd_range_at_mass * bulk_mod) + a3 * ((w_log+4.738563e+01) * (lambda-2.641453e-01)) + a4 * (w_log / wtd_mean_at_mass)
+

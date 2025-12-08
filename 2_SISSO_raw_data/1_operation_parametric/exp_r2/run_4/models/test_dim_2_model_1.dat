@@ -1,0 +1,21 @@
+# c0 + a0 * ((wtd_range_at_rad * lambda) * (|mean_EA - wtd_std_IP|)) + a1 * ((w_log^2) * (wtd_range_EA * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.08540397794574; Max AE: 5.01750450274955
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  3.229272668719021e+00,  1.341615623738124e-06,  3.106408650621475e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * eV;                                          17|5|mult|26|25|abd|mult; ((wtd_range_at_rad * lambda) * (|mean_EA - wtd_std_IP|)); $\left(\left(wtd_{range, at, rad} lambda\right) \left(\left|mean_{EA} - wtd_{std, IP}\right|\right)\right)$; ((wtd_range_at_rad .* lambda) .* abs(mean_EA - wtd_std_IP)); ((newdata$wtd_range_at_rad * newdata$lambda) * abs(newdata$mean_EA - newdata$wtd_std_IP)); wtd_range_at_rad,lambda,mean_EA,wtd_std_IP
+# 1;  2; K^3 * eV;                                         4|sq|29|6|mult|mult; ((w_log^2) * (wtd_range_EA * lambda4w_low)); $\left(\left(w_{log}^2\right) \left(wtd_{range, EA} lambda4w_{low}\right)\right)$; ((w_log)^2 .* (wtd_range_EA .* lambda4w_low)); ((newdata$w_log)^2 * (newdata$wtd_range_EA * newdata$lambda4w_low)); w_log,wtd_range_EA,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B1Mo1       ,  2.500000000000000e-01,  4.165834883307220e+00,  1.664659500000001e-02,  7.495960993827175e+05
+Hg2Na1      ,  1.620000000000000e+00,  4.416374144409717e+00,  4.035656198970000e-01,  5.025334604724734e+03
+Ga2Y1       ,  1.680000000000000e+00,  3.251349343385048e+00,  4.408355340000000e-02,  1.925200171522658e+03
+B2Nb1       ,  4.597500000000000e+00,  4.711213584541522e+00,  7.198686180000004e-04,  1.194440682944570e+06
+Nb0.75Si0.25,  9.000000000000000e+00,  1.151145656552403e+01,  8.268894054000001e-01,  4.274545150280997e+06
+Ta1B2       ,  9.500000000000000e+00,  4.482495497250454e+00,  7.339179329999999e-04,  1.023927271865911e+06

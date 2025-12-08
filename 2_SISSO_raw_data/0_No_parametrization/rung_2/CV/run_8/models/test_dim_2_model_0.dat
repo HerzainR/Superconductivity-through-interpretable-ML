@@ -1,0 +1,20 @@
+# c0 + a0 * ((|range_EA - wtd_mean_IP|) + (mean_EA * lambda)) + a1 * ((wtd_range_EA * w_log) * (lambda4w_low * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.22103232575625; Max AE: 4.16716628661178
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.513901797647586e+00,  1.320493325286239e-06, -8.244267861117409e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               28|21|abd|26|5|mult|add; ((|range_EA - wtd_mean_IP|) + (mean_EA * lambda)); $\left(\left(\left|range_{EA} - wtd_{mean, IP}\right|\right) + \left(mean_{EA} lambda\right)\right)$; (abs(range_EA - wtd_mean_IP) + (mean_EA .* lambda)); (abs(newdata$range_EA - newdata$wtd_mean_IP) + (newdata$mean_EA * newdata$lambda)); range_EA,wtd_mean_IP,mean_EA,lambda
+# 1;  2; K^3 * eV;                                         29|4|mult|6|4|mult|mult; ((wtd_range_EA * w_log) * (lambda4w_low * w_log)); $\left(\left(wtd_{range, EA} w_{log}\right) \left(lambda4w_{low} w_{log}\right)\right)$; ((wtd_range_EA .* w_log) .* (lambda4w_low .* w_log)); ((newdata$wtd_range_EA * newdata$w_log) * (newdata$lambda4w_low * newdata$w_log)); wtd_range_EA,w_log,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1In1Ti2    ,  3.100000000000000e+00,  1.826181300776551e+00,  6.633852730000000e+00,  2.078585941482376e+04
+Sn1         ,  3.740729412000000e+00,  3.335264208729448e+00,  7.648800000000000e+00,  0.000000000000000e+00
+Al1Si1Sr1   ,  4.750000000000000e+00,  5.828337133882170e-01,  5.613194070000000e+00,  2.493590653451277e+05
+Sn1Ta3      ,  6.692500000000000e+00,  5.432341547598463e+00,  8.956378400000000e+00,  8.900616632680272e+04
+Re3W1       ,  8.733333332999999e+00,  6.752264766472384e+00,  9.847333500000001e+00,  6.712395905922583e+04

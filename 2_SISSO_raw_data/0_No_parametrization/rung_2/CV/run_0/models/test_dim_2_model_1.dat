@@ -1,0 +1,21 @@
+# c0 + a0 * ((|std_EA - wtd_mean_IP|) + (mean_EA * lambda)) + a1 * ((wtd_range_EA * lambda4w_low) * (w_log^2))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.81139337736718; Max AE: 2.70210205284321
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.559253228796130e+00,  1.310361595052258e-06, -8.826101090274205e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               30|21|abd|26|5|mult|add; ((|std_EA - wtd_mean_IP|) + (mean_EA * lambda)); $\left(\left(\left|std_{EA} - wtd_{mean, IP}\right|\right) + \left(mean_{EA} lambda\right)\right)$; (abs(std_EA - wtd_mean_IP) + (mean_EA .* lambda)); (abs(newdata$std_EA - newdata$wtd_mean_IP) + (newdata$mean_EA * newdata$lambda)); std_EA,wtd_mean_IP,mean_EA,lambda
+# 1;  2; K^3 * eV;                                         29|6|mult|4|sq|mult; ((wtd_range_EA * lambda4w_low) * (w_log^2)); $\left(\left(wtd_{range, EA} lambda4w_{low}\right) \left(w_{log}^2\right)\right)$; ((wtd_range_EA .* lambda4w_low) .* (w_log)^2); ((newdata$wtd_range_EA * newdata$lambda4w_low) * (newdata$w_log)^2); wtd_range_EA,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 17, 31, 20, 14, 40, 47 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Cr1         ,  1.550000000000000e+00,  2.192050624069179e+00,  7.066300400000000e+00,  0.000000000000000e+00
+Be2Nb1      ,  2.150000000000000e+00,  4.637948610469305e+00,  8.229735049999999e+00,  4.821636670976588e+05
+B1Zr1       ,  3.100000000000000e+00,  3.192504132661500e+00,  7.545562450000000e+00,  1.932005719995730e+05
+Ir1Ti3      ,  5.185000000000000e+00,  5.817712161396564e+00,  8.364239599999999e+00,  1.222445510456554e+06
+Ir1Mo3      ,  8.031000000000001e+00,  1.034930138582029e+01,  1.177010175000000e+01,  6.279437082519203e+05
+Nb3Pt1      ,  9.516428571000001e+00,  1.221853062384321e+01,  1.298517790000000e+01,  6.085733510973887e+05

@@ -1,0 +1,22 @@
+# c0 + a0 * (|range_EA - mean_EA|) + a1 * (wtd_mean_IP * density) + a2 * (exp(-1.0 * lambda)) + a3 * (w_log / density)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.85064903556118; Max AE: 14.6129610751499
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  7.001691878268746e+00,  7.238151554514589e-02, -1.245707260813474e+01,  1.303261602511878e-01, -5.137719968546638e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               28|26|abd; (|range_EA - mean_EA|); $\left(\left|range_{EA} - mean_{EA}\right|\right)$; abs(range_EA - mean_EA); abs(newdata$range_EA - newdata$mean_EA); range_EA,mean_EA
+# 1;  1; cm^-3 * eV * g;                                   21|2|mult; (wtd_mean_IP * density); $\left(wtd_{mean, IP} density\right)$; (wtd_mean_IP .* density); (newdata$wtd_mean_IP * newdata$density); wtd_mean_IP,density
+# 2;  1; Unitless;                                         5|nexp; (exp(-1.0 * lambda)); $\left(\exp{ \left(-lambda \right) } \right)$; exp(-1.0 * (lambda)); exp(-1.0 * (newdata$lambda)); lambda
+# 3;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ti1O1       ,  7.200000000000000e-01,  9.819162377211130e+00,  6.119999999999999e-01,  5.612427000000000e+01,  8.832915073154146e-01,  9.966353369763205e+01
+Ga1Mo3      ,  7.600000000000000e-01,  1.871278310075145e-01,  7.700000000000001e-02,  6.696061600000000e+01,  6.647794150798125e-01,  2.759433808553971e+01
+Pt0.25V0.75 ,  3.102500000000000e+00,  3.858557138468036e+00,  2.765000000000000e-01,  7.696903499999999e+01,  4.463731578443175e-01,  1.861275403608737e+01
+C1Mo1       ,  1.015200000000000e+01,  6.845905759290648e+00,  4.874999999999999e-01,  7.937240000000000e+01,  8.220122346781865e-01,  6.476922543352600e+01
+Ga0.25Nb0.75,  1.816296296333330e+01,  3.550001888183352e+00,  3.500000000000059e-03,  5.452270000000001e+01,  1.572411704043684e-06,  7.124578313253012e-01

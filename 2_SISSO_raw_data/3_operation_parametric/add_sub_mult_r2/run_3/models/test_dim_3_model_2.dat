@@ -1,0 +1,22 @@
+# c0 + a0 * ((std_EA - (1.151822e+01*std_at_rad)) + 4.184628e+00*((mean_EA-5.603694e-01) / (wtd_mean_IP-9.975963e+00))) + a1 * (((std_IP-1.435303e+01) / (lambda4w_low-4.636252e+00)) + 4.414455e+01*((range_EA-7.620191e-01) / (mean_IP-7.017653e+00))) + a2 * ((|wtd_std_PE - (-1.886774e+00*lambda+1.085706e+00)|-1.139579e-01) * (((w_log-6.285796e+01) / (wtd_mean_at_mass-6.206116e+00))+1.424334e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.37082278374642; Max AE: 11.6775267013747
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -6.259247340477970e-01, -1.734640378611431e-02,  9.822666149257688e-01, -2.324954078094034e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               30|18|sub|26|21|div|add:4.1846282062568e+00,0.0000000000000e+00,-5.6036935430661e-01,-9.9759631042185e+00,1.1518216277779e+01,0.0000000000000e+00; ((std_EA - (1.151822e+01*std_at_rad)) + 4.184628e+00*((mean_EA-5.603694e-01) / (wtd_mean_IP-9.975963e+00))); $\left(\left(std_{EA} - \left(1.152e+01std_{at, rad}\right)\right) + 4.18\left(\frac{ mean_{EA} -5.604e-01 }{ wtd_{mean, IP}-9.976e+00 } \right)\right)$; ((std_EA - (1.151822e+01.*std_at_rad)) + (4.184628e+00.*((mean_EA-5.603694e-01) ./ (wtd_mean_IP-9.975963e+00)))); ((newdata$std_EA - (1.151822e+01*newdata$std_at_rad)) + (4.184628e+00*((newdata$mean_EA-5.603694e-01) / (newdata$wtd_mean_IP-9.975963e+00)))); std_EA,std_at_rad,mean_EA,wtd_mean_IP
+# 1;  2; K^-1 * eV;                                        24|6|div|28|20|div|add:4.4144550999323e+01,0.0000000000000e+00,-7.6201908257314e-01,-7.0176532971327e+00,-1.4353027353563e+01,-4.6362519030456e+00; (((std_IP-1.435303e+01) / (lambda4w_low-4.636252e+00)) + 4.414455e+01*((range_EA-7.620191e-01) / (mean_IP-7.017653e+00))); $\left(\left(\frac{ std_{IP} -1.435e+01 }{ lambda4w_{low}-4.636e+00 } \right) + 44.1\left(\frac{ range_{EA} -7.620e-01 }{ mean_{IP}-7.018e+00 } \right)\right)$; (((std_IP-1.435303e+01) ./ (lambda4w_low-4.636252e+00)) + (4.414455e+01.*((range_EA-7.620191e-01) ./ (mean_IP-7.017653e+00)))); (((newdata$std_IP-1.435303e+01) / (newdata$lambda4w_low-4.636252e+00)) + (4.414455e+01*((newdata$range_EA-7.620191e-01) / (newdata$mean_IP-7.017653e+00)))); std_IP,lambda4w_low,range_EA,mean_IP
+# 2;  2; K * g^-1 * mol;                                   37|5|abd|4|9|div|mult:-1.1395790089103e-01,1.4243337988698e+00,-6.2857958321150e+01,-6.2061156844522e+00,-1.8867740343052e+00,1.0857056373751e+00; ((|wtd_std_PE - (-1.886774e+00*lambda+1.085706e+00)|-1.139579e-01) * (((w_log-6.285796e+01) / (wtd_mean_at_mass-6.206116e+00))+1.424334e+00)); $\left(\left(\left(\left|wtd_{std, PE} - \left(-1.887e+00lambda+1.086e+00\right)\right|\right)-1.140e-01\right) * \left(\left(\frac{ w_{log} -6.286e+01 }{ wtd_{mean, at, mass}-6.206e+00 } \right)+1.424e+00\right)\right)$; ((abs(wtd_std_PE - (-1.886774e+00.*lambda+1.085706e+00))-1.139579e-01) .* (((w_log-6.285796e+01) ./ (wtd_mean_at_mass-6.206116e+00))+1.424334e+00)); ((abs(newdata$wtd_std_PE - (-1.886774e+00*newdata$lambda+1.085706e+00))-1.139579e-01) * (((newdata$w_log-6.285796e+01) / (newdata$wtd_mean_at_mass-6.206116e+00))+1.424334e+00)); wtd_std_PE,lambda,w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  2.901677817282083e+00, -4.371125276871272e+00, -4.240699760308894e+01, -3.435229294942799e-01
+Os0.5V0.5   ,  5.150000000000000e+00,  2.899130169894566e+00, -6.991243441711302e-01, -1.177160428845155e+01,  2.534781615786299e+00
+Ir1Mo1      ,  5.325000000000000e+00,  1.053168184035477e+00, -1.663891165757970e+00, -2.686209853613275e-01,  2.438577721324104e-01
+N1Ti1       ,  5.387500000000000e+00,  1.706502670137466e+01, -8.177638906438265e+00, -8.355485321670896e+00,  1.225125423836536e+01
+B6Y1        ,  5.692857143000000e+00,  7.698579411929805e+00, -5.521109623102789e+00, -1.353095368120355e+02,  2.166562370397800e+00
+N1V1        ,  8.528333333499999e+00,  5.473406358769599e+00, -6.337081993540265e+00, -5.994847611915222e-01,  1.760180458268592e+00

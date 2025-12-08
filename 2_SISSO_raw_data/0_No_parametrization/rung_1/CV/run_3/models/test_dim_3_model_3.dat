@@ -1,0 +1,22 @@
+# c0 + a0 * (|range_EA - wtd_mean_IP|) + a1 * ln(lambda) + a2 * (w_log / density)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.9559480471764; Max AE: 8.67277983537517
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.494001220603167e+00,  4.721695443043179e+00,  1.011493903515823e-01, -7.173181223026734e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               28|21|abd; (|range_EA - wtd_mean_IP|); $\left(\left|range_{EA} - wtd_{mean, IP}\right|\right)$; abs(range_EA - wtd_mean_IP); abs(newdata$range_EA - newdata$wtd_mean_IP); range_EA,wtd_mean_IP
+# 1;  1; Unitless;                                         5|log; ln(lambda); $\left(\ln{ lambda }\right)$; log(lambda); log(newdata$lambda); lambda
+# 2;  1; K * cm^3 * g^-1;                                  4|2|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  2.609098681920053e+00,  7.284500000000000e+00, -9.137938516755678e-01,  3.177363963963964e+01
+Os0.5V0.5   ,  5.150000000000000e+00,  4.905636347277686e+00,  7.148000000000000e+00,  2.946171014961905e-02,  1.246263193968472e+01
+Ir1Mo1      ,  5.325000000000000e+00,  1.405965066709944e+00,  7.277000000000000e+00, -7.872381039595407e-01,  1.408212121212121e+01
+N1Ti1       ,  5.387500000000000e+00,  1.406027983537517e+01,  1.060200000000000e+01, -3.628367460525414e-01,  7.026502782931355e+01
+B6Y1        ,  5.692857143000000e+00,  6.985055071227005e+00,  7.970700000000000e+00, -4.378849993642757e-01,  4.268498659517427e+01
+N1V1        ,  8.528333333499999e+00,  7.366123522004737e+00,  1.011500000000000e+01, -2.288682187825054e+00,  1.011765134706815e+02

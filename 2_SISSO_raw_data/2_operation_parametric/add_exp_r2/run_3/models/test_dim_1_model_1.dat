@@ -1,0 +1,20 @@
+# c0 + a0 * (((wtd_mean_IP+2.022695e+00) * (lambda+1.251403e+01)) + 7.597196e-01*((wtd_range_at_rad-6.587438e-01) / (mean_at_rad-1.126933e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.49533935789365; Max AE: 4.46703785157206
+# Coefficients
+# Task   a0                      c0
+# all ,  1.441287509580682e-01, -1.395735224527110e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|5|mult|17|14|div|add:7.5971957254075e-01,0.0000000000000e+00,-6.5874378564112e-01,-1.1269325536017e+00,2.0226949231665e+00,1.2514029767856e+01; (((wtd_mean_IP+2.022695e+00) * (lambda+1.251403e+01)) + 7.597196e-01*((wtd_range_at_rad-6.587438e-01) / (mean_at_rad-1.126933e+00))); $\left(\left(\left(wtd_{mean, IP}+2.023e+00\right) * \left(lambda+1.251e+01\right)\right) + 0.760\left(\frac{ wtd_{range, at, rad} -6.587e-01 }{ mean_{at, rad}-1.127e+00 } \right)\right)$; (((wtd_mean_IP+2.022695e+00) .* (lambda+1.251403e+01)) + (7.597196e-01.*((wtd_range_at_rad-6.587438e-01) ./ (mean_at_rad-1.126933e+00)))); (((newdata$wtd_mean_IP+2.022695e+00) * (newdata$lambda+1.251403e+01)) + (7.597196e-01*((newdata$wtd_range_at_rad-6.587438e-01) / (newdata$mean_at_rad-1.126933e+00)))); wtd_mean_IP,lambda,wtd_range_at_rad,mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B1Hf1       ,  3.100000000000000e+00,  3.750187118170870e+00,  1.228591744931841e+02
+Os0.5V0.5   ,  5.150000000000000e+00,  4.879239780781982e+00,  1.306928138961897e+02
+Ir1Mo1      ,  5.325000000000000e+00,  4.769975981883261e+00,  1.299347153338112e+02
+N1Ti1       ,  5.387500000000000e+00,  9.395373372924752e+00,  1.620268368591492e+02
+B6Y1        ,  5.692857143000000e+00,  4.958875617408943e+00,  1.312453465178741e+02
+N1V1        ,  8.528333333499999e+00,  1.299537118507206e+01,  1.870044890501036e+02

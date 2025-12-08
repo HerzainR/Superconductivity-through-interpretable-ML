@@ -1,0 +1,45 @@
+Commit: ac5ce3effde5dec1922a0476f389f7d8b9fd059a
+Compiler: IntelLLVM version 2024.0.2
+Compiler flags: -O3 -fp-model=precise -fiopenmp
+time input_parsing: 0.0627322 s
+Time to generate feat space: 3.05013 s
+Projection time: 0.100589 s
+Time to get best features on rank : 6.00815e-05 s
+|---Complete final combination/selection from all ranks: 0.0121188 s
+Time for SIS: 0.119071 s
+Time for l0-norm: 0.0341239 s
+Projection time: 0.00449181 s
+Time to get best features on rank : 5.91278e-05 s
+|---Complete final combination/selection from all ranks: 0.00889993 s
+Time for SIS: 0.014889 s
+Time for l0-norm: 0.00647902 s
+Projection time: 0.00620413 s
+Time to get best features on rank : 5.10216e-05 s
+|---Complete final combination/selection from all ranks: 0.049336 s
+Time for SIS: 0.0568981 s
+Time for l0-norm: 0.00663996 s
+Projection time: 0.00950193 s
+Time to get best features on rank : 5.29289e-05 s
+|---Complete final combination/selection from all ranks: 0.0083642 s
+Time for SIS: 0.019268 s
+Time for l0-norm: 0.16091 s
+Projection time: 0.00873017 s
+Time to get best features on rank : 5.81741e-05 s
+|---Complete final combination/selection from all ranks: 0.00803018 s
+Time for SIS: 0.0181539 s
+Time for l0-norm: 13.002 s
+Train RMSE: 4.75047 K; Test RMSE: 4.10295 K
+c0 + a0 * ((lambda4w_low+7.672463e+01) * (w_log-4.255132e+00))
+
+Train RMSE: 3.88001 K; Test RMSE: 3.68522 K
+c0 + a0 * (w_log / wtd_mean_at_mass) + a1 * ((lambda-1.378528e-01) * (w_log+6.815725e+01))
+
+Train RMSE: 3.61998 K; Test RMSE: 4.04725 K
+c0 + a0 * (wtd_mean_EA * wtd_mean_at_mass) + a1 * (w_log / wtd_mean_at_mass) + a2 * ((lambda-1.378528e-01) * (w_log+6.815725e+01))
+
+Train RMSE: 3.33801 K; Test RMSE: 4.68531 K
+c0 + a0 * ((std_PE-8.129108e-01) * (mean_IP-7.223307e+00)) + a1 * (std_EA - wtd_range_EA) + a2 * ln(lambda) + a3 * (w_log / mean_at_mass)
+
+Train RMSE: 2.87467 K; Test RMSE: 3.15246 K
+c0 + a0 * (wtd_range_PE * wtd_std_EA) + a1 * (wtd_mean_EA * V_molar) + a2 * ((range_at_mass-1.413308e+01) * (wtd_mean_IP-7.725467e+00)) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+

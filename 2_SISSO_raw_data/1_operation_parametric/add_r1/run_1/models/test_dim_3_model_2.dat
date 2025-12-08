@@ -1,0 +1,22 @@
+# c0 + a0 * (wtd_range_PE * std_EA) + a1 * (mean_EA + 5.868188e-01*wtd_mean_IP) + a2 * (mean_EA + 7.814827e-01*lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15.204739462158; Max AE: 35.844714616324
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -1.183651048611979e+01,  3.398351465476008e+00,  1.850997845290135e+00, -1.377943288975467e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               35|30|mult; (wtd_range_PE * std_EA); $\left(wtd_{range, PE} std_{EA}\right)$; (wtd_range_PE .* std_EA); (newdata$wtd_range_PE * newdata$std_EA); wtd_range_PE,std_EA
+# 1;  1; eV;                                               26|21|add:5.8681882515896e-01,0.0000000000000e+00; (mean_EA + 5.868188e-01*wtd_mean_IP); $\left(mean_{EA} + 0.587wtd_{mean, IP}\right)$; (mean_EA + (5.868188e-01.*wtd_mean_IP)); (newdata$mean_EA + (5.868188e-01*newdata$wtd_mean_IP)); mean_EA,wtd_mean_IP
+# 2;  1; eV;                                               26|5|add:7.8148272216623e-01,0.0000000000000e+00; (mean_EA + 7.814827e-01*lambda); $\left(mean_{EA} + 0.781lambda\right)$; (mean_EA + (7.814827e-01.*lambda)); (newdata$mean_EA + (7.814827e-01*newdata$lambda)); mean_EA,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 24, 48, 9, 56, 13, 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Sb1V3       ,  6.500000000000000e-01,  3.701841066990056e+00,  1.934750000000000e-01,  5.034038508235090e+00,  1.439175463170690e+00
+B2Ru1       ,  8.000000000000000e-01,  3.301389422103345e+00,  2.422195500000000e-01,  5.349659092071883e+00,  9.550712036402196e-01
+Nb1O1       ,  1.380000000000000e+00,  1.029248801064451e+01,  2.612800000000000e-01,  7.155803600132034e+00,  1.537888721096364e+00
+B1Ta1       ,  4.000000000000000e+00,  4.192560172723288e+00,  6.075000000000001e-03,  5.049211570836598e+00,  4.780688020149831e-01
+N1Zr1       ,  9.850000000000000e+00,  7.162837584413569e+00,  1.821150000000000e-01,  6.423890445482400e+00,  6.846248228273186e-01
+B2Mg0.98    ,  3.840000000000000e+01,  2.555285383676000e+00,  1.278770500000000e-01,  4.880406880461984e+00,  6.823338263554779e-01

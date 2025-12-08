@@ -1,0 +1,23 @@
+# c0 + a0 * ((V_molar-3.771826e+01) * (wtd_range_PE-8.698157e-02)) + a1 * ((std_at_mass-7.145944e+00) * (wtd_mean_IP-7.938024e+00)) + a2 * ln(lambda) + a3 * (w_log / mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.2745016906519; Max AE: 9.49680722440777
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  4.594113818110653e-01,  6.487643071416326e-02,  3.358362995045289e+00,  8.608777740233843e-01,  4.312892286651768e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^3 * mol^-1;                                    3|35|mult:-3.7718256203953e+01,-8.6981574028407e-02; ((V_molar-3.771826e+01) * (wtd_range_PE-8.698157e-02)); $\left(\left(V_{molar}-3.772e+01\right) * \left(wtd_{range, PE}-8.698e-02\right)\right)$; ((V_molar-3.771826e+01) .* (wtd_range_PE-8.698157e-02)); ((newdata$V_molar-3.771826e+01) * (newdata$wtd_range_PE-8.698157e-02)); V_molar,wtd_range_PE
+# 1;  1; eV * g * mol^-1;                                  12|21|mult:-7.1459442808585e+00,-7.9380237180323e+00; ((std_at_mass-7.145944e+00) * (wtd_mean_IP-7.938024e+00)); $\left(\left(std_{at, mass}-7.146e+00\right) * \left(wtd_{mean, IP}-7.938e+00\right)\right)$; ((std_at_mass-7.145944e+00) .* (wtd_mean_IP-7.938024e+00)); ((newdata$std_at_mass-7.145944e+00) * (newdata$wtd_mean_IP-7.938024e+00)); std_at_mass,wtd_mean_IP
+# 2;  1; Unitless;                                         5|log; ln(lambda); $\left(\ln{ lambda }\right)$; log(lambda); log(newdata$lambda); lambda
+# 3;  1; K * g^-1 * mol;                                   4|8|div; (w_log / mean_at_mass); $\left(\frac{ w_{log} }{ mean_{at, mass} } \right)$; (w_log ./ mean_at_mass); (newdata$w_log / newdata$mean_at_mass); w_log,mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+B1Mo1       ,  2.500000000000000e-01,  7.554927352321067e+00,  6.823598575189859e-01, -8.609371776085055e+00, -6.543111567747470e-01,  6.603156731237589e+00
+Hg2Na1      ,  1.620000000000000e+00,  1.005687241159345e+01,  6.622237343387831e+00,  5.990845105151362e+01, -4.849954470649726e-01,  5.155124433205208e-01
+Ga2Y1       ,  1.680000000000000e+00,  4.764466941462913e+00, -2.597968479124341e-02, -4.564012010031589e+00,  1.552072643023826e-01,  2.768854079460980e-01
+B2Nb1       ,  4.597500000000000e+00,  1.561527330143391e+00, -1.540572079893901e+01, -5.188155267260773e+00, -3.563892704615717e-01,  6.806624858743988e+00
+Nb0.75Si0.25,  9.000000000000000e+00,  7.340772691549193e+00,  2.351610736393766e+00, -2.098761644432395e+01,  3.889291394680648e-01,  2.326648615946125e+00
+Ta1B2       ,  9.500000000000000e+00,  3.192775592233859e-03, -1.639499124312313e+01,  1.745334185447135e+01, -1.231851005703783e-01,  2.908352272549488e+00

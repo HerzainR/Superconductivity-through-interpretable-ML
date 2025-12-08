@@ -1,0 +1,28 @@
+                                  
+================================= 
+Global information about the job: 
+================================= 
+  
+Job owner: lfoppa(30900)
+Job name:  SISSO
+Node list: ravc[3393,3397]
+Job start: Tue Aug 19 01:25:53 CEST 2025
+Job end:   Tue Aug 19 01:26:24 CEST 2025
+Work dir:  /u/lfoppa/Supercond/parametric_analysis/sub_r1/run_2/./
+Command:   /raven/u/lfoppa/Supercond/parametric_analysis/sub_r1/run_2/run.sh
+  
+  
+  
+==========================================================================================
+Information on jobsteps (Note: MaxRSS/AveRSS is the maximum/average over all 
+tasks of the per-task memory high-water marks; cf. "man sacct"): 
+==========================================================================================
+  
+JobID            JobName NNodes NTasks  NCPUS       MaxRSS       AveRSS    Elapsed ExitCode
+------------- ---------- ------ ------ ------ ------------ ------------ ---------- --------
+21396416           SISSO      2           288                             00:00:31      0:0
+21396416.0       sisso++      2    144    288       31.12M       27.36M   00:00:24      0:0
+  
+Maximum memory per node: 2.349416 GB (defined as MaxRSS*Ntasks/NNodes)
+CPU utilization: 90.3 %
+  

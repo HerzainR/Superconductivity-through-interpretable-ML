@@ -1,0 +1,22 @@
+# c0 + a0 * ((|range_EA - wtd_std_IP|) / (wtd_range_PE + lambda3)) + a1 * ((|range_EA - wtd_mean_EA|) * (wtd_range_IP * lambda)) + a2 * ((wtd_range_EA * lambda4w_low) * (w_log^2))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.36305568433092; Max AE: 7.28996158745856
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.243284600894796e+00,  1.523320775603176e+00,  1.422114240277166e-06,  1.314803710279272e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               28|25|abd|35|7|add|div; ((|range_EA - wtd_std_IP|) / (wtd_range_PE + lambda3)); $\left(\frac{ \left(\left|range_{EA} - wtd_{std, IP}\right|\right) }{ \left(wtd_{range, PE} + lambda3\right) } \right)$; (abs(range_EA - wtd_std_IP) ./ (wtd_range_PE + lambda3)); (abs(newdata$range_EA - newdata$wtd_std_IP) / (newdata$wtd_range_PE + newdata$lambda3)); range_EA,wtd_std_IP,wtd_range_PE,lambda3
+# 1;  2; eV^2;                                             28|27|abd|23|5|mult|mult; ((|range_EA - wtd_mean_EA|) * (wtd_range_IP * lambda)); $\left(\left(\left|range_{EA} - wtd_{mean, EA}\right|\right) \left(wtd_{range, IP} lambda\right)\right)$; (abs(range_EA - wtd_mean_EA) .* (wtd_range_IP .* lambda)); (abs(newdata$range_EA - newdata$wtd_mean_EA) * (newdata$wtd_range_IP * newdata$lambda)); range_EA,wtd_mean_EA,wtd_range_IP,lambda
+# 2;  2; K^3 * eV;                                         29|6|mult|4|sq|mult; ((wtd_range_EA * lambda4w_low) * (w_log^2)); $\left(\left(wtd_{range, EA} lambda4w_{low}\right) \left(w_{log}^2\right)\right)$; ((wtd_range_EA .* lambda4w_low) .* (w_log)^2); ((newdata$wtd_range_EA * newdata$lambda4w_low) * (newdata$w_log)^2); wtd_range_EA,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 17, 31, 20, 14, 40, 47 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Cr1         ,  1.550000000000000e+00,  1.314803710279272e+00,  0.000000000000000e+00,  0.000000000000000e+00,  0.000000000000000e+00
+Be2Nb1      ,  2.150000000000000e+00,  4.099652139618060e+00,  3.425036627055184e-01,  1.098473223383000e+00,  4.821636670976588e+05
+B1Zr1       ,  3.100000000000000e+00,  3.636359232575630e+00,  1.555808656036446e+00,  7.384478400000000e-02,  1.932005719995730e+05
+Ir1Ti3      ,  5.185000000000000e+00,  1.247496158745856e+01,  6.106783006128596e-02,  6.135133299400000e+00,  1.222445510456554e+06
+Ir1Mo3      ,  8.031000000000001e+00,  4.633675131479552e+00,  3.979864716061033e-04,  1.592159025200000e+00,  6.279437082519203e+05
+Nb3Pt1      ,  9.516428571000001e+00,  2.779364579025424e+00,  4.809188690418809e-03,  3.893604414480014e-01,  6.085733510973887e+05

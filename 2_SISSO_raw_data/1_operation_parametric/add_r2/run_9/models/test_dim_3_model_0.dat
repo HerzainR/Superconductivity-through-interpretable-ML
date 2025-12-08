@@ -1,0 +1,21 @@
+# c0 + a0 * (((wtd_mean_IP-1.391944e+02) * (L_avg-1.302547e+02)) + 1.055667e+01*((range_EA-7.127701e+00) / (lambda3-6.180687e-01))) + a1 * (((mean_IP+1.993217e+02) / (lambda3+8.209681e-01)) + 4.516610e+02*((mean_EA+1.036823e+00) / (wtd_mean_ThermalCond-1.051382e+02))) + a2 * (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.86844563688082; Max AE: 9.02792935224716
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.448841552525547e-03, -1.656197381154643e-02,  6.053267683587598e+00,  8.023544926650429e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * eV;                                          21|0|mult|28|7|div|add:1.0556673744107e+01,0.0000000000000e+00,-7.1277007926747e+00,-6.1806870438404e-01,-1.3919444234375e+02,-1.3025470729239e+02; (((wtd_mean_IP-1.391944e+02) * (L_avg-1.302547e+02)) + 1.055667e+01*((range_EA-7.127701e+00) / (lambda3-6.180687e-01))); $\left(\left(\left(wtd_{mean, IP}-1.392e+02\right) * \left(L_{avg}-1.303e+02\right)\right) + 10.6\left(\frac{ range_{EA} -7.128e+00 }{ lambda3-6.181e-01 } \right)\right)$; (((wtd_mean_IP-1.391944e+02) .* (L_avg-1.302547e+02)) + (1.055667e+01.*((range_EA-7.127701e+00) ./ (lambda3-6.180687e-01)))); (((newdata$wtd_mean_IP-1.391944e+02) * (newdata$L_avg-1.302547e+02)) + (1.055667e+01*((newdata$range_EA-7.127701e+00) / (newdata$lambda3-6.180687e-01)))); wtd_mean_IP,L_avg,range_EA,lambda3
+# 1;  2; eV;                                               20|7|div|26|39|div|add:4.5166098245381e+02,0.0000000000000e+00,1.0368231073221e+00,-1.0513816461126e+02,1.9932169485258e+02,8.2096814680337e-01; (((mean_IP+1.993217e+02) / (lambda3+8.209681e-01)) + 4.516610e+02*((mean_EA+1.036823e+00) / (wtd_mean_ThermalCond-1.051382e+02))); $\left(\left(\frac{ mean_{IP} +1.993e+02 }{ lambda3+8.210e-01 } \right) + 452.0\left(\frac{ mean_{EA} +1.037e+00 }{ wtd_{mean, ThermalCond}-1.051e+02 } \right)\right)$; (((mean_IP+1.993217e+02) ./ (lambda3+8.209681e-01)) + (4.516610e+02.*((mean_EA+1.036823e+00) ./ (wtd_mean_ThermalCond-1.051382e+02)))); (((newdata$mean_IP+1.993217e+02) / (newdata$lambda3+8.209681e-01)) + (4.516610e+02*((newdata$mean_EA+1.036823e+00) / (newdata$wtd_mean_ThermalCond-1.051382e+02)))); mean_IP,lambda3,mean_EA,wtd_mean_ThermalCond
+# 2;  2; cm^3 * eV * g^-1;                                 26|2|div|33|2|div|add:7.3865746821875e-01,0.0000000000000e+00,-1.1952350759671e+00,-2.5924068378962e+00,-6.2774142611739e-01,-8.3126084387276e+00; (((mean_EA-6.277414e-01) / (density-8.312608e+00)) + 7.386575e-01*((wtd_mean_PE-1.195235e+00) / (density-2.592407e+00))); $\left(\left(\frac{ mean_{EA} -6.277e-01 }{ density-8.313e+00 } \right) + 0.739\left(\frac{ wtd_{mean, PE} -1.195e+00 }{ density-2.592e+00 } \right)\right)$; (((mean_EA-6.277414e-01) ./ (density-8.312608e+00)) + (7.386575e-01.*((wtd_mean_PE-1.195235e+00) ./ (density-2.592407e+00)))); (((newdata$mean_EA-6.277414e-01) / (newdata$density-8.312608e+00)) + (7.386575e-01*((newdata$wtd_mean_PE-1.195235e+00) / (newdata$density-2.592407e+00)))); mean_EA,density,wtd_mean_PE,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 18, 6, 25, 44, 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Os1      ,  6.633333330000000e-01,  4.065171627257135e+00,  1.667845481220875e+04,  1.819833391618395e+02,  1.723909321559189e-01
+Ge1Mo3      ,  2.179200000000000e+00,  3.398799433297008e+00,  1.665997708575621e+04,  2.932597992071881e+02,  3.531827297632695e-01
+Sn1V3       ,  4.462500000000000e+00,  4.973757019774607e+00,  1.656549540521880e+04,  1.866734158803963e+01, -2.073689770423268e-01
+Hf1N1       ,  8.830000000000000e+00,  3.963379415969223e+00,  1.635598878582822e+04,  1.940575000029497e+02, -4.838577935545643e-02
+C1Nb1       ,  1.002500000000000e+01,  9.970706477528412e-01,  1.696421765061112e+04,  4.057930996644249e+01, -5.113252744567407e-01

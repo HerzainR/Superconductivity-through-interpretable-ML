@@ -1,0 +1,24 @@
+# c0 + a0 * (wtd_std_ThermalCond / V_molar) + a1 * (|range_EA - mean_EA|) + a2 * (wtd_range_at_mass / V_molar) + a3 * ln(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.85981269041533; Max AE: 16.4109978673938
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.336746526098066e+00,  7.635721562626336e+00,  1.619196955341425e+00,  4.861525156666058e+00,  7.698541464167947e-01, -1.052413903491506e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * cm^-3 * mK^-1 * mol;                          43|3|div; (wtd_std_ThermalCond / V_molar); $\left(\frac{ wtd_{std, ThermalCond} }{ V_{molar} } \right)$; (wtd_std_ThermalCond ./ V_molar); (newdata$wtd_std_ThermalCond / newdata$V_molar); wtd_std_ThermalCond,V_molar
+# 1;  1; eV;                                               28|26|abd; (|range_EA - mean_EA|); $\left(\left|range_{EA} - mean_{EA}\right|\right)$; abs(range_EA - mean_EA); abs(newdata$range_EA - newdata$mean_EA); range_EA,mean_EA
+# 2;  1; cm^-3 * g;                                        11|3|div; (wtd_range_at_mass / V_molar); $\left(\frac{ wtd_{range, at, mass} }{ V_{molar} } \right)$; (wtd_range_at_mass ./ V_molar); (newdata$wtd_range_at_mass / newdata$V_molar); wtd_range_at_mass,V_molar
+# 3;  1; Unitless;                                         5|log; ln(lambda); $\left(\ln{ lambda }\right)$; log(lambda); log(newdata$lambda); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Rh1V3       ,  1.900000000000000e-01, -7.449518622988359e-01,  1.454963136360206e+00,  2.190000000000000e-01,  3.860134686216747e-01, -7.577923740534765e-01,  4.727065264145779e+00
+Fe1Li1P1    ,  4.965000000000000e+00, -1.108292976757157e+00,  1.634388699093170e+00,  7.399999999999995e-02,  6.898788735148009e-01, -1.644029357203719e+00,  1.096218198340602e+01
+Ga1Si1Sr1   ,  5.000000000000000e+00,  1.025353505249930e+01,  1.291187328092640e+00,  8.233000000000000e-01,  4.601905396195376e-01,  1.165024054187361e+00,  4.371174750888615e-01
+Nb1S2       ,  5.821818182000000e+00, -2.573158454667503e-02,  6.176344799783785e-01,  3.010000000000002e-01,  2.560241486205229e-01, -1.155817762438889e+00,  6.180955838101697e+00
+Ge1V3       ,  6.680000000000000e+00,  5.343365876367608e+00,  3.574424218764129e-01,  1.125000000000000e-01,  6.251446040172944e-01,  7.473038715119003e-01,  1.778651470097723e+00
+Mo1Ni1P1    ,  1.550000000000000e+01, -9.109978673937534e-01,  2.625641067762557e+00,  4.727000000000001e-01,  9.883224022695362e-01, -1.017216650464116e+00,  4.399226472546725e+00

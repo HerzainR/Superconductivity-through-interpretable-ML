@@ -1,0 +1,24 @@
+# c0 + a0 * (wtd_mean_IP + 5.601685e-02*V_molar) + a1 * (wtd_range_PE * wtd_std_EA) + a2 * (wtd_mean_EA + 6.125868e-03*wtd_range_at_mass) + a3 * cbrt(lambda) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.77151013271895; Max AE: 4.93578062806834
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.551639605751500e+00, -1.568342188921317e+01,  6.331678522375796e+00,  1.080888633672520e+01,  6.858736951154916e-01, -2.572329776721406e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               21|3|add:5.6016845844499e-02,0.0000000000000e+00; (wtd_mean_IP + 5.601685e-02*V_molar); $\left(wtd_{mean, IP} + 0.0560V_{molar}\right)$; (wtd_mean_IP + (5.601685e-02.*V_molar)); (newdata$wtd_mean_IP + (5.601685e-02*newdata$V_molar)); wtd_mean_IP,V_molar
+# 1;  1; eV;                                               35|31|mult; (wtd_range_PE * wtd_std_EA); $\left(wtd_{range, PE} wtd_{std, EA}\right)$; (wtd_range_PE .* wtd_std_EA); (newdata$wtd_range_PE * newdata$wtd_std_EA); wtd_range_PE,wtd_std_EA
+# 2;  1; eV;                                               27|11|add:6.1258677917019e-03,0.0000000000000e+00; (wtd_mean_EA + 6.125868e-03*wtd_range_at_mass); $\left(wtd_{mean, EA} + 0.00613wtd_{range, at, mass}\right)$; (wtd_mean_EA + (6.125868e-03.*wtd_range_at_mass)); (newdata$wtd_mean_EA + (6.125868e-03*newdata$wtd_range_at_mass)); wtd_mean_EA,wtd_range_at_mass
+# 3;  1; Unitless;                                         5|cbrt; cbrt(lambda); $\left(\sqrt[3]{ lambda }\right)$; nthroot(lambda, 3); nthroot(newdata$lambda, 3); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B1Mo1       ,  2.500000000000000e-01,  5.185780628068344e+00,  8.391200327062231e+00,  1.407000000000000e-02,  7.722904436283351e-01,  8.040420429653392e-01,  6.603156731237589e+00
+Hg2Na1      ,  1.620000000000000e+00,  3.362298402152541e+00,  1.118074438036791e+01,  2.412941400000000e-01,  9.549556854005680e-01,  8.507260232928537e-01,  4.075894344277194e-01
+Ga2Y1       ,  1.680000000000000e+00,  1.083574234102276e+00,  8.182516702080161e+00,  2.400000000000000e-03,  4.055006569264651e-01,  1.053097429768361e+00,  2.885152258422198e-01
+B2Nb1       ,  4.597500000000000e+00,  4.302915597559441e+00,  8.731224796467650e+00,  2.191581700000000e-01,  6.278800228962383e-01,  8.879885559762081e-01,  9.246523702741220e+00
+Nb0.75Si0.25,  9.000000000000000e+00,  9.118892537464419e+00,  9.426624846356390e+00,  1.410125000000000e-01,  1.399836461852798e+00,  1.138421947078910e+00,  1.835084933371403e+00
+Ta1B2       ,  9.500000000000000e+00,  5.229937088967881e+00,  9.086793311416004e+00,  1.668400000000000e-02,  6.173570901528735e-01,  9.597699101349482e-01,  4.129795616113745e+00

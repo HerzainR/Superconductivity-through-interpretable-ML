@@ -1,0 +1,20 @@
+# c0 + a0 * ((((wtd_mean_PE-2.925621e-01) / (wtd_mean_at_mass-1.333123e+01))-2.970720e-03) * (((lambda4w_low-1.403895e+01) / (lambda-3.633562e-01))+1.458229e+02))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.15913177141765; Max AE: 12.1668094023748
+# Coefficients
+# Task   a0                      c0
+# all ,  6.583734723937357e-02,  3.552610196665042e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; K * g^-1 * mol;                                   33|9|div|6|5|div|mult:-2.9707198303032e-03,1.4582288679504e+02,-1.4038945684631e+01,-3.6335622231444e-01,-2.9256207380406e-01,-1.3331228231269e+01; ((((wtd_mean_PE-2.925621e-01) / (wtd_mean_at_mass-1.333123e+01))-2.970720e-03) * (((lambda4w_low-1.403895e+01) / (lambda-3.633562e-01))+1.458229e+02)); $\left(\left(\left(\frac{ wtd_{mean, PE} -2.926e-01 }{ wtd_{mean, at, mass}-1.333e+01 } \right)-2.971e-03\right) * \left(\left(\frac{ lambda4w_{low} -1.404e+01 }{ lambda-3.634e-01 } \right)+1.458e+02\right)\right)$; ((((wtd_mean_PE-2.925621e-01) ./ (wtd_mean_at_mass-1.333123e+01))-2.970720e-03) .* (((lambda4w_low-1.403895e+01) ./ (lambda-3.633562e-01))+1.458229e+02)); ((((newdata$wtd_mean_PE-2.925621e-01) / (newdata$wtd_mean_at_mass-1.333123e+01))-2.970720e-03) * (((newdata$lambda4w_low-1.403895e+01) / (newdata$lambda-3.633562e-01))+1.458229e+02)); wtd_mean_PE,wtd_mean_at_mass,lambda4w_low,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 11, 42, 33, 54, 52, 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Al1Nb1Ni2   ,  1.075000000000000e+00,  3.981880564493353e+00,  6.520165010105217e+00
+La1         ,  5.343000000000000e+00,  3.831909474692632e+00,  4.242262025110227e+00
+C1Ta1       ,  8.637499999999999e+00,  4.080075123895916e+00,  8.011637001610943e+00
+C1I1Y1      ,  9.917500000000000e+00,  3.980001324192919e+00,  6.491621328149114e+00
+Nb1Ru3      ,  1.350000000000000e+01,  3.870337800786153e+00,  4.825947846378229e+00
+Nb3Sn1      ,  1.670900000000000e+01,  4.542190597625195e+00,  1.503068459551088e+01

@@ -1,0 +1,20 @@
+# c0 + a0 * (((wtd_mean_IP+2.284925e+01) * (lambda+4.333254e+01)) - (5.531271e-03*((range_at_mass+9.235025e+01) / (mean_at_rad-1.125773e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.98253503452107; Max AE: 6.12390662444292
+# Coefficients
+# Task   a0                      c0
+# all ,  4.287652570669096e-02, -5.302582938267442e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|5|mult|10|14|div|sub:5.5312709692125e-03,0.0000000000000e+00,9.2350246469302e+01,-1.1257730304179e+00,2.2849253139289e+01,4.3332538138981e+01; (((wtd_mean_IP+2.284925e+01) * (lambda+4.333254e+01)) - (5.531271e-03*((range_at_mass+9.235025e+01) / (mean_at_rad-1.125773e+00)))); $\left(\left(\left(wtd_{mean, IP}+2.285e+01\right) * \left(lambda+4.333e+01\right)\right) - \left(5.531e-03\left(\frac{ range_{at, mass} +9.235e+01 }{ mean_{at, rad}-1.126e+00 } \right)\right)\right)$; (((wtd_mean_IP+2.284925e+01) .* (lambda+4.333254e+01)) - (5.531271e-03.*((range_at_mass+9.235025e+01) ./ (mean_at_rad-1.125773e+00)))); (((newdata$wtd_mean_IP+2.284925e+01) * (newdata$lambda+4.333254e+01)) - (5.531271e-03*((newdata$range_at_mass+9.235025e+01) / (newdata$mean_at_rad-1.125773e+00)))); wtd_mean_IP,lambda,range_at_mass,mean_at_rad
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 34, 35, 19, 30, 32, 41 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B1Hf1       ,  3.100000000000000e+00,  3.634239165232226e+00,  1.321470609244460e+03
+Os0.5V0.5   ,  5.150000000000000e+00,  4.972946099138475e+00,  1.352692983535326e+03
+Ir1Mo1      ,  5.325000000000000e+00,  4.944610177889095e+00,  1.352032110930040e+03
+N1Ti1       ,  5.387500000000000e+00,  9.247707902440784e+00,  1.452392334936721e+03
+B6Y1        ,  5.692857143000000e+00,  4.979977060750948e+00,  1.352856965142898e+03
+N1V1        ,  8.528333333499999e+00,  1.465223995794292e+01,  1.578441075277143e+03

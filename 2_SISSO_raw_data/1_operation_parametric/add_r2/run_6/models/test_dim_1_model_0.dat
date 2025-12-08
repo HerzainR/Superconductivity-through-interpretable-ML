@@ -1,0 +1,20 @@
+# c0 + a0 * (((wtd_mean_IP+1.656687e+00) * (lambda+1.273433e+01)) + 1.980328e+03*((mean_at_rad-1.345246e+00) / (wtd_mean_at_mass-1.735032e+01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.93520301072447; Max AE: 10.9078002890473
+# Coefficients
+# Task   a0                      c0
+# all ,  1.535034468211609e-01, -1.521417769164388e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               21|5|mult|14|9|div|add:1.9803283891074e+03,0.0000000000000e+00,-1.3452456173616e+00,-1.7350322970059e+01,1.6566873323881e+00,1.2734332159424e+01; (((wtd_mean_IP+1.656687e+00) * (lambda+1.273433e+01)) + 1.980328e+03*((mean_at_rad-1.345246e+00) / (wtd_mean_at_mass-1.735032e+01))); $\left(\left(\left(wtd_{mean, IP}+1.657e+00\right) * \left(lambda+1.273e+01\right)\right) + 1.98e+03\left(\frac{ mean_{at, rad} -1.345e+00 }{ wtd_{mean, at, mass}-1.735e+01 } \right)\right)$; (((wtd_mean_IP+1.656687e+00) .* (lambda+1.273433e+01)) + (1.980328e+03.*((mean_at_rad-1.345246e+00) ./ (wtd_mean_at_mass-1.735032e+01)))); (((newdata$wtd_mean_IP+1.656687e+00) * (newdata$lambda+1.273433e+01)) + (1.980328e+03*((newdata$mean_at_rad-1.345246e+00) / (newdata$wtd_mean_at_mass-1.735032e+01)))); wtd_mean_IP,lambda,mean_at_rad,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 53, 29, 0, 36, 28, 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Rh1V3       ,  1.900000000000000e-01,  3.023757920965589e+00,  1.188112448957421e+02
+Fe1Li1P1    ,  4.965000000000000e+00,  1.137369471002168e+00,  1.065223452714805e+02
+Ga1Si1Sr1   ,  5.000000000000000e+00,  5.583451902826726e+00,  1.354864012838804e+02
+Nb1S2       ,  5.821818182000000e+00,  6.449850802992897e+00,  1.411305670541485e+02
+Ge1V3       ,  6.680000000000000e+00,  4.745708171048659e+00,  1.300289099432848e+02
+Mo1Ni1P1    ,  1.550000000000000e+01,  4.592199710952700e+00,  1.290288772842475e+02

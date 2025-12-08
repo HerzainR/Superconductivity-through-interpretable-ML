@@ -1,0 +1,21 @@
+# c0 + a0 * ((|mean_EA - std_IP|) * (wtd_range_at_rad * lambda)) + a1 * ((wtd_range_EA * w_log) * (lambda4w_low * w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.12971576649228; Max AE: 5.15296262236718
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  4.030925180803989e+00,  1.348412817495111e-06,  2.964080460417659e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * eV;                                          26|24|abd|17|5|mult|mult; ((|mean_EA - std_IP|) * (wtd_range_at_rad * lambda)); $\left(\left(\left|mean_{EA} - std_{IP}\right|\right) \left(wtd_{range, at, rad} lambda\right)\right)$; (abs(mean_EA - std_IP) .* (wtd_range_at_rad .* lambda)); (abs(newdata$mean_EA - newdata$std_IP) * (newdata$wtd_range_at_rad * newdata$lambda)); mean_EA,std_IP,wtd_range_at_rad,lambda
+# 1;  2; K^3 * eV;                                         29|4|mult|6|4|mult|mult; ((wtd_range_EA * w_log) * (lambda4w_low * w_log)); $\left(\left(wtd_{range, EA} w_{log}\right) \left(lambda4w_{low} w_{log}\right)\right)$; ((wtd_range_EA .* w_log) .* (lambda4w_low .* w_log)); ((newdata$wtd_range_EA * newdata$w_log) * (newdata$lambda4w_low * newdata$w_log)); wtd_range_EA,w_log,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 6                     
+# Excluded Indexes: [ 46, 16, 45, 15, 1, 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B1Mo1       ,  2.500000000000000e-01,  4.041946627729800e+00,  1.664659500000001e-02,  7.495960993827175e+05
+Hg2Na1      ,  1.620000000000000e+00,  4.896953265468055e+00,  4.778299008450000e-01,  5.025334604724735e+03
+Ga2Y1       ,  1.680000000000000e+00,  3.131493615333504e+00,  4.088817900000000e-02,  1.925200171522658e+03
+B2Nb1       ,  4.597500000000000e+00,  4.581605465323323e+00,  1.718185770000000e-03,  1.194440682944570e+06
+Nb0.75Si0.25,  9.000000000000000e+00,  1.123457660496774e+01,  6.218534362500001e-01,  4.274545150280997e+06
+Ta1B2       ,  9.500000000000000e+00,  4.347037377632815e+00,  5.656913850000000e-04,  1.023927271865911e+06

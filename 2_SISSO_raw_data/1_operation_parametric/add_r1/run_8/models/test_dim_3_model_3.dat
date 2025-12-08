@@ -1,0 +1,21 @@
+# c0 + a0 * (mean_EA + 1.566471e-02*wtd_range_at_mass) + a1 * ln(lambda3) + a2 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.32162891784307; Max AE: 5.82378204470244
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.934169145394999e+00,  1.350560113024148e+00,  7.339261332023528e-01, -1.888543897879145e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               26|11|add:1.5664711070254e-02,0.0000000000000e+00; (mean_EA + 1.566471e-02*wtd_range_at_mass); $\left(mean_{EA} + 0.0157wtd_{range, at, mass}\right)$; (mean_EA + (1.566471e-02.*wtd_range_at_mass)); (newdata$mean_EA + (1.566471e-02*newdata$wtd_range_at_mass)); mean_EA,wtd_range_at_mass
+# 1;  1; Unitless;                                         7|log; ln(lambda3); $\left(\ln{ lambda3 }\right)$; log(lambda3); log(newdata$lambda3); lambda3
+# 2;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 38, 21, 43, 23, 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+C1In1Ti2    ,  3.100000000000000e+00, -2.238404915078135e-01,  9.499081380432438e-01, -4.017383521085972e+00,  4.569018473820517e+00
+Sn1         ,  3.740729412000000e+00, -2.083052632702444e+00,  1.200000000000000e+00, -4.135166556742356e+00,  9.119164350096876e-01
+Al1Si1Sr1   ,  4.750000000000000e+00,  2.213946432800141e+00,  9.253276719208330e-01, -1.358679194086917e+00,  3.129841787122208e+00
+Sn1Ta3      ,  6.692500000000000e+00,  1.184906324354454e+01,  2.421982574796685e+00,  3.017738353816606e+00,  1.818724892435020e-01
+Re3W1       ,  8.733333332999999e+00,  1.265714747489311e+01,  1.950209803140783e+00,  5.061309396824210e+00,  5.127702296093048e-02

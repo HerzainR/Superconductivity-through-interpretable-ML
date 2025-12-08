@@ -1,0 +1,23 @@
+# c0 + a0 * (range_EA - wtd_mean_EA) + a1 * ((mean_at_mass+1.406328e+02) * (range_at_rad+2.054709e+00)) + a2 * ((mean_at_mass+1.486910e+02) * (std_at_rad+1.048188e+00)) + a3 * (exp(-1.0 * lambda)) + a4 * (w_log / wtd_mean_at_mass)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.42744206750453; Max AE: 10.9778537114008
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -4.860764038366011e+00,  2.974902052033746e-01, -5.387188456305306e-01, -1.205593017099477e+01,  7.502148717845033e-01, -1.101734915965035e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               28|27|sub; (range_EA - wtd_mean_EA); $\left(range_{EA} - wtd_{mean, EA}\right)$; (range_EA - wtd_mean_EA); (newdata$range_EA - newdata$wtd_mean_EA); range_EA,wtd_mean_EA
+# 1;  1; AA * g * mol^-1;                                  8|16|mult:1.4063277072390e+02,2.0547092032725e+00; ((mean_at_mass+1.406328e+02) * (range_at_rad+2.054709e+00)); $\left(\left(mean_{at, mass}+1.406e+02\right) * \left(range_{at, rad}+2.055e+00\right)\right)$; ((mean_at_mass+1.406328e+02) .* (range_at_rad+2.054709e+00)); ((newdata$mean_at_mass+1.406328e+02) * (newdata$range_at_rad+2.054709e+00)); mean_at_mass,range_at_rad
+# 2;  1; AA * g * mol^-1;                                  8|18|mult:1.4869097096606e+02,1.0481879644678e+00; ((mean_at_mass+1.486910e+02) * (std_at_rad+1.048188e+00)); $\left(\left(mean_{at, mass}+1.487e+02\right) * \left(std_{at, rad}+1.048e+00\right)\right)$; ((mean_at_mass+1.486910e+02) .* (std_at_rad+1.048188e+00)); ((newdata$mean_at_mass+1.486910e+02) * (newdata$std_at_rad+1.048188e+00)); mean_at_mass,std_at_rad
+# 3;  1; Unitless;                                         5|nexp; (exp(-1.0 * lambda)); $\left(\exp{ \left(-lambda \right) } \right)$; exp(-1.0 * (lambda)); exp(-1.0 * (newdata$lambda)); lambda
+# 4;  1; K * g^-1 * mol;                                   4|9|div; (w_log / wtd_mean_at_mass); $\left(\frac{ w_{log} }{ wtd_{mean, at, mass} } \right)$; (w_log ./ wtd_mean_at_mass); (newdata$w_log / newdata$wtd_mean_at_mass); w_log,wtd_mean_at_mass
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 5                     
+# Excluded Indexes: [ 8, 22, 7, 51, 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ti1O1       ,  7.200000000000000e-01,  4.139165292608777e+00,  6.119999999999999e-01,  5.167849006985025e+02,  2.742214424526334e+02,  8.832915073154146e-01,  1.713429283629577e+01
+Ga1Mo3      ,  7.600000000000000e-01,  1.249450095459649e+00, -1.884999999999999e-01,  5.306745338366243e+02,  2.797287038648475e+02,  6.647794150798125e-01,  3.031283105109667e+00
+Pt0.25V0.75 ,  3.102500000000000e+00,  2.582985080808474e+00,  6.772000000000000e-01,  6.893565001737951e+02,  3.608736784976202e+02,  4.463731578443175e-01,  2.253378188051798e+00
+C1Mo1       ,  1.015200000000000e+01,  6.334642743168379e+00, -4.874999999999999e-01,  5.575112871344654e+02,  2.945201783052391e+02,  8.220122346781865e-01,  1.037876059636019e+01
+Ga0.25Nb0.75,  1.816296296333330e+01,  7.185109251932531e+00, -1.518000000000000e-01,  5.492554484434742e+02,  2.893903669688233e+02,  1.572411704043684e-06,  6.788389459364830e-02
