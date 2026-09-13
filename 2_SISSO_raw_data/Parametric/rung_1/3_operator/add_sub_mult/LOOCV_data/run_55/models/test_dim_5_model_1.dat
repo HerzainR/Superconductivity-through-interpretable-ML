@@ -1,0 +1,19 @@
+# c0 + a0 * ((L_avg-5.008191e+00) * (at_mass_range-6.074783e+01)) + a1 * (EA_wtd_range * lambda4w_low) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.27838998462184; Max AE: 2.27838998462184
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.552840156037782e-02, -7.240207363402481e+00,  2.105010805433141e+05,  4.805971945211390e+02, -5.442782380916182e+02,  3.191030334220798e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  4|9|mult:-5.0081905132378e+00,-6.0747833390051e+01; ((L_avg-5.008191e+00) * (at_mass_range-6.074783e+01)); $\left(\left(L_{avg}-5.008e+00\right) * \left(at_{mass, range}-6.075e+01\right)\right)$; ((L_avg-5.008191e+00) .* (at_mass_range-6.074783e+01)); ((newdata$L_avg-5.008191e+00) * (newdata$at_mass_range-6.074783e+01)); L_avg,at_mass_range
+# 1;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Br2C2Y2     ,  5.050000000000000e+00,  2.771610015378157e+00,  1.611835471532929e+01,  6.066043000000001e-03,  3.131359847000001e-06,  1.134556500000000e-02,  1.145923082948226e-02

@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + (PE_wtd_range / PE_mean)) + a1 * ((PE_wtd_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * (exp(5.863072e-01*((PE_wtd_mean-3.252752e+00) / (density-3.025600e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.95049790441071; Max AE: 3.95049790441071
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  4.124589201409962e+00,  4.098573074852978e-01,  3.031040899356053e+00, -2.568818802382071e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|25|div|add; (sin(lambda) + (PE_wtd_range / PE_mean)); $\left(\left(\sin{ lambda }\right) + \left(\frac{ PE_{wtd, range} }{ PE_{mean} } \right)\right)$; (sin(lambda) + (PE_wtd_range ./ PE_mean)); (sin(newdata$lambda) + (newdata$PE_wtd_range / newdata$PE_mean)); lambda,PE_wtd_range,PE_mean
+# 1;  2; W * eV * mK^-1;                                   26|2|mult|41|37|abd|mult; ((PE_wtd_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(PE_{wtd, mean} lambda4w_{low}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((PE_wtd_mean .* lambda4w_low) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$PE_wtd_mean * newdata$lambda4w_low) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); PE_wtd_mean,lambda4w_low,ThermalCond_std,ThermalCond_mean
+# 2;  2; Unitless;                                         26|5|div|exp:5.8630723870199e-01,0.0000000000000e+00,-3.2527517580082e+00,-3.0255999982475e+00; (exp(5.863072e-01*((PE_wtd_mean-3.252752e+00) / (density-3.025600e+00)))); $\left(\exp{ \left(5.863e-01\left(\frac{ PE_{wtd, mean} -3.253e+00 }{ density-3.026e+00 } \right) \right)}\right)$; exp(5.863072e-01.*((PE_wtd_mean-3.252752e+00) ./ (density-3.025600e+00))); exp(5.863072e-01*((newdata$PE_wtd_mean-3.252752e+00) / (newdata$density-3.025600e+00))); PE_wtd_mean,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 67 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ag1B2       ,  6.700000000000000e+00,  2.749502095589290e+00,  6.572303271537309e-01,  2.223062010000000e-01,  8.302104954470966e-01

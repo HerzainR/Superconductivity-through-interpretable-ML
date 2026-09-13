@@ -1,0 +1,16 @@
+# c0 + a0 * ((lambda3 / density) * (|ThermalCond_std - ThermalCond_mean|)) + a1 * (exp(1.099810e+00*((IP_std-1.756720e+00) / (at_mass_mean-1.870573e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.942534295794122; Max AE: 0.942534295794122
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.734217626610628e-01,  1.190302041549220e+01, -8.589046868879093e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * cm^3 * g^-1 * mK^-1;                          3|5|div|41|37|abd|mult; ((lambda3 / density) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda3 }{ density } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda3 ./ density) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda3 / newdata$density) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda3,density,ThermalCond_std,ThermalCond_mean
+# 1;  2; Unitless;                                         23|7|div|exp:1.0998096400854e+00,0.0000000000000e+00,-1.7567201660126e+00,-1.8705732196272e+01; (exp(1.099810e+00*((IP_std-1.756720e+00) / (at_mass_mean-1.870573e+01)))); $\left(\exp{ \left(1.100e+00\left(\frac{ IP_{std} -1.757e+00 }{ at_{mass, mean}-1.871e+01 } \right) \right)}\right)$; exp(1.099810e+00.*((IP_std-1.756720e+00) ./ (at_mass_mean-1.870573e+01))); exp(1.099810e+00*((newdata$IP_std-1.756720e+00) / (newdata$at_mass_mean-1.870573e+01))); IP_std,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Be2Nb3      ,  2.300000000000000e+00,  3.242534295794122e+00,  6.901598998692112e-01,  9.839428993229714e-01

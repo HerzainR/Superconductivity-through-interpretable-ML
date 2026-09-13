@@ -1,0 +1,19 @@
+# c0 + a0 * (at_rad_std + 4.081780e-03*at_mass_wtd_mean) + a1 * (IP_range * lambda4w_low) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_wtd_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 8.80172700466926; Max AE: 8.80172700466926
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  4.582457783652315e+00, -3.405137398342418e+00,  2.044085660596964e+05,  5.360542356563611e+02, -5.043166924335580e+02, -5.317095653183107e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               17|8|add:4.0817801079588e-03,0.0000000000000e+00; (at_rad_std + 4.081780e-03*at_mass_wtd_mean); $\left(at_{rad, std} + 0.00408at_{mass, wtd, mean}\right)$; (at_rad_std + (4.081780e-03.*at_mass_wtd_mean)); (newdata$at_rad_std + (4.081780e-03*newdata$at_mass_wtd_mean)); at_rad_std,at_mass_wtd_mean
+# 1;  1; eV^2;                                             21|2|mult; (IP_range * lambda4w_low); $\left(IP_{range} lambda4w_{low}\right)$; (IP_range .* lambda4w_low); (newdata$IP_range * newdata$lambda4w_low); IP_range,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|14|div; (w_log / at_rad_wtd_mean); $\left(\frac{ w_{log} }{ at_{rad, wtd, mean} } \right)$; (w_log ./ at_rad_wtd_mean); (newdata$w_log / newdata$at_rad_wtd_mean); w_log,at_rad_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 78 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C6Ca        ,  1.130300000000000e+01,  2.501272995330739e+00,  5.803913418635320e-01,  5.105824000000000e-02,  2.776307795200001e-05,  2.291310574213517e-02,  3.452285942309885e-02

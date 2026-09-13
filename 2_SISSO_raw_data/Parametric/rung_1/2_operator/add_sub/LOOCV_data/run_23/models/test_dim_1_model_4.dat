@@ -1,0 +1,15 @@
+# c0 + a0 * (w_log / density)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.56503635383887; Max AE: 4.56503635383887
+# Coefficients
+# Task   a0                      c0
+# all ,  9.072479071472103e+02,  2.509794376081492e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^3 * eV * g^-1;                                 1|5|div; (w_log / density); $\left(\frac{ w_{log} }{ density } \right)$; (w_log ./ density); (newdata$w_log / newdata$density); w_log,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 23 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Be2Nb1      ,  2.150000000000000e+00,  6.715036353838869e+00,  4.635163051497713e-03

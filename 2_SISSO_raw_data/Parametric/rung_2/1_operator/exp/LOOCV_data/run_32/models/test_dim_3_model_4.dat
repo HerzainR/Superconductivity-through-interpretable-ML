@@ -1,0 +1,17 @@
+# c0 + a0 * (|(exp(4.806581e-01*EA_mean)) - (PE_range * lambda)|) + a1 * ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.14628603066716; Max AE: 1.14628603066716
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -2.005198374685954e+00,  1.625854031788460e+00, -6.703447671479794e+03,  5.174687711498805e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         31|exp:4.8065805389149e-01,0.0000000000000e+00|27|0|mult|abd; (|(exp(4.806581e-01*EA_mean)) - (PE_range * lambda)|); $\left(\left|\left(\exp{ \left(4.807e-01EA_{mean} \right)}\right) - \left(PE_{range} lambda\right)\right|\right)$; abs(exp(4.806581e-01.*EA_mean) - (PE_range .* lambda)); abs(exp(4.806581e-01*newdata$EA_mean) - (newdata$PE_range * newdata$lambda)); EA_mean,PE_range,lambda
+# 1;  2; W * eV * mK^-1;                                   2|0|div|41|37|abd|mult; ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda4w_{low} }{ lambda } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda4w_low ./ lambda) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda4w_low / newdata$lambda) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda4w_low,lambda,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 32 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Rh1      ,  2.742333333000000e+00,  3.888619363667162e+00,  1.219887706272225e+00,  2.029265048220818e-01, -1.238347284480000e-04

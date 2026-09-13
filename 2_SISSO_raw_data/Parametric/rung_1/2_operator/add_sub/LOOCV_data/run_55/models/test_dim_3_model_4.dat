@@ -1,0 +1,17 @@
+# c0 + a0 * (ThermalCond_std * lambda3) + a1 * (lambda / IP_wtd_mean) + a2 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.8766297322484; Max AE: 2.8766297322484
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -7.107809328434576e-03,  4.144288027990387e+01,  1.480669209946064e+05, -1.375414160445227e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        41|3|mult; (ThermalCond_std * lambda3); $\left(ThermalCond_{std} lambda3\right)$; (ThermalCond_std .* lambda3); (newdata$ThermalCond_std * newdata$lambda3); ThermalCond_std,lambda3
+# 1;  1; eV^-1;                                            0|20|div; (lambda / IP_wtd_mean); $\left(\frac{ lambda }{ IP_{wtd, mean} } \right)$; (lambda ./ IP_wtd_mean); (newdata$lambda / newdata$IP_wtd_mean); lambda,IP_wtd_mean
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 55 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Br2C2Y2     ,  5.050000000000000e+00,  2.173370267751603e+00,  2.905875542300000e+01,  7.942685662197732e-02,  3.131359847000001e-06

@@ -1,0 +1,15 @@
+# c0 + a0 * ((|EA_wtd_range - (-7.067342e-04*IP_range+7.564169e-01)|-1.148251e-01) * (((w_log-1.310405e-03) * (lambda-5.878900e-01))-9.842393e-04))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.4485130406528; Max AE: 34.4485130406528
+# Coefficients
+# Task   a0                      c0
+# all ,  1.468498684832969e+03,  3.535927352433460e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             34|21|abd|1|0|mult|mult:-1.1482512744239e-01,-9.8423933883215e-04,-1.3104049250937e-03,-5.8789001239863e-01,-7.0673419366269e-04,7.5641691082311e-01; ((|EA_wtd_range - (-7.067342e-04*IP_range+7.564169e-01)|-1.148251e-01) * (((w_log-1.310405e-03) * (lambda-5.878900e-01))-9.842393e-04)); $\left(\left(\left(\left|EA_{wtd, range} - \left(-7.067e-04IP_{range}+7.564e-01\right)\right|\right)-1.148e-01\right) * \left(\left(\left(w_{log}-1.310e-03\right) * \left(lambda-5.879e-01\right)\right)-9.842e-04\right)\right)$; ((abs(EA_wtd_range - (-7.067342e-04.*IP_range+7.564169e-01))-1.148251e-01) .* (((w_log-1.310405e-03) .* (lambda-5.878900e-01))-9.842393e-04)); ((abs(newdata$EA_wtd_range - (-7.067342e-04*newdata$IP_range+7.564169e-01))-1.148251e-01) * (((newdata$w_log-1.310405e-03) * (newdata$lambda-5.878900e-01))-9.842393e-04)); EA_wtd_range,IP_range,w_log,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.951486959347172e+00,  2.829826210984855e-04

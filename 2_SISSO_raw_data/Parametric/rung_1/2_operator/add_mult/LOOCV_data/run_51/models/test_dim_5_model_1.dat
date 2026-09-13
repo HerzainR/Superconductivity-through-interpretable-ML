@@ -1,0 +1,19 @@
+# c0 + a0 * ((L_avg-4.600750e+00) * (density-1.113263e+01)) + a1 * ((at_mass_range-6.132963e+01) * (L_avg-4.993608e+00)) + a2 * (w_log / lambda) + a3 * ((lambda4w_low+6.368354e-03) * (EA_wtd_mean-1.437251e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.0166078048031784; Max AE: 0.0166078048031784
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.389421396885833e-01, -1.443133848204271e-02, -1.256288064671365e+02, -6.047506078356612e+01,  2.157717057997965e+05,  4.395015799584074e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * cm^-3 * g;                                   4|5|mult:-4.6007502923097e+00,-1.1132634002876e+01; ((L_avg-4.600750e+00) * (density-1.113263e+01)); $\left(\left(L_{avg}-4.601e+00\right) * \left(density-1.113e+01\right)\right)$; ((L_avg-4.600750e+00) .* (density-1.113263e+01)); ((newdata$L_avg-4.600750e+00) * (newdata$density-1.113263e+01)); L_avg,density
+# 1;  1; AA * g * mol^-1;                                  9|4|mult:-6.1329631549108e+01,-4.9936075497057e+00; ((at_mass_range-6.132963e+01) * (L_avg-4.993608e+00)); $\left(\left(at_{mass, range}-6.133e+01\right) * \left(L_{avg}-4.994e+00\right)\right)$; ((at_mass_range-6.132963e+01) .* (L_avg-4.993608e+00)); ((newdata$at_mass_range-6.132963e+01) * (newdata$L_avg-4.993608e+00)); at_mass_range,L_avg
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^2;                                             2|32|mult:6.3683535506139e-03,-1.4372511871758e+00; ((lambda4w_low+6.368354e-03) * (EA_wtd_mean-1.437251e+00)); $\left(\left(lambda4w_{low}+6.368e-03\right) * \left(EA_{wtd, mean}-1.437e+00\right)\right)$; ((lambda4w_low+6.368354e-03) .* (EA_wtd_mean-1.437251e+00)); ((newdata$lambda4w_low+6.368354e-03) * (newdata$EA_wtd_mean-1.437251e+00)); lambda4w_low,EA_wtd_mean
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 51 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pb3Y1       ,  4.720000000000000e+00,  4.736607804803178e+00, -9.140548516976810e-02, -1.106294925889097e+01,  5.991594174567492e-03, -1.427221066744309e-02,  2.303463970000000e-07

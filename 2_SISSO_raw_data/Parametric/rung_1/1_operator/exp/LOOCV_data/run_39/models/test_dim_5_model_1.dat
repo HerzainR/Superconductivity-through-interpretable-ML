@@ -1,0 +1,19 @@
+# c0 + a0 * (lambda4w_low^2) + a1 * (EA_wtd_range * lambda4w_low) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.46690682668869; Max AE: 1.46690682668869
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.942897643703503e+01, -6.216041549145489e+01,  1.936673148708092e+05,  6.144191417673828e+02, -5.886740759926935e+02,  2.771782471062780e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             2|sq; (lambda4w_low^2); $\left(lambda4w_{low}^2\right)$; (lambda4w_low)^2; (newdata$lambda4w_low)^2; lambda4w_low
+# 1;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+In1Sb1      ,  3.320000000000000e+00,  4.786906826688692e+00,  3.470769000000000e-04,  7.172550000000001e-03,  2.337448960000000e-07,  8.121343999999999e-03,  4.384341637010676e-03

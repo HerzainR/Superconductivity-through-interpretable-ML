@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + exp(PE_wtd_range)) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (|PE_wtd_range - lambda3|)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.637665827614466; Max AE: 0.637665827614466
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.755984664660765e+00,  1.888832281487695e-02, -8.478275930210390e+03, -2.440532606576451e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|exp|add; (sin(lambda) + exp(PE_wtd_range)); $\left(\left(\sin{ lambda }\right) + \left(\exp{ PE_{wtd, range} }\right)\right)$; (sin(lambda) + exp(PE_wtd_range)); (sin(newdata$lambda) + exp(newdata$PE_wtd_range)); lambda,PE_wtd_range
+# 1;  2; W * mK^-1;                                        41|37|abd|28|3|abd|mult; ((|ThermalCond_std - ThermalCond_mean|) * (|PE_wtd_range - lambda3|)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(\left|PE_{wtd, range} - lambda3\right|\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* abs(PE_wtd_range - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * abs(newdata$PE_wtd_range - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_wtd_range,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 46 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Bi2Rb1      ,  4.250000000000000e+00,  3.612334172385534e+00,  2.164996210262341e+00,  3.389920000000000e+00, -2.611441445872221e-06

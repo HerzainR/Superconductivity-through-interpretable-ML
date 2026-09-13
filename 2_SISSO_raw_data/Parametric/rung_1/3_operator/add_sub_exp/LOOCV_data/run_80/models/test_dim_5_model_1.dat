@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_std * lambda) + a1 * (EA_range * lambda) + a2 * (IP_wtd_mean - (6.368259e+00*at_rad_wtd_range)) + a3 * (w_log / IP_wtd_mean) + a4 * (w_log * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.4280262358045; Max AE: 34.4280262358045
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.254039486367278e+01,  8.960468693666279e+00, -8.132563311957350e-01, -2.656796389894909e+03,  5.589532605950758e+02,  8.651755140659020e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               36|0|mult; (EA_wtd_std * lambda); $\left(EA_{wtd, std} lambda\right)$; (EA_wtd_std .* lambda); (newdata$EA_wtd_std * newdata$lambda); EA_wtd_std,lambda
+# 1;  1; eV;                                               33|0|mult; (EA_range * lambda); $\left(EA_{range} lambda\right)$; (EA_range .* lambda); (newdata$EA_range * newdata$lambda); EA_range,lambda
+# 2;  1; eV;                                               20|16|sub:6.3682590078984e+00,0.0000000000000e+00; (IP_wtd_mean - (6.368259e+00*at_rad_wtd_range)); $\left(IP_{wtd, mean} - \left(6.368e+00at_{rad, wtd, range}\right)\right)$; (IP_wtd_mean - (6.368259e+00.*at_rad_wtd_range)); (newdata$IP_wtd_mean - (6.368259e+00*newdata$at_rad_wtd_range)); IP_wtd_mean,at_rad_wtd_range
+# 3;  1; Unitless;                                         1|20|div; (w_log / IP_wtd_mean); $\left(\frac{ w_{log} }{ IP_{wtd, mean} } \right)$; (w_log ./ IP_wtd_mean); (newdata$w_log / newdata$IP_wtd_mean); w_log,IP_wtd_mean
+# 4;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.971973764195468e+00,  8.013616000000000e-02,  1.699672000000000e-01,  6.467619993299325e+00,  7.529050701053126e-03,  3.733142400000000e-02

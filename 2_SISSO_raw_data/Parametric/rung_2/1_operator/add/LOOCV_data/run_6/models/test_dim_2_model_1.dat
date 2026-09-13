@@ -1,0 +1,16 @@
+# c0 + a0 * (((lambda3+1.838563e+01) / (lambda4w_low+6.472380e-03)) + 9.168812e-01*((ThermalCond_std-6.157824e+01) / (PE_mean-2.143723e+00))) + a1 * (((PE_range-1.011405e+00) * (lambda4w_low-4.668249e-02)) + 4.559088e-02*((EA_wtd_mean-9.131507e-01) / (density-2.645263e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.9527469516853; Max AE: 0.9527469516853
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.694429467571289e-03, -4.049157892437345e+01,  6.861731705431367e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^-1;                                            3|2|div|41|25|div|add:9.1688122629757e-01,0.0000000000000e+00,-6.1578236518533e+01,-2.1437230047844e+00,1.8385629675587e+01,6.4723804332110e-03; (((lambda3+1.838563e+01) / (lambda4w_low+6.472380e-03)) + 9.168812e-01*((ThermalCond_std-6.157824e+01) / (PE_mean-2.143723e+00))); $\left(\left(\frac{ lambda3 +1.839e+01 }{ lambda4w_{low}+6.472e-03 } \right) + 0.917\left(\frac{ ThermalCond_{std} -6.158e+01 }{ PE_{mean}-2.144e+00 } \right)\right)$; (((lambda3+1.838563e+01) ./ (lambda4w_low+6.472380e-03)) + (9.168812e-01.*((ThermalCond_std-6.157824e+01) ./ (PE_mean-2.143723e+00)))); (((newdata$lambda3+1.838563e+01) / (newdata$lambda4w_low+6.472380e-03)) + (9.168812e-01*((newdata$ThermalCond_std-6.157824e+01) / (newdata$PE_mean-2.143723e+00)))); lambda3,lambda4w_low,ThermalCond_std,PE_mean
+# 1;  2; eV;                                               27|2|mult|32|5|div|add:4.5590875711447e-02,0.0000000000000e+00,-9.1315073487632e-01,-2.6452630477808e+00,-1.0114047072825e+00,-4.6682487330995e-02; (((PE_range-1.011405e+00) * (lambda4w_low-4.668249e-02)) + 4.559088e-02*((EA_wtd_mean-9.131507e-01) / (density-2.645263e+00))); $\left(\left(\left(PE_{range}-1.011e+00\right) * \left(lambda4w_{low}-4.668e-02\right)\right) + 0.0456\left(\frac{ EA_{wtd, mean} -9.132e-01 }{ density-2.645e+00 } \right)\right)$; (((PE_range-1.011405e+00) .* (lambda4w_low-4.668249e-02)) + (4.559088e-02.*((EA_wtd_mean-9.131507e-01) ./ (density-2.645263e+00)))); (((newdata$PE_range-1.011405e+00) * (newdata$lambda4w_low-4.668249e-02)) + (4.559088e-02*((newdata$EA_wtd_mean-9.131507e-01) / (newdata$density-2.645263e+00)))); PE_range,lambda4w_low,EA_wtd_mean,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 6 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Sb1V3       ,  6.500000000000000e-01,  1.602746951685300e+00,  2.516625268300917e+03,  2.456660784111141e-02

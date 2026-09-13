@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_std / w_log) + a1 * (ThermalCond_mean * L_avg) + a2 * (IP_wtd_range * at_mass_wtd_range) + a3 * (w_log / lambda) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 10.9316775722769; Max AE: 10.9316775722769
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.796101330084923e-04,  6.485832502186479e-03,  2.295516556088214e-02, -1.831421849981943e+02,  2.178611244861637e+05,  4.388663517551219e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV^-1 * mK^-1;                                41|1|div; (ThermalCond_std / w_log); $\left(\frac{ ThermalCond_{std} }{ w_{log} } \right)$; (ThermalCond_std ./ w_log); (newdata$ThermalCond_std / newdata$w_log); ThermalCond_std,w_log
+# 1;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 2;  1; eV * g * mol^-1;                                  22|10|mult; (IP_wtd_range * at_mass_wtd_range); $\left(IP_{wtd, range} at_{mass, wtd, range}\right)$; (IP_wtd_range .* at_mass_wtd_range); (newdata$IP_wtd_range * newdata$at_mass_wtd_range); IP_wtd_range,at_mass_wtd_range
+# 3;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  5.777322427723125e+00,  6.075216972034715e+02,  3.170393100000000e+02,  2.123002160000000e+00,  4.310416493474105e-03,  1.115157653000000e-06

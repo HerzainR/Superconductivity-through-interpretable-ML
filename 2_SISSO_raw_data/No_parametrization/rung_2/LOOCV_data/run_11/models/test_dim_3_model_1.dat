@@ -1,0 +1,17 @@
+# c0 + a0 * (|(|PE_range - lambda|) - (PE_std + PE_wtd_range)|) + a1 * ((ThermalCond_std - ThermalCond_wtd_mean) * (PE_wtd_range + lambda3)) + a2 * ((w_log^3) * (lambda3 / density))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.11477924040421; Max AE: 9.11477924040421
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.911616726500061e+00, -1.087068823487101e-02,  1.811451366768531e+06,  1.389225424348833e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         27|0|abd|29|28|add|abd; (|(|PE_range - lambda|) - (PE_std + PE_wtd_range)|); $\left(\left|\left(\left|PE_{range} - lambda\right|\right) - \left(PE_{std} + PE_{wtd, range}\right)\right|\right)$; abs(abs(PE_range - lambda) - (PE_std + PE_wtd_range)); abs(abs(newdata$PE_range - newdata$lambda) - (newdata$PE_std + newdata$PE_wtd_range)); PE_range,lambda,PE_std,PE_wtd_range
+# 1;  2; W * mK^-1;                                        41|38|sub|28|3|add|mult; ((ThermalCond_std - ThermalCond_wtd_mean) * (PE_wtd_range + lambda3)); $\left(\left(ThermalCond_{std} - ThermalCond_{wtd, mean}\right) \left(PE_{wtd, range} + lambda3\right)\right)$; ((ThermalCond_std - ThermalCond_wtd_mean) .* (PE_wtd_range + lambda3)); ((newdata$ThermalCond_std - newdata$ThermalCond_wtd_mean) * (newdata$PE_wtd_range + newdata$lambda3)); ThermalCond_std,ThermalCond_wtd_mean,PE_wtd_range,lambda3
+# 2;  2; cm^3 * eV^3 * g^-1;                               1|cb|3|5|div|mult; ((w_log^3) * (lambda3 / density)); $\left(\left(w_{log}^3\right) \left(\frac{ lambda3 }{ density } \right)\right)$; ((w_log).^3 .* (lambda3 ./ density)); ((newdata$w_log)^3 * (newdata$lambda3 / newdata$density)); w_log,lambda3,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 11 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+C1Si1       ,  1.075000000000000e+00,  1.018977924040421e+01,  6.001000000000000e-01, -7.575539999999999e+01,  3.439109322646692e-06

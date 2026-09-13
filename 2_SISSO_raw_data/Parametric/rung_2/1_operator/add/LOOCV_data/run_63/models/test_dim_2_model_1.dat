@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_rad_mean-1.020433e+02) / (ThermalCond_mean-6.034307e+01)) + 3.165906e+00*((at_mass_wtd_range-5.421717e+00) / (L_avg-2.899487e+00))) + a1 * ((cos(6.374717e-01*lambda3+6.255517e-01)) + 1.245457e+00*((lambda4w_low+2.717128e-01) / (density-2.710951e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.89209934216863; Max AE: 2.89209934216863
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  4.845955945261863e-03, -2.699268575062800e+00,  4.619455168886700e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * W^-1 * mK;                                   13|37|div|10|4|div|add:3.1659062546434e+00,0.0000000000000e+00,-5.4217172804604e+00,-2.8994874114474e+00,-1.0204334760543e+02,-6.0343068757326e+01; (((at_rad_mean-1.020433e+02) / (ThermalCond_mean-6.034307e+01)) + 3.165906e+00*((at_mass_wtd_range-5.421717e+00) / (L_avg-2.899487e+00))); $\left(\left(\frac{ at_{rad, mean} -1.020e+02 }{ ThermalCond_{mean}-6.034e+01 } \right) + 3.17\left(\frac{ at_{mass, wtd, range} -5.422e+00 }{ L_{avg}-2.899e+00 } \right)\right)$; (((at_rad_mean-1.020433e+02) ./ (ThermalCond_mean-6.034307e+01)) + (3.165906e+00.*((at_mass_wtd_range-5.421717e+00) ./ (L_avg-2.899487e+00)))); (((newdata$at_rad_mean-1.020433e+02) / (newdata$ThermalCond_mean-6.034307e+01)) + (3.165906e+00*((newdata$at_mass_wtd_range-5.421717e+00) / (newdata$L_avg-2.899487e+00)))); at_rad_mean,ThermalCond_mean,at_mass_wtd_range,L_avg
+# 1;  2; Unitless;                                         3|cos|2|5|div|add:1.2454568736424e+00,0.0000000000000e+00,2.7171281524272e-01,-2.7109508105924e+00,6.3747170217661e-01,6.2555166247199e-01; ((cos(6.374717e-01*lambda3+6.255517e-01)) + 1.245457e+00*((lambda4w_low+2.717128e-01) / (density-2.710951e+00))); $\left(\left(\cos{ \left(6.375e-01lambda3+6.256e-01 \right)}\right) + 1.25\left(\frac{ lambda4w_{low} +2.717e-01 }{ density-2.711e+00 } \right)\right)$; (cos(6.374717e-01.*lambda3+6.255517e-01) + (1.245457e+00.*((lambda4w_low+2.717128e-01) ./ (density-2.710951e+00)))); (cos(6.374717e-01*newdata$lambda3+6.255517e-01) + (1.245457e+00*((newdata$lambda4w_low+2.717128e-01) / (newdata$density-2.710951e+00)))); lambda3,lambda4w_low,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 63 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1Mo2       ,  6.021666667000000e+00,  3.129567324831374e+00,  1.513669699967698e+02,  8.237066636378402e-01

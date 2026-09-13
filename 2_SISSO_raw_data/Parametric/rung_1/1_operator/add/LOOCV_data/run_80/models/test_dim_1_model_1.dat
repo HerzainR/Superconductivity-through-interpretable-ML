@@ -1,0 +1,15 @@
+# c0 + a0 * (at_rad_wtd_mean / lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.0998635162501; Max AE: 34.0998635162501
+# Coefficients
+# Task   a0                      c0
+# all , -1.470949106674970e+00,  6.769298119791650e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               14|0|div; (at_rad_wtd_mean / lambda); $\left(\frac{ at_{rad, wtd, mean} }{ lambda } \right)$; (at_rad_wtd_mean ./ lambda); (newdata$at_rad_wtd_mean / newdata$lambda); at_rad_wtd_mean,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  4.300136483749898e+00,  1.678617992177314e+00

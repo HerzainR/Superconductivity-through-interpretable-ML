@@ -1,0 +1,19 @@
+# c0 + a0 * (|ThermalCond_std - ThermalCond_mean|) + a1 * (IP_range * lambda3) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (at_rad_wtd_mean - (3.786288e+03*w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.7150510172991; Max AE: 11.7150510172991
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.477054153910465e-02, -6.511662160252205e-02,  1.946483095203773e+05,  4.744418327345208e+02,  1.184692057498070e-01,  3.281927889139173e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        41|37|abd; (|ThermalCond_std - ThermalCond_mean|); $\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)$; abs(ThermalCond_std - ThermalCond_mean); abs(newdata$ThermalCond_std - newdata$ThermalCond_mean); ThermalCond_std,ThermalCond_mean
+# 1;  1; eV;                                               21|3|mult; (IP_range * lambda3); $\left(IP_{range} lambda3\right)$; (IP_range .* lambda3); (newdata$IP_range * newdata$lambda3); IP_range,lambda3
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA;                                               14|1|sub:3.7862878537273e+03,0.0000000000000e+00; (at_rad_wtd_mean - (3.786288e+03*w_log)); $\left(at_{rad, wtd, mean} - \left(3.786e+03w_{log}\right)\right)$; (at_rad_wtd_mean - (3.786288e+03.*w_log)); (newdata$at_rad_wtd_mean - (3.786288e+03*newdata$w_log)); at_rad_wtd_mean,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 11 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C1Si1       ,  1.075000000000000e+00,  1.279005101729909e+01,  1.400000000000000e+02,  6.716698800000001e-01,  6.443297272900001e-05,  2.406182036925640e-02, -1.508722800559279e+02

@@ -1,0 +1,18 @@
+# c0 + a0 * (at_mass_wtd_range / V_molar) + a1 * ((lambda4w_low-2.325626e-02) * (at_rad_wtd_std-2.312015e-01)) + a2 * (w_log / lambda) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.599409628442095; Max AE: 0.599409628442095
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  6.113599338156294e-01, -2.439097440204603e+02, -1.630500458799139e+02,  2.096884801335188e+05,  5.256599201749917e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^-3 * g;                                        10|6|div; (at_mass_wtd_range / V_molar); $\left(\frac{ at_{mass, wtd, range} }{ V_{molar} } \right)$; (at_mass_wtd_range ./ V_molar); (newdata$at_mass_wtd_range / newdata$V_molar); at_mass_wtd_range,V_molar
+# 1;  1; AA * eV;                                          2|18|mult:-2.3256264620404e-02,-2.3120146843176e-01; ((lambda4w_low-2.325626e-02) * (at_rad_wtd_std-2.312015e-01)); $\left(\left(lambda4w_{low}-2.326e-02\right) * \left(at_{rad, wtd, std}-2.312e-01\right)\right)$; ((lambda4w_low-2.325626e-02) .* (at_rad_wtd_std-2.312015e-01)); ((newdata$lambda4w_low-2.325626e-02) * (newdata$at_rad_wtd_std-2.312015e-01)); lambda4w_low,at_rad_wtd_std
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 61 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ba1Bi3      ,  5.745000000000000e+00,  5.145590371557905e+00,  3.432295512085206e-01, -6.034899402014350e-04,  2.951014643573924e-03,  6.257077299999998e-08

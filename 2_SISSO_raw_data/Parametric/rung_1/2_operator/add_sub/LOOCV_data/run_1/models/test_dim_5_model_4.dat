@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_range * lambda4w_low) + a1 * (at_rad_wtd_range * at_mass_wtd_range) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 80.2481941221954; Max AE: 80.2481941221954
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -6.100226912468677e+01,  1.074756525218618e-01,  2.107741815543756e+05,  6.781266618232396e+02, -6.852544093646303e+02,  2.067904136997770e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 1;  1; AA * g * mol^-1;                                  16|10|mult; (at_rad_wtd_range * at_mass_wtd_range); $\left(at_{rad, wtd, range} at_{mass, wtd, range}\right)$; (at_rad_wtd_range .* at_mass_wtd_range); (newdata$at_rad_wtd_range * newdata$at_mass_wtd_range); at_rad_wtd_range,at_mass_wtd_range
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Se2Ta1      ,  1.250000000000000e-01, -8.012319412219539e+01,  1.566032094000000e+00,  1.007079282000000e+01,  9.861112800000000e-08,  2.126538657776917e-02,  3.186206896551724e-03

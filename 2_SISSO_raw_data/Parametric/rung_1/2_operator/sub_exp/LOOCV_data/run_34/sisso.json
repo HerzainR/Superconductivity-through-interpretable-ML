@@ -1,0 +1,19 @@
+{
+    "data_file": "data.csv",
+    "property_key": "Tc_exp",
+    "opset": ["add", "sub", "abs_diff", "mult", "div", "inv", "abs", "exp", "log", "sin", "cos", "sq", "cb", "six_pow", "sqrt", "cbrt", "neg_exp"],
+    "param_opset": ["exp","sub"],
+    "calc_type": "regression",
+    "desc_dim": 5,
+    "n_sis_select": 30,
+    "max_rung": 1,
+    "n_residual": 10,
+    "n_models_store": 5,
+    "n_rung_store": 1,
+    "n_rung_generate": 0,
+    "min_abs_feat_val": 1e-5,
+    "max_abs_feat_val": 1e8,
+    "leave_out_inds": [34], 
+    "leave_out_frac": 0.01,
+    "global_param_opt": true
+}

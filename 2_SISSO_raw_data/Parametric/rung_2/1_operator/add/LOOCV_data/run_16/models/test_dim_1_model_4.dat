@@ -1,0 +1,15 @@
+# c0 + a0 * (((lambda-3.882307e-01) / (w_log-6.193096e-02)) + 2.508848e+00*((PE_wtd_mean-1.851678e+00) * (lambda3-3.922006e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.83113615638011; Max AE: 5.83113615638011
+# Coefficients
+# Task   a0                      c0
+# all , -1.822456769583317e-01,  2.173670354326888e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^-1;                                            0|1|div|26|3|mult|add:2.5088476630288e+00,0.0000000000000e+00,-1.8516782999562e+00,-3.9220064015314e+00,-3.8823067762695e-01,-6.1930960436534e-02; (((lambda-3.882307e-01) / (w_log-6.193096e-02)) + 2.508848e+00*((PE_wtd_mean-1.851678e+00) * (lambda3-3.922006e+00))); $\left(\left(\frac{ lambda -3.882e-01 }{ w_{log}-6.193e-02 } \right) + 2.51\left(\left(PE_{wtd, mean}-1.852e+00\right) * \left(lambda3-3.922e+00\right)\right)\right)$; (((lambda-3.882307e-01) ./ (w_log-6.193096e-02)) + (2.508848e+00.*((PE_wtd_mean-1.851678e+00) .* (lambda3-3.922006e+00)))); (((newdata$lambda-3.882307e-01) / (newdata$w_log-6.193096e-02)) + (2.508848e+00*((newdata$PE_wtd_mean-1.851678e+00) * (newdata$lambda3-3.922006e+00)))); lambda,w_log,PE_wtd_mean,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+S2Ta1       ,  1.488116666500000e+00,  7.319252822880115e+00, -2.823431839060689e+01

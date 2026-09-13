@@ -1,0 +1,17 @@
+# c0 + a0 * (|(exp(2.920382e-01*EA_mean)) - cbrt(lambda3)|) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)) + a2 * ((w_log^3) * (ThermalCond_wtd_range * lambda3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.47522795849682; Max AE: 5.47522795849682
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -3.084841139654150e+00,  1.980104478925183e-02,  1.141241369310255e+04,  4.369805071160716e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         31|exp:2.9203822162700e-01,0.0000000000000e+00|3|cbrt|abd; (|(exp(2.920382e-01*EA_mean)) - cbrt(lambda3)|); $\left(\left|\left(\exp{ \left(2.920e-01EA_{mean} \right)}\right) - \left(\sqrt[3]{ lambda3 }\right)\right|\right)$; abs(exp(2.920382e-01.*EA_mean) - nthroot(lambda3, 3)); abs(exp(2.920382e-01*newdata$EA_mean) - nthroot(newdata$lambda3, 3)); EA_mean,lambda3
+# 1;  2; W * mK^-1;                                        41|37|abd|27|3|abd|mult; ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(\left|PE_{range} - lambda3\right|\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* abs(PE_range - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * abs(newdata$PE_range - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_range,lambda3
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|40|3|mult|mult; ((w_log^3) * (ThermalCond_wtd_range * lambda3)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, range} lambda3\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_range .* lambda3)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_range * newdata$lambda3)); w_log,ThermalCond_wtd_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 3 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Mo1       ,  2.500000000000000e-01,  5.725227958496822e+00,  5.793154238604651e-01,  2.077110000000000e+00,  2.717558331616800e-04

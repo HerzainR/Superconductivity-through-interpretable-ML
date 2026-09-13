@@ -1,0 +1,16 @@
+# c0 + a0 * (((IP_wtd_range-1.314373e+00)^3) + 2.812884e+00*((ThermalCond_wtd_mean-2.021130e+01) * (lambda4w_low+3.530284e-03))) + a1 * (((w_log+9.140830e-03) / (density-2.746221e+00)) + 8.050968e-02*(cos(5.721383e-01*lambda3+7.762149e-01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.67486636286857; Max AE: 7.67486636286857
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  2.779081481919114e-01, -3.055218959827902e+01,  4.287677458578695e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^3;                                             22|cb|38|2|mult|add:2.8128838576783e+00,0.0000000000000e+00,-2.0211295244103e+01,3.5302835582969e-03,1.0000000000000e+00,-1.3143731575170e+00; (((IP_wtd_range-1.314373e+00)^3) + 2.812884e+00*((ThermalCond_wtd_mean-2.021130e+01) * (lambda4w_low+3.530284e-03))); $\left(\left(\left(IP_{wtd, range}-1.314e+00\right)^3\right) + 2.81\left(\left(ThermalCond_{wtd, mean}-2.021e+01\right) * \left(lambda4w_{low}+3.530e-03\right)\right)\right)$; ((IP_wtd_range-1.314373e+00).^3 + (2.812884e+00.*((ThermalCond_wtd_mean-2.021130e+01) .* (lambda4w_low+3.530284e-03)))); ((newdata$IP_wtd_range-1.314373e+00)^3 + (2.812884e+00*((newdata$ThermalCond_wtd_mean-2.021130e+01) * (newdata$lambda4w_low+3.530284e-03)))); IP_wtd_range,ThermalCond_wtd_mean,lambda4w_low
+# 1;  2; cm^3 * eV * g^-1;                                 1|5|div|3|cos|add:8.0509681381087e-02,0.0000000000000e+00,5.7213832897486e-01,7.7621493568332e-01,9.1408301347335e-03,-2.7462211703920e+00; (((w_log+9.140830e-03) / (density-2.746221e+00)) + 8.050968e-02*(cos(5.721383e-01*lambda3+7.762149e-01))); $\left(\left(\frac{ w_{log} +9.141e-03 }{ density-2.746e+00 } \right) + 0.0805\left(\cos{ \left(5.721e-01lambda3+7.762e-01 \right)}\right)\right)$; (((w_log+9.140830e-03) ./ (density-2.746221e+00)) + (8.050968e-02.*cos(5.721383e-01.*lambda3+7.762149e-01))); (((newdata$w_log+9.140830e-03) / (newdata$density-2.746221e+00)) + (8.050968e-02*cos(5.721383e-01*newdata$lambda3+7.762149e-01))); w_log,density,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 34 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+N1Ni3Zn1    ,  3.000000000000000e+00,  1.067486636286857e+01,  1.535515450386582e+01, -6.938508757615368e-02

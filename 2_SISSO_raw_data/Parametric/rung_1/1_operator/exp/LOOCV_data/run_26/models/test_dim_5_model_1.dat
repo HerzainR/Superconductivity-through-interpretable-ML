@@ -1,0 +1,19 @@
+# c0 + a0 * (lambda4w_low^2) + a1 * (EA_wtd_range * lambda4w_low) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.62657113694039; Max AE: 1.62657113694039
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.953630121487440e+01, -6.248177386574368e+01,  1.940278177191171e+05,  6.198882551804860e+02, -5.920114357819497e+02,  2.706562191095861e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             2|sq; (lambda4w_low^2); $\left(lambda4w_{low}^2\right)$; (lambda4w_low)^2; (newdata$lambda4w_low)^2; lambda4w_low
+# 1;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Be2Nb3      ,  2.300000000000000e+00,  6.734288630596083e-01,  6.241000000000000e-07,  3.385940000000000e-04,  7.278825672000002e-06,  8.713248000000000e-03,  1.490769230769231e-02

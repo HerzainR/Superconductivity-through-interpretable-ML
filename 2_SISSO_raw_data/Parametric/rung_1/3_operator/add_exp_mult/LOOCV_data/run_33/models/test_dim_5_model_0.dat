@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * IP_mean) + a1 * (EA_mean / at_mass_mean) + a2 * (w_log / lambda) + a3 * ((PE_wtd_range-4.532854e-01) * (lambda4w_low-4.309875e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.15241748503621; Max AE: 1.15241748503621
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.225640394288926e-03, -1.220096339001158e+02, -1.208440633508326e+02, -1.217572852507567e+02,  1.918771901286646e+05,  5.299642048857955e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|19|mult; (ThermalCond_mean * IP_mean); $\left(ThermalCond_{mean} IP_{mean}\right)$; (ThermalCond_mean .* IP_mean); (newdata$ThermalCond_mean * newdata$IP_mean); ThermalCond_mean,IP_mean
+# 1;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               28|2|mult:-4.5328540693816e-01,-4.3098754073185e-02; ((PE_wtd_range-4.532854e-01) * (lambda4w_low-4.309875e-02)); $\left(\left(PE_{wtd, range}-4.533e-01\right) * \left(lambda4w_{low}-4.310e-02\right)\right)$; ((PE_wtd_range-4.532854e-01) .* (lambda4w_low-4.309875e-02)); ((newdata$PE_wtd_range-4.532854e-01) * (newdata$lambda4w_low-4.309875e-02)); PE_wtd_range,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 33 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ga1Ni2Zr1   ,  2.870000000000000e+00,  4.022417485036208e+00,  3.214414885899999e+02,  8.568173871235631e-03,  3.906309029089536e-03,  6.760502285479905e-03,  1.381884130000000e-07

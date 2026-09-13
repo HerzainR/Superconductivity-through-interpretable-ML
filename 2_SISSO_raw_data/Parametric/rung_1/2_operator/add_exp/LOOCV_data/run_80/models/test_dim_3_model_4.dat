@@ -1,0 +1,17 @@
+# c0 + a0 * (IP_std * lambda4w_low) + a1 * (w_log / lambda) + a2 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 32.1111870633226; Max AE: 32.1111870633226
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -5.207260372875235e+00, -8.608426155177618e+01,  3.340950597208295e+02,  2.372901629502699e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             23|2|mult; (IP_std * lambda4w_low); $\left(IP_{std} lambda4w_{low}\right)$; (IP_std .* lambda4w_low); (newdata$IP_std * newdata$lambda4w_low); IP_std,lambda4w_low
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  6.288812936677370e+00,  2.810120000000000e-03,  9.915254237288135e-02,  3.731278677170807e-02

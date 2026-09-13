@@ -1,0 +1,15 @@
+# c0 + a0 * (((IP_wtd_std-1.463136e+00) / (density-2.648581e+00)) + 7.648938e+01*((PE_wtd_mean-2.179720e+00) * (lambda4w_low-3.193820e-02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.344598151787035; Max AE: 0.344598151787035
+# Coefficients
+# Task   a0                      c0
+# all , -1.072381943402924e+00,  4.360003702131220e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^3 * eV * g^-1;                                 24|5|div|26|2|mult|add:7.6489377611207e+01,0.0000000000000e+00,-2.1797204565243e+00,-3.1938202581680e-02,-1.4631355140306e+00,-2.6485812573443e+00; (((IP_wtd_std-1.463136e+00) / (density-2.648581e+00)) + 7.648938e+01*((PE_wtd_mean-2.179720e+00) * (lambda4w_low-3.193820e-02))); $\left(\left(\frac{ IP_{wtd, std} -1.463e+00 }{ density-2.649e+00 } \right) + 76.5\left(\left(PE_{wtd, mean}-2.180e+00\right) * \left(lambda4w_{low}-3.194e-02\right)\right)\right)$; (((IP_wtd_std-1.463136e+00) ./ (density-2.648581e+00)) + (7.648938e+01.*((PE_wtd_mean-2.179720e+00) .* (lambda4w_low-3.193820e-02)))); (((newdata$IP_wtd_std-1.463136e+00) / (newdata$density-2.648581e+00)) + (7.648938e+01*((newdata$PE_wtd_mean-2.179720e+00) * (newdata$lambda4w_low-3.193820e-02)))); IP_wtd_std,density,PE_wtd_mean,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 44 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+C1Ga1Mo2    ,  3.900000000000000e+00,  4.244598151787035e+00,  1.076160887024773e-01

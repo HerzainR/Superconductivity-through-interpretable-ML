@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * L_avg) + a1 * (at_mass_wtd_mean * w_log) + a2 * (w_log / lambda) + a3 * ((PE_wtd_std-4.841150e-01) * (lambda3-1.991582e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.01090929951325; Max AE: 2.01090929951325
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  5.038867659169422e-03,  2.087525200243100e+00, -1.540463886853772e+02, -2.389327877712617e+00,  2.097474365794417e+05,  2.265749808982320e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 1;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; Unitless;                                         30|3|mult:-4.8411502000067e-01,-1.9915819324245e+00; ((PE_wtd_std-4.841150e-01) * (lambda3-1.991582e+00)); $\left(\left(PE_{wtd, std}-4.841e-01\right) * \left(lambda3-1.992e+00\right)\right)$; ((PE_wtd_std-4.841150e-01) .* (lambda3-1.991582e+00)); ((newdata$PE_wtd_std-4.841150e-01) * (newdata$lambda3-1.991582e+00)); PE_wtd_std,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 61 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ba1Bi3      ,  5.745000000000000e+00,  3.734090700486750e+00,  6.585540000000000e+01,  7.585363869999999e-01,  2.951014643573924e-03,  2.297921266318511e-03,  6.257077299999998e-08

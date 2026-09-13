@@ -1,0 +1,17 @@
+# c0 + a0 * ((exp(1.116213e+00*PE_wtd_range)) + sin(lambda)) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (PE_std - lambda3)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.956076278115566; Max AE: 0.956076278115566
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.454011272457411e+00, -1.900026411864654e-02, -8.543437884533150e+03, -1.890723218182117e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         28|exp:1.1162129218660e+00,0.0000000000000e+00|0|sin|add; ((exp(1.116213e+00*PE_wtd_range)) + sin(lambda)); $\left(\left(\exp{ \left(1.116e+00PE_{wtd, range} \right)}\right) + \left(\sin{ lambda }\right)\right)$; (exp(1.116213e+00.*PE_wtd_range) + sin(lambda)); (exp(1.116213e+00*newdata$PE_wtd_range) + sin(newdata$lambda)); PE_wtd_range,lambda
+# 1;  2; W * mK^-1;                                        41|37|abd|29|3|sub|mult; ((|ThermalCond_std - ThermalCond_mean|) * (PE_std - lambda3)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(PE_{std} - lambda3\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* (PE_std - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * (newdata$PE_std - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_std,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 52 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Bi2Cs1      ,  4.750000000000000e+00,  3.793923721884434e+00,  2.342333961143896e+00,  3.760400000000000e+00, -9.342361774314200e-07

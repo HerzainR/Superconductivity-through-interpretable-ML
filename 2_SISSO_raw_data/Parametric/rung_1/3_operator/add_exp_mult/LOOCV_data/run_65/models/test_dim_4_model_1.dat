@@ -1,0 +1,18 @@
+# c0 + a0 * ((ThermalCond_mean-6.146579e+01) * (PE_wtd_mean-1.700727e+00)) + a1 * (w_log / lambda) + a2 * ((lambda4w_low-4.353201e-02) * (PE_wtd_range-4.533135e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.47964322195307; Max AE: 4.47964322195307
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  4.719705613367738e-02, -1.199911271611896e+02, -1.167404855916156e+02,  1.895293751878979e+05,  5.578102631213497e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|26|mult:-6.1465787591114e+01,-1.7007274292053e+00; ((ThermalCond_mean-6.146579e+01) * (PE_wtd_mean-1.700727e+00)); $\left(\left(ThermalCond_{mean}-6.147e+01\right) * \left(PE_{wtd, mean}-1.701e+00\right)\right)$; ((ThermalCond_mean-6.146579e+01) .* (PE_wtd_mean-1.700727e+00)); ((newdata$ThermalCond_mean-6.146579e+01) * (newdata$PE_wtd_mean-1.700727e+00)); ThermalCond_mean,PE_wtd_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               2|28|mult:-4.3532010936333e-02,-4.5331349380628e-01; ((lambda4w_low-4.353201e-02) * (PE_wtd_range-4.533135e-01)); $\left(\left(lambda4w_{low}-4.353e-02\right) * \left(PE_{wtd, range}-4.533e-01\right)\right)$; ((lambda4w_low-4.353201e-02) .* (PE_wtd_range-4.533135e-01)); ((newdata$lambda4w_low-4.353201e-02) * (newdata$PE_wtd_range-4.533135e-01)); lambda4w_low,PE_wtd_range
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 65 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Pb1         ,  6.470100000000000e+00,  1.990456778046928e+00, -1.665419419556686e+01,  5.789769533445756e-03,  1.826944538496816e-02,  1.365908750000000e-07

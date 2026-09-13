@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_std * lambda) + a1 * (EA_range * lambda) + a2 * (IP_wtd_mean - (6.120684e+00*at_rad_wtd_std)) + a3 * (w_log / IP_wtd_mean) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.4516175828501; Max AE: 34.4516175828501
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.128426672332604e+01,  8.382876094830277e+00, -7.653163831204375e-01, -2.635313931385773e+03,  5.549196743216888e+02,  8.290652102525890e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               36|0|mult; (EA_wtd_std * lambda); $\left(EA_{wtd, std} lambda\right)$; (EA_wtd_std .* lambda); (newdata$EA_wtd_std * newdata$lambda); EA_wtd_std,lambda
+# 1;  1; eV;                                               33|0|mult; (EA_range * lambda); $\left(EA_{range} lambda\right)$; (EA_range .* lambda); (newdata$EA_range * newdata$lambda); EA_range,lambda
+# 2;  1; eV;                                               20|18|sub:6.1206838264596e+00,0.0000000000000e+00; (IP_wtd_mean - (6.120684e+00*at_rad_wtd_std)); $\left(IP_{wtd, mean} - \left(6.121e+00at_{rad, wtd, std}\right)\right)$; (IP_wtd_mean - (6.120684e+00.*at_rad_wtd_std)); (newdata$IP_wtd_mean - (6.120684e+00*newdata$at_rad_wtd_std)); IP_wtd_mean,at_rad_wtd_std
+# 3;  1; Unitless;                                         1|20|div; (w_log / IP_wtd_mean); $\left(\frac{ w_{log} }{ IP_{wtd, mean} } \right)$; (w_log ./ IP_wtd_mean); (newdata$w_log / newdata$IP_wtd_mean); w_log,IP_wtd_mean
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.948382417149884e+00,  8.013616000000000e-02,  1.699672000000000e-01,  6.436072255830318e+00,  7.529050701053126e-03,  3.731278677170807e-02

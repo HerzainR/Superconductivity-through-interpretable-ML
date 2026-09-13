@@ -1,0 +1,19 @@
+# c0 + a0 * (IP_std * lambda4w_low) + a1 * ((at_mass_range-6.183382e+01) * (L_avg-5.057849e+00)) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.52047778170818; Max AE: 5.52047778170818
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -6.773877625572090e+00, -1.585102664832729e-02,  2.069449202951703e+05,  5.552431220553398e+02, -5.742921560237435e+02,  2.921305239038565e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             23|2|mult; (IP_std * lambda4w_low); $\left(IP_{std} lambda4w_{low}\right)$; (IP_std .* lambda4w_low); (newdata$IP_std * newdata$lambda4w_low); IP_std,lambda4w_low
+# 1;  1; AA * g * mol^-1;                                  9|4|mult:-6.1833821608113e+01,-5.0578494011570e+00; ((at_mass_range-6.183382e+01) * (L_avg-5.057849e+00)); $\left(\left(at_{mass, range}-6.183e+01\right) * \left(L_{avg}-5.058e+00\right)\right)$; ((at_mass_range-6.183382e+01) .* (L_avg-5.057849e+00)); ((newdata$at_mass_range-6.183382e+01) * (newdata$L_avg-5.057849e+00)); at_mass_range,L_avg
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  8.622977781708180e+00,  2.382079200000000e-02, -2.565145033085172e+01,  9.952248951000003e-06,  2.151430200000000e-02,  1.488581314878893e-02

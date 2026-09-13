@@ -1,0 +1,18 @@
+# c0 + a0 * (|(|EA_range - IP_wtd_range|) - (|EA_mean - IP_std|)|) + a1 * (sin(lambda) + (PE_wtd_range + PE_wtd_mean)) + a2 * ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)) + a3 * (exp(1.304258e+00*((at_mass_wtd_mean-1.588957e+01) / (PE_wtd_mean-2.649102e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.54396001989078; Max AE: 1.54396001989078
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -2.843339039794723e+00,  2.601865095816523e+00,  2.018631156500738e-02,  1.435059065491684e+01, -3.342195380919418e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               33|22|abd|31|23|abd|abd; (|(|EA_range - IP_wtd_range|) - (|EA_mean - IP_std|)|); $\left(\left|\left(\left|EA_{range} - IP_{wtd, range}\right|\right) - \left(\left|EA_{mean} - IP_{std}\right|\right)\right|\right)$; abs(abs(EA_range - IP_wtd_range) - abs(EA_mean - IP_std)); abs(abs(newdata$EA_range - newdata$IP_wtd_range) - abs(newdata$EA_mean - newdata$IP_std)); EA_range,IP_wtd_range,EA_mean,IP_std
+# 1;  2; Unitless;                                         0|sin|28|26|add|add; (sin(lambda) + (PE_wtd_range + PE_wtd_mean)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, range} + PE_{wtd, mean}\right)\right)$; (sin(lambda) + (PE_wtd_range + PE_wtd_mean)); (sin(newdata$lambda) + (newdata$PE_wtd_range + newdata$PE_wtd_mean)); lambda,PE_wtd_range,PE_wtd_mean
+# 2;  2; W * mK^-1;                                        41|37|abd|27|3|abd|mult; ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(\left|PE_{range} - lambda3\right|\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* abs(PE_range - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * abs(newdata$PE_range - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_range,lambda3
+# 3;  2; Unitless;                                         8|26|div|exp:1.3042580571822e+00,0.0000000000000e+00,-1.5889572103670e+01,-2.6491023523255e+00; (exp(1.304258e+00*((at_mass_wtd_mean-1.588957e+01) / (PE_wtd_mean-2.649102e+00)))); $\left(\exp{ \left(1.304e+00\left(\frac{ at_{mass, wtd, mean} -1.589e+01 }{ PE_{wtd, mean}-2.649e+00 } \right) \right)}\right)$; exp(1.304258e+00.*((at_mass_wtd_mean-1.588957e+01) ./ (PE_wtd_mean-2.649102e+00))); exp(1.304258e+00*((newdata$at_mass_wtd_mean-1.588957e+01) / (newdata$PE_wtd_mean-2.649102e+00))); at_mass_wtd_mean,PE_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 33 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ga1Ni2Zr1   ,  2.870000000000000e+00,  4.413960019890782e+00,  1.458999999999999e-01,  2.914577779051698e+00,  2.911182523199999e+01,  3.510534346875230e-34

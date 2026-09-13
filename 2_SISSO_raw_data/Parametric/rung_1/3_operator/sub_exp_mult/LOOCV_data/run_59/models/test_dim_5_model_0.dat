@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_wtd_mean / w_log) + a1 * ((at_mass_range-6.186587e+01) * (L_avg-5.015679e+00)) + a2 * (w_log / lambda) + a3 * ((ThermalCond_wtd_mean-2.171917e+01) * (lambda3+4.311323e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.445166215765216; Max AE: 0.445166215765216
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.007497037887324e-04, -1.599743615023981e-02, -1.542688839785389e+02,  1.809768860457184e-02,  2.091136606712107e+05,  6.109326310033972e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV^-1 * mK^-1;                                38|1|div; (ThermalCond_wtd_mean / w_log); $\left(\frac{ ThermalCond_{wtd, mean} }{ w_{log} } \right)$; (ThermalCond_wtd_mean ./ w_log); (newdata$ThermalCond_wtd_mean / newdata$w_log); ThermalCond_wtd_mean,w_log
+# 1;  1; AA * g * mol^-1;                                  9|4|mult:-6.1865868376211e+01,-5.0156791571463e+00; ((at_mass_range-6.186587e+01) * (L_avg-5.015679e+00)); $\left(\left(at_{mass, range}-6.187e+01\right) * \left(L_{avg}-5.016e+00\right)\right)$; ((at_mass_range-6.186587e+01) .* (L_avg-5.015679e+00)); ((newdata$at_mass_range-6.186587e+01) * (newdata$L_avg-5.015679e+00)); at_mass_range,L_avg
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; W * mK^-1;                                        38|3|mult:-2.1719169285964e+01,4.3113228927384e-01; ((ThermalCond_wtd_mean-2.171917e+01) * (lambda3+4.311323e-01)); $\left(\left(ThermalCond_{wtd, mean}-2.172e+01\right) * \left(lambda3+4.311e-01\right)\right)$; ((ThermalCond_wtd_mean-2.171917e+01) .* (lambda3+4.311323e-01)); ((newdata$ThermalCond_wtd_mean-2.171917e+01) * (newdata$lambda3+4.311323e-01)); ThermalCond_wtd_mean,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 59 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B6Y1        ,  5.692857143000000e+00,  5.247690927234784e+00,  4.980544747081713e+03, -1.527920086654964e+01,  3.114773966791904e-03,  1.911267325953541e+01,  1.357967440000000e-07

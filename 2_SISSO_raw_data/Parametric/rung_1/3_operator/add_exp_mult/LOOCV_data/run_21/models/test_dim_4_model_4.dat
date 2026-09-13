@@ -1,0 +1,18 @@
+# c0 + a0 * ((ThermalCond_mean+2.677669e+02) * (EA_wtd_mean-5.151690e+00)) + a1 * (w_log / lambda) + a2 * ((lambda4w_low-4.299666e-02) * (PE_wtd_std-4.814169e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.636827900857348; Max AE: 0.636827900857348
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -4.065987470004640e-03, -1.274676744085170e+02, -1.081370014665933e+02,  1.874901255145062e+05,  1.530927603311098e-02, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|32|mult:2.6776687260032e+02,-5.1516903796444e+00; ((ThermalCond_mean+2.677669e+02) * (EA_wtd_mean-5.151690e+00)); $\left(\left(ThermalCond_{mean}+2.678e+02\right) * \left(EA_{wtd, mean}-5.152e+00\right)\right)$; ((ThermalCond_mean+2.677669e+02) .* (EA_wtd_mean-5.151690e+00)); ((newdata$ThermalCond_mean+2.677669e+02) * (newdata$EA_wtd_mean-5.151690e+00)); ThermalCond_mean,EA_wtd_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               2|30|mult:-4.2996663153506e-02,-4.8141691624470e-01; ((lambda4w_low-4.299666e-02) * (PE_wtd_std-4.814169e-01)); $\left(\left(lambda4w_{low}-4.300e-02\right) * \left(PE_{wtd, std}-4.814e-01\right)\right)$; ((lambda4w_low-4.299666e-02) .* (PE_wtd_std-4.814169e-01)); ((newdata$lambda4w_low-4.299666e-02) * (newdata$PE_wtd_std-4.814169e-01)); lambda4w_low,PE_wtd_std
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 21 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Mo0.5Rh0.5  ,  1.940000000000000e+00,  2.576827900857348e+00, -1.735722020867970e+03,  2.902909447531873e-02,  1.707019307351329e-02,  5.601816576000001e-06

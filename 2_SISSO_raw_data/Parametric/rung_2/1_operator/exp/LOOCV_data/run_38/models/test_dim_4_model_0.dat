@@ -1,0 +1,18 @@
+# c0 + a0 * (|(|EA_range - IP_wtd_range|) - (|EA_mean - IP_std|)|) + a1 * (sin(lambda) + (PE_wtd_range + PE_wtd_mean)) + a2 * ((|PE_range - lambda3|) * (|ThermalCond_std - ThermalCond_mean|)) + a3 * (exp(6.614567e-01*((EA_mean-9.864957e-01) / (at_mass_wtd_mean-1.509551e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.11495964520167; Max AE: 1.11495964520167
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -2.700281822252169e+00,  2.696749493051028e+00,  2.028358069017877e-02, -3.757700429705770e+01,  3.378574086334583e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               33|22|abd|31|23|abd|abd; (|(|EA_range - IP_wtd_range|) - (|EA_mean - IP_std|)|); $\left(\left|\left(\left|EA_{range} - IP_{wtd, range}\right|\right) - \left(\left|EA_{mean} - IP_{std}\right|\right)\right|\right)$; abs(abs(EA_range - IP_wtd_range) - abs(EA_mean - IP_std)); abs(abs(newdata$EA_range - newdata$IP_wtd_range) - abs(newdata$EA_mean - newdata$IP_std)); EA_range,IP_wtd_range,EA_mean,IP_std
+# 1;  2; Unitless;                                         0|sin|28|26|add|add; (sin(lambda) + (PE_wtd_range + PE_wtd_mean)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, range} + PE_{wtd, mean}\right)\right)$; (sin(lambda) + (PE_wtd_range + PE_wtd_mean)); (sin(newdata$lambda) + (newdata$PE_wtd_range + newdata$PE_wtd_mean)); lambda,PE_wtd_range,PE_wtd_mean
+# 2;  2; W * mK^-1;                                        27|3|abd|41|37|abd|mult; ((|PE_range - lambda3|) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\left|PE_{range} - lambda3\right|\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; (abs(PE_range - lambda3) .* abs(ThermalCond_std - ThermalCond_mean)); (abs(newdata$PE_range - newdata$lambda3) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); PE_range,lambda3,ThermalCond_std,ThermalCond_mean
+# 3;  2; Unitless;                                         31|8|div|exp:6.6145673542292e-01,0.0000000000000e+00,-9.8649570134514e-01,-1.5095507997088e+01; (exp(6.614567e-01*((EA_mean-9.864957e-01) / (at_mass_wtd_mean-1.509551e+01)))); $\left(\exp{ \left(6.615e-01\left(\frac{ EA_{mean} -9.865e-01 }{ at_{mass, wtd, mean}-1.510e+01 } \right) \right)}\right)$; exp(6.614567e-01.*((EA_mean-9.864957e-01) ./ (at_mass_wtd_mean-1.509551e+01))); exp(6.614567e-01*((newdata$EA_mean-9.864957e-01) / (newdata$at_mass_wtd_mean-1.509551e+01))); EA_mean,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 38 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Pb1Pd2Y1    ,  3.215000000000000e+00,  4.329959645201666e+00,  4.999999999999999e-02,  2.880280516022301e+00,  1.778973897700000e+01,  9.965935937418228e-01

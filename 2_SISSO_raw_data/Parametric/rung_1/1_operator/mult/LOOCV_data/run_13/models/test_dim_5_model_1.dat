@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * IP_mean) + a1 * (EA_mean / at_mass_mean) + a2 * (w_log / lambda) + a3 * ((lambda4w_low-4.375885e-02) * (PE_wtd_range-4.532535e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.90497984700053; Max AE: 1.90497984700053
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.158134450645539e-03, -1.193160843866989e+02, -1.162050400663190e+02, -1.242721589555823e+02,  1.897963025149929e+05,  5.256252989895896e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|19|mult; (ThermalCond_mean * IP_mean); $\left(ThermalCond_{mean} IP_{mean}\right)$; (ThermalCond_mean .* IP_mean); (newdata$ThermalCond_mean * newdata$IP_mean); ThermalCond_mean,IP_mean
+# 1;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               2|28|mult:-4.3758845919970e-02,-4.5325352283306e-01; ((lambda4w_low-4.375885e-02) * (PE_wtd_range-4.532535e-01)); $\left(\left(lambda4w_{low}-4.376e-02\right) * \left(PE_{wtd, range}-4.533e-01\right)\right)$; ((lambda4w_low-4.375885e-02) .* (PE_wtd_range-4.532535e-01)); ((newdata$lambda4w_low-4.375885e-02) * (newdata$PE_wtd_range-4.532535e-01)); lambda4w_low,PE_wtd_range
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 13 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb1O1       ,  1.380000000000000e+00,  3.284979847000525e+00,  2.752250070500000e+02,  2.161501040348632e-02,  4.880998829496684e-02, -1.961681577253843e-02,  1.566253000800000e-05

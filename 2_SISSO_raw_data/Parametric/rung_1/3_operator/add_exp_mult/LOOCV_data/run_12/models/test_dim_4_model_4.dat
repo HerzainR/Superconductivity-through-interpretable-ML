@@ -1,0 +1,18 @@
+# c0 + a0 * ((EA_wtd_mean-1.364756e+01) * (ThermalCond_mean+9.732553e+02)) + a1 * (w_log / lambda) + a2 * ((PE_wtd_std-4.711842e-01) * (lambda4w_low-4.017142e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.726864565178752; Max AE: 0.726864565178752
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.200091257019449e-03, -1.302984683734362e+02, -1.072080564060278e+02,  1.893600785675815e+05, -1.009987413667042e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   32|37|mult:-1.3647557553314e+01,9.7325534601803e+02; ((EA_wtd_mean-1.364756e+01) * (ThermalCond_mean+9.732553e+02)); $\left(\left(EA_{wtd, mean}-1.365e+01\right) * \left(ThermalCond_{mean}+9.733e+02\right)\right)$; ((EA_wtd_mean-1.364756e+01) .* (ThermalCond_mean+9.732553e+02)); ((newdata$EA_wtd_mean-1.364756e+01) * (newdata$ThermalCond_mean+9.732553e+02)); EA_wtd_mean,ThermalCond_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               30|2|mult:-4.7118422751038e-01,-4.0171415504197e-02; ((PE_wtd_std-4.711842e-01) * (lambda4w_low-4.017142e-02)); $\left(\left(PE_{wtd, std}-4.712e-01\right) * \left(lambda4w_{low}-4.017e-02\right)\right)$; ((PE_wtd_std-4.711842e-01) .* (lambda4w_low-4.017142e-02)); ((newdata$PE_wtd_std-4.711842e-01) * (newdata$lambda4w_low-4.017142e-02)); PE_wtd_std,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 12 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Nb3Sb1      ,  1.100000000000000e+00,  1.826864565178752e+00, -1.286602615760842e+04,  2.743149653718759e-02,  1.011791949291388e-02,  6.048464248000001e-06

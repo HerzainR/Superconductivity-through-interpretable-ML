@@ -1,0 +1,17 @@
+# c0 + a0 * ((at_rad_wtd_range * lambda) / (exp(9.770773e-01*EA_wtd_mean))) + a1 * ((|PE_mean - lambda|) * (density * lambda3)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 441.717674918587; Max AE: 441.717674918587
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.411794761824935e+01,  1.982032894858409e-01, -8.433017633552616e+03,  1.455347860676032e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA;                                               16|0|mult|32|exp:9.7707731134843e-01,0.0000000000000e+00|div; ((at_rad_wtd_range * lambda) / (exp(9.770773e-01*EA_wtd_mean))); $\left(\frac{ \left(at_{rad, wtd, range} lambda\right) }{ \left(\exp{ \left(9.771e-01EA_{wtd, mean} \right)}\right) } \right)$; ((at_rad_wtd_range .* lambda) ./ exp(9.770773e-01.*EA_wtd_mean)); ((newdata$at_rad_wtd_range * newdata$lambda) / exp(9.770773e-01*newdata$EA_wtd_mean)); at_rad_wtd_range,lambda,EA_wtd_mean
+# 1;  2; cm^-3 * g;                                        25|0|abd|5|3|mult|mult; ((|PE_mean - lambda|) * (density * lambda3)); $\left(\left(\left|PE_{mean} - lambda\right|\right) \left(density lambda3\right)\right)$; (abs(PE_mean - lambda) .* (density .* lambda3)); (abs(newdata$PE_mean - newdata$lambda) * (newdata$density * newdata$lambda3)); PE_mean,lambda,density,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Se2Ta1      ,  1.250000000000000e-01,  4.418426749185875e+02,  2.468872555659676e-01,  2.204129006829888e+03, -4.288632248378643e-06

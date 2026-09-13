@@ -1,0 +1,16 @@
+# c0 + a0 * (exp(7.671457e+00*((EA_wtd_range-7.471042e-01) * (lambda4w_low-2.471082e-03)))) + a1 * (exp(8.316120e-01*((PE_range-2.463001e+00) * (at_mass_wtd_mean-1.661926e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.04661396890042; Max AE: 3.04661396890042
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.609319090761922e+01,  5.189432673068757e+00,  1.955338339944776e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         34|2|mult|exp:7.6714570540691e+00,0.0000000000000e+00,-7.4710422073467e-01,-2.4710816899471e-03; (exp(7.671457e+00*((EA_wtd_range-7.471042e-01) * (lambda4w_low-2.471082e-03)))); $\left(\exp{ \left(7.671e+00\left(\left(EA_{wtd, range}-7.471e-01\right) * \left(lambda4w_{low}-2.471e-03\right)\right) \right)}\right)$; exp(7.671457e+00.*((EA_wtd_range-7.471042e-01) .* (lambda4w_low-2.471082e-03))); exp(7.671457e+00*((newdata$EA_wtd_range-7.471042e-01) * (newdata$lambda4w_low-2.471082e-03))); EA_wtd_range,lambda4w_low
+# 1;  2; Unitless;                                         27|8|mult|exp:8.3161202540604e-01,0.0000000000000e+00,-2.4630005407222e+00,-1.6619256342619e+01; (exp(8.316120e-01*((PE_range-2.463001e+00) * (at_mass_wtd_mean-1.661926e+01)))); $\left(\exp{ \left(8.316e-01\left(\left(PE_{range}-2.463e+00\right) * \left(at_{mass, wtd, mean}-1.662e+01\right)\right) \right)}\right)$; exp(8.316120e-01.*((PE_range-2.463001e+00) .* (at_mass_wtd_mean-1.661926e+01))); exp(8.316120e-01*((newdata$PE_range-2.463001e+00) * (newdata$at_mass_wtd_mean-1.661926e+01))); PE_range,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 14 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Sb1         ,  1.416666667000000e+00,  4.463280635900421e+00,  9.376700276638754e-01,  2.966336974556900e-94

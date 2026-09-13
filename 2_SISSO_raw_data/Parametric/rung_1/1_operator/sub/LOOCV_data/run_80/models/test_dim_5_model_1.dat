@@ -1,0 +1,19 @@
+# c0 + a0 * (|ThermalCond_wtd_std - ThermalCond_wtd_range|) + a1 * (EA_wtd_mean - (3.184493e+00*PE_wtd_range)) + a2 * (ThermalCond_mean - (8.188986e+03*w_log)) + a3 * (ThermalCond_std * lambda3) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.30669865041; Max AE: 34.30669865041
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.659412800621020e-01, -1.580314965655450e+00,  3.589002825381456e-02, -3.873954318325790e-03,  4.524913924711287e+02,  1.407364273340533e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        42|40|abd; (|ThermalCond_wtd_std - ThermalCond_wtd_range|); $\left(\left|ThermalCond_{wtd, std} - ThermalCond_{wtd, range}\right|\right)$; abs(ThermalCond_wtd_std - ThermalCond_wtd_range); abs(newdata$ThermalCond_wtd_std - newdata$ThermalCond_wtd_range); ThermalCond_wtd_std,ThermalCond_wtd_range
+# 1;  1; eV;                                               32|28|sub:3.1844927380438e+00,0.0000000000000e+00; (EA_wtd_mean - (3.184493e+00*PE_wtd_range)); $\left(EA_{wtd, mean} - \left(3.184e+00PE_{wtd, range}\right)\right)$; (EA_wtd_mean - (3.184493e+00.*PE_wtd_range)); (newdata$EA_wtd_mean - (3.184493e+00*newdata$PE_wtd_range)); EA_wtd_mean,PE_wtd_range
+# 2;  1; W * mK^-1;                                        37|1|sub:8.1889857154955e+03,0.0000000000000e+00; (ThermalCond_mean - (8.188986e+03*w_log)); $\left(ThermalCond_{mean} - \left(8.189e+03w_{log}\right)\right)$; (ThermalCond_mean - (8.188986e+03.*w_log)); (newdata$ThermalCond_mean - (8.188986e+03*newdata$w_log)); ThermalCond_mean,w_log
+# 3;  1; W * mK^-1;                                        41|3|mult; (ThermalCond_std * lambda3); $\left(ThermalCond_{std} lambda3\right)$; (ThermalCond_std .* lambda3); (newdata$ThermalCond_std * newdata$lambda3); ThermalCond_std,lambda3
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  4.093301349590030e+00,  3.585700000000003e+00, -8.483494442214091e-01, -4.047178909307455e+02,  1.536283000000000e+01,  3.731278677170807e-02

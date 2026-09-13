@@ -1,0 +1,15 @@
+# c0 + a0 * (((PE_mean-2.135567e+00) / (at_mass_mean-1.673490e+01)) + 2.069469e+00*((PE_wtd_std-4.817088e-01) * (lambda4w_low-4.301392e-02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.56826443080897; Max AE: 1.56826443080897
+# Coefficients
+# Task   a0                      c0
+# all , -6.138514995537015e+01,  4.312521745680604e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; g^-1 * mol;                                       25|7|div|30|2|mult|add:2.0694691006391e+00,0.0000000000000e+00,-4.8170883061571e-01,-4.3013920399305e-02,-2.1355669672490e+00,-1.6734900153401e+01; (((PE_mean-2.135567e+00) / (at_mass_mean-1.673490e+01)) + 2.069469e+00*((PE_wtd_std-4.817088e-01) * (lambda4w_low-4.301392e-02))); $\left(\left(\frac{ PE_{mean} -2.136e+00 }{ at_{mass, mean}-1.673e+01 } \right) + 2.07\left(\left(PE_{wtd, std}-4.817e-01\right) * \left(lambda4w_{low}-4.301e-02\right)\right)\right)$; (((PE_mean-2.135567e+00) ./ (at_mass_mean-1.673490e+01)) + (2.069469e+00.*((PE_wtd_std-4.817088e-01) .* (lambda4w_low-4.301392e-02)))); (((newdata$PE_mean-2.135567e+00) / (newdata$at_mass_mean-1.673490e+01)) + (2.069469e+00*((newdata$PE_wtd_std-4.817088e-01) * (newdata$lambda4w_low-4.301392e-02)))); PE_mean,at_mass_mean,PE_wtd_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 40 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Bi2K1       ,  3.575000000000000e+00,  5.143264430808972e+00, -1.353328428345222e-02

@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_mass_mean+2.115575e+01) / (at_rad_mean-1.233241e+00)) + 7.087700e+00*((V_molar-1.551069e+01) / (lambda4w_low-5.376842e-02))) + a1 * (((at_rad_wtd_mean+3.204862e+00) / (density-2.710542e+00)) + 2.791816e+02*((EA_std-8.245713e-01) * (lambda4w_low-1.890017e-02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.60702058945242; Max AE: 2.60702058945242
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.994436732154086e-04, -2.195945919921870e-01,  3.620519676014676e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^-1 * g * mol^-1;                               7|13|div|6|2|div|add:7.0877004516654e+00,0.0000000000000e+00,-1.5510691928641e+01,-5.3768423691466e-02,2.1155748376407e+01,-1.2332410151148e+00; (((at_mass_mean+2.115575e+01) / (at_rad_mean-1.233241e+00)) + 7.087700e+00*((V_molar-1.551069e+01) / (lambda4w_low-5.376842e-02))); $\left(\left(\frac{ at_{mass, mean} +2.116e+01 }{ at_{rad, mean}-1.233e+00 } \right) + 7.09\left(\frac{ V_{molar} -1.551e+01 }{ lambda4w_{low}-5.377e-02 } \right)\right)$; (((at_mass_mean+2.115575e+01) ./ (at_rad_mean-1.233241e+00)) + (7.087700e+00.*((V_molar-1.551069e+01) ./ (lambda4w_low-5.376842e-02)))); (((newdata$at_mass_mean+2.115575e+01) / (newdata$at_rad_mean-1.233241e+00)) + (7.087700e+00*((newdata$V_molar-1.551069e+01) / (newdata$lambda4w_low-5.376842e-02)))); at_mass_mean,at_rad_mean,V_molar,lambda4w_low
+# 1;  2; AA * cm^3 * g^-1;                                 14|5|div|35|2|mult|add:2.7918164957121e+02,0.0000000000000e+00,-8.2457132853429e-01,-1.8900171415618e-02,3.2048621160642e+00,-2.7105418705378e+00; (((at_rad_wtd_mean+3.204862e+00) / (density-2.710542e+00)) + 2.791816e+02*((EA_std-8.245713e-01) * (lambda4w_low-1.890017e-02))); $\left(\left(\frac{ at_{rad, wtd, mean} +3.205e+00 }{ density-2.711e+00 } \right) + 279.0\left(\left(EA_{std}-8.246e-01\right) * \left(lambda4w_{low}-1.890e-02\right)\right)\right)$; (((at_rad_wtd_mean+3.204862e+00) ./ (density-2.710542e+00)) + (2.791816e+02.*((EA_std-8.245713e-01) .* (lambda4w_low-1.890017e-02)))); (((newdata$at_rad_wtd_mean+3.204862e+00) / (newdata$density-2.710542e+00)) + (2.791816e+02*((newdata$EA_std-8.245713e-01) * (newdata$lambda4w_low-1.890017e-02)))); at_rad_wtd_mean,density,EA_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 6 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Sb1V3       ,  6.500000000000000e-01,  3.257020589452423e+00, -2.139868539080299e+03,  3.598824183350724e+00

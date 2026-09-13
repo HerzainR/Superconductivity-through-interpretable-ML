@@ -1,0 +1,18 @@
+# c0 + a0 * ((density-1.640254e+02) * (at_rad_wtd_range-6.475516e+00)) + a1 * (w_log / lambda) + a2 * ((lambda3-3.564006e-01) * (EA_wtd_range-7.414557e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.80664897944344; Max AE: 1.80664897944344
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -3.472896311255710e-02, -1.168788512965052e+02, -1.210008658010587e+00,  1.987967414099200e+05,  3.852176520205995e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * cm^-3 * g;                                   5|16|mult:-1.6402542180583e+02,-6.4755158399480e+00; ((density-1.640254e+02) * (at_rad_wtd_range-6.475516e+00)); $\left(\left(density-1.640e+02\right) * \left(at_{rad, wtd, range}-6.476e+00\right)\right)$; ((density-1.640254e+02) .* (at_rad_wtd_range-6.475516e+00)); ((newdata$density-1.640254e+02) * (newdata$at_rad_wtd_range-6.475516e+00)); density,at_rad_wtd_range
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               3|34|mult:-3.5640057140780e-01,-7.4145573917173e-01; ((lambda3-3.564006e-01) * (EA_wtd_range-7.414557e-01)); $\left(\left(lambda3-3.564e-01\right) * \left(EA_{wtd, range}-7.415e-01\right)\right)$; ((lambda3-3.564006e-01) .* (EA_wtd_range-7.414557e-01)); ((newdata$lambda3-3.564006e-01) * (newdata$EA_wtd_range-7.414557e-01)); lambda3,EA_wtd_range
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 43 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C1W2        ,  3.835000000000000e+00,  5.641648979443441e+00,  8.933477025876908e+02,  2.747871265694906e-02,  1.287041159684722e-02,  6.902411264000002e-06

@@ -1,0 +1,15 @@
+# c0 + a0 * (w_log / at_mass_wtd_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.44626033074956; Max AE: 4.44626033074956
+# Coefficients
+# Task   a0                      c0
+# all ,  5.324114482420225e+03,  2.977920314598392e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g^-1 * mol;                                  1|8|div; (w_log / at_mass_wtd_mean); $\left(\frac{ w_{log} }{ at_{mass, wtd, mean} } \right)$; (w_log ./ at_mass_wtd_mean); (newdata$w_log / newdata$at_mass_wtd_mean); w_log,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 23 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Be2Nb1      ,  2.150000000000000e+00,  6.596260330749563e+00,  6.796134884211494e-04

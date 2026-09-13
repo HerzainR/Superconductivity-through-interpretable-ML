@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_mass_range+3.332464e-01) / (ThermalCond_mean-9.963460e+00)) + 1.716371e+02*((EA_wtd_mean-1.279681e+00) / (V_molar-2.772273e+01))) + a1 * (((IP_mean+6.241844e+01) / (density-2.708282e+00)) + 1.289751e+02*((EA_std-8.254620e-01) * (lambda3-1.957911e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.04829807408484; Max AE: 1.04829807408484
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  5.084796910221851e-02, -1.168549900788850e-02,  4.636930942937171e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W^-1 * g * mK * mol^-1;                           9|37|div|32|6|div|add:1.7163710182710e+02,0.0000000000000e+00,-1.2796814718455e+00,-2.7722728804172e+01,3.3324635529523e-01,-9.9634599066404e+00; (((at_mass_range+3.332464e-01) / (ThermalCond_mean-9.963460e+00)) + 1.716371e+02*((EA_wtd_mean-1.279681e+00) / (V_molar-2.772273e+01))); $\left(\left(\frac{ at_{mass, range} +3.332e-01 }{ ThermalCond_{mean}-9.963e+00 } \right) + 172.0\left(\frac{ EA_{wtd, mean} -1.280e+00 }{ V_{molar}-2.772e+01 } \right)\right)$; (((at_mass_range+3.332464e-01) ./ (ThermalCond_mean-9.963460e+00)) + (1.716371e+02.*((EA_wtd_mean-1.279681e+00) ./ (V_molar-2.772273e+01)))); (((newdata$at_mass_range+3.332464e-01) / (newdata$ThermalCond_mean-9.963460e+00)) + (1.716371e+02*((newdata$EA_wtd_mean-1.279681e+00) / (newdata$V_molar-2.772273e+01)))); at_mass_range,ThermalCond_mean,EA_wtd_mean,V_molar
+# 1;  2; cm^3 * eV * g^-1;                                 19|5|div|35|3|mult|add:1.2897514972878e+02,0.0000000000000e+00,-8.2546204476449e-01,-1.9579113552648e+00,6.2418435105244e+01,-2.7082819588095e+00; (((IP_mean+6.241844e+01) / (density-2.708282e+00)) + 1.289751e+02*((EA_std-8.254620e-01) * (lambda3-1.957911e+00))); $\left(\left(\frac{ IP_{mean} +6.242e+01 }{ density-2.708e+00 } \right) + 129.0\left(\left(EA_{std}-8.255e-01\right) * \left(lambda3-1.958e+00\right)\right)\right)$; (((IP_mean+6.241844e+01) ./ (density-2.708282e+00)) + (1.289751e+02.*((EA_std-8.254620e-01) .* (lambda3-1.957911e+00)))); (((newdata$IP_mean+6.241844e+01) / (newdata$density-2.708282e+00)) + (1.289751e+02*((newdata$EA_std-8.254620e-01) * (newdata$lambda3-1.957911e+00)))); IP_mean,density,EA_std,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C2Y1        ,  3.150000000000000e+00,  4.198298074084836e+00,  1.797728277500132e+01,  1.157623809667225e+02

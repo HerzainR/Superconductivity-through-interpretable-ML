@@ -1,0 +1,18 @@
+# c0 + a0 * (at_rad_wtd_range * at_mass_wtd_range) + a1 * (w_log / lambda) + a2 * ((lambda3-3.564006e-01) * (EA_wtd_range-7.414557e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.38320016361237; Max AE: 1.38320016361237
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  1.071805158224357e-01, -1.224124545363123e+02, -1.254774153965853e+00,  1.989688261335971e+05,  3.986646238464658e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  16|10|mult; (at_rad_wtd_range * at_mass_wtd_range); $\left(at_{rad, wtd, range} at_{mass, wtd, range}\right)$; (at_rad_wtd_range .* at_mass_wtd_range); (newdata$at_rad_wtd_range * newdata$at_mass_wtd_range); at_rad_wtd_range,at_mass_wtd_range
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               3|34|mult:-3.5640057140780e-01,-7.4145573917173e-01; ((lambda3-3.564006e-01) * (EA_wtd_range-7.414557e-01)); $\left(\left(lambda3-3.564e-01\right) * \left(EA_{wtd, range}-7.415e-01\right)\right)$; ((lambda3-3.564006e-01) .* (EA_wtd_range-7.414557e-01)); ((newdata$lambda3-3.564006e-01) * (newdata$EA_wtd_range-7.414557e-01)); lambda3,EA_wtd_range
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 43 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C1W2        ,  3.835000000000000e+00,  5.218200163612368e+00,  3.021141816000000e+01,  2.747871265694906e-02,  1.287041159684722e-02,  6.902411264000002e-06

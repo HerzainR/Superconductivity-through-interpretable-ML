@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_mean / at_mass_mean) + a1 * (ThermalCond_mean * PE_mean) + a2 * (w_log / lambda) + a3 * ((PE_wtd_std-4.782125e-01) * (lambda4w_low-4.508416e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.0483037183979119; Max AE: 0.0483037183979119
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.209709044506822e+02,  1.293909677987129e-02, -1.189116104740680e+02, -1.156522770722728e+02,  1.928230989174314e+05,  5.287224687080718e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 1;  1; W * mK^-1;                                        37|25|mult; (ThermalCond_mean * PE_mean); $\left(ThermalCond_{mean} PE_{mean}\right)$; (ThermalCond_mean .* PE_mean); (newdata$ThermalCond_mean * newdata$PE_mean); ThermalCond_mean,PE_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               30|2|mult:-4.7821253479230e-01,-4.5084164555468e-02; ((PE_wtd_std-4.782125e-01) * (lambda4w_low-4.508416e-02)); $\left(\left(PE_{wtd, std}-4.782e-01\right) * \left(lambda4w_{low}-4.508e-02\right)\right)$; ((PE_wtd_std-4.782125e-01) .* (lambda4w_low-4.508416e-02)); ((newdata$PE_wtd_std-4.782125e-01) * (newdata$lambda4w_low-4.508416e-02)); PE_wtd_std,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 10 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Be2Ta3      ,  1.000000000000000e+00,  9.516962816020881e-01,  1.695093703937671e-03,  1.895725000000000e+02,  4.241203330647327e-02,  1.988025200637339e-02,  3.936827538999999e-06

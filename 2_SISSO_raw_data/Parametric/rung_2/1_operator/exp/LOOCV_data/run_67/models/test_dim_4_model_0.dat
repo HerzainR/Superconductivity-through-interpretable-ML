@@ -1,0 +1,18 @@
+# c0 + a0 * ((at_rad_wtd_std / L_avg)^6) + a1 * (|(lambda / PE_mean) - cos(PE_wtd_range)|) + a2 * ((PE_wtd_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)) + a3 * (exp(5.863072e-01*((PE_wtd_mean-3.252752e+00) / (density-3.025600e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.2377431456528; Max AE: 4.2377431456528
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.706703680572715e+05, -4.710592019822324e+00,  4.068482032447455e-01,  3.075932862175364e+00,  2.783245542301855e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         18|4|div|sp; ((at_rad_wtd_std / L_avg)^6); $\left(\left(\frac{ at_{rad, wtd, std} }{ L_{avg} } \right)^6\right)$; ((at_rad_wtd_std ./ L_avg)).^6; ((newdata$at_rad_wtd_std / newdata$L_avg))^6; at_rad_wtd_std,L_avg
+# 1;  2; Unitless;                                         0|25|div|28|cos|abd; (|(lambda / PE_mean) - cos(PE_wtd_range)|); $\left(\left|\left(\frac{ lambda }{ PE_{mean} } \right) - \left(\cos{ PE_{wtd, range} }\right)\right|\right)$; abs((lambda ./ PE_mean) - cos(PE_wtd_range)); abs((newdata$lambda / newdata$PE_mean) - cos(newdata$PE_wtd_range)); lambda,PE_mean,PE_wtd_range
+# 2;  2; W * eV * mK^-1;                                   26|2|mult|41|37|abd|mult; ((PE_wtd_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(PE_{wtd, mean} lambda4w_{low}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((PE_wtd_mean .* lambda4w_low) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$PE_wtd_mean * newdata$lambda4w_low) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); PE_wtd_mean,lambda4w_low,ThermalCond_std,ThermalCond_mean
+# 3;  2; Unitless;                                         26|5|div|exp:5.8630723870199e-01,0.0000000000000e+00,-3.2527517580082e+00,-3.0255999982475e+00; (exp(5.863072e-01*((PE_wtd_mean-3.252752e+00) / (density-3.025600e+00)))); $\left(\exp{ \left(5.863e-01\left(\frac{ PE_{wtd, mean} -3.253e+00 }{ density-3.026e+00 } \right) \right)}\right)$; exp(5.863072e-01.*((PE_wtd_mean-3.252752e+00) ./ (density-3.025600e+00))); exp(5.863072e-01*((newdata$PE_wtd_mean-3.252752e+00) / (newdata$density-3.025600e+00))); PE_wtd_mean,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 67 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ag1B2       ,  6.700000000000000e+00,  2.462256854347202e+00,  4.231109400109428e-07,  6.537668498509155e-01,  2.223062010000000e-01,  8.302104954470966e-01

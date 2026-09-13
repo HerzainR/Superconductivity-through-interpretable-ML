@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + exp(PE_wtd_range)) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (PE_wtd_std - lambda3)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.878942402109184; Max AE: 0.878942402109184
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.747496607515509e+00, -1.862466382559971e-02, -8.497371567590031e+03, -2.330420993001838e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|exp|add; (sin(lambda) + exp(PE_wtd_range)); $\left(\left(\sin{ lambda }\right) + \left(\exp{ PE_{wtd, range} }\right)\right)$; (sin(lambda) + exp(PE_wtd_range)); (sin(newdata$lambda) + exp(newdata$PE_wtd_range)); lambda,PE_wtd_range
+# 1;  2; W * mK^-1;                                        41|37|abd|30|3|sub|mult; ((|ThermalCond_std - ThermalCond_mean|) * (PE_wtd_std - lambda3)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(PE_{wtd, std} - lambda3\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* (PE_wtd_std - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * (newdata$PE_wtd_std - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_wtd_std,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 18 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Re2Y1       ,  1.830000000000000e+00,  2.708942402109184e+00,  1.860089709136974e+00,  2.924516000000000e+00,  1.972214929220701e-06

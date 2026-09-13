@@ -1,0 +1,19 @@
+# c0 + a0 * (|ThermalCond_wtd_std - ThermalCond_std|) + a1 * (IP_wtd_range^6) + a2 * (exp(-1.0 * lambda3)) + a3 * ((ThermalCond_mean-7.434412e+01) * (IP_wtd_mean-6.566208e+00)) + a4 * ((PE_wtd_std-4.813537e-01) * (lambda4w_low-4.128384e-02))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 35.4950175717773; Max AE: 35.4950175717773
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.909942155604556e-01,  2.025651614417371e-03, -3.972685021819915e+00,  1.862237008535148e-02, -1.016298489299359e+02,  6.699953193485467e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        42|41|abd; (|ThermalCond_wtd_std - ThermalCond_std|); $\left(\left|ThermalCond_{wtd, std} - ThermalCond_{std}\right|\right)$; abs(ThermalCond_wtd_std - ThermalCond_std); abs(newdata$ThermalCond_wtd_std - newdata$ThermalCond_std); ThermalCond_wtd_std,ThermalCond_std
+# 1;  1; eV^6;                                             22|sp; (IP_wtd_range^6); $\left(IP_{wtd, range}^6\right)$; (IP_wtd_range).^6; (newdata$IP_wtd_range)^6; IP_wtd_range
+# 2;  1; Unitless;                                         3|nexp; (exp(-1.0 * lambda3)); $\left(\exp{ \left(-lambda3 \right) } \right)$; exp(-1.0 * (lambda3)); exp(-1.0 * (newdata$lambda3)); lambda3
+# 3;  1; W * eV * mK^-1;                                   37|20|mult:-7.4344121828853e+01,-6.5662081927641e+00; ((ThermalCond_mean-7.434412e+01) * (IP_wtd_mean-6.566208e+00)); $\left(\left(ThermalCond_{mean}-7.434e+01\right) * \left(IP_{wtd, mean}-6.566e+00\right)\right)$; ((ThermalCond_mean-7.434412e+01) .* (IP_wtd_mean-6.566208e+00)); ((newdata$ThermalCond_mean-7.434412e+01) * (newdata$IP_wtd_mean-6.566208e+00)); ThermalCond_mean,IP_wtd_mean
+# 4;  1; eV;                                               30|2|mult:-4.8135373650020e-01,-4.1283836315278e-02; ((PE_wtd_std-4.813537e-01) * (lambda4w_low-4.128384e-02)); $\left(\left(PE_{wtd, std}-4.814e-01\right) * \left(lambda4w_{low}-4.128e-02\right)\right)$; ((PE_wtd_std-4.813537e-01) .* (lambda4w_low-4.128384e-02)); ((newdata$PE_wtd_std-4.813537e-01) * (newdata$lambda4w_low-4.128384e-02)); PE_wtd_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  2.904982428222656e+00,  3.803199999999997e+00,  5.923662229057778e-04,  7.937235914046689e-01,  2.901142055061150e+01,  4.483233582702830e-03

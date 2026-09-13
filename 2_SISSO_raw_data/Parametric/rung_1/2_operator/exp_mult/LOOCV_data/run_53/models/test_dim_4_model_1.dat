@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda4w_low-2.431763e-02) * (at_rad_wtd_range-2.175542e-01)) + a1 * ((L_avg-5.019833e+00) * (at_mass_range-6.173238e+01)) + a2 * (w_log / lambda) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.10792454517961; Max AE: 0.10792454517961
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -2.325612804977733e+02, -1.167517175264248e-02, -1.546186450464303e+02,  2.103221184638769e+05,  5.797462062415620e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * eV;                                          2|16|mult:-2.4317630851124e-02,-2.1755422882487e-01; ((lambda4w_low-2.431763e-02) * (at_rad_wtd_range-2.175542e-01)); $\left(\left(lambda4w_{low}-2.432e-02\right) * \left(at_{rad, wtd, range}-2.176e-01\right)\right)$; ((lambda4w_low-2.431763e-02) .* (at_rad_wtd_range-2.175542e-01)); ((newdata$lambda4w_low-2.431763e-02) * (newdata$at_rad_wtd_range-2.175542e-01)); lambda4w_low,at_rad_wtd_range
+# 1;  1; AA * g * mol^-1;                                  4|9|mult:-5.0198328446545e+00,-6.1732375044505e+01; ((L_avg-5.019833e+00) * (at_mass_range-6.173238e+01)); $\left(\left(L_{avg}-5.020e+00\right) * \left(at_{mass, range}-6.173e+01\right)\right)$; ((L_avg-5.019833e+00) .* (at_mass_range-6.173238e+01)); ((newdata$L_avg-5.019833e+00) * (newdata$at_mass_range-6.173238e+01)); L_avg,at_mass_range
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 53 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Al1Si1Sr1   ,  4.750000000000000e+00,  4.642075454820390e+00, -2.260613516181308e-03,  7.076636942381138e-01,  1.291512915129151e-02,  1.540798875000000e-06

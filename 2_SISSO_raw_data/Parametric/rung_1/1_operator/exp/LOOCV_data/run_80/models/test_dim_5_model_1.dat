@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_wtd_std - ThermalCond_wtd_range) + a1 * (EA_wtd_range * lambda4w_low) + a2 * (EA_wtd_std * lambda4w_low) + a3 * (PE_range / ThermalCond_wtd_mean) + a4 * (ThermalCond_mean * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 35.2208094157737; Max AE: 35.2208094157737
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.849004386057671e-01, -1.473116472421495e+03,  1.383221281235119e+03,  3.735183396088431e+01,  5.250065223388653e-02,  8.124305942257549e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        42|40|sub; (ThermalCond_wtd_std - ThermalCond_wtd_range); $\left(ThermalCond_{wtd, std} - ThermalCond_{wtd, range}\right)$; (ThermalCond_wtd_std - ThermalCond_wtd_range); (newdata$ThermalCond_wtd_std - newdata$ThermalCond_wtd_range); ThermalCond_wtd_std,ThermalCond_wtd_range
+# 1;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 2;  1; eV^2;                                             36|2|mult; (EA_wtd_std * lambda4w_low); $\left(EA_{wtd, std} lambda4w_{low}\right)$; (EA_wtd_std .* lambda4w_low); (newdata$EA_wtd_std * newdata$lambda4w_low); EA_wtd_std,lambda4w_low
+# 3;  1; W^-1 * mK;                                        27|38|div; (PE_range / ThermalCond_wtd_mean); $\left(\frac{ PE_{range} }{ ThermalCond_{wtd, mean} } \right)$; (PE_range ./ ThermalCond_wtd_mean); (newdata$PE_range / newdata$ThermalCond_wtd_mean); PE_range,ThermalCond_wtd_mean
+# 4;  1; W * mK^-1;                                        37|0|mult; (ThermalCond_mean * lambda); $\left(ThermalCond_{mean} lambda\right)$; (ThermalCond_mean .* lambda); (newdata$ThermalCond_mean * newdata$lambda); ThermalCond_mean,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.179190584226307e+00,  3.585700000000003e+00,  1.061122000000000e-03,  1.125772000000000e-03,  1.023364964189236e-02,  5.737160000000000e+01

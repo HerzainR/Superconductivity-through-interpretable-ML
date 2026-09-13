@@ -1,0 +1,17 @@
+# c0 + a0 * ((PE_std^2) / (exp(1.018975e+00*EA_wtd_mean))) + a1 * ((lambda^2) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.27393296754497; Max AE: 3.27393296754497
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  9.616594262836836e+00,  3.977559478789369e-02, -6.941835835814151e+03,  1.952867045693976e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         29|sq|32|exp:1.0189754343049e+00,0.0000000000000e+00|div; ((PE_std^2) / (exp(1.018975e+00*EA_wtd_mean))); $\left(\frac{ \left(PE_{std}^2\right) }{ \left(\exp{ \left(1.019e+00EA_{wtd, mean} \right)}\right) } \right)$; ((PE_std)^2 ./ exp(1.018975e+00.*EA_wtd_mean)); ((newdata$PE_std)^2 / exp(1.018975e+00*newdata$EA_wtd_mean)); PE_std,EA_wtd_mean
+# 1;  2; W * mK^-1;                                        0|sq|41|37|abd|mult; ((lambda^2) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(lambda^2\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda)^2 .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda)^2 * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 62 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb1S2       ,  5.821818182000000e+00,  2.547885214455027e+00,  4.324290311538993e-02,  5.944032071999951e-01, -2.240415609377940e-05

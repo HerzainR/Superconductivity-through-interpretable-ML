@@ -1,0 +1,18 @@
+# c0 + a0 * (EA_wtd_range * lambda4w_low) + a1 * (EA_wtd_std * lambda4w_low) + a2 * (density / ThermalCond_mean) + a3 * (ThermalCond_mean * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 35.8429331972229; Max AE: 35.8429331972229
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.691302327721367e+03,  1.590135918624887e+03,  7.323077367605107e+00,  4.135547815524258e-02, -2.126225858923572e-02, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 1;  1; eV^2;                                             36|2|mult; (EA_wtd_std * lambda4w_low); $\left(EA_{wtd, std} lambda4w_{low}\right)$; (EA_wtd_std .* lambda4w_low); (newdata$EA_wtd_std * newdata$lambda4w_low); EA_wtd_std,lambda4w_low
+# 2;  1; W^-1 * cm^-3 * g * mK;                            5|37|div; (density / ThermalCond_mean); $\left(\frac{ density }{ ThermalCond_{mean} } \right)$; (density ./ ThermalCond_mean); (newdata$density / newdata$ThermalCond_mean); density,ThermalCond_mean
+# 3;  1; W * mK^-1;                                        37|0|mult; (ThermalCond_mean * lambda); $\left(ThermalCond_{mean} lambda\right)$; (ThermalCond_mean .* lambda); (newdata$ThermalCond_mean * newdata$lambda); ThermalCond_mean,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  2.557066802777093e+00,  1.061122000000000e-03,  1.125772000000000e-03,  2.871016042780749e-02,  5.737160000000000e+01

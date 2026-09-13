@@ -1,0 +1,15 @@
+# c0 + a0 * (((IP_std-3.414269e+00) / (at_rad_mean-1.120235e+00)) + 5.928822e+01*((PE_std-5.131382e-01) * (lambda3-2.277739e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.417405458156474; Max AE: 0.417405458156474
+# Coefficients
+# Task   a0                      c0
+# all , -5.179722833858925e-02,  3.908411599021617e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^-1 * eV;                                       23|13|div|29|3|mult|add:5.9288220049191e+01,0.0000000000000e+00,-5.1313821386409e-01,-2.2777388774017e+00,-3.4142691390763e+00,-1.1202347371955e+00; (((IP_std-3.414269e+00) / (at_rad_mean-1.120235e+00)) + 5.928822e+01*((PE_std-5.131382e-01) * (lambda3-2.277739e+00))); $\left(\left(\frac{ IP_{std} -3.414e+00 }{ at_{rad, mean}-1.120e+00 } \right) + 59.3\left(\left(PE_{std}-5.131e-01\right) * \left(lambda3-2.278e+00\right)\right)\right)$; (((IP_std-3.414269e+00) ./ (at_rad_mean-1.120235e+00)) + (5.928822e+01.*((PE_std-5.131382e-01) .* (lambda3-2.277739e+00)))); (((newdata$IP_std-3.414269e+00) / (newdata$at_rad_mean-1.120235e+00)) + (5.928822e+01*((newdata$PE_std-5.131382e-01) * (newdata$lambda3-2.277739e+00)))); IP_std,at_rad_mean,PE_std,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 21 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Mo0.5Rh0.5  ,  1.940000000000000e+00,  1.522594541843526e+00,  4.606070891636190e+01

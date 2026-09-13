@@ -1,0 +1,16 @@
+# c0 + a0 * (|(exp(-1.0 * lambda3)) - (PE_wtd_std * PE_wtd_range)|) + a1 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 10.991450666899; Max AE: 10.991450666899
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -4.529689966095491e+00, -8.517932498346780e+03,  5.790228422762850e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         3|nexp|30|28|mult|abd; (|(exp(-1.0 * lambda3)) - (PE_wtd_std * PE_wtd_range)|); $\left(\left|\left(\exp{ \left(-lambda3 \right) } \right) - \left(PE_{wtd, std} PE_{wtd, range}\right)\right|\right)$; abs(exp(-1.0 * (lambda3)) - (PE_wtd_std .* PE_wtd_range)); abs(exp(-1.0 * (newdata$lambda3)) - (newdata$PE_wtd_std * newdata$PE_wtd_range)); lambda3,PE_wtd_std,PE_wtd_range
+# 1;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  5.717549333101013e+00,  2.104560323321221e-02, -2.659209630795652e-06

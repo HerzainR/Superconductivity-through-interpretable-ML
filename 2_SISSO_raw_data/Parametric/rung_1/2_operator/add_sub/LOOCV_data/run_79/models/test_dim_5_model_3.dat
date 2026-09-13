@@ -1,0 +1,19 @@
+# c0 + a0 * (at_rad_wtd_range^6) + a1 * (EA_wtd_mean / w_log) + a2 * (ThermalCond_mean + 2.837331e+01*L_avg) + a3 * (w_log / lambda) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.1546926718296; Max AE: 11.1546926718296
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.626656676622342e+02, -1.925564896927297e-02,  2.110936219796842e-02, -2.041003614039594e+02,  2.213627048340204e+05,  3.565861585435825e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA^6;                                             16|sp; (at_rad_wtd_range^6); $\left(at_{rad, wtd, range}^6\right)$; (at_rad_wtd_range).^6; (newdata$at_rad_wtd_range)^6; at_rad_wtd_range
+# 1;  1; Unitless;                                         32|1|div; (EA_wtd_mean / w_log); $\left(\frac{ EA_{wtd, mean} }{ w_{log} } \right)$; (EA_wtd_mean ./ w_log); (newdata$EA_wtd_mean / newdata$w_log); EA_wtd_mean,w_log
+# 2;  1; W * mK^-1;                                        37|4|add:2.8373305664012e+01,0.0000000000000e+00; (ThermalCond_mean + 2.837331e+01*L_avg); $\left(ThermalCond_{mean} + 28.4L_{avg}\right)$; (ThermalCond_mean + (2.837331e+01.*L_avg)); (newdata$ThermalCond_mean + (2.837331e+01*newdata$L_avg)); ThermalCond_mean,L_avg
+# 3;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  5.554307328170441e+00,  6.811096450432433e-07,  9.351976856316297e+01,  2.094783291896736e+02,  4.310416493474105e-03,  1.115157653000000e-06

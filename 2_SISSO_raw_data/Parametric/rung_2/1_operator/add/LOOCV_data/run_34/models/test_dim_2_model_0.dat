@@ -1,0 +1,16 @@
+# c0 + a0 * (((PE_wtd_range-2.714246e-01) / (V_molar-1.443607e+01)) + 2.832403e+01*((PE_range-1.022293e+00) * (lambda4w_low-3.557363e-02))) + a1 * (((w_log+9.140830e-03) / (density-2.746221e+00)) + 8.050968e-02*(cos(5.721383e-01*lambda3+7.762149e-01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.26121802816324; Max AE: 3.26121802816324
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.776943404921614e+00, -3.048573540750462e+01,  5.138109432122430e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^-3 * mol;                                      28|6|div|27|2|mult|add:2.8324026884568e+01,0.0000000000000e+00,-1.0222929515860e+00,-3.5573630221296e-02,-2.7142461701961e-01,-1.4436065505500e+01; (((PE_wtd_range-2.714246e-01) / (V_molar-1.443607e+01)) + 2.832403e+01*((PE_range-1.022293e+00) * (lambda4w_low-3.557363e-02))); $\left(\left(\frac{ PE_{wtd, range} -2.714e-01 }{ V_{molar}-1.444e+01 } \right) + 28.3\left(\left(PE_{range}-1.022e+00\right) * \left(lambda4w_{low}-3.557e-02\right)\right)\right)$; (((PE_wtd_range-2.714246e-01) ./ (V_molar-1.443607e+01)) + (2.832403e+01.*((PE_range-1.022293e+00) .* (lambda4w_low-3.557363e-02)))); (((newdata$PE_wtd_range-2.714246e-01) / (newdata$V_molar-1.443607e+01)) + (2.832403e+01*((newdata$PE_range-1.022293e+00) * (newdata$lambda4w_low-3.557363e-02)))); PE_wtd_range,V_molar,PE_range,lambda4w_low
+# 1;  2; cm^3 * eV * g^-1;                                 1|5|div|3|cos|add:8.0509681381087e-02,0.0000000000000e+00,5.7213832897486e-01,7.7621493568332e-01,9.1408301347335e-03,-2.7462211703920e+00; (((w_log+9.140830e-03) / (density-2.746221e+00)) + 8.050968e-02*(cos(5.721383e-01*lambda3+7.762149e-01))); $\left(\left(\frac{ w_{log} +9.141e-03 }{ density-2.746e+00 } \right) + 0.0805\left(\cos{ \left(5.721e-01lambda3+7.762e-01 \right)}\right)\right)$; (((w_log+9.140830e-03) ./ (density-2.746221e+00)) + (8.050968e-02.*cos(5.721383e-01.*lambda3+7.762149e-01))); (((newdata$w_log+9.140830e-03) / (newdata$density-2.746221e+00)) + (8.050968e-02*cos(5.721383e-01*newdata$lambda3+7.762149e-01))); w_log,density,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 34 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+N1Ni3Zn1    ,  3.000000000000000e+00,  6.261218028163236e+00,  5.583446396122661e-01, -6.938508757615368e-02

@@ -1,0 +1,18 @@
+# c0 + a0 * ((at_mass_range-6.183382e+01) * (L_avg-5.057849e+00)) + a1 * (at_rad_wtd_mean - (6.331435e-01*lambda4w_low)) + a2 * ((w_log+2.209752e-03) * (lambda-4.396239e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.35774219890452; Max AE: 6.35774219890452
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.711064202405652e-02,  8.245314072211681e+00,  4.752328371987513e+02,  1.524311495208774e+05, -1.096725220842069e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  9|4|mult:-6.1833821608113e+01,-5.0578494011570e+00; ((at_mass_range-6.183382e+01) * (L_avg-5.057849e+00)); $\left(\left(at_{mass, range}-6.183e+01\right) * \left(L_{avg}-5.058e+00\right)\right)$; ((at_mass_range-6.183382e+01) .* (L_avg-5.057849e+00)); ((newdata$at_mass_range-6.183382e+01) * (newdata$L_avg-5.057849e+00)); at_mass_range,L_avg
+# 1;  1; AA;                                               14|2|sub:6.3314345983698e-01,0.0000000000000e+00; (at_rad_wtd_mean - (6.331435e-01*lambda4w_low)); $\left(at_{rad, wtd, mean} - \left(6.331e-01lambda4w_{low}\right)\right)$; (at_rad_wtd_mean - (6.331435e-01.*lambda4w_low)); (newdata$at_rad_wtd_mean - (6.331435e-01*newdata$lambda4w_low)); at_rad_wtd_mean,lambda4w_low
+# 2;  1; eV;                                               1|0|mult:2.2097515750365e-03,-4.3962389126096e-01; ((w_log+2.209752e-03) * (lambda-4.396239e-01)); $\left(\left(w_{log}+2.210e-03\right) * \left(lambda-4.396e-01\right)\right)$; ((w_log+2.209752e-03) .* (lambda-4.396239e-01)); ((newdata$w_log+2.209752e-03) * (newdata$lambda-4.396239e-01)); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  9.460242198904520e+00, -2.565145033085172e+01,  1.473868421309710e+00,  1.329672603819074e-02,  9.952248951000003e-06

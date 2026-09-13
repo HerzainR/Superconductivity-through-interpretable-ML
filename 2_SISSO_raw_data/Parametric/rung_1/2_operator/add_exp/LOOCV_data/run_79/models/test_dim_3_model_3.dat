@@ -1,0 +1,17 @@
+# c0 + a0 * (at_mass_std / V_molar) + a1 * (w_log / lambda) + a2 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 12.151337814176; Max AE: 12.151337814176
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  6.794628153913028e-01, -1.448339333825337e+02,  2.048708127816914e+05,  4.753185643238238e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^-3 * g;                                        11|6|div; (at_mass_std / V_molar); $\left(\frac{ at_{mass, std} }{ V_{molar} } \right)$; (at_mass_std ./ V_molar); (newdata$at_mass_std / newdata$V_molar); at_mass_std,V_molar
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  4.557662185824029e+00,  2.948032748302833e-01,  4.310416493474105e-03,  1.115157653000000e-06

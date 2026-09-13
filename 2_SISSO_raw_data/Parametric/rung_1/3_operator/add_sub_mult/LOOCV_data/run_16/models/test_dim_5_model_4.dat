@@ -1,0 +1,19 @@
+# c0 + a0 * ((PE_wtd_mean-2.113998e+00) * (lambda3-6.163955e+00)) + a1 * ((at_mass_wtd_range-7.362413e+01) * (IP_wtd_mean-5.664254e+00)) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.12251737339805; Max AE: 9.12251737339805
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -9.865254529628172e-01,  1.952272385704538e-02,  2.103062819707086e+05,  4.140803376921353e+02, -4.823278251419407e+02,  6.041807015833599e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         26|3|mult:-2.1139975839464e+00,-6.1639552594779e+00; ((PE_wtd_mean-2.113998e+00) * (lambda3-6.163955e+00)); $\left(\left(PE_{wtd, mean}-2.114e+00\right) * \left(lambda3-6.164e+00\right)\right)$; ((PE_wtd_mean-2.113998e+00) .* (lambda3-6.163955e+00)); ((newdata$PE_wtd_mean-2.113998e+00) * (newdata$lambda3-6.163955e+00)); PE_wtd_mean,lambda3
+# 1;  1; eV * g * mol^-1;                                  10|20|mult:-7.3624132008766e+01,-5.6642544636795e+00; ((at_mass_wtd_range-7.362413e+01) * (IP_wtd_mean-5.664254e+00)); $\left(\left(at_{mass, wtd, range}-7.362e+01\right) * \left(IP_{wtd, mean}-5.664e+00\right)\right)$; ((at_mass_wtd_range-7.362413e+01) .* (IP_wtd_mean-5.664254e+00)); ((newdata$at_mass_wtd_range-7.362413e+01) * (newdata$IP_wtd_mean-5.664254e+00)); at_mass_wtd_range,IP_wtd_mean
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+S2Ta1       ,  1.488116666500000e+00,  1.061063403989805e+01,  3.808131221553227e-01, -2.886688195814994e+01,  9.791466569999998e-07,  2.121673354550067e-02,  7.221818181818182e-03

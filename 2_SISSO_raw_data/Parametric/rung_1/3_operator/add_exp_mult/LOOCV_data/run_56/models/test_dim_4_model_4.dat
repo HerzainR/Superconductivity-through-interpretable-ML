@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda4w_low-5.234918e-02) * (at_mass_std-4.778599e+01)) + a1 * (w_log / lambda) + a2 * ((ThermalCond_wtd_mean-2.231249e+01) * (lambda3+6.855142e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.46482571586867; Max AE: 2.46482571586867
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -5.141081188087880e-01, -1.274899111676311e+02,  7.929572793290365e-03,  2.008398596732206e+05,  5.015925066924882e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g * mol^-1;                                  2|11|mult:-5.2349183181451e-02,-4.7785987535509e+01; ((lambda4w_low-5.234918e-02) * (at_mass_std-4.778599e+01)); $\left(\left(lambda4w_{low}-5.235e-02\right) * \left(at_{mass, std}-4.779e+01\right)\right)$; ((lambda4w_low-5.234918e-02) .* (at_mass_std-4.778599e+01)); ((newdata$lambda4w_low-5.234918e-02) * (newdata$at_mass_std-4.778599e+01)); lambda4w_low,at_mass_std
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; W * mK^-1;                                        38|3|mult:-2.2312494380791e+01,6.8551421174378e-01; ((ThermalCond_wtd_mean-2.231249e+01) * (lambda3+6.855142e-01)); $\left(\left(ThermalCond_{wtd, mean}-2.231e+01\right) * \left(lambda3+6.855e-01\right)\right)$; ((ThermalCond_wtd_mean-2.231249e+01) .* (lambda3+6.855142e-01)); ((newdata$ThermalCond_wtd_mean-2.231249e+01) * (newdata$lambda3+6.855142e-01)); ThermalCond_wtd_mean,lambda3
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 56 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ir1Mo1      ,  5.325000000000000e+00,  2.860174284131330e+00, -1.757342147468689e-02,  3.404946741289042e-02,  1.045258163044197e+02,  6.708494455999999e-06

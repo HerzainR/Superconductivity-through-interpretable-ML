@@ -1,0 +1,16 @@
+# c0 + a0 * ((lambda3+1.007757e+02) * (lambda-9.182740e+00)) + a1 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.160989893766514; Max AE: 0.160989893766514
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  6.319230400738497e-02,  1.437577155862012e+05,  5.660264723249760e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         3|0|mult:1.0077570648661e+02,-9.1827402370302e+00; ((lambda3+1.007757e+02) * (lambda-9.182740e+00)); $\left(\left(lambda3+1.008e+02\right) * \left(lambda-9.183e+00\right)\right)$; ((lambda3+1.007757e+02) .* (lambda-9.182740e+00)); ((newdata$lambda3+1.007757e+02) * (newdata$lambda-9.182740e+00)); lambda3,lambda
+# 1;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 22 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Pd2Sc1Sn1   ,  2.122500000000000e+00,  2.283489893766514e+00, -8.606439528263809e+02,  4.654843749999999e-07

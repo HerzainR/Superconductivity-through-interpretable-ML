@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean + 5.945089e+01*PE_wtd_range) + a1 * (EA_wtd_std * lambda) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.07524745379797; Max AE: 9.07524745379797
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.567038070299962e-02, -3.508552791417086e+00,  2.041306655468937e+05,  5.719109050699470e+02, -6.340404685423701e+02,  2.051307123704009e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|28|add:5.9450889186157e+01,0.0000000000000e+00; (ThermalCond_mean + 5.945089e+01*PE_wtd_range); $\left(ThermalCond_{mean} + 59.5PE_{wtd, range}\right)$; (ThermalCond_mean + (5.945089e+01.*PE_wtd_range)); (newdata$ThermalCond_mean + (5.945089e+01*newdata$PE_wtd_range)); ThermalCond_mean,PE_wtd_range
+# 1;  1; eV;                                               36|0|mult; (EA_wtd_std * lambda); $\left(EA_{wtd, std} lambda\right)$; (EA_wtd_std .* lambda); (newdata$EA_wtd_std * newdata$lambda); EA_wtd_std,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 75 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C2I2Y2      ,  9.917500000000000e+00,  8.422525462020312e-01,  8.914766738299798e+01,  1.870797920000000e+00,  2.720977919999999e-07,  1.062551302226233e-02,  4.835820895522387e-03

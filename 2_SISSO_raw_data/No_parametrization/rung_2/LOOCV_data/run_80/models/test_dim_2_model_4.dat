@@ -1,0 +1,16 @@
+# c0 + a0 * (sin(lambda) + (PE_wtd_std * PE_wtd_range)) + a1 * ((lambda4w_low * w_log) * (|ThermalCond_wtd_std - ThermalCond_mean|))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.4389730769138; Max AE: 34.4389730769138
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  3.906111008254590e+00,  6.985241426820167e+01,  1.473802897151544e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|30|28|mult|add; (sin(lambda) + (PE_wtd_std * PE_wtd_range)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, std} PE_{wtd, range}\right)\right)$; (sin(lambda) + (PE_wtd_std .* PE_wtd_range)); (sin(newdata$lambda) + (newdata$PE_wtd_std * newdata$PE_wtd_range)); lambda,PE_wtd_std,PE_wtd_range
+# 1;  2; W * eV^2 * mK^-1;                                 2|1|mult|42|37|abd|mult; ((lambda4w_low * w_log) * (|ThermalCond_wtd_std - ThermalCond_mean|)); $\left(\left(lambda4w_{low} w_{log}\right) \left(\left|ThermalCond_{wtd, std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda4w_low .* w_log) .* abs(ThermalCond_wtd_std - ThermalCond_mean)); ((newdata$lambda4w_low * newdata$w_log) * abs(newdata$ThermalCond_wtd_std - newdata$ThermalCond_mean)); lambda4w_low,w_log,ThermalCond_wtd_std,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.961026923086209e+00,  6.874405144140139e-01,  1.615445485056000e-02

@@ -1,0 +1,16 @@
+# c0 + a0 * (cos(lambda) * (EA_mean / at_mass_wtd_mean)) + a1 * ((w_log^3) * (ThermalCond_wtd_mean * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.76216280369574; Max AE: 5.76216280369574
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -2.169794036629411e+02,  2.562245247197674e+05,  4.547982039569457e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV * g^-1 * mol;                                  0|cos|31|8|div|mult; (cos(lambda) * (EA_mean / at_mass_wtd_mean)); $\left(\left(\cos{ lambda }\right) \left(\frac{ EA_{mean} }{ at_{mass, wtd, mean} } \right)\right)$; (cos(lambda) .* (EA_mean ./ at_mass_wtd_mean)); (cos(newdata$lambda) * (newdata$EA_mean / newdata$at_mass_wtd_mean)); lambda,EA_mean,at_mass_wtd_mean
+# 1;  2; W * eV^4 * mK^-1;                                 1|cb|38|2|mult|mult; ((w_log^3) * (ThermalCond_wtd_mean * lambda4w_low)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} lambda4w_{low}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean .* lambda4w_low)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean * newdata$lambda4w_low)); w_log,ThermalCond_wtd_mean,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+S2Ta1       ,  1.488116666500000e+00,  7.250279470195744e+00, -7.873935230273896e-03,  3.878690617019463e-06

@@ -1,0 +1,15 @@
+# c0 + a0 * (((cos(4.201473e+00*PE_wtd_range-1.520380e-02))+3.206433e-01) * (((lambda4w_low-1.951755e-02) / (density-2.723021e+00))-3.072604e-03))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.0785342210363; Max AE: 4.0785342210363
+# Coefficients
+# Task   a0                      c0
+# all ,  2.230513471792770e+02,  4.451212143850295e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^3 * eV * g^-1;                                 28|cos|2|5|div|mult:3.2064331331821e-01,-3.0726035405371e-03,-1.9517554696586e-02,-2.7230206161538e+00,4.2014734077341e+00,-1.5203800652478e-02; (((cos(4.201473e+00*PE_wtd_range-1.520380e-02))+3.206433e-01) * (((lambda4w_low-1.951755e-02) / (density-2.723021e+00))-3.072604e-03)); $\left(\left(\left(\cos{ \left(4.201e+00PE_{wtd, range}-1.520e-02 \right)}\right)+3.206e-01\right) * \left(\left(\frac{ lambda4w_{low} -1.952e-02 }{ density-2.723e+00 } \right)-3.073e-03\right)\right)$; ((cos(4.201473e+00.*PE_wtd_range-1.520380e-02)+3.206433e-01) .* (((lambda4w_low-1.951755e-02) ./ (density-2.723021e+00))-3.072604e-03)); ((cos(4.201473e+00*newdata$PE_wtd_range-1.520380e-02)+3.206433e-01) * (((newdata$lambda4w_low-1.951755e-02) / (newdata$density-2.723021e+00))-3.072604e-03)); PE_wtd_range,lambda4w_low,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 71 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+P1Ru1Zr1    ,  8.496153846000000e+00,  4.417619624963701e+00, -1.506044205130685e-04

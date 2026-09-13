@@ -1,0 +1,15 @@
+# c0 + a0 * ((((L_avg-1.203134e+01) / (density-2.722054e+00))-4.030786e+01) * (((PE_wtd_std-4.823997e-01) * (lambda4w_low-3.174529e-02))+4.455365e-02))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.906149632264911; Max AE: 0.906149632264911
+# Coefficients
+# Task   a0                      c0
+# all ,  3.092605054137438e+00,  1.005103020819488e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * cm^3 * eV * g^-1;                            4|5|div|30|2|mult|mult:-4.0307862887619e+01,4.4553649264131e-02,-4.8239965407636e-01,-3.1745289942897e-02,-1.2031337166509e+01,-2.7220539942020e+00; ((((L_avg-1.203134e+01) / (density-2.722054e+00))-4.030786e+01) * (((PE_wtd_std-4.823997e-01) * (lambda4w_low-3.174529e-02))+4.455365e-02)); $\left(\left(\left(\frac{ L_{avg} -1.203e+01 }{ density-2.722e+00 } \right)-4.031e+01\right) * \left(\left(\left(PE_{wtd, std}-4.824e-01\right) * \left(lambda4w_{low}-3.175e-02\right)\right)+4.455e-02\right)\right)$; ((((L_avg-1.203134e+01) ./ (density-2.722054e+00))-4.030786e+01) .* (((PE_wtd_std-4.823997e-01) .* (lambda4w_low-3.174529e-02))+4.455365e-02)); ((((newdata$L_avg-1.203134e+01) / (newdata$density-2.722054e+00))-4.030786e+01) * (((newdata$PE_wtd_std-4.823997e-01) * (newdata$lambda4w_low-3.174529e-02))+4.455365e-02)); L_avg,density,PE_wtd_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 32 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb3Rh1      ,  2.742333333000000e+00,  3.648482965264911e+00, -2.070276395094268e+00

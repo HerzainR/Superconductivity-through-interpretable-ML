@@ -1,0 +1,19 @@
+# c0 + a0 * ((EA_range-5.551153e-02) * (ThermalCond_mean-5.653679e+01)) + a1 * ((PE_range-1.001381e+00) * (lambda3-3.503344e+00)) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_wtd_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.5022289768265; Max AE: 11.5022289768265
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  4.235570385139822e-02, -7.463142116448916e-01,  2.132374249013048e+05,  3.483943450224063e+02, -4.609601664787294e+02,  3.920083799344890e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   33|37|mult:-5.5511526277846e-02,-5.6536789148172e+01; ((EA_range-5.551153e-02) * (ThermalCond_mean-5.653679e+01)); $\left(\left(EA_{range}-5.551e-02\right) * \left(ThermalCond_{mean}-5.654e+01\right)\right)$; ((EA_range-5.551153e-02) .* (ThermalCond_mean-5.653679e+01)); ((newdata$EA_range-5.551153e-02) * (newdata$ThermalCond_mean-5.653679e+01)); EA_range,ThermalCond_mean
+# 1;  1; Unitless;                                         27|3|mult:-1.0013813560496e+00,-3.5033435568633e+00; ((PE_range-1.001381e+00) * (lambda3-3.503344e+00)); $\left(\left(PE_{range}-1.001e+00\right) * \left(lambda3-3.503e+00\right)\right)$; ((PE_range-1.001381e+00) .* (lambda3-3.503344e+00)); ((newdata$PE_range-1.001381e+00) * (newdata$lambda3-3.503344e+00)); PE_range,lambda3
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|14|div; (w_log / at_rad_wtd_mean); $\left(\frac{ w_{log} }{ at_{rad, wtd, mean} } \right)$; (w_log ./ at_rad_wtd_mean); (newdata$w_log / newdata$at_rad_wtd_mean); w_log,at_rad_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 49 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Al1Au2Sc1   ,  4.400000000000000e+00,  1.590222897682653e+01,  2.425046337431793e+02, -1.970838563357173e+00,  1.212873750000000e-07,  4.726755000000000e-03,  3.108320251177394e-03

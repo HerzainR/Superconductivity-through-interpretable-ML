@@ -1,0 +1,15 @@
+# c0 + a0 * (((sqrt(1.0*lambda4w_low-3.599114e-05))-5.185980e-02) * (((EA_wtd_range-1.776802e+00) / (w_log-6.455871e-02))-1.791967e+01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.01265388786737; Max AE: 2.01265388786737
+# Coefficients
+# Task   a0                      c0
+# all ,  2.010547092226463e+00,  3.326144063157138e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^0.5;                                           2|sqrt|34|1|div|mult:-5.1859800286087e-02,-1.7919667534996e+01,-1.7768021673541e+00,-6.4558712819863e-02,1.0000000000000e+00,-3.5991140006607e-05; (((sqrt(1.0*lambda4w_low-3.599114e-05))-5.185980e-02) * (((EA_wtd_range-1.776802e+00) / (w_log-6.455871e-02))-1.791967e+01)); $\left(\left(\left(\sqrt{ 1.0lambda4w_{low}-3.599e-05 }\right)-5.186e-02\right) * \left(\left(\frac{ EA_{wtd, range} -1.777e+00 }{ w_{log}-6.456e-02 } \right)-1.792e+01\right)\right)$; ((sqrt(1.0.*lambda4w_low-3.599114e-05)-5.185980e-02) .* (((EA_wtd_range-1.776802e+00) ./ (w_log-6.455871e-02))-1.791967e+01)); ((sqrt(1.0*newdata$lambda4w_low-3.599114e-05)-5.185980e-02) * (((newdata$EA_wtd_range-1.776802e+00) / (newdata$w_log-6.455871e-02))-1.791967e+01)); lambda4w_low,EA_wtd_range,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  5.115153887867367e+00,  8.898124453922118e-01

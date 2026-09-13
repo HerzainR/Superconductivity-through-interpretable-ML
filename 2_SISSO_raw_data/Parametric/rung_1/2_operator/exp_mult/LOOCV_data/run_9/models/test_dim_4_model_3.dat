@@ -1,0 +1,18 @@
+# c0 + a0 * ((ThermalCond_mean-9.709111e+01) * (EA_std+2.302966e-01)) + a1 * (w_log / lambda) + a2 * ((PE_wtd_std-4.813306e-01) * (lambda4w_low-3.757325e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.979071501528461; Max AE: 0.979071501528461
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.475933736318750e-02, -1.257940887144119e+02, -1.111492721901418e+02,  1.912546133751641e+05,  6.186734716526893e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|35|mult:-9.7091107724778e+01,2.3029661160170e-01; ((ThermalCond_mean-9.709111e+01) * (EA_std+2.302966e-01)); $\left(\left(ThermalCond_{mean}-9.709e+01\right) * \left(EA_{std}+2.303e-01\right)\right)$; ((ThermalCond_mean-9.709111e+01) .* (EA_std+2.302966e-01)); ((newdata$ThermalCond_mean-9.709111e+01) * (newdata$EA_std+2.302966e-01)); ThermalCond_mean,EA_std
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               30|2|mult:-4.8133061299227e-01,-3.7573246922846e-02; ((PE_wtd_std-4.813306e-01) * (lambda4w_low-3.757325e-02)); $\left(\left(PE_{wtd, std}-4.813e-01\right) * \left(lambda4w_{low}-3.757e-02\right)\right)$; ((PE_wtd_std-4.813306e-01) .* (lambda4w_low-3.757325e-02)); ((newdata$PE_wtd_std-4.813306e-01) * (newdata$lambda4w_low-3.757325e-02)); PE_wtd_std,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 9 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Zr1         ,  9.966666670000000e-01,  1.975738168528461e+00, -1.713202004231367e+01,  1.849970980847359e-02,  1.669892180806578e-02,  2.072671874999999e-06

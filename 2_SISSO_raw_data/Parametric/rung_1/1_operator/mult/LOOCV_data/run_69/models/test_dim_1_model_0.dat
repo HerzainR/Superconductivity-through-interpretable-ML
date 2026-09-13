@@ -1,0 +1,15 @@
+# c0 + a0 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.87231862467681; Max AE: 3.87231862467681
+# Coefficients
+# Task   a0                      c0
+# all ,  1.289245677013661e+05,  3.297692441132594e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 69 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Li1Pb1      ,  7.200000000000000e+00,  3.327681375323186e+00,  2.326083750000000e-07

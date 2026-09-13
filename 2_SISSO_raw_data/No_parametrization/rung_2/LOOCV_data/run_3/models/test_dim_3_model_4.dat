@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + (PE_wtd_range^2)) + a1 * ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_std * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.28693374903469; Max AE: 3.28693374903469
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.662133101240542e+00,  1.565166208901428e+00,  2.749814300875583e+05,  5.811322908519154e-03, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|sq|add; (sin(lambda) + (PE_wtd_range^2)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, range}^2\right)\right)$; (sin(lambda) + (PE_wtd_range)^2); (sin(newdata$lambda) + (newdata$PE_wtd_range)^2); lambda,PE_wtd_range
+# 1;  2; W * eV * mK^-1;                                   2|0|div|41|37|abd|mult; ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda4w_{low} }{ lambda } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda4w_low ./ lambda) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda4w_low / newdata$lambda) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda4w_low,lambda,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^4 * mK^-1;                                 1|cb|41|2|mult|mult; ((w_log^3) * (ThermalCond_std * lambda4w_low)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{std} lambda4w_{low}\right)\right)$; ((w_log).^3 .* (ThermalCond_std .* lambda4w_low)); ((newdata$w_log)^3 * (newdata$ThermalCond_std * newdata$lambda4w_low)); w_log,ThermalCond_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 3 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Mo1       ,  2.500000000000000e-01,  3.536933749034690e+00,  5.531286809501414e-01,  1.545376418013063e-01,  4.595272048080000e-06

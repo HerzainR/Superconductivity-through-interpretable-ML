@@ -1,0 +1,17 @@
+# c0 + a0 * (|sin(PE_wtd_mean) - (PE_wtd_range * lambda)|) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.38067691359886; Max AE: 4.38067691359886
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.869967246682244e+00,  1.849792117336617e-02, -7.023552119544517e+03,  6.484094791551872e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         26|sin|28|0|mult|abd; (|sin(PE_wtd_mean) - (PE_wtd_range * lambda)|); $\left(\left|\left(\sin{ PE_{wtd, mean} }\right) - \left(PE_{wtd, range} lambda\right)\right|\right)$; abs(sin(PE_wtd_mean) - (PE_wtd_range .* lambda)); abs(sin(newdata$PE_wtd_mean) - (newdata$PE_wtd_range * newdata$lambda)); PE_wtd_mean,PE_wtd_range,lambda
+# 1;  2; W * mK^-1;                                        41|37|abd|27|3|abd|mult; ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(\left|PE_{range} - lambda3\right|\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* abs(PE_range - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * abs(newdata$PE_range - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_range,lambda3
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 70 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Tc1         ,  7.794166667000000e+00,  3.413489753401139e+00,  9.463000876874145e-01,  8.313612000000001e+01,  0.000000000000000e+00

@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_mean - (5.235216e+00*at_rad_wtd_range)) + a1 * (IP_range * lambda4w_low) + a2 * (w_log^3) + a3 * (w_log^2) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.51101264800171; Max AE: 4.51101264800171
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.143609457648864e+00, -3.270541846476212e+00,  4.334299389654471e+05, -2.202616988998282e+04,  5.068963218064079e+02,  1.375620931180270e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               32|16|sub:5.2352160228334e+00,0.0000000000000e+00; (EA_wtd_mean - (5.235216e+00*at_rad_wtd_range)); $\left(EA_{wtd, mean} - \left(5.235e+00at_{rad, wtd, range}\right)\right)$; (EA_wtd_mean - (5.235216e+00.*at_rad_wtd_range)); (newdata$EA_wtd_mean - (5.235216e+00*newdata$at_rad_wtd_range)); EA_wtd_mean,at_rad_wtd_range
+# 1;  1; eV^2;                                             21|2|mult; (IP_range * lambda4w_low); $\left(IP_{range} lambda4w_{low}\right)$; (IP_range .* lambda4w_low); (newdata$IP_range * newdata$lambda4w_low); IP_range,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 56 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ir1Mo1      ,  5.325000000000000e+00,  8.139873519982918e-01,  8.152109585158309e-01,  3.574240000000000e-03,  6.708494455999999e-06,  3.556995999999999e-04,  1.047428504177945e-02

@@ -1,0 +1,18 @@
+# c0 + a0 * (ThermalCond_mean + 7.445174e+01*PE_wtd_std) + a1 * (EA_mean / at_mass_wtd_mean) + a2 * ((lambda3+1.000980e+02) * (lambda-9.140007e+00)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.79209709485698; Max AE: 9.79209709485698
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.193863094080744e-02, -1.299135741972545e+02,  6.118844579234398e-02,  1.488023690627290e+05,  5.352537489455539e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|30|add:7.4451736422909e+01,0.0000000000000e+00; (ThermalCond_mean + 7.445174e+01*PE_wtd_std); $\left(ThermalCond_{mean} + 74.5PE_{wtd, std}\right)$; (ThermalCond_mean + (7.445174e+01.*PE_wtd_std)); (newdata$ThermalCond_mean + (7.445174e+01*newdata$PE_wtd_std)); ThermalCond_mean,PE_wtd_std
+# 1;  1; eV * g^-1 * mol;                                  31|8|div; (EA_mean / at_mass_wtd_mean); $\left(\frac{ EA_{mean} }{ at_{mass, wtd, mean} } \right)$; (EA_mean ./ at_mass_wtd_mean); (newdata$EA_mean / newdata$at_mass_wtd_mean); EA_mean,at_mass_wtd_mean
+# 2;  1; Unitless;                                         3|0|mult:1.0009802109419e+02,-9.1400068702983e+00; ((lambda3+1.000980e+02) * (lambda-9.140007e+00)); $\left(\left(lambda3+1.001e+02\right) * \left(lambda-9.140e+00\right)\right)$; ((lambda3+1.000980e+02) .* (lambda-9.140007e+00)); ((newdata$lambda3+1.000980e+02) * (newdata$lambda-9.140007e+00)); lambda3,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  6.916902905143020e+00,  7.190702570833149e+01,  1.053269362190800e-02, -7.678510428950203e+02,  1.115157653000000e-06

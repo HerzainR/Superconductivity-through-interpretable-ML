@@ -1,0 +1,16 @@
+# c0 + a0 * ((lambda3 * w_log) * (ThermalCond_wtd_range - ThermalCond_wtd_mean)) + a1 * ((w_log^3) * (ThermalCond_range * lambda3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.09029646794374; Max AE: 7.09029646794374
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.588458490210473e+00,  5.054577186446744e+03,  2.765976481957038e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * eV * mK^-1;                                   3|1|mult|40|38|sub|mult; ((lambda3 * w_log) * (ThermalCond_wtd_range - ThermalCond_wtd_mean)); $\left(\left(lambda3 w_{log}\right) \left(ThermalCond_{wtd, range} - ThermalCond_{wtd, mean}\right)\right)$; ((lambda3 .* w_log) .* (ThermalCond_wtd_range - ThermalCond_wtd_mean)); ((newdata$lambda3 * newdata$w_log) * (newdata$ThermalCond_wtd_range - newdata$ThermalCond_wtd_mean)); lambda3,w_log,ThermalCond_wtd_range,ThermalCond_wtd_mean
+# 1;  2; W * eV^3 * mK^-1;                                 1|cb|39|3|mult|mult; ((w_log^3) * (ThermalCond_range * lambda3)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{range} lambda3\right)\right)$; ((w_log).^3 .* (ThermalCond_range .* lambda3)); ((newdata$w_log)^3 * (newdata$ThermalCond_range * newdata$lambda3)); w_log,ThermalCond_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 34 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+N1Ni3Zn1    ,  3.000000000000000e+00,  1.009029646794374e+01, -2.433557787595200e+00,  6.842737442287818e-04

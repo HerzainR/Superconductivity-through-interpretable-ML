@@ -1,0 +1,18 @@
+# c0 + a0 * (EA_wtd_mean / ThermalCond_wtd_mean) + a1 * (at_rad_wtd_std + 4.107804e-03*at_mass_wtd_mean) + a2 * (lambda4w_low + 3.915955e+01*w_log) + a3 * (w_log * lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 31.8135118928075; Max AE: 31.8135118928075
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -3.206592113787408e+01,  5.249003037825037e+00, -5.709413691046033e+00,  5.311037659193913e+02, -1.246137735701384e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W^-1 * eV * mK;                                   32|38|div; (EA_wtd_mean / ThermalCond_wtd_mean); $\left(\frac{ EA_{wtd, mean} }{ ThermalCond_{wtd, mean} } \right)$; (EA_wtd_mean ./ ThermalCond_wtd_mean); (newdata$EA_wtd_mean / newdata$ThermalCond_wtd_mean); EA_wtd_mean,ThermalCond_wtd_mean
+# 1;  1; AA;                                               18|8|add:4.1078037265555e-03,0.0000000000000e+00; (at_rad_wtd_std + 4.107804e-03*at_mass_wtd_mean); $\left(at_{rad, wtd, std} + 0.00411at_{mass, wtd, mean}\right)$; (at_rad_wtd_std + (4.107804e-03.*at_mass_wtd_mean)); (newdata$at_rad_wtd_std + (4.107804e-03*newdata$at_mass_wtd_mean)); at_rad_wtd_std,at_mass_wtd_mean
+# 2;  1; eV;                                               2|1|add:3.9159550287085e+01,0.0000000000000e+00; (lambda4w_low + 3.915955e+01*w_log); $\left(lambda4w_{low} + 39.2w_{log}\right)$; (lambda4w_low + (3.915955e+01.*w_log)); (newdata$lambda4w_low + (3.915955e+01*newdata$w_log)); lambda4w_low,w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  6.586488107192517e+00,  2.589253546380162e-03,  3.315863672498380e-01,  2.391087039466231e+00,  3.733142400000000e-02

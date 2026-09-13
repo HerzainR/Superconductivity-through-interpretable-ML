@@ -1,0 +1,15 @@
+# c0 + a0 * (((IP_range-2.617831e+00) / (density-2.673800e+00)) - (7.008758e+00*((ThermalCond_mean-2.956423e+01) * (lambda4w_low+4.426962e-03))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.8535519670076; Max AE: 2.8535519670076
+# Coefficients
+# Task   a0                      c0
+# all , -1.773389732875760e-01,  3.312150831361186e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^3 * eV * g^-1;                                 21|5|div|37|2|mult|sub:7.0087583876995e+00,0.0000000000000e+00,-2.9564225956404e+01,4.4269617370944e-03,-2.6178308634091e+00,-2.6737999177427e+00; (((IP_range-2.617831e+00) / (density-2.673800e+00)) - (7.008758e+00*((ThermalCond_mean-2.956423e+01) * (lambda4w_low+4.426962e-03)))); $\left(\left(\frac{ IP_{range} -2.618e+00 }{ density-2.674e+00 } \right) - \left(7.009e+00\left(\left(ThermalCond_{mean}-2.956e+01\right) * \left(lambda4w_{low}+4.427e-03\right)\right)\right)\right)$; (((IP_range-2.617831e+00) ./ (density-2.673800e+00)) - (7.008758e+00.*((ThermalCond_mean-2.956423e+01) .* (lambda4w_low+4.426962e-03)))); (((newdata$IP_range-2.617831e+00) / (newdata$density-2.673800e+00)) - (7.008758e+00*((newdata$ThermalCond_mean-2.956423e+01) * (newdata$lambda4w_low+4.426962e-03)))); IP_range,density,ThermalCond_mean,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 8 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Rh1Te2      ,  7.550000000000000e-01,  3.608551967007601e+00, -1.671381818399081e+00

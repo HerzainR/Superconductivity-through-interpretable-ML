@@ -1,0 +1,17 @@
+# c0 + a0 * (((at_mass_wtd_range-4.083417e+01) * (L_avg-6.037285e+00)) + 1.193400e+00*((PE_wtd_mean-6.811857e+00) / (L_avg-4.924299e+00))) + a1 * ((EA_range + 1.502914e+01*EA_wtd_mean) + 3.932499e+01*((PE_wtd_mean-2.262115e+00) / (IP_mean-9.238735e+00))) + a2 * (((w_log+1.543589e-03) / (density-2.733236e+00)) + 1.098580e+00*((EA_range-1.651556e+00) * (lambda4w_low-1.640713e-02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.47532603606009; Max AE: 2.47532603606009
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -1.593530361521544e-02, -1.033737814088696e-01, -2.811113484232322e+01,  6.241841960357085e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * g * mol^-1;                                  10|4|mult|26|4|div|add:1.1934003361701e+00,0.0000000000000e+00,-6.8118565903614e+00,-4.9242993888063e+00,-4.0834169575627e+01,-6.0372853469723e+00; (((at_mass_wtd_range-4.083417e+01) * (L_avg-6.037285e+00)) + 1.193400e+00*((PE_wtd_mean-6.811857e+00) / (L_avg-4.924299e+00))); $\left(\left(\left(at_{mass, wtd, range}-4.083e+01\right) * \left(L_{avg}-6.037e+00\right)\right) + 1.19\left(\frac{ PE_{wtd, mean} -6.812e+00 }{ L_{avg}-4.924e+00 } \right)\right)$; (((at_mass_wtd_range-4.083417e+01) .* (L_avg-6.037285e+00)) + (1.193400e+00.*((PE_wtd_mean-6.811857e+00) ./ (L_avg-4.924299e+00)))); (((newdata$at_mass_wtd_range-4.083417e+01) * (newdata$L_avg-6.037285e+00)) + (1.193400e+00*((newdata$PE_wtd_mean-6.811857e+00) / (newdata$L_avg-4.924299e+00)))); at_mass_wtd_range,L_avg,PE_wtd_mean,L_avg
+# 1;  2; eV;                                               33|32|add|26|19|div|add:3.9324993940679e+01,0.0000000000000e+00,-2.2621154901769e+00,-9.2387345357442e+00,1.5029142355182e+01,0.0000000000000e+00; ((EA_range + 1.502914e+01*EA_wtd_mean) + 3.932499e+01*((PE_wtd_mean-2.262115e+00) / (IP_mean-9.238735e+00))); $\left(\left(EA_{range} + 15.0EA_{wtd, mean}\right) + 39.3\left(\frac{ PE_{wtd, mean} -2.262e+00 }{ IP_{mean}-9.239e+00 } \right)\right)$; ((EA_range + (1.502914e+01.*EA_wtd_mean)) + (3.932499e+01.*((PE_wtd_mean-2.262115e+00) ./ (IP_mean-9.238735e+00)))); ((newdata$EA_range + (1.502914e+01*newdata$EA_wtd_mean)) + (3.932499e+01*((newdata$PE_wtd_mean-2.262115e+00) / (newdata$IP_mean-9.238735e+00)))); EA_range,EA_wtd_mean,PE_wtd_mean,IP_mean
+# 2;  2; cm^3 * eV * g^-1;                                 1|5|div|33|2|mult|add:1.0985802235448e+00,0.0000000000000e+00,-1.6515557253556e+00,-1.6407125102662e-02,1.5435885124852e-03,-2.7332357528548e+00; (((w_log+1.543589e-03) / (density-2.733236e+00)) + 1.098580e+00*((EA_range-1.651556e+00) * (lambda4w_low-1.640713e-02))); $\left(\left(\frac{ w_{log} +1.544e-03 }{ density-2.733e+00 } \right) + 1.10\left(\left(EA_{range}-1.652e+00\right) * \left(lambda4w_{low}-1.641e-02\right)\right)\right)$; (((w_log+1.543589e-03) ./ (density-2.733236e+00)) + (1.098580e+00.*((EA_range-1.651556e+00) .* (lambda4w_low-1.640713e-02)))); (((newdata$w_log+1.543589e-03) / (newdata$density-2.733236e+00)) + (1.098580e+00*((newdata$EA_range-1.651556e+00) * (newdata$lambda4w_low-1.640713e-02)))); w_log,density,EA_range,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 35 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  5.575326036060093e+00, -1.099977302113088e+02,  1.624147123044110e+01,  2.633905957969144e-02

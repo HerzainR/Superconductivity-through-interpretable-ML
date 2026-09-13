@@ -1,0 +1,15 @@
+# c0 + a0 * ((cos(2.863998e+00*lambda-7.800791e-01)) + 1.150353e+00*((EA_wtd_mean-9.379934e-01) / (density-2.637258e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 14.6031520840864; Max AE: 14.6031520840864
+# Coefficients
+# Task   a0                      c0
+# all , -1.909919522042052e+00,  3.998083085355737e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|cos|32|5|div|add:1.1503531671974e+00,0.0000000000000e+00,-9.3799339541617e-01,-2.6372578151610e+00,2.8639979459589e+00,-7.8007914075210e-01; ((cos(2.863998e+00*lambda-7.800791e-01)) + 1.150353e+00*((EA_wtd_mean-9.379934e-01) / (density-2.637258e+00))); $\left(\left(\cos{ \left(2.864e+00lambda-7.801e-01 \right)}\right) + 1.15\left(\frac{ EA_{wtd, mean} -9.380e-01 }{ density-2.637e+00 } \right)\right)$; (cos(2.863998e+00.*lambda-7.800791e-01) + (1.150353e+00.*((EA_wtd_mean-9.379934e-01) ./ (density-2.637258e+00)))); (cos(2.863998e+00*newdata$lambda-7.800791e-01) + (1.150353e+00*((newdata$EA_wtd_mean-9.379934e-01) / (newdata$density-2.637258e+00)))); lambda,EA_wtd_mean,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  2.105847915913625e+00,  9.907407865117629e-01

@@ -1,0 +1,18 @@
+# c0 + a0 * (ThermalCond_mean - (9.349355e+01*EA_mean)) + a1 * (w_log / lambda) + a2 * ((PE_wtd_range-4.532289e-01) * (lambda4w_low-4.275882e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.15989833351892; Max AE: 4.15989833351892
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  1.619071470137361e-02, -1.277717213474810e+02, -1.106472003027301e+02,  1.870292119476618e+05,  6.059043752768043e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|31|sub:9.3493552584430e+01,0.0000000000000e+00; (ThermalCond_mean - (9.349355e+01*EA_mean)); $\left(ThermalCond_{mean} - \left(9.349e+01EA_{mean}\right)\right)$; (ThermalCond_mean - (9.349355e+01.*EA_mean)); (newdata$ThermalCond_mean - (9.349355e+01*newdata$EA_mean)); ThermalCond_mean,EA_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               28|2|mult:-4.5322885717594e-01,-4.2758824449611e-02; ((PE_wtd_range-4.532289e-01) * (lambda4w_low-4.275882e-02)); $\left(\left(PE_{wtd, range}-4.532e-01\right) * \left(lambda4w_{low}-4.276e-02\right)\right)$; ((PE_wtd_range-4.532289e-01) .* (lambda4w_low-4.275882e-02)); ((newdata$PE_wtd_range-4.532289e-01) * (newdata$lambda4w_low-4.275882e-02)); PE_wtd_range,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 7 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Al1Ni2Zr1   ,  6.899999999999999e-01,  4.849898333518919e+00,  5.319059749231852e+01,  9.591494124230554e-03,  8.699162200388732e-03,  6.294227929999998e-07

@@ -1,0 +1,19 @@
+# c0 + a0 * (at_rad_wtd_range + 3.787210e-03*at_mass_wtd_mean) + a1 * (IP_wtd_std * lambda4w_low) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.07029403615206; Max AE: 3.07029403615206
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  5.430043273671806e+00, -7.502319474008742e+00,  1.906527729286435e+05,  5.622141905200134e+02, -5.028230526082706e+02, -1.068098073299795e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               16|8|add:3.7872095091603e-03,0.0000000000000e+00; (at_rad_wtd_range + 3.787210e-03*at_mass_wtd_mean); $\left(at_{rad, wtd, range} + 0.00379at_{mass, wtd, mean}\right)$; (at_rad_wtd_range + (3.787210e-03.*at_mass_wtd_mean)); (newdata$at_rad_wtd_range + (3.787210e-03*newdata$at_mass_wtd_mean)); at_rad_wtd_range,at_mass_wtd_mean
+# 1;  1; eV^2;                                             24|2|mult; (IP_wtd_std * lambda4w_low); $\left(IP_{wtd, std} lambda4w_{low}\right)$; (IP_wtd_std .* lambda4w_low); (newdata$IP_wtd_std * newdata$lambda4w_low); IP_wtd_std,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 58 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ga1         ,  5.527454545000000e+00,  2.457160508847937e+00,  2.640556086071840e-01,  0.000000000000000e+00,  2.406418480000000e-07,  8.198155633716555e-03,  5.098360655737705e-03

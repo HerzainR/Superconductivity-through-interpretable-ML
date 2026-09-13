@@ -1,0 +1,15 @@
+# c0 + a0 * ((lambda3 / density) * (|ThermalCond_std - ThermalCond_mean|))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.7187117086866; Max AE: 34.7187117086866
+# Coefficients
+# Task   a0                      c0
+# all ,  1.737231571715820e-01,  3.277620752278931e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * cm^3 * g^-1 * mK^-1;                          3|5|div|41|37|abd|mult; ((lambda3 / density) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda3 }{ density } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda3 ./ density) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda3 / newdata$density) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda3,density,ThermalCond_std,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.681288291313363e+00,  2.323625391148860e+00

@@ -1,0 +1,16 @@
+# c0 + a0 * ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)) + a1 * (exp(2.164503e+00*((at_rad_wtd_std-2.202673e-01) / (at_mass_mean-1.720617e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.4239363726782; Max AE: 4.4239363726782
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.655959949032696e+00,  9.916063977413914e+01, -9.604870987591364e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * eV * mK^-1;                                   2|0|div|41|37|abd|mult; ((lambda4w_low / lambda) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda4w_{low} }{ lambda } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda4w_low ./ lambda) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda4w_low / newdata$lambda) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda4w_low,lambda,ThermalCond_std,ThermalCond_mean
+# 1;  2; Unitless;                                         18|7|div|exp:2.1645026507044e+00,0.0000000000000e+00,-2.2026726666128e-01,-1.7206170835296e+01; (exp(2.164503e+00*((at_rad_wtd_std-2.202673e-01) / (at_mass_mean-1.720617e+01)))); $\left(\exp{ \left(2.165e+00\left(\frac{ at_{rad, wtd, std} -2.203e-01 }{ at_{mass, mean}-1.721e+01 } \right) \right)}\right)$; exp(2.164503e+00.*((at_rad_wtd_std-2.202673e-01) ./ (at_mass_mean-1.720617e+01))); exp(2.164503e+00*((newdata$at_rad_wtd_std-2.202673e-01) / (newdata$at_mass_mean-1.720617e+01))); at_rad_wtd_std,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 0 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C8Cs1       ,  6.750000000000000e-02,  4.491436372678196e+00,  8.446927374301676e-02,  1.012501217650813e+00

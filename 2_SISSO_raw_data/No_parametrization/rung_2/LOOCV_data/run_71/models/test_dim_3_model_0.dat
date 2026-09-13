@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) * (PE_wtd_range / L_avg)) + a1 * ((|ThermalCond_std - ThermalCond_mean|) * (PE_std - lambda3)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.49904529958309; Max AE: 4.49904529958309
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  2.698347947688193e+01, -1.993184981654340e-02, -8.424040509428241e+03,  2.067758970062882e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^-1;                                            0|sin|28|4|div|mult; (sin(lambda) * (PE_wtd_range / L_avg)); $\left(\left(\sin{ lambda }\right) \left(\frac{ PE_{wtd, range} }{ L_{avg} } \right)\right)$; (sin(lambda) .* (PE_wtd_range ./ L_avg)); (sin(newdata$lambda) * (newdata$PE_wtd_range / newdata$L_avg)); lambda,PE_wtd_range,L_avg
+# 1;  2; W * mK^-1;                                        41|37|abd|29|3|sub|mult; ((|ThermalCond_std - ThermalCond_mean|) * (PE_std - lambda3)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(PE_{std} - lambda3\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* (PE_std - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * (newdata$PE_std - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_std,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 71 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+P1Ru1Zr1    ,  8.496153846000000e+00,  3.997108546416912e+00,  6.632318970016628e-02, -7.009843517999998e+00,  0.000000000000000e+00

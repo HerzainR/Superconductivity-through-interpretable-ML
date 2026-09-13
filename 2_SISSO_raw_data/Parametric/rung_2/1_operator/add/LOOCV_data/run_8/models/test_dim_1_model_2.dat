@@ -1,0 +1,15 @@
+# c0 + a0 * (((at_mass_wtd_mean-9.502323e+01) / (density-2.712317e+00)) + 1.240132e+02*((EA_wtd_mean-2.570408e+00) / (lambda-2.563365e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.10826789392064; Max AE: 2.10826789392064
+# Coefficients
+# Task   a0                      c0
+# all ,  1.181016877614959e-02,  2.243450370866386e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^3 * mol^-1;                                    8|5|div|32|0|div|add:1.2401323979680e+02,0.0000000000000e+00,-2.5704082848044e+00,-2.5633652598017e+00,-9.5023230472567e+01,-2.7123170439626e+00; (((at_mass_wtd_mean-9.502323e+01) / (density-2.712317e+00)) + 1.240132e+02*((EA_wtd_mean-2.570408e+00) / (lambda-2.563365e+00))); $\left(\left(\frac{ at_{mass, wtd, mean} -9.502e+01 }{ density-2.712e+00 } \right) + 124.0\left(\frac{ EA_{wtd, mean} -2.570e+00 }{ lambda-2.563e+00 } \right)\right)$; (((at_mass_wtd_mean-9.502323e+01) ./ (density-2.712317e+00)) + (1.240132e+02.*((EA_wtd_mean-2.570408e+00) ./ (lambda-2.563365e+00)))); (((newdata$at_mass_wtd_mean-9.502323e+01) / (newdata$density-2.712317e+00)) + (1.240132e+02*((newdata$EA_wtd_mean-2.570408e+00) / (newdata$lambda-2.563365e+00)))); at_mass_wtd_mean,density,EA_wtd_mean,lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 8 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Rh1Te2      ,  7.550000000000000e-01,  2.863267893920644e+00,  5.248168208281391e+01

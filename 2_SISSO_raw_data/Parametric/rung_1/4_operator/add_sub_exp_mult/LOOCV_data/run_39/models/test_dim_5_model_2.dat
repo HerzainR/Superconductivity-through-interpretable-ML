@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_range * lambda) + a1 * ((at_rad_wtd_std-2.265220e-01) * (lambda4w_low-4.215099e-02)) + a2 * (w_log^3) + a3 * (w_log^2) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.334540426229487; Max AE: 0.334540426229487
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.262160089205020e+00, -1.608881641537282e+02,  4.288512876102254e+05, -2.114350947472801e+04,  4.368670571093571e+02,  2.753710896253511e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               34|0|mult; (EA_wtd_range * lambda); $\left(EA_{wtd, range} lambda\right)$; (EA_wtd_range .* lambda); (newdata$EA_wtd_range * newdata$lambda); EA_wtd_range,lambda
+# 1;  1; AA * eV;                                          18|2|mult:-2.2652195127138e-01,-4.2150985368175e-02; ((at_rad_wtd_std-2.265220e-01) * (lambda4w_low-4.215099e-02)); $\left(\left(at_{rad, wtd, std}-2.265e-01\right) * \left(lambda4w_{low}-4.215e-02\right)\right)$; ((at_rad_wtd_std-2.265220e-01) .* (lambda4w_low-4.215099e-02)); ((newdata$at_rad_wtd_std-2.265220e-01) * (newdata$lambda4w_low-4.215099e-02)); at_rad_wtd_std,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+In1Sb1      ,  3.320000000000000e+00,  3.654540426229487e+00,  5.075840000000000e-01,  4.975204720902114e-03,  2.337448960000000e-07,  3.794560000000000e-05,  8.129655569664995e-03

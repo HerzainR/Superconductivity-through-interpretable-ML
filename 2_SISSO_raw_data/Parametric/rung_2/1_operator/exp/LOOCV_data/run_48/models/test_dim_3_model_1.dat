@@ -1,0 +1,17 @@
+# c0 + a0 * (|(exp(4.602987e-01*EA_mean)) - (PE_range * lambda)|) + a1 * ((lambda3 * w_log) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.6479292816307; Max AE: 2.6479292816307
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -2.160215231415450e+00,  1.638326054282086e+00, -6.696622288685317e+03,  5.224495796052793e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         31|exp:4.6029866729860e-01,0.0000000000000e+00|27|0|mult|abd; (|(exp(4.602987e-01*EA_mean)) - (PE_range * lambda)|); $\left(\left|\left(\exp{ \left(4.603e-01EA_{mean} \right)}\right) - \left(PE_{range} lambda\right)\right|\right)$; abs(exp(4.602987e-01.*EA_mean) - (PE_range .* lambda)); abs(exp(4.602987e-01*newdata$EA_mean) - (newdata$PE_range * newdata$lambda)); EA_mean,PE_range,lambda
+# 1;  2; W * eV * mK^-1;                                   3|1|mult|41|37|abd|mult; ((lambda3 * w_log) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(lambda3 w_{log}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda3 .* w_log) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda3 * newdata$w_log) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda3,w_log,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 48 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Rh1Se2      ,  4.350000000000000e+00,  1.702070718369303e+00,  1.853608948021083e+00,  3.716146928000073e-03, -7.103296618500561e-05

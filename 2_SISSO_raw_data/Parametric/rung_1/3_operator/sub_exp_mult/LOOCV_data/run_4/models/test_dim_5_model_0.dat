@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_range * lambda) + a1 * ((at_rad_wtd_std-4.094368e-01) * (IP_mean-4.800238e+00)) + a2 * (w_log^3) + a3 * (w_log^2) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.81977759438439; Max AE: 2.81977759438439
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -3.561716957761140e+00,  2.524488453624653e+00,  4.651864170464218e+05, -2.419909095221631e+04,  5.351309117252073e+02,  3.936269973472518e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               34|0|mult; (EA_wtd_range * lambda); $\left(EA_{wtd, range} lambda\right)$; (EA_wtd_range .* lambda); (newdata$EA_wtd_range * newdata$lambda); EA_wtd_range,lambda
+# 1;  1; AA * eV;                                          18|19|mult:-4.0943677706838e-01,-4.8002379791202e+00; ((at_rad_wtd_std-4.094368e-01) * (IP_mean-4.800238e+00)); $\left(\left(at_{rad, wtd, std}-4.094e-01\right) * \left(IP_{mean}-4.800e+00\right)\right)$; ((at_rad_wtd_std-4.094368e-01) .* (IP_mean-4.800238e+00)); ((newdata$at_rad_wtd_std-4.094368e-01) * (newdata$IP_mean-4.800238e+00)); at_rad_wtd_std,IP_mean
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 4 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Al1Hf1Ni2   ,  3.700000000000000e-01,  3.189777594384388e+00,  2.759552200000000e-01, -3.709567062345361e-01,  1.316532736000000e-06,  1.201216000000000e-04,  6.479271203780387e-03

@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_mass_wtd_range-5.774926e+01) * (L_avg-5.902254e+00)) + 3.127504e+01*((at_rad_wtd_std-4.909670e-02) / (L_avg-3.257003e+00))) + a1 * (((PE_mean-4.320382e+00) / (density-2.706884e+00)) + 4.478952e+00*((ThermalCond_mean-2.958540e+01) * (lambda4w_low-5.906041e-04)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.88564544462112; Max AE: 4.88564544462112
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.823167847830940e-02,  2.836998763172092e-01,  3.951607666619049e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * g * mol^-1;                                  10|4|mult|18|4|div|add:3.1275040470310e+01,0.0000000000000e+00,-4.9096699325197e-02,-3.2570026364215e+00,-5.7749256723789e+01,-5.9022537163667e+00; (((at_mass_wtd_range-5.774926e+01) * (L_avg-5.902254e+00)) + 3.127504e+01*((at_rad_wtd_std-4.909670e-02) / (L_avg-3.257003e+00))); $\left(\left(\left(at_{mass, wtd, range}-5.775e+01\right) * \left(L_{avg}-5.902e+00\right)\right) + 31.3\left(\frac{ at_{rad, wtd, std} -4.910e-02 }{ L_{avg}-3.257e+00 } \right)\right)$; (((at_mass_wtd_range-5.774926e+01) .* (L_avg-5.902254e+00)) + (3.127504e+01.*((at_rad_wtd_std-4.909670e-02) ./ (L_avg-3.257003e+00)))); (((newdata$at_mass_wtd_range-5.774926e+01) * (newdata$L_avg-5.902254e+00)) + (3.127504e+01*((newdata$at_rad_wtd_std-4.909670e-02) / (newdata$L_avg-3.257003e+00)))); at_mass_wtd_range,L_avg,at_rad_wtd_std,L_avg
+# 1;  2; cm^3 * g^-1;                                      25|5|div|37|2|mult|add:4.4789523817870e+00,0.0000000000000e+00,-2.9585403000538e+01,-5.9060411172875e-04,-4.3203815802943e+00,-2.7068839639039e+00; (((PE_mean-4.320382e+00) / (density-2.706884e+00)) + 4.478952e+00*((ThermalCond_mean-2.958540e+01) * (lambda4w_low-5.906041e-04))); $\left(\left(\frac{ PE_{mean} -4.320e+00 }{ density-2.707e+00 } \right) + 4.48\left(\left(ThermalCond_{mean}-2.959e+01\right) * \left(lambda4w_{low}-5.906e-04\right)\right)\right)$; (((PE_mean-4.320382e+00) ./ (density-2.706884e+00)) + (4.478952e+00.*((ThermalCond_mean-2.958540e+01) .* (lambda4w_low-5.906041e-04)))); (((newdata$PE_mean-4.320382e+00) / (newdata$density-2.706884e+00)) + (4.478952e+00*((newdata$ThermalCond_mean-2.958540e+01) * (newdata$lambda4w_low-5.906041e-04)))); PE_mean,density,ThermalCond_mean,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 67 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Ag1B2       ,  6.700000000000000e+00,  1.814354555378880e+00,  1.574794844612333e+02,  2.586755503433544e+00

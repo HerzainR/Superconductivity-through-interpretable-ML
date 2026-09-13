@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_mean - (1.286466e-02*at_mass_wtd_std)) + a1 * (EA_wtd_range * lambda4w_low) + a2 * (EA_wtd_std * lambda4w_low) + a3 * (w_log / PE_wtd_mean) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 35.0696412614248; Max AE: 35.0696412614248
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.738776333288776e+00, -1.507190724239976e+03,  1.414817525667791e+03, -4.209657244604890e+02,  3.873043824541040e+02,  3.238809984463705e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               31|12|sub:1.2864659998096e-02,0.0000000000000e+00; (EA_mean - (1.286466e-02*at_mass_wtd_std)); $\left(EA_{mean} - \left(1.286e-02at_{mass, wtd, std}\right)\right)$; (EA_mean - (1.286466e-02.*at_mass_wtd_std)); (newdata$EA_mean - (1.286466e-02*newdata$at_mass_wtd_std)); EA_mean,at_mass_wtd_std
+# 1;  1; eV^2;                                             34|2|mult; (EA_wtd_range * lambda4w_low); $\left(EA_{wtd, range} lambda4w_{low}\right)$; (EA_wtd_range .* lambda4w_low); (newdata$EA_wtd_range * newdata$lambda4w_low); EA_wtd_range,lambda4w_low
+# 2;  1; eV^2;                                             36|2|mult; (EA_wtd_std * lambda4w_low); $\left(EA_{wtd, std} lambda4w_{low}\right)$; (EA_wtd_std .* lambda4w_low); (newdata$EA_wtd_std * newdata$lambda4w_low); EA_wtd_std,lambda4w_low
+# 3;  1; eV;                                               1|26|div; (w_log / PE_wtd_mean); $\left(\frac{ w_{log} }{ PE_{wtd, mean} } \right)$; (w_log ./ PE_wtd_mean); (newdata$w_log / newdata$PE_wtd_mean); w_log,PE_wtd_mean
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.330358738575195e+00,  5.666661128610907e-02,  1.061122000000000e-03,  1.125772000000000e-03,  3.386208048088162e-02,  3.731278677170807e-02

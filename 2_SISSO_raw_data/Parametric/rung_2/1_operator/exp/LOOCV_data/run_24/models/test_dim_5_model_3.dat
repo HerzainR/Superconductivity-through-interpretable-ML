@@ -1,0 +1,19 @@
+# c0 + a0 * ((at_rad_wtd_range * at_mass_range) - (at_rad_range * at_mass_wtd_range)) + a1 * ((IP_wtd_mean / PE_wtd_mean) + (EA_wtd_mean + w_log)) + a2 * ((lambda3 * w_log) * (at_rad_wtd_range^6)) + a3 * (exp(3.345697e+00*((EA_range-1.672166e+00) * (lambda4w_low-1.583050e-02)))) + a4 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.30304880970771; Max AE: 1.30304880970771
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -7.104880882907847e-01, -2.131280741546783e+00,  3.036214914001872e+04, -1.650014087500107e+01, -8.439078875240009e+03,  3.056920619973925e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * g * mol^-1;                                  16|9|mult|15|10|mult|sub; ((at_rad_wtd_range * at_mass_range) - (at_rad_range * at_mass_wtd_range)); $\left(\left(at_{rad, wtd, range} at_{mass, range}\right) - \left(at_{rad, range} at_{mass, wtd, range}\right)\right)$; ((at_rad_wtd_range .* at_mass_range) - (at_rad_range .* at_mass_wtd_range)); ((newdata$at_rad_wtd_range * newdata$at_mass_range) - (newdata$at_rad_range * newdata$at_mass_wtd_range)); at_rad_wtd_range,at_mass_range,at_rad_range,at_mass_wtd_range
+# 1;  2; eV;                                               20|26|div|32|1|add|add; ((IP_wtd_mean / PE_wtd_mean) + (EA_wtd_mean + w_log)); $\left(\left(\frac{ IP_{wtd, mean} }{ PE_{wtd, mean} } \right) + \left(EA_{wtd, mean} + w_{log}\right)\right)$; ((IP_wtd_mean ./ PE_wtd_mean) + (EA_wtd_mean + w_log)); ((newdata$IP_wtd_mean / newdata$PE_wtd_mean) + (newdata$EA_wtd_mean + newdata$w_log)); IP_wtd_mean,PE_wtd_mean,EA_wtd_mean,w_log
+# 2;  2; AA^6 * eV;                                        3|1|mult|16|sp|mult; ((lambda3 * w_log) * (at_rad_wtd_range^6)); $\left(\left(lambda3 w_{log}\right) \left(at_{rad, wtd, range}^6\right)\right)$; ((lambda3 .* w_log) .* (at_rad_wtd_range).^6); ((newdata$lambda3 * newdata$w_log) * (newdata$at_rad_wtd_range)^6); lambda3,w_log,at_rad_wtd_range
+# 3;  2; Unitless;                                         33|2|mult|exp:3.3456974590575e+00,0.0000000000000e+00,-1.6721656251918e+00,-1.5830499691138e-02; (exp(3.345697e+00*((EA_range-1.672166e+00) * (lambda4w_low-1.583050e-02)))); $\left(\exp{ \left(3.346e+00\left(\left(EA_{range}-1.672e+00\right) * \left(lambda4w_{low}-1.583e-02\right)\right) \right)}\right)$; exp(3.345697e+00.*((EA_range-1.672166e+00) .* (lambda4w_low-1.583050e-02))); exp(3.345697e+00*((newdata$EA_range-1.672166e+00) * (newdata$lambda4w_low-1.583050e-02))); EA_range,lambda4w_low
+# 4;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 24 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+In1Te1      ,  2.206000000000000e+00,  3.509048809707709e+00,  0.000000000000000e+00,  4.954412061855670e+00,  2.671424320000000e-13,  1.000046878994990e+00,  0.000000000000000e+00

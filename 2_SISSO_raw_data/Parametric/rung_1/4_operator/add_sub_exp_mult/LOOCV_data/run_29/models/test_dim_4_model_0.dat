@@ -1,0 +1,18 @@
+# c0 + a0 * (density * w_log) + a1 * (w_log / lambda) + a2 * ((PE_std-5.134653e-01) * (lambda3-2.109402e+00)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.470359460408592; Max AE: 0.470359460408592
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  1.548994485469635e+01, -1.599160028182496e+02, -1.997702454026254e+00,  2.024552185853590e+05,  4.516526652969927e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; cm^-3 * eV * g;                                   5|1|mult; (density * w_log); $\left(density w_{log}\right)$; (density .* w_log); (newdata$density * newdata$w_log); density,w_log
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; Unitless;                                         29|3|mult:-5.1346533504370e-01,-2.1094021975040e+00; ((PE_std-5.134653e-01) * (lambda3-2.109402e+00)); $\left(\left(PE_{std}-5.135e-01\right) * \left(lambda3-2.109e+00\right)\right)$; ((PE_std-5.134653e-01) .* (lambda3-2.109402e+00)); ((newdata$PE_std-5.134653e-01) * (newdata$lambda3-2.109402e+00)); PE_std,lambda3
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 29 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Bi1Nb3      ,  2.516666667000000e+00,  2.987026127408592e+00,  1.547866900000000e-01,  2.136867325546571e-02,  5.497554331781078e-01,  2.905841483000000e-06

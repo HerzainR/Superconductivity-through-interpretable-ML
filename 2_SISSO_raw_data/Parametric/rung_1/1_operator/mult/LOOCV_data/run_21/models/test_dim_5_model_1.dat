@@ -1,0 +1,19 @@
+# c0 + a0 * (|ThermalCond_range - ThermalCond_wtd_mean|) + a1 * (EA_mean / at_mass_mean) + a2 * (w_log / lambda) + a3 * ((lambda4w_low-4.299666e-02) * (PE_wtd_std-4.814169e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.23264273498385; Max AE: 2.23264273498385
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.868581918852904e-02, -1.375393421292212e+02, -1.028839127401920e+02, -1.167290739214270e+02,  1.861917598760822e+05,  5.581673592581212e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        39|38|abd; (|ThermalCond_range - ThermalCond_wtd_mean|); $\left(\left|ThermalCond_{range} - ThermalCond_{wtd, mean}\right|\right)$; abs(ThermalCond_range - ThermalCond_wtd_mean); abs(newdata$ThermalCond_range - newdata$ThermalCond_wtd_mean); ThermalCond_range,ThermalCond_wtd_mean
+# 1;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               2|30|mult:-4.2996663153506e-02,-4.8141691624470e-01; ((lambda4w_low-4.299666e-02) * (PE_wtd_std-4.814169e-01)); $\left(\left(lambda4w_{low}-4.300e-02\right) * \left(PE_{wtd, std}-4.814e-01\right)\right)$; ((lambda4w_low-4.299666e-02) .* (PE_wtd_std-4.814169e-01)); ((newdata$lambda4w_low-4.299666e-02) * (newdata$PE_wtd_std-4.814169e-01)); lambda4w_low,PE_wtd_std
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 21 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Mo0.5Rh0.5  ,  1.940000000000000e+00,  4.172642734983849e+00,  1.335000000000000e+02,  9.469182663198824e-03,  2.902909447531873e-02,  1.707019307351329e-02,  5.601816576000001e-06

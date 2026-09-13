@@ -1,0 +1,16 @@
+# c0 + a0 * (|cos(lambda) - (PE_wtd_range * lambda)|) + a1 * ((V_molar * lambda4w_low) * (w_log^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.71187169043403; Max AE: 7.71187169043403
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -4.940643520170201e+00,  9.680479496427150e+05,  5.600562558071088e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|cos|28|0|mult|abd; (|cos(lambda) - (PE_wtd_range * lambda)|); $\left(\left|\left(\cos{ lambda }\right) - \left(PE_{wtd, range} lambda\right)\right|\right)$; abs(cos(lambda) - (PE_wtd_range .* lambda)); abs(cos(newdata$lambda) - (newdata$PE_wtd_range * newdata$lambda)); lambda,PE_wtd_range,lambda
+# 1;  2; cm^3 * eV^4 * mol^-1;                             6|2|mult|1|cb|mult; ((V_molar * lambda4w_low) * (w_log^3)); $\left(\left(V_{molar} lambda4w_{low}\right) \left(w_{log}^3\right)\right)$; ((V_molar .* lambda4w_low) .* (w_log).^3); ((newdata$V_molar * newdata$lambda4w_low) * (newdata$w_log)^3); V_molar,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  1.081437169043403e+01,  2.962852408662541e-01,  6.898055917824562e-06

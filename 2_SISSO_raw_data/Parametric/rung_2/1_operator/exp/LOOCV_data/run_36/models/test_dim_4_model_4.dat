@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda4w_low^2) / exp(lambda3)) + a1 * ((w_log * lambda) * (PE_wtd_range * at_mass_wtd_mean)) + a2 * ((lambda4w_low - w_log) - (PE_range * lambda4w_low)) + a3 * (exp(2.808464e+00*((PE_range-2.303258e+00) * (at_mass_wtd_mean-1.527195e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.5878749661719; Max AE: 5.5878749661719
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.772504734385149e+04,  4.633028041247612e+00,  5.807191543105265e+01,  4.300586218730089e+01,  2.663224035560792e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2;                                             2|sq|3|exp|div; ((lambda4w_low^2) / exp(lambda3)); $\left(\frac{ \left(lambda4w_{low}^2\right) }{ \left(\exp{ lambda3 }\right) } \right)$; ((lambda4w_low)^2 ./ exp(lambda3)); ((newdata$lambda4w_low)^2 / exp(newdata$lambda3)); lambda4w_low,lambda3
+# 1;  2; eV * g * mol^-1;                                  1|0|mult|28|8|mult|mult; ((w_log * lambda) * (PE_wtd_range * at_mass_wtd_mean)); $\left(\left(w_{log} lambda\right) \left(PE_{wtd, range} at_{mass, wtd, mean}\right)\right)$; ((w_log .* lambda) .* (PE_wtd_range .* at_mass_wtd_mean)); ((newdata$w_log * newdata$lambda) * (newdata$PE_wtd_range * newdata$at_mass_wtd_mean)); w_log,lambda,PE_wtd_range,at_mass_wtd_mean
+# 2;  2; eV;                                               2|1|sub|27|2|mult|sub; ((lambda4w_low - w_log) - (PE_range * lambda4w_low)); $\left(\left(lambda4w_{low} - w_{log}\right) - \left(PE_{range} lambda4w_{low}\right)\right)$; ((lambda4w_low - w_log) - (PE_range .* lambda4w_low)); ((newdata$lambda4w_low - newdata$w_log) - (newdata$PE_range * newdata$lambda4w_low)); lambda4w_low,w_log,PE_range,lambda4w_low
+# 3;  2; Unitless;                                         27|8|mult|exp:2.8084638496990e+00,0.0000000000000e+00,-2.3032583605496e+00,-1.5271953813468e+01; (exp(2.808464e+00*((PE_range-2.303258e+00) * (at_mass_wtd_mean-1.527195e+01)))); $\left(\exp{ \left(2.808e+00\left(\left(PE_{range}-2.303e+00\right) * \left(at_{mass, wtd, mean}-1.527e+01\right)\right) \right)}\right)$; exp(2.808464e+00.*((PE_range-2.303258e+00) .* (at_mass_wtd_mean-1.527195e+01))); exp(2.808464e+00*((newdata$PE_range-2.303258e+00) * (newdata$at_mass_wtd_mean-1.527195e+01))); PE_range,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  8.690374966171897e+00,  1.704248816405082e-04,  4.562111392228480e-01, -1.397450000000000e-02, 2.558708340174207e-145

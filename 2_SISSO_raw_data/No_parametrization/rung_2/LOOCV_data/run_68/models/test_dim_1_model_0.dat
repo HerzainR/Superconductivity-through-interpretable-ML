@@ -1,0 +1,15 @@
+# c0 + a0 * ((w_log^3) * (lambda3 / PE_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.13205891773936; Max AE: 1.13205891773936
+# Coefficients
+# Task   a0                      c0
+# all ,  1.044909219711975e+06,  2.658640112531293e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^3;                                             1|cb|3|25|div|mult; ((w_log^3) * (lambda3 / PE_mean)); $\left(\left(w_{log}^3\right) \left(\frac{ lambda3 }{ PE_{mean} } \right)\right)$; ((w_log).^3 .* (lambda3 ./ PE_mean)); ((newdata$w_log)^3 * (newdata$lambda3 / newdata$PE_mean)); w_log,lambda3,PE_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 68 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb1Se2      ,  6.814619048000000e+00,  7.946677965739361e+00,  5.060762938493064e-06

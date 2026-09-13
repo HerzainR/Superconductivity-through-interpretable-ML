@@ -1,0 +1,15 @@
+# c0 + a0 * ((sin(8.506389e-01*lambda-4.324747e-01)) + 1.400046e+00*((at_rad_wtd_std-5.044544e-01) / (density-2.732880e+00)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.12595294447025; Max AE: 4.12595294447025
+# Coefficients
+# Task   a0                      c0
+# all ,  5.155996703802294e+00,  2.868403594733176e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|18|5|div|add:1.4000460268864e+00,0.0000000000000e+00,-5.0445442328688e-01,-2.7328796512435e+00,8.5063889987659e-01,-4.3247474911994e-01; ((sin(8.506389e-01*lambda-4.324747e-01)) + 1.400046e+00*((at_rad_wtd_std-5.044544e-01) / (density-2.732880e+00))); $\left(\left(\sin{ \left(8.506e-01lambda-4.325e-01 \right)}\right) + 1.40\left(\frac{ at_{rad, wtd, std} -5.045e-01 }{ density-2.733e+00 } \right)\right)$; (sin(8.506389e-01.*lambda-4.324747e-01) + (1.400046e+00.*((at_rad_wtd_std-5.044544e-01) ./ (density-2.732880e+00)))); (sin(8.506389e-01*newdata$lambda-4.324747e-01) + (1.400046e+00*((newdata$at_rad_wtd_std-5.044544e-01) / (newdata$density-2.732880e+00)))); lambda,at_rad_wtd_std,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 25 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+C2Cl2Y2     ,  2.300000000000000e+00,  6.425952944470251e+00,  6.899828595921245e-01

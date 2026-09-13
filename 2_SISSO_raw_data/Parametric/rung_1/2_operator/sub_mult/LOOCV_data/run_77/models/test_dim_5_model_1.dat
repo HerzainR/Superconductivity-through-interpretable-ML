@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * IP_mean) + a1 * (EA_mean / at_mass_mean) + a2 * (w_log / lambda) + a3 * ((PE_wtd_std-4.813486e-01) * (lambda4w_low-4.161675e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.23095982054962; Max AE: 4.23095982054962
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.967045552710163e-03, -1.167883722410201e+02, -1.178670789102902e+02, -1.170144062215233e+02,  1.912843512014781e+05,  5.216254216971460e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|19|mult; (ThermalCond_mean * IP_mean); $\left(ThermalCond_{mean} IP_{mean}\right)$; (ThermalCond_mean .* IP_mean); (newdata$ThermalCond_mean * newdata$IP_mean); ThermalCond_mean,IP_mean
+# 1;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               30|2|mult:-4.8134856660471e-01,-4.1616750843508e-02; ((PE_wtd_std-4.813486e-01) * (lambda4w_low-4.161675e-02)); $\left(\left(PE_{wtd, std}-4.813e-01\right) * \left(lambda4w_{low}-4.162e-02\right)\right)$; ((PE_wtd_std-4.813486e-01) .* (lambda4w_low-4.161675e-02)); ((newdata$PE_wtd_std-4.813486e-01) * (newdata$lambda4w_low-4.161675e-02)); PE_wtd_std,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 77 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Mo3Os1      ,  1.102250000000000e+01,  6.791540179450382e+00,  8.961960000000000e+02,  6.450485708295478e-03,  1.052903416217812e-02, -3.031744906341433e-03,  2.905841483000000e-06

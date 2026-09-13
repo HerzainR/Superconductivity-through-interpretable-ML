@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean^2) + a1 * (at_mass_wtd_mean * w_log) + a2 * (w_log / lambda) + a3 * ((PE_std-5.133601e-01) * (lambda3-2.220876e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.55453061024049; Max AE: 1.55453061024049
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.010907618278344e-04,  2.145890480715739e+00, -1.618250448221956e+02, -2.270502095564882e+00,  2.100971857489944e+05,  3.338611483393976e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W^2 * mK^-2;                                      37|sq; (ThermalCond_mean^2); $\left(ThermalCond_{mean}^2\right)$; (ThermalCond_mean)^2; (newdata$ThermalCond_mean)^2; ThermalCond_mean
+# 1;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; Unitless;                                         29|3|mult:-5.1336014488026e-01,-2.2208756838980e+00; ((PE_std-5.133601e-01) * (lambda3-2.220876e+00)); $\left(\left(PE_{std}-5.134e-01\right) * \left(lambda3-2.221e+00\right)\right)$; ((PE_std-5.133601e-01) .* (lambda3-2.220876e+00)); ((newdata$PE_std-5.133601e-01) * (newdata$lambda3-2.220876e+00)); PE_std,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 8 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Rh1Te2      ,  7.550000000000000e-01, -7.995306102404907e-01,  5.852250000000000e+03,  1.443165165000000e+00,  3.766355140186916e-02,  9.262254977034555e-01,  1.767172329000000e-06

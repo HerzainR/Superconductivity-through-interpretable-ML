@@ -1,0 +1,18 @@
+# c0 + a0 * (at_rad_wtd_range * at_mass_wtd_range) + a1 * (w_log / lambda) + a2 * ((lambda4w_low-1.243965e-02) * (EA_range-1.652861e+00)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.305453536603129; Max AE: 0.305453536603129
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  9.599293735054026e-02, -1.303371878250349e+02, -2.976941548389111e+01,  2.006015507343375e+05,  4.565156040080527e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  16|10|mult; (at_rad_wtd_range * at_mass_wtd_range); $\left(at_{rad, wtd, range} at_{mass, wtd, range}\right)$; (at_rad_wtd_range .* at_mass_wtd_range); (newdata$at_rad_wtd_range * newdata$at_mass_wtd_range); at_rad_wtd_range,at_mass_wtd_range
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV^2;                                             2|33|mult:-1.2439649388940e-02,-1.6528607318225e+00; ((lambda4w_low-1.243965e-02) * (EA_range-1.652861e+00)); $\left(\left(lambda4w_{low}-1.244e-02\right) * \left(EA_{range}-1.653e+00\right)\right)$; ((lambda4w_low-1.243965e-02) .* (EA_range-1.652861e+00)); ((newdata$lambda4w_low-1.243965e-02) * (newdata$EA_range-1.652861e+00)); lambda4w_low,EA_range
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 62 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Nb1S2       ,  5.821818182000000e+00,  6.127271718603129e+00,  7.089940439999999e+00,  7.969227155273666e-03, -4.766454638483461e-02,  2.498846293000000e-06

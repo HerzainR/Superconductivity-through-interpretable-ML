@@ -1,0 +1,19 @@
+# c0 + a0 * (L_avg / at_mass_wtd_mean) + a1 * (at_mass_wtd_mean * w_log) + a2 * ((at_rad_wtd_range-2.174992e-01) * (lambda4w_low-2.606879e-02)) + a3 * (w_log / lambda) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.12737454583372; Max AE: 1.12737454583372
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.819068209801125e+01,  3.011115022204170e+00, -2.583648423350082e+02, -2.220235958704837e+02,  2.135186030556490e+05,  2.007228037399217e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g^-1 * mol;                                  4|8|div; (L_avg / at_mass_wtd_mean); $\left(\frac{ L_{avg} }{ at_{mass, wtd, mean} } \right)$; (L_avg ./ at_mass_wtd_mean); (newdata$L_avg / newdata$at_mass_wtd_mean); L_avg,at_mass_wtd_mean
+# 1;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 2;  1; AA * eV;                                          16|2|mult:-2.1749923860888e-01,-2.6068791596252e-02; ((at_rad_wtd_range-2.174992e-01) * (lambda4w_low-2.606879e-02)); $\left(\left(at_{rad, wtd, range}-2.175e-01\right) * \left(lambda4w_{low}-2.607e-02\right)\right)$; ((at_rad_wtd_range-2.174992e-01) .* (lambda4w_low-2.606879e-02)); ((newdata$at_rad_wtd_range-2.174992e-01) * (newdata$lambda4w_low-2.606879e-02)); at_rad_wtd_range,lambda4w_low
+# 3;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 54 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pd2Sn1Y1    ,  4.814444444333330e+00,  3.687069898499607e+00,  4.499020111497992e-02,  5.108540400000000e-01,  5.213331890586497e-04,  4.578426754592557e-03,  1.147912560000000e-07

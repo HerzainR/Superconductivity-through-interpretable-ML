@@ -1,0 +1,17 @@
+# c0 + a0 * ((|PE_wtd_mean - lambda|) * (PE_wtd_range + lambda3)) + a1 * ((EA_wtd_mean / density) / (V_molar * lambda)) + a2 * ((w_log^3) * (ThermalCond_mean * lambda4w_low))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 266.35473490838; Max AE: 266.35473490838
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.113648682049780e+00, -2.196158721146860e+02,  1.958429200714794e+05,  3.293081470801998e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         26|0|abd|28|3|add|mult; ((|PE_wtd_mean - lambda|) * (PE_wtd_range + lambda3)); $\left(\left(\left|PE_{wtd, mean} - lambda\right|\right) \left(PE_{wtd, range} + lambda3\right)\right)$; (abs(PE_wtd_mean - lambda) .* (PE_wtd_range + lambda3)); (abs(newdata$PE_wtd_mean - newdata$lambda) * (newdata$PE_wtd_range + newdata$lambda3)); PE_wtd_mean,lambda,PE_wtd_range,lambda3
+# 1;  2; eV * g^-1 * mol;                                  32|5|div|6|0|mult|div; ((EA_wtd_mean / density) / (V_molar * lambda)); $\left(\frac{ \left(\frac{ EA_{wtd, mean} }{ density } \right) }{ \left(V_{molar} lambda\right) } \right)$; ((EA_wtd_mean ./ density) ./ (V_molar .* lambda)); ((newdata$EA_wtd_mean / newdata$density) / (newdata$V_molar * newdata$lambda)); EA_wtd_mean,density,V_molar,lambda
+# 2;  2; W * eV^4 * mK^-1;                                 1|cb|37|2|mult|mult; ((w_log^3) * (ThermalCond_mean * lambda4w_low)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{mean} lambda4w_{low}\right)\right)$; ((w_log).^3 .* (ThermalCond_mean .* lambda4w_low)); ((newdata$w_log)^3 * (newdata$ThermalCond_mean * newdata$lambda4w_low)); w_log,ThermalCond_mean,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Se2Ta1      ,  1.250000000000000e-01,  2.664797349083796e+02,  2.354778037800000e+02,  9.325521452740505e-04,  5.881810066252243e-06

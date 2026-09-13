@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * EA_std) + a1 * (EA_wtd_range * lambda) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 8.43547778010977; Max AE: 8.43547778010977
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.945163806294284e-02, -4.364814415539882e+00,  2.033164209445399e+05,  5.815883820243085e+02, -6.113427760080366e+02,  3.072743441108482e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|35|mult; (ThermalCond_mean * EA_std); $\left(ThermalCond_{mean} EA_{std}\right)$; (ThermalCond_mean .* EA_std); (newdata$ThermalCond_mean * newdata$EA_std); ThermalCond_mean,EA_std
+# 1;  1; eV;                                               34|0|mult; (EA_wtd_range * lambda); $\left(EA_{wtd, range} lambda\right)$; (EA_wtd_range .* lambda); (newdata$EA_wtd_range * newdata$lambda); EA_wtd_range,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 75 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C2I2Y2      ,  9.917500000000000e+00,  1.482022219890230e+00,  5.994869776000000e+01,  1.657446930000000e+00,  2.720977919999999e-07,  1.062551302226233e-02,  4.835820895522387e-03

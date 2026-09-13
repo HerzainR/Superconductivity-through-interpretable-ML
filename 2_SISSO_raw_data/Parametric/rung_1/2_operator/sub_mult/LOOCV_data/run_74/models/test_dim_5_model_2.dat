@@ -1,0 +1,19 @@
+# c0 + a0 * (at_mass_wtd_mean * w_log) + a1 * (ThermalCond_mean * L_avg) + a2 * (w_log / lambda) + a3 * ((PE_std-5.109179e-01) * (lambda4w_low-4.130592e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.68862398557746; Max AE: 3.68862398557746
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.998249055638220e+00,  4.693099946916190e-03, -1.678628604565802e+02, -1.050699080705123e+02,  2.131408244142945e+05,  2.852708095193496e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 1;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               29|2|mult:-5.1091794803945e-01,-4.1305922186549e-02; ((PE_std-5.109179e-01) * (lambda4w_low-4.130592e-02)); $\left(\left(PE_{std}-5.109e-01\right) * \left(lambda4w_{low}-4.131e-02\right)\right)$; ((PE_std-5.109179e-01) .* (lambda4w_low-4.130592e-02)); ((newdata$PE_std-5.109179e-01) * (newdata$lambda4w_low-4.130592e-02)); PE_std,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 74 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+N1Zr1       ,  9.850000000000000e+00,  6.161376014422541e+00,  1.587376448000000e+00,  3.654990414000000e+01,  4.229044014578077e-02, -1.152534563825884e-02,  2.746160591300000e-05

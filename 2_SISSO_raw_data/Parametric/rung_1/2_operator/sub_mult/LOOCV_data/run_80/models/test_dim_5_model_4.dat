@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_std - ThermalCond_mean) + a1 * ((L_avg-5.112665e+00) * (EA_wtd_mean-6.069366e-01)) + a2 * ((lambda4w_low-4.315987e-02) * (PE_wtd_range-4.532973e-01)) + a3 * ((lambda-9.493173e-01) * (EA_wtd_std-7.099870e-01)) + a4 * ((EA_range-1.648802e+00) * (lambda3-2.019911e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 33.6495625431487; Max AE: 33.6495625431487
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -3.675974632957357e-02,  2.265016277928875e+00, -1.463338177903298e+02, -1.227742244925287e+01,  8.202524016209840e-01,  2.962454208179839e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        41|37|sub; (ThermalCond_std - ThermalCond_mean); $\left(ThermalCond_{std} - ThermalCond_{mean}\right)$; (ThermalCond_std - ThermalCond_mean); (newdata$ThermalCond_std - newdata$ThermalCond_mean); ThermalCond_std,ThermalCond_mean
+# 1;  1; AA * eV;                                          4|32|mult:-5.1126650438375e+00,-6.0693660392035e-01; ((L_avg-5.112665e+00) * (EA_wtd_mean-6.069366e-01)); $\left(\left(L_{avg}-5.113e+00\right) * \left(EA_{wtd, mean}-6.069e-01\right)\right)$; ((L_avg-5.112665e+00) .* (EA_wtd_mean-6.069366e-01)); ((newdata$L_avg-5.112665e+00) * (newdata$EA_wtd_mean-6.069366e-01)); L_avg,EA_wtd_mean
+# 2;  1; eV;                                               2|28|mult:-4.3159871870962e-02,-4.5329726019554e-01; ((lambda4w_low-4.315987e-02) * (PE_wtd_range-4.532973e-01)); $\left(\left(lambda4w_{low}-4.316e-02\right) * \left(PE_{wtd, range}-4.533e-01\right)\right)$; ((lambda4w_low-4.315987e-02) .* (PE_wtd_range-4.532973e-01)); ((newdata$lambda4w_low-4.315987e-02) * (newdata$PE_wtd_range-4.532973e-01)); lambda4w_low,PE_wtd_range
+# 3;  1; eV;                                               0|36|mult:-9.4931726618067e-01,-7.0998700876791e-01; ((lambda-9.493173e-01) * (EA_wtd_std-7.099870e-01)); $\left(\left(lambda-9.493e-01\right) * \left(EA_{wtd, std}-7.100e-01\right)\right)$; ((lambda-9.493173e-01) .* (EA_wtd_std-7.099870e-01)); ((newdata$lambda-9.493173e-01) * (newdata$EA_wtd_std-7.099870e-01)); lambda,EA_wtd_std
+# 4;  1; eV;                                               33|3|mult:-1.6488017297579e+00,-2.0199111739417e+00; ((EA_range-1.648802e+00) * (lambda3-2.019911e+00)); $\left(\left(EA_{range}-1.649e+00\right) * \left(lambda3-2.020e+00\right)\right)$; ((EA_range-1.648802e+00) .* (lambda3-2.019911e+00)); ((newdata$EA_range-1.648802e+00) * (newdata$lambda3-2.019911e+00)); EA_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  4.750437456851294e+00, -2.700000000000000e+01,  8.044726416781260e-01,  4.452094851671882e-03,  1.945102226441583e-01,  2.454004006761883e+00

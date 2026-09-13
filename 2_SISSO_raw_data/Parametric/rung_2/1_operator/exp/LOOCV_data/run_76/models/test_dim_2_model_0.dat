@@ -1,0 +1,16 @@
+# c0 + a0 * (exp(8.754559e-01*((EA_range-1.660176e+00) * (lambda4w_low-1.409664e-02)))) + a1 * (exp(1.272174e+00*((at_rad_range-1.458845e+00) / (density-3.248846e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.04224769161969; Max AE: 4.04224769161969
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -4.162688788846150e+01,  5.123324845409404e+00,  4.166859371186273e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         33|2|mult|exp:8.7545587003435e-01,0.0000000000000e+00,-1.6601762354802e+00,-1.4096640866629e-02; (exp(8.754559e-01*((EA_range-1.660176e+00) * (lambda4w_low-1.409664e-02)))); $\left(\exp{ \left(8.755e-01\left(\left(EA_{range}-1.660e+00\right) * \left(lambda4w_{low}-1.410e-02\right)\right) \right)}\right)$; exp(8.754559e-01.*((EA_range-1.660176e+00) .* (lambda4w_low-1.409664e-02))); exp(8.754559e-01*((newdata$EA_range-1.660176e+00) * (newdata$lambda4w_low-1.409664e-02))); EA_range,lambda4w_low
+# 1;  2; Unitless;                                         15|5|div|exp:1.2721737142276e+00,0.0000000000000e+00,-1.4588446656793e+00,-3.2488464929107e+00; (exp(1.272174e+00*((at_rad_range-1.458845e+00) / (density-3.248846e+00)))); $\left(\exp{ \left(1.272e+00\left(\frac{ at_{rad, range} -1.459e+00 }{ density-3.249e+00 } \right) \right)}\right)$; exp(1.272174e+00.*((at_rad_range-1.458845e+00) ./ (density-3.248846e+00))); exp(1.272174e+00*((newdata$at_rad_range-1.458845e+00) / (newdata$density-3.248846e+00))); at_rad_range,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 76 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1Mo1       ,  1.015200000000000e+01,  6.109752308380306e+00,  9.601306635859830e-01,  8.604588272077756e-01

@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda4w_low+5.255485e-02) * (ThermalCond_mean-3.305962e+01)) + a1 * (w_log / lambda) + a2 * ((PE_wtd_range-4.533639e-01) * (lambda4w_low-4.212527e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.1785872869926; Max AE: 4.1785872869926
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.968270850378905e-01, -1.273715686022660e+02, -8.486758705335235e+01,  1.915202443208428e+05,  5.116538423287132e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   2|37|mult:5.2554845169833e-02,-3.3059615445170e+01; ((lambda4w_low+5.255485e-02) * (ThermalCond_mean-3.305962e+01)); $\left(\left(lambda4w_{low}+5.255e-02\right) * \left(ThermalCond_{mean}-3.306e+01\right)\right)$; ((lambda4w_low+5.255485e-02) .* (ThermalCond_mean-3.305962e+01)); ((newdata$lambda4w_low+5.255485e-02) * (newdata$ThermalCond_mean-3.305962e+01)); lambda4w_low,ThermalCond_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               28|2|mult:-4.5336390157877e-01,-4.2125272705871e-02; ((PE_wtd_range-4.533639e-01) * (lambda4w_low-4.212527e-02)); $\left(\left(PE_{wtd, range}-4.534e-01\right) * \left(lambda4w_{low}-4.213e-02\right)\right)$; ((PE_wtd_range-4.533639e-01) .* (lambda4w_low-4.212527e-02)); ((newdata$PE_wtd_range-4.533639e-01) * (newdata$lambda4w_low-4.212527e-02)); PE_wtd_range,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 73 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Hf1N1       ,  8.830000000000000e+00,  4.651412713007397e+00, -1.314238572496608e+00,  3.186383200730403e-02, -1.403450059442920e-02,  1.458043230700000e-05

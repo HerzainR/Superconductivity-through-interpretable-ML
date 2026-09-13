@@ -1,0 +1,19 @@
+# c0 + a0 * (at_rad_wtd_range^3) + a1 * (EA_mean / at_mass_mean) + a2 * (w_log / lambda) + a3 * ((lambda4w_low+1.306552e-02) * (ThermalCond_mean-4.892004e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 37.1007030842384; Max AE: 37.1007030842384
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.382850674149343e+01, -1.031284628666898e+02, -1.206080219675896e+02,  6.731426532457487e-01,  1.962065118561716e+05,  4.464618984969876e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA^3;                                             16|cb; (at_rad_wtd_range^3); $\left(at_{rad, wtd, range}^3\right)$; (at_rad_wtd_range).^3; (newdata$at_rad_wtd_range)^3; at_rad_wtd_range
+# 1;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; W * eV * mK^-1;                                   2|37|mult:1.3065520071234e-02,-4.8920043494835e+00; ((lambda4w_low+1.306552e-02) * (ThermalCond_mean-4.892004e+00)); $\left(\left(lambda4w_{low}+1.307e-02\right) * \left(ThermalCond_{mean}-4.892e+00\right)\right)$; ((lambda4w_low+1.306552e-02) .* (ThermalCond_mean-4.892004e+00)); ((newdata$lambda4w_low+1.306552e-02) * (newdata$ThermalCond_mean-4.892004e+00)); lambda4w_low,ThermalCond_mean
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Se2Ta1      ,  1.250000000000000e-01,  3.722570308423845e+01,  1.097064504800000e-02,  9.014353713544384e-03,  1.003693243536824e-03,  4.981263867566415e+01,  9.861112800000000e-08

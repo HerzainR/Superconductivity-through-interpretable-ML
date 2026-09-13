@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda4w_low-2.417474e-02) * (at_rad_wtd_std-2.311472e-01)) + a1 * (w_log / lambda) + a2 * (w_log^3) + a3 * ((w_log-2.619159e-02) * (PE_wtd_mean-2.531490e+00))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.25997598968334; Max AE: 1.25997598968334
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -2.698517747269945e+02, -1.873409877935048e+02,  1.867681097534449e+05, -1.868233966700912e+02,  8.062506953101440e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * eV;                                          2|18|mult:-2.4174739368030e-02,-2.3114719760924e-01; ((lambda4w_low-2.417474e-02) * (at_rad_wtd_std-2.311472e-01)); $\left(\left(lambda4w_{low}-2.417e-02\right) * \left(at_{rad, wtd, std}-2.311e-01\right)\right)$; ((lambda4w_low-2.417474e-02) .* (at_rad_wtd_std-2.311472e-01)); ((newdata$lambda4w_low-2.417474e-02) * (newdata$at_rad_wtd_std-2.311472e-01)); lambda4w_low,at_rad_wtd_std
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|26|mult:-2.6191591682617e-02,-2.5314900579758e+00; ((w_log-2.619159e-02) * (PE_wtd_mean-2.531490e+00)); $\left(\left(w_{log}-2.619e-02\right) * \left(PE_{wtd, mean}-2.531e+00\right)\right)$; ((w_log-2.619159e-02) .* (PE_wtd_mean-2.531490e+00)); ((newdata$w_log-2.619159e-02) * (newdata$PE_wtd_mean-2.531490e+00)); w_log,PE_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 35 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+B1Hf1       ,  3.100000000000000e+00,  1.840024010316663e+00, -5.176537712089543e-03,  5.771288452964779e-02,  1.735386246900000e-05,  2.598182361428579e-04

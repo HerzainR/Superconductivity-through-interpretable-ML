@@ -1,0 +1,18 @@
+# c0 + a0 * (ThermalCond_mean * density) + a1 * (w_log / lambda) + a2 * ((PE_std-5.108021e-01) * (lambda4w_low-4.019933e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.01990531803879; Max AE: 1.01990531803879
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  1.624465438746837e-03, -1.239049804236860e+02, -1.089089596877439e+02,  1.962305712128602e+05,  4.786897091765625e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * cm^-3 * g * mK^-1;                            37|5|mult; (ThermalCond_mean * density); $\left(ThermalCond_{mean} density\right)$; (ThermalCond_mean .* density); (newdata$ThermalCond_mean * newdata$density); ThermalCond_mean,density
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               29|2|mult:-5.1080205028730e-01,-4.0199326290551e-02; ((PE_std-5.108021e-01) * (lambda4w_low-4.019933e-02)); $\left(\left(PE_{std}-5.108e-01\right) * \left(lambda4w_{low}-4.020e-02\right)\right)$; ((PE_std-5.108021e-01) .* (lambda4w_low-4.019933e-02)); ((newdata$PE_std-5.108021e-01) * (newdata$lambda4w_low-4.019933e-02)); PE_std,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 15 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Sb1Sn1      ,  1.430000000000000e+00,  2.449905318038792e+00,  3.213129000000000e+02,  9.119496855345912e-03,  1.674061187208290e-02,  4.800486870000000e-07

@@ -1,0 +1,15 @@
+# c0 + a0 * (((V_molar-1.019602e+02) / (density-2.707488e+00)) + 3.375069e+02*((at_rad_wtd_range-7.221263e-01) / (lambda3+4.952974e-01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.3640503369419; Max AE: 11.3640503369419
+# Coefficients
+# Task   a0                      c0
+# all ,  9.802094046627441e-03,  5.578603727328928e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^6 * g^-1 * mol^-1;                             6|5|div|16|3|div|add:3.3750685892460e+02,0.0000000000000e+00,-7.2212628506447e-01,4.9529740035202e-01,-1.0196023405882e+02,-2.7074876169207e+00; (((V_molar-1.019602e+02) / (density-2.707488e+00)) + 3.375069e+02*((at_rad_wtd_range-7.221263e-01) / (lambda3+4.952974e-01))); $\left(\left(\frac{ V_{molar} -1.020e+02 }{ density-2.707e+00 } \right) + 338.0\left(\frac{ at_{rad, wtd, range} -7.221e-01 }{ lambda3+4.953e-01 } \right)\right)$; (((V_molar-1.019602e+02) ./ (density-2.707488e+00)) + (3.375069e+02.*((at_rad_wtd_range-7.221263e-01) ./ (lambda3+4.952974e-01)))); (((newdata$V_molar-1.019602e+02) / (newdata$density-2.707488e+00)) + (3.375069e+02*((newdata$at_rad_wtd_range-7.221263e-01) / (newdata$lambda3+4.952974e-01)))); V_molar,density,at_rad_wtd_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  5.344949663058096e+00, -2.383715797454767e+01

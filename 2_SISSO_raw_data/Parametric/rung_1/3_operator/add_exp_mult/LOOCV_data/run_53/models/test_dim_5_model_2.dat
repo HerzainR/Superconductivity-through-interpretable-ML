@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_wtd_mean * lambda) + a1 * ((at_rad_wtd_std-2.299912e-01) * (lambda4w_low-2.565343e-02)) + a2 * (w_log^3) + a3 * (w_log^2) + a4 * (lambda4w_low / lambda3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.570774278413415; Max AE: 0.570774278413415
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.565156197882025e+00, -1.789808785771944e+02,  4.306019491821595e+05, -2.187559437502353e+04,  5.059573135962390e+02,  2.727223123789778e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               32|0|mult; (EA_wtd_mean * lambda); $\left(EA_{wtd, mean} lambda\right)$; (EA_wtd_mean .* lambda); (newdata$EA_wtd_mean * newdata$lambda); EA_wtd_mean,lambda
+# 1;  1; AA * eV;                                          18|2|mult:-2.2999116282686e-01,-2.5653427092585e-02; ((at_rad_wtd_std-2.299912e-01) * (lambda4w_low-2.565343e-02)); $\left(\left(at_{rad, wtd, std}-2.300e-01\right) * \left(lambda4w_{low}-2.565e-02\right)\right)$; ((at_rad_wtd_std-2.299912e-01) .* (lambda4w_low-2.565343e-02)); ((newdata$at_rad_wtd_std-2.299912e-01) * (newdata$lambda4w_low-2.565343e-02)); at_rad_wtd_std,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# 4;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 53 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Al1Si1Sr1   ,  4.750000000000000e+00,  5.320774278413415e+00,  5.443604100000000e-01, -2.641052954655124e-03,  1.540798875000000e-06,  1.334025000000000e-04,  1.033219618589564e-02

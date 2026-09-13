@@ -1,0 +1,17 @@
+# c0 + a0 * ((IP_wtd_std * w_log) * (at_mass_wtd_mean * lambda)) + a1 * ((lambda4w_low - w_log) - (PE_range * lambda4w_low)) + a2 * (exp(1.078178e+00*((at_rad_range-4.779805e+00) * (density-6.279737e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.8057230846279; Max AE: 2.8057230846279
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.437458704564275e+00,  6.291910176935297e+01,  3.178099154921837e-06,  3.059236659033947e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^2 * g * mol^-1;                                24|1|mult|8|0|mult|mult; ((IP_wtd_std * w_log) * (at_mass_wtd_mean * lambda)); $\left(\left(IP_{wtd, std} w_{log}\right) \left(at_{mass, wtd, mean} lambda\right)\right)$; ((IP_wtd_std .* w_log) .* (at_mass_wtd_mean .* lambda)); ((newdata$IP_wtd_std * newdata$w_log) * (newdata$at_mass_wtd_mean * newdata$lambda)); IP_wtd_std,w_log,at_mass_wtd_mean,lambda
+# 1;  2; eV;                                               2|1|sub|27|2|mult|sub; ((lambda4w_low - w_log) - (PE_range * lambda4w_low)); $\left(\left(lambda4w_{low} - w_{log}\right) - \left(PE_{range} lambda4w_{low}\right)\right)$; ((lambda4w_low - w_log) - (PE_range .* lambda4w_low)); ((newdata$lambda4w_low - newdata$w_log) - (newdata$PE_range * newdata$lambda4w_low)); lambda4w_low,w_log,PE_range,lambda4w_low
+# 2;  2; Unitless;                                         15|5|mult|exp:1.0781784192054e+00,0.0000000000000e+00,-4.7798052263449e+00,-6.2797367807843e+00; (exp(1.078178e+00*((at_rad_range-4.779805e+00) * (density-6.279737e+00)))); $\left(\exp{ \left(1.078e+00\left(\left(at_{rad, range}-4.780e+00\right) * \left(density-6.280e+00\right)\right) \right)}\right)$; exp(1.078178e+00.*((at_rad_range-4.779805e+00) .* (density-6.279737e+00))); exp(1.078178e+00*((newdata$at_rad_range-4.779805e+00) * (newdata$density-6.279737e+00))); at_rad_range,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+S2Ta1       ,  1.488116666500000e+00,  4.293839751127899e+00,  2.018374543277053e+00, -2.649000000000001e-02,  1.310832930631026e-02

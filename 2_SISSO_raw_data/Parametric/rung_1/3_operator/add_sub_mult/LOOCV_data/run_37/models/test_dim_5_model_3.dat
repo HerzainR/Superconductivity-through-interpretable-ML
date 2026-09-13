@@ -1,0 +1,19 @@
+# c0 + a0 * (at_mass_wtd_mean * w_log) + a1 * ((at_rad_std-3.568493e-01) * (IP_mean-4.491539e+00)) + a2 * (w_log / lambda) + a3 * ((lambda3-1.622178e+00) * (EA_std-8.288875e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.143016990900264; Max AE: 0.143016990900264
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.539633829394500e+00,  1.806701564274440e+00, -1.690221234812958e+02, -1.185300194969100e+00,  2.179621864692789e+05,  4.057477256302466e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 1;  1; AA * eV;                                          17|19|mult:-3.5684928368973e-01,-4.4915390794492e+00; ((at_rad_std-3.568493e-01) * (IP_mean-4.491539e+00)); $\left(\left(at_{rad, std}-3.568e-01\right) * \left(IP_{mean}-4.492e+00\right)\right)$; ((at_rad_std-3.568493e-01) .* (IP_mean-4.491539e+00)); ((newdata$at_rad_std-3.568493e-01) * (newdata$IP_mean-4.491539e+00)); at_rad_std,IP_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               3|35|mult:-1.6221776543257e+00,-8.2888745488097e-01; ((lambda3-1.622178e+00) * (EA_std-8.288875e-01)); $\left(\left(lambda3-1.622e+00\right) * \left(EA_{std}-8.289e-01\right)\right)$; ((lambda3-1.622178e+00) .* (EA_std-8.288875e-01)); ((newdata$lambda3-1.622178e+00) * (newdata$EA_std-8.288875e-01)); lambda3,EA_std
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C2Y1        ,  3.150000000000000e+00,  3.293016990900264e+00,  8.503418160000000e-01,  9.689471761653896e-01,  3.900880676912451e-02,  5.010559358786864e-01,  1.152785997900000e-05

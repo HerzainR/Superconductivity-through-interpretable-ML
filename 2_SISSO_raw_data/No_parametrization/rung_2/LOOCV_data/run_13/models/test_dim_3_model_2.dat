@@ -1,0 +1,17 @@
+# c0 + a0 * (|(PE_wtd_range * IP_wtd_mean) - (EA_range + lambda4w_low)|) + a1 * ((lambda3 / lambda) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.79149056435841; Max AE: 6.79149056435841
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  7.492341804892936e-01,  4.017338769026678e-02, -6.891045756973130e+03,  1.575184315025648e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV;                                               28|20|mult|33|2|add|abd; (|(PE_wtd_range * IP_wtd_mean) - (EA_range + lambda4w_low)|); $\left(\left|\left(PE_{wtd, range} IP_{wtd, mean}\right) - \left(EA_{range} + lambda4w_{low}\right)\right|\right)$; abs((PE_wtd_range .* IP_wtd_mean) - (EA_range + lambda4w_low)); abs((newdata$PE_wtd_range * newdata$IP_wtd_mean) - (newdata$EA_range + newdata$lambda4w_low)); PE_wtd_range,IP_wtd_mean,EA_range,lambda4w_low
+# 1;  2; W * mK^-1;                                        3|0|div|41|37|abd|mult; ((lambda3 / lambda) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda3 }{ lambda } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda3 ./ lambda) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda3 / newdata$lambda) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda3,lambda,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 13 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb1O1       ,  1.380000000000000e+00,  8.171490564358413e+00,  8.803690000000000e+00,  6.989375731565087e-03,  0.000000000000000e+00

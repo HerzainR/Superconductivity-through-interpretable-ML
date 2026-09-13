@@ -1,0 +1,18 @@
+# c0 + a0 * (|ThermalCond_wtd_std - ThermalCond_mean|) + a1 * (w_log / lambda) + a2 * ((PE_wtd_std-4.782125e-01) * (lambda4w_low-4.508416e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.37154734238662; Max AE: 1.37154734238662
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  2.318638797200696e-02, -1.309108656293574e+02, -1.016560969700983e+02,  1.941580321500571e+05,  5.084453443444842e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        42|37|abd; (|ThermalCond_wtd_std - ThermalCond_mean|); $\left(\left|ThermalCond_{wtd, std} - ThermalCond_{mean}\right|\right)$; abs(ThermalCond_wtd_std - ThermalCond_mean); abs(newdata$ThermalCond_wtd_std - newdata$ThermalCond_mean); ThermalCond_wtd_std,ThermalCond_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               30|2|mult:-4.7821253479230e-01,-4.5084164555468e-02; ((PE_wtd_std-4.782125e-01) * (lambda4w_low-4.508416e-02)); $\left(\left(PE_{wtd, std}-4.782e-01\right) * \left(lambda4w_{low}-4.508e-02\right)\right)$; ((PE_wtd_std-4.782125e-01) .* (lambda4w_low-4.508416e-02)); ((newdata$PE_wtd_std-4.782125e-01) * (newdata$lambda4w_low-4.508416e-02)); PE_wtd_std,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 10 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Be2Ta3      ,  1.000000000000000e+00, -3.715473423866189e-01,  5.834360000000000e+01,  4.241203330647327e-02,  1.988025200637339e-02,  3.936827538999999e-06

@@ -1,0 +1,19 @@
+# c0 + a0 * ((ThermalCond_mean-1.346317e+02) * (lambda3+6.309874e+01)) + a1 * ((PE_std-5.133601e-01) * (lambda3-2.220876e+00)) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_wtd_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.216899237069942; Max AE: 0.216899237069942
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.745157524975116e-04, -1.904468436478609e+00,  1.996090356284094e+05,  3.178593520088177e+02, -4.039178073575129e+02,  5.595096457831978e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|3|mult:-1.3463166557020e+02,6.3098739901037e+01; ((ThermalCond_mean-1.346317e+02) * (lambda3+6.309874e+01)); $\left(\left(ThermalCond_{mean}-1.346e+02\right) * \left(lambda3+6.310e+01\right)\right)$; ((ThermalCond_mean-1.346317e+02) .* (lambda3+6.309874e+01)); ((newdata$ThermalCond_mean-1.346317e+02) * (newdata$lambda3+6.309874e+01)); ThermalCond_mean,lambda3
+# 1;  1; Unitless;                                         29|3|mult:-5.1336014488026e-01,-2.2208756838980e+00; ((PE_std-5.133601e-01) * (lambda3-2.220876e+00)); $\left(\left(PE_{std}-5.134e-01\right) * \left(lambda3-2.221e+00\right)\right)$; ((PE_std-5.133601e-01) .* (lambda3-2.220876e+00)); ((newdata$PE_std-5.133601e-01) * (newdata$lambda3-2.220876e+00)); PE_std,lambda3
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|14|div; (w_log / at_rad_wtd_mean); $\left(\frac{ w_{log} }{ at_{rad, wtd, mean} } \right)$; (w_log ./ at_rad_wtd_mean); (newdata$w_log / newdata$at_rad_wtd_mean); w_log,at_rad_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 8 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Rh1Te2      ,  7.550000000000000e-01,  5.381007629300577e-01, -3.669957841325456e+03,  9.262254977034555e-01,  1.767172329000000e-06,  3.880890000000000e-03,  8.677241082322543e-03

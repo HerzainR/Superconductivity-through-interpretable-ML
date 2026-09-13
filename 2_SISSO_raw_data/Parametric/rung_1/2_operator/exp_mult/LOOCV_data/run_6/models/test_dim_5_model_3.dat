@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_mean / at_mass_mean) + a1 * (ThermalCond_mean * PE_mean) + a2 * (w_log / lambda) + a3 * ((PE_wtd_range-4.536034e-01) * (lambda4w_low-4.233781e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.381355487280845; Max AE: 0.381355487280845
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.196847870453433e+02,  1.289331333176870e-02, -1.167402572259695e+02, -1.236988630784627e+02,  1.920404463432383e+05,  5.219616211793704e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 1;  1; W * mK^-1;                                        37|25|mult; (ThermalCond_mean * PE_mean); $\left(ThermalCond_{mean} PE_{mean}\right)$; (ThermalCond_mean .* PE_mean); (newdata$ThermalCond_mean * newdata$PE_mean); ThermalCond_mean,PE_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               28|2|mult:-4.5360341097782e-01,-4.2337813986146e-02; ((PE_wtd_range-4.536034e-01) * (lambda4w_low-4.233781e-02)); $\left(\left(PE_{wtd, range}-4.536e-01\right) * \left(lambda4w_{low}-4.234e-02\right)\right)$; ((PE_wtd_range-4.536034e-01) .* (lambda4w_low-4.233781e-02)); ((newdata$PE_wtd_range-4.536034e-01) * (newdata$lambda4w_low-4.233781e-02)); PE_wtd_range,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 6 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Sb1V3       ,  6.500000000000000e-01,  2.686445127191552e-01,  9.235583225633115e-03,  5.032400000000001e+01,  4.013221854948473e-02,  1.210998222283408e-02,  8.792838143999999e-06

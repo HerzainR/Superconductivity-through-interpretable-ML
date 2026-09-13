@@ -1,0 +1,17 @@
+# c0 + a0 * ((at_rad_wtd_std^6) * (lambda3 * w_log)) + a1 * (exp(7.594188e+00*((EA_wtd_std-7.923327e-01) * (lambda4w_low-4.856342e-03)))) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.16531912363152; Max AE: 1.16531912363152
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.991616683015900e+04, -1.685050034402714e+01, -6.988507963832925e+03,  1.986214536226182e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^6 * eV;                                        18|sp|3|1|mult|mult; ((at_rad_wtd_std^6) * (lambda3 * w_log)); $\left(\left(at_{rad, wtd, std}^6\right) \left(lambda3 w_{log}\right)\right)$; ((at_rad_wtd_std).^6 .* (lambda3 .* w_log)); ((newdata$at_rad_wtd_std)^6 * (newdata$lambda3 * newdata$w_log)); at_rad_wtd_std,lambda3,w_log
+# 1;  2; Unitless;                                         36|2|mult|exp:7.5941881734012e+00,0.0000000000000e+00,-7.9233268131579e-01,-4.8563419032930e-03; (exp(7.594188e+00*((EA_wtd_std-7.923327e-01) * (lambda4w_low-4.856342e-03)))); $\left(\exp{ \left(7.594e+00\left(\left(EA_{wtd, std}-7.923e-01\right) * \left(lambda4w_{low}-4.856e-03\right)\right) \right)}\right)$; exp(7.594188e+00.*((EA_wtd_std-7.923327e-01) .* (lambda4w_low-4.856342e-03))); exp(7.594188e+00*((newdata$EA_wtd_std-7.923327e-01) * (newdata$lambda4w_low-4.856342e-03))); EA_wtd_std,lambda4w_low
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 58 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ga1         ,  5.527454545000000e+00,  4.362135421368480e+00,  0.000000000000000e+00,  9.198545814330970e-01,  0.000000000000000e+00

@@ -1,0 +1,18 @@
+# c0 + a0 * ((EA_wtd_mean-4.896590e+00) * (ThermalCond_mean+2.541614e+02)) + a1 * (w_log / lambda) + a2 * ((PE_std-5.108956e-01) * (lambda4w_low-4.172608e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.98660240677234; Max AE: 3.98660240677234
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -4.168954191542383e-03, -1.321351615701447e+02, -1.052324317384015e+02,  1.896674128390256e+05,  4.694327971718359e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   32|37|mult:-4.8965899199010e+00,2.5416138994178e+02; ((EA_wtd_mean-4.896590e+00) * (ThermalCond_mean+2.541614e+02)); $\left(\left(EA_{wtd, mean}-4.897e+00\right) * \left(ThermalCond_{mean}+2.542e+02\right)\right)$; ((EA_wtd_mean-4.896590e+00) .* (ThermalCond_mean+2.541614e+02)); ((newdata$EA_wtd_mean-4.896590e+00) * (newdata$ThermalCond_mean+2.541614e+02)); EA_wtd_mean,ThermalCond_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               29|2|mult:-5.1089563703427e-01,-4.1726084020334e-02; ((PE_std-5.108956e-01) * (lambda4w_low-4.172608e-02)); $\left(\left(PE_{std}-5.109e-01\right) * \left(lambda4w_{low}-4.173e-02\right)\right)$; ((PE_std-5.108956e-01) .* (lambda4w_low-4.172608e-02)); ((newdata$PE_std-5.108956e-01) * (newdata$lambda4w_low-4.172608e-02)); PE_std,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 72 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C1Ta1       ,  8.637499999999999e+00,  4.650897593227655e+00, -1.447354055598347e+03,  3.234351038617036e-02, -5.019190455517412e-04,  1.248716800000000e-05

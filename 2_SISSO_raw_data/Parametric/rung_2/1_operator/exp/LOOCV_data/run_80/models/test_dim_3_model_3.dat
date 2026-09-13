@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + (ThermalCond_mean / ThermalCond_wtd_mean)) + a1 * ((exp(-1.0 * lambda3)) * (PE_wtd_range * lambda4w_low)) + a2 * ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 32.3838802152867; Max AE: 32.3838802152867
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.104896083901357e+00,  1.249001241611676e+03,  1.987389398416969e-02, -2.881384375884741e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|37|38|div|add; (sin(lambda) + (ThermalCond_mean / ThermalCond_wtd_mean)); $\left(\left(\sin{ lambda }\right) + \left(\frac{ ThermalCond_{mean} }{ ThermalCond_{wtd, mean} } \right)\right)$; (sin(lambda) + (ThermalCond_mean ./ ThermalCond_wtd_mean)); (sin(newdata$lambda) + (newdata$ThermalCond_mean / newdata$ThermalCond_wtd_mean)); lambda,ThermalCond_mean,ThermalCond_wtd_mean
+# 1;  2; eV;                                               3|nexp|28|2|mult|mult; ((exp(-1.0 * lambda3)) * (PE_wtd_range * lambda4w_low)); $\left(\left(\exp{ \left(-lambda3 \right) } \right) \left(PE_{wtd, range} lambda4w_{low}\right)\right)$; (exp(-1.0 * (lambda3)) .* (PE_wtd_range .* lambda4w_low)); (exp(-1.0 * (newdata$lambda3)) * (newdata$PE_wtd_range * newdata$lambda4w_low)); lambda3,PE_wtd_range,lambda4w_low
+# 2;  2; W * mK^-1;                                        41|37|abd|27|3|abd|mult; ((|ThermalCond_std - ThermalCond_mean|) * (|PE_range - lambda3|)); $\left(\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right) \left(\left|PE_{range} - lambda3\right|\right)\right)$; (abs(ThermalCond_std - ThermalCond_mean) .* abs(PE_range - lambda3)); (abs(newdata$ThermalCond_std - newdata$ThermalCond_mean) * abs(newdata$PE_range - newdata$lambda3)); ThermalCond_std,ThermalCond_mean,PE_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  6.016119784713253e+00,  1.886562750464610e+00,  2.219511502905435e-03,  1.347246000000000e+01

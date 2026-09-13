@@ -1,0 +1,17 @@
+# c0 + a0 * (EA_mean / at_mass_wtd_mean) + a1 * (lambda4w_low - (4.629261e-01*lambda)) + a2 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.93933692814813; Max AE: 5.93933692814813
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -9.997247368681739e+01, -1.200114157620590e+01,  1.521252722810663e+05, -4.827339541502241e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g^-1 * mol;                                  31|8|div; (EA_mean / at_mass_wtd_mean); $\left(\frac{ EA_{mean} }{ at_{mass, wtd, mean} } \right)$; (EA_mean ./ at_mass_wtd_mean); (newdata$EA_mean / newdata$at_mass_wtd_mean); EA_mean,at_mass_wtd_mean
+# 1;  1; eV;                                               2|0|sub:4.6292613571446e-01,0.0000000000000e+00; (lambda4w_low - (4.629261e-01*lambda)); $\left(lambda4w_{low} - \left(4.629e-01lambda\right)\right)$; (lambda4w_low - (4.629261e-01.*lambda)); (newdata$lambda4w_low - (4.629261e-01*newdata$lambda)); lambda4w_low,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 42 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Hg0.5In0.5  ,  3.810000000000000e+00,  9.749336928148134e+00,  9.511429567864049e-04, -8.603459788610444e-01,  1.331205300000000e-08

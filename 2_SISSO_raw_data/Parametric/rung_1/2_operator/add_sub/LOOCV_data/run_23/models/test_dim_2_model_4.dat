@@ -1,0 +1,16 @@
+# c0 + a0 * (IP_mean / lambda) + a1 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.04275757226192; Max AE: 1.04275757226192
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -3.703977507112950e-01,  1.461825285034362e+05,  7.026491505781410e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               19|0|div; (IP_mean / lambda); $\left(\frac{ IP_{mean} }{ lambda } \right)$; (IP_mean ./ lambda); (newdata$IP_mean / newdata$lambda); IP_mean,lambda
+# 1;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 23 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Be2Nb1      ,  2.150000000000000e+00,  3.192757572261919e+00,  1.661363636363636e+01,  1.587001969700000e-05

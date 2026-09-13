@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean + 2.605185e+01*L_avg) + a1 * (at_rad_wtd_range^6) + a2 * (w_log / lambda) + a3 * ((EA_range-1.668140e+00) * (lambda3-4.983304e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.00531650862966; Max AE: 6.00531650862966
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.932110023389108e-02,  2.727283991904613e+02, -1.365816932202412e+02, -6.185376133291939e-01,  2.042970990434280e+05,  1.026448908117066e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        37|4|add:2.6051846303452e+01,0.0000000000000e+00; (ThermalCond_mean + 2.605185e+01*L_avg); $\left(ThermalCond_{mean} + 26.1L_{avg}\right)$; (ThermalCond_mean + (2.605185e+01.*L_avg)); (newdata$ThermalCond_mean + (2.605185e+01*newdata$L_avg)); ThermalCond_mean,L_avg
+# 1;  1; AA^6;                                             16|sp; (at_rad_wtd_range^6); $\left(at_{rad, wtd, range}^6\right)$; (at_rad_wtd_range).^6; (newdata$at_rad_wtd_range)^6; at_rad_wtd_range
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               33|3|mult:-1.6681399603100e+00,-4.9833043555510e-01; ((EA_range-1.668140e+00) * (lambda3-4.983304e-01)); $\left(\left(EA_{range}-1.668e+00\right) * \left(lambda3-4.983e-01\right)\right)$; ((EA_range-1.668140e+00) .* (lambda3-4.983304e-01)); ((newdata$EA_range-1.668140e+00) * (newdata$lambda3-4.983304e-01)); EA_range,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 42 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Hg0.5In0.5  ,  3.810000000000000e+00,  9.815316508629657e+00,  1.706235073513140e+02,  1.562500000000001e-08,  1.228297486395439e-03, -9.146206578366209e+00,  1.331205300000000e-08

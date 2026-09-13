@@ -1,0 +1,19 @@
+# c0 + a0 * (at_mass_wtd_range / lambda) + a1 * ((PE_wtd_mean-2.159684e+00) * (lambda3-2.884227e+00)) + a2 * (w_log / lambda) + a3 * (w_log^3) + a4 * (w_log / PE_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.46506170043962; Max AE: 6.46506170043962
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.591692011184536e-02, -1.449746173881055e+00, -3.215039323197533e+02,  1.680564885650326e+05,  7.821237565623055e+02,  3.320358380450850e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; g * mol^-1;                                       10|0|div; (at_mass_wtd_range / lambda); $\left(\frac{ at_{mass, wtd, range} }{ lambda } \right)$; (at_mass_wtd_range ./ lambda); (newdata$at_mass_wtd_range / newdata$lambda); at_mass_wtd_range,lambda
+# 1;  1; Unitless;                                         26|3|mult:-2.1596843501253e+00,-2.8842268213417e+00; ((PE_wtd_mean-2.159684e+00) * (lambda3-2.884227e+00)); $\left(\left(PE_{wtd, mean}-2.160e+00\right) * \left(lambda3-2.884e+00\right)\right)$; ((PE_wtd_mean-2.159684e+00) .* (lambda3-2.884227e+00)); ((newdata$PE_wtd_mean-2.159684e+00) * (newdata$lambda3-2.884227e+00)); PE_wtd_mean,lambda3
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 4;  1; eV;                                               1|25|div; (w_log / PE_mean); $\left(\frac{ w_{log} }{ PE_{mean} } \right)$; (w_log ./ PE_mean); (newdata$w_log / newdata$PE_mean); w_log,PE_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 63 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C1Mo2       ,  6.021666667000000e+00, -4.433950334396227e-01,  8.017709004943048e+01, -3.627318940408923e-01,  5.506125080593166e-02,  1.681656832800000e-05,  1.087898089171974e-02

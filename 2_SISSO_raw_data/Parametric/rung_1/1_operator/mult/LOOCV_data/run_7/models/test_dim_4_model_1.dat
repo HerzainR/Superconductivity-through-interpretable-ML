@@ -1,0 +1,18 @@
+# c0 + a0 * ((ThermalCond_mean+2.663786e+02) * (EA_wtd_mean-5.063144e+00)) + a1 * (w_log / lambda) + a2 * ((PE_wtd_range-4.532289e-01) * (lambda4w_low-4.275882e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.17301291955671; Max AE: 4.17301291955671
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -4.340308772225046e-03, -1.297983882205298e+02, -1.117633239423886e+02,  1.877425273621961e+05, -1.261920896412372e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV * mK^-1;                                   37|32|mult:2.6637864916202e+02,-5.0631444878970e+00; ((ThermalCond_mean+2.663786e+02) * (EA_wtd_mean-5.063144e+00)); $\left(\left(ThermalCond_{mean}+2.664e+02\right) * \left(EA_{wtd, mean}-5.063e+00\right)\right)$; ((ThermalCond_mean+2.663786e+02) .* (EA_wtd_mean-5.063144e+00)); ((newdata$ThermalCond_mean+2.663786e+02) * (newdata$EA_wtd_mean-5.063144e+00)); ThermalCond_mean,EA_wtd_mean
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               28|2|mult:-4.5322885717594e-01,-4.2758824449611e-02; ((PE_wtd_range-4.532289e-01) * (lambda4w_low-4.275882e-02)); $\left(\left(PE_{wtd, range}-4.532e-01\right) * \left(lambda4w_{low}-4.276e-02\right)\right)$; ((PE_wtd_range-4.532289e-01) .* (lambda4w_low-4.275882e-02)); ((newdata$PE_wtd_range-4.532289e-01) * (newdata$lambda4w_low-4.275882e-02)); PE_wtd_range,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 7 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Al1Ni2Zr1   ,  6.899999999999999e-01,  4.863012919556709e+00, -1.633119604209224e+03,  9.591494124230554e-03,  8.699162200388732e-03,  6.294227929999998e-07

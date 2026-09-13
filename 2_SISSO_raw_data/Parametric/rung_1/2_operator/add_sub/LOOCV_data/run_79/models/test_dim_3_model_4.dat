@@ -1,0 +1,17 @@
+# c0 + a0 * (at_rad_wtd_range + 3.691726e-02*density) + a1 * (w_log / lambda) + a2 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 12.1663739507497; Max AE: 12.1663739507497
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  4.722438066428190e+00, -1.374360804250179e+02,  2.045779256274173e+05,  2.880719693363138e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA;                                               16|5|add:3.6917263335564e-02,0.0000000000000e+00; (at_rad_wtd_range + 3.691726e-02*density); $\left(at_{rad, wtd, range} + 0.0369density\right)$; (at_rad_wtd_range + (3.691726e-02.*density)); (newdata$at_rad_wtd_range + (3.691726e-02*newdata$density)); at_rad_wtd_range,density
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  4.542626049250303e+00,  4.290530518029246e-01,  4.310416493474105e-03,  1.115157653000000e-06

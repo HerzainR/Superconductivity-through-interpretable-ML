@@ -1,0 +1,19 @@
+# c0 + a0 * ((at_rad_wtd_std-4.264038e-01) * (IP_wtd_mean-3.580754e+00)) + a1 * (at_mass_wtd_mean * w_log) + a2 * (w_log / lambda) + a3 * ((EA_wtd_std-7.866192e-01) * (lambda3-3.783725e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.41804486496711; Max AE: 1.41804486496711
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  1.691497042988576e+00,  2.168740128558085e+00, -1.675263974915467e+02, -1.177564397756357e+00,  2.154402552201156e+05,  4.549939843287376e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * eV;                                          18|20|mult:-4.2640378979963e-01,-3.5807535038253e+00; ((at_rad_wtd_std-4.264038e-01) * (IP_wtd_mean-3.580754e+00)); $\left(\left(at_{rad, wtd, std}-4.264e-01\right) * \left(IP_{wtd, mean}-3.581e+00\right)\right)$; ((at_rad_wtd_std-4.264038e-01) .* (IP_wtd_mean-3.580754e+00)); ((newdata$at_rad_wtd_std-4.264038e-01) * (newdata$IP_wtd_mean-3.580754e+00)); at_rad_wtd_std,IP_wtd_mean
+# 1;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               36|3|mult:-7.8661916691357e-01,-3.7837253858957e-01; ((EA_wtd_std-7.866192e-01) * (lambda3-3.783725e-01)); $\left(\left(EA_{wtd, std}-7.866e-01\right) * \left(lambda3-3.784e-01\right)\right)$; ((EA_wtd_std-7.866192e-01) .* (lambda3-3.783725e-01)); ((newdata$EA_wtd_std-7.866192e-01) * (newdata$lambda3-3.783725e-01)); EA_wtd_std,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 45 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ba1Ge3      ,  4.000000000000000e+00,  5.418044864967106e+00, -5.472251977604748e-02,  8.773864840000000e-01,  8.531951640759931e-03, -2.372649381212329e-01,  9.644302719999999e-07

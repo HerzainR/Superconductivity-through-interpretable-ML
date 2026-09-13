@@ -1,0 +1,15 @@
+# c0 + a0 * (((ThermalCond_mean-8.158220e-01) * (lambda4w_low+1.594675e-02)) - (5.614127e+01*((EA_mean-8.837214e-01) / (at_mass_wtd_mean-1.447965e+01))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 41.1476976064324; Max AE: 41.1476976064324
+# Coefficients
+# Task   a0                      c0
+# all ,  6.653438414921101e-01,  2.525655641817642e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * eV * mK^-1;                                   37|2|mult|31|8|div|sub:5.6141267429010e+01,0.0000000000000e+00,-8.8372142454643e-01,-1.4479650900289e+01,-8.1582197528340e-01,1.5946748977273e-02; (((ThermalCond_mean-8.158220e-01) * (lambda4w_low+1.594675e-02)) - (5.614127e+01*((EA_mean-8.837214e-01) / (at_mass_wtd_mean-1.447965e+01)))); $\left(\left(\left(ThermalCond_{mean}-8.158e-01\right) * \left(lambda4w_{low}+1.595e-02\right)\right) - \left(5.614e+01\left(\frac{ EA_{mean} -8.837e-01 }{ at_{mass, wtd, mean}-1.448e+01 } \right)\right)\right)$; (((ThermalCond_mean-8.158220e-01) .* (lambda4w_low+1.594675e-02)) - (5.614127e+01.*((EA_mean-8.837214e-01) ./ (at_mass_wtd_mean-1.447965e+01)))); (((newdata$ThermalCond_mean-8.158220e-01) * (newdata$lambda4w_low+1.594675e-02)) - (5.614127e+01*((newdata$EA_mean-8.837214e-01) / (newdata$at_mass_wtd_mean-1.447965e+01)))); ThermalCond_mean,lambda4w_low,EA_mean,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Se2Ta1      ,  1.250000000000000e-01,  4.127269760643237e+01,  5.823611724987193e+01

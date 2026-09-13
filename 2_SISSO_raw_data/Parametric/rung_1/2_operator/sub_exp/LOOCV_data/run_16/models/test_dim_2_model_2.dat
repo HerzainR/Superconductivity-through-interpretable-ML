@@ -1,0 +1,16 @@
+# c0 + a0 * cos(lambda) + a1 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 7.47687860412656; Max AE: 7.47687860412656
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -5.043882259780557e+00,  1.424839417377827e+05,  6.120633967023702e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         0|cos; cos(lambda); $\left(\cos{ lambda }\right)$; cos(lambda); cos(newdata$lambda); lambda;[-1.000000000000000e+00, 1.000000000000000e+00]
+# 1;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+S2Ta1       ,  1.488116666500000e+00,  8.964995270626563e+00, -5.362632371382530e-01,  9.791466569999998e-07

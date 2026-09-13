@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + (PE_wtd_range^2)) + a1 * ((PE_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.54520395925796; Max AE: 0.54520395925796
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.825666692289285e+00,  4.083081275451620e-01, -8.404374884299992e+03,  2.579483198390871e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|sq|add; (sin(lambda) + (PE_wtd_range^2)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, range}^2\right)\right)$; (sin(lambda) + (PE_wtd_range)^2); (sin(newdata$lambda) + (newdata$PE_wtd_range)^2); lambda,PE_wtd_range
+# 1;  2; W * eV * mK^-1;                                   25|2|mult|41|37|abd|mult; ((PE_mean * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(PE_{mean} lambda4w_{low}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((PE_mean .* lambda4w_low) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$PE_mean * newdata$lambda4w_low) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); PE_mean,lambda4w_low,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 57 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+N1Ti1       ,  5.387500000000000e+00,  4.842296040742040e+00,  1.198265618066947e+00,  4.478415600000046e-04,  0.000000000000000e+00

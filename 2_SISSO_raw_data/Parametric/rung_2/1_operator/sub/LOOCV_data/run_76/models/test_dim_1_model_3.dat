@@ -1,0 +1,15 @@
+# c0 + a0 * (((IP_wtd_std-1.509830e+00) / (at_mass_wtd_mean-1.566431e+01)) - (5.808863e+00*((EA_std-8.300731e-01) * (lambda4w_low-1.783118e-03))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.67983365218893; Max AE: 4.67983365218893
+# Coefficients
+# Task   a0                      c0
+# all ,  1.023641470048675e+01,  3.518595767103077e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV * g^-1 * mol;                                  24|8|div|35|2|mult|sub:5.8088634161985e+00,0.0000000000000e+00,-8.3007306032018e-01,-1.7831176416744e-03,-1.5098298888380e+00,-1.5664312553632e+01; (((IP_wtd_std-1.509830e+00) / (at_mass_wtd_mean-1.566431e+01)) - (5.808863e+00*((EA_std-8.300731e-01) * (lambda4w_low-1.783118e-03)))); $\left(\left(\frac{ IP_{wtd, std} -1.510e+00 }{ at_{mass, wtd, mean}-1.566e+01 } \right) - \left(5.809e+00\left(\left(EA_{std}-8.301e-01\right) * \left(lambda4w_{low}-1.783e-03\right)\right)\right)\right)$; (((IP_wtd_std-1.509830e+00) ./ (at_mass_wtd_mean-1.566431e+01)) - (5.808863e+00.*((EA_std-8.300731e-01) .* (lambda4w_low-1.783118e-03)))); (((newdata$IP_wtd_std-1.509830e+00) / (newdata$at_mass_wtd_mean-1.566431e+01)) - (5.808863e+00*((newdata$EA_std-8.300731e-01) * (newdata$lambda4w_low-1.783118e-03)))); IP_wtd_std,at_mass_wtd_mean,EA_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 76 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+C1Mo1       ,  1.015200000000000e+01,  5.472166347811069e+00,  1.908451970605585e-01

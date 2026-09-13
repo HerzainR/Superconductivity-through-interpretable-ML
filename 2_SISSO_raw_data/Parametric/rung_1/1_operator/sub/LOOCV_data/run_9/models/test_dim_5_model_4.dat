@@ -1,0 +1,19 @@
+# c0 + a0 * (lambda^6) + a1 * (EA_std * lambda4w_low) + a2 * (w_log^3) + a3 * (lambda4w_low / lambda3) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.31148264445768; Max AE: 3.31148264445768
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  8.826370730738586e-03, -5.557603303959453e+01,  1.930617397975485e+05,  6.259328203184772e+02, -5.930199705252428e+02,  2.721051682389999e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         0|sp; (lambda^6); $\left(lambda^6\right)$; (lambda).^6; (newdata$lambda)^6; lambda
+# 1;  1; eV^2;                                             35|2|mult; (EA_std * lambda4w_low); $\left(EA_{std} lambda4w_{low}\right)$; (EA_std .* lambda4w_low); (newdata$EA_std * newdata$lambda4w_low); EA_std,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               2|3|div; (lambda4w_low / lambda3); $\left(\frac{ lambda4w_{low} }{ lambda3 } \right)$; (lambda4w_low ./ lambda3); (newdata$lambda4w_low / newdata$lambda3); lambda4w_low,lambda3
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 9 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Zr1         ,  9.966666670000000e-01,  4.308149311457679e+00,  1.071696007160877e-01,  0.000000000000000e+00,  2.072671874999999e-06,  8.797385221614688e-03,  7.285714285714285e-03

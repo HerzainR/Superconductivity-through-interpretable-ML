@@ -1,0 +1,18 @@
+# c0 + a0 * (w_log / lambda) + a1 * ((at_mass_range-6.180686e+01) * (L_avg-5.016205e+00)) + a2 * ((PE_std-5.133819e-01) * (lambda3-2.098310e+00)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.24455925805242; Max AE: 5.24455925805242
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.252399296177442e+02, -1.477694192754326e-02, -1.708355053885604e+00,  2.006199267589045e+05,  5.500813650799059e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 1;  1; AA * g * mol^-1;                                  9|4|mult:-6.1806855028277e+01,-5.0162046229905e+00; ((at_mass_range-6.180686e+01) * (L_avg-5.016205e+00)); $\left(\left(at_{mass, range}-6.181e+01\right) * \left(L_{avg}-5.016e+00\right)\right)$; ((at_mass_range-6.180686e+01) .* (L_avg-5.016205e+00)); ((newdata$at_mass_range-6.180686e+01) * (newdata$L_avg-5.016205e+00)); at_mass_range,L_avg
+# 2;  1; Unitless;                                         29|3|mult:-5.1338192543729e-01,-2.0983098127454e+00; ((PE_std-5.133819e-01) * (lambda3-2.098310e+00)); $\left(\left(PE_{std}-5.134e-01\right) * \left(lambda3-2.098e+00\right)\right)$; ((PE_std-5.133819e-01) .* (lambda3-2.098310e+00)); ((newdata$PE_std-5.133819e-01) * (newdata$lambda3-2.098310e+00)); PE_std,lambda3
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 70 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Tc1         ,  7.794166667000000e+00,  2.549607408947580e+00,  1.199762086838304e-02,  1.084651356216291e+02,  2.403601875373778e-01,  2.815166528000000e-06

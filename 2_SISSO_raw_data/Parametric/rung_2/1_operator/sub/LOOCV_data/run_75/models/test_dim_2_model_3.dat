@@ -1,0 +1,16 @@
+# c0 + a0 * ((cos(2.731763e+00*lambda-3.014372e-01)) - (1.563596e-02*((at_mass_wtd_range-8.838402e+00) / (L_avg-2.828337e+00)))) + a1 * (((lambda3-1.886351e+00) / (density-2.713144e+00)) - (1.046527e+02*((EA_wtd_std-7.081435e-01) * (lambda4w_low-4.273286e-03))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 6.42115476277856; Max AE: 6.42115476277856
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.581355086702893e+00,  6.291337458141197e-01,  3.028421653765284e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|cos|10|4|div|sub:1.5635962528155e-02,0.0000000000000e+00,-8.8384022442484e+00,-2.8283368365395e+00,2.7317629623584e+00,-3.0143720301222e-01; ((cos(2.731763e+00*lambda-3.014372e-01)) - (1.563596e-02*((at_mass_wtd_range-8.838402e+00) / (L_avg-2.828337e+00)))); $\left(\left(\cos{ \left(2.732e+00lambda-3.014e-01 \right)}\right) - \left(1.564e-02\left(\frac{ at_{mass, wtd, range} -8.838e+00 }{ L_{avg}-2.828e+00 } \right)\right)\right)$; (cos(2.731763e+00.*lambda-3.014372e-01) - (1.563596e-02.*((at_mass_wtd_range-8.838402e+00) ./ (L_avg-2.828337e+00)))); (cos(2.731763e+00*newdata$lambda-3.014372e-01) - (1.563596e-02*((newdata$at_mass_wtd_range-8.838402e+00) / (newdata$L_avg-2.828337e+00)))); lambda,at_mass_wtd_range,L_avg
+# 1;  2; cm^3 * g^-1;                                      3|5|div|36|2|mult|sub:1.0465273843931e+02,0.0000000000000e+00,-7.0814346568630e-01,-4.2732860083264e-03,-1.8863506763149e+00,-2.7131440227045e+00; (((lambda3-1.886351e+00) / (density-2.713144e+00)) - (1.046527e+02*((EA_wtd_std-7.081435e-01) * (lambda4w_low-4.273286e-03)))); $\left(\left(\frac{ lambda3 -1.886e+00 }{ density-2.713e+00 } \right) - \left(1.047e+02\left(\left(EA_{wtd, std}-7.081e-01\right) * \left(lambda4w_{low}-4.273e-03\right)\right)\right)\right)$; (((lambda3-1.886351e+00) ./ (density-2.713144e+00)) - (1.046527e+02.*((EA_wtd_std-7.081435e-01) .* (lambda4w_low-4.273286e-03)))); (((newdata$lambda3-1.886351e+00) / (newdata$density-2.713144e+00)) - (1.046527e+02*((newdata$EA_wtd_std-7.081435e-01) * (newdata$lambda4w_low-4.273286e-03)))); lambda3,density,EA_wtd_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 75 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C2I2Y2      ,  9.917500000000000e+00,  3.496345237221445e+00, -6.649029546872635e-01, -9.275040323059245e-01

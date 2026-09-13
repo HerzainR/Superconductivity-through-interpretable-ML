@@ -1,0 +1,15 @@
+# c0 + a0 * (1.0 / lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 34.9792980848009; Max AE: 34.9792980848009
+# Coefficients
+# Task   a0                      c0
+# all , -2.147931386218951e+00,  6.921241984004475e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         0|inv; (1.0 / lambda); $\left(\frac{1.0}{ lambda }\right)$; (lambda).^(-1); (newdata$lambda)^(-1); lambda
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  3.420701915199145e+00,  1.629726205997392e+00

@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_wtd_std / w_log) + a1 * (ThermalCond_mean * L_avg) + a2 * (w_log / lambda) + a3 * ((PE_wtd_range-4.560049e-01) * (lambda3-2.053266e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.69056419346194; Max AE: 1.69056419346194
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.793368836752781e-04,  7.111303833427510e-03, -1.489973765211159e+02, -2.340120711770371e+00,  2.000315688854835e+05,  4.898479098537629e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * eV^-1 * mK^-1;                                42|1|div; (ThermalCond_wtd_std / w_log); $\left(\frac{ ThermalCond_{wtd, std} }{ w_{log} } \right)$; (ThermalCond_wtd_std ./ w_log); (newdata$ThermalCond_wtd_std / newdata$w_log); ThermalCond_wtd_std,w_log
+# 1;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; Unitless;                                         28|3|mult:-4.5600492904655e-01,-2.0532662796445e+00; ((PE_wtd_range-4.560049e-01) * (lambda3-2.053266e+00)); $\left(\left(PE_{wtd, range}-4.560e-01\right) * \left(lambda3-2.053e+00\right)\right)$; ((PE_wtd_range-4.560049e-01) .* (lambda3-2.053266e+00)); ((newdata$PE_wtd_range-4.560049e-01) * (newdata$lambda3-2.053266e+00)); PE_wtd_range,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pt1Te1      ,  5.900000000000000e-01,  2.280564193461940e+00,  4.503916449086162e+03,  1.752600000000000e+02,  9.401080019636722e-03,  5.535188726765340e-01,  4.494550960000001e-07

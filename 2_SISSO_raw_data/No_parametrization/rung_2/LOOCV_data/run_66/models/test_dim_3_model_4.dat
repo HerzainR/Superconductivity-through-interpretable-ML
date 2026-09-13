@@ -1,0 +1,17 @@
+# c0 + a0 * (|sin(PE_wtd_mean) - (PE_std * lambda)|) + a1 * ((density * lambda3) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 8.29144934384848; Max AE: 8.29144934384848
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.489647947746378e+00,  2.057734775192491e-03, -7.079202125513851e+03,  6.164390035749190e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         26|sin|29|0|mult|abd; (|sin(PE_wtd_mean) - (PE_std * lambda)|); $\left(\left|\left(\sin{ PE_{wtd, mean} }\right) - \left(PE_{std} lambda\right)\right|\right)$; abs(sin(PE_wtd_mean) - (PE_std .* lambda)); abs(sin(newdata$PE_wtd_mean) - (newdata$PE_std * newdata$lambda)); PE_wtd_mean,PE_std,lambda
+# 1;  2; W * cm^-3 * g * mK^-1;                            5|3|mult|41|37|abd|mult; ((density * lambda3) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(density lambda3\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((density .* lambda3) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$density * newdata$lambda3) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); density,lambda3,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 66 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Sn1Ta3      ,  6.692500000000000e+00,  1.498394934384848e+01,  5.715221767096499e-01,  5.529179072966999e+03, -1.117162499999999e-06

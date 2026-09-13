@@ -1,0 +1,19 @@
+# c0 + a0 * (lambda4w_low / ThermalCond_wtd_mean) + a1 * (EA_wtd_mean * lambda4w_low) + a2 * (EA_mean / at_mass_mean) + a3 * (w_log / lambda) + a4 * (w_log^2)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.37143204717399; Max AE: 3.37143204717399
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.140693462191955e+03,  7.448939447380346e+01, -1.424370107913407e+02, -2.235449030152190e+02,  1.432194084031786e+04,  6.039166788934618e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W^-1 * eV * mK;                                   2|38|div; (lambda4w_low / ThermalCond_wtd_mean); $\left(\frac{ lambda4w_{low} }{ ThermalCond_{wtd, mean} } \right)$; (lambda4w_low ./ ThermalCond_wtd_mean); (newdata$lambda4w_low / newdata$ThermalCond_wtd_mean); lambda4w_low,ThermalCond_wtd_mean
+# 1;  1; eV^2;                                             32|2|mult; (EA_wtd_mean * lambda4w_low); $\left(EA_{wtd, mean} lambda4w_{low}\right)$; (EA_wtd_mean .* lambda4w_low); (newdata$EA_wtd_mean * newdata$lambda4w_low); EA_wtd_mean,lambda4w_low
+# 2;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 3;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 4;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 71 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+P1Ru1Zr1    ,  8.496153846000000e+00,  5.124721798826010e+00,  7.085693657086848e-04,  2.500603200000000e-02,  9.952715531315380e-03,  1.040859875128428e-02,  1.734489000000000e-04

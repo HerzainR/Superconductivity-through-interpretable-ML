@@ -1,0 +1,19 @@
+# c0 + a0 * (IP_mean / w_log) + a1 * ((L_avg-5.099968e+00) * (at_mass_wtd_range-2.560082e+01)) + a2 * (w_log / lambda) + a3 * ((EA_std-8.338602e-01) * (lambda3-5.855550e-01)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.85393047806111; Max AE: 1.85393047806111
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.491169096933589e-03, -3.375983196227215e-02, -1.805371553663520e+02, -1.002983737482741e+00,  2.161508840029983e+05,  8.071357326384746e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         19|1|div; (IP_mean / w_log); $\left(\frac{ IP_{mean} }{ w_{log} } \right)$; (IP_mean ./ w_log); (newdata$IP_mean / newdata$w_log); IP_mean,w_log
+# 1;  1; AA * g * mol^-1;                                  4|10|mult:-5.0999677675211e+00,-2.5600819064905e+01; ((L_avg-5.099968e+00) * (at_mass_wtd_range-2.560082e+01)); $\left(\left(L_{avg}-5.100e+00\right) * \left(at_{mass, wtd, range}-2.560e+01\right)\right)$; ((L_avg-5.099968e+00) .* (at_mass_wtd_range-2.560082e+01)); ((newdata$L_avg-5.099968e+00) * (newdata$at_mass_wtd_range-2.560082e+01)); L_avg,at_mass_wtd_range
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               35|3|mult:-8.3386019386458e-01,-5.8555502754056e-01; ((EA_std-8.338602e-01) * (lambda3-5.855550e-01)); $\left(\left(EA_{std}-8.339e-01\right) * \left(lambda3-5.856e-01\right)\right)$; ((EA_std-8.338602e-01) .* (lambda3-5.855550e-01)); ((newdata$EA_std-8.338602e-01) * (newdata$lambda3-5.855550e-01)); EA_std,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 40 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Bi2K1       ,  3.575000000000000e+00,  1.721069521938886e+00,  1.146942800788955e+03,  7.775450821241088e+01,  5.556164383561644e-03, -1.065264401427286e-01,  1.303238430000000e-07

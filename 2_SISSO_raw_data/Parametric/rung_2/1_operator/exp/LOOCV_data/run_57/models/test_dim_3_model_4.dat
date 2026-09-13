@@ -1,0 +1,17 @@
+# c0 + a0 * ((PE_std * PE_wtd_range) / (exp(8.496626e-01*EA_mean))) + a1 * ((lambda^2) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.0190217202688; Max AE: 2.0190217202688
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  9.992590363909819e+00,  3.952555391854832e-02, -6.927386076543413e+03,  1.970719564239351e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         29|28|mult|31|exp:8.4966256238849e-01,0.0000000000000e+00|div; ((PE_std * PE_wtd_range) / (exp(8.496626e-01*EA_mean))); $\left(\frac{ \left(PE_{std} PE_{wtd, range}\right) }{ \left(\exp{ \left(8.497e-01EA_{mean} \right)}\right) } \right)$; ((PE_std .* PE_wtd_range) ./ exp(8.496626e-01.*EA_mean)); ((newdata$PE_std * newdata$PE_wtd_range) / exp(8.496626e-01*newdata$EA_mean)); PE_std,PE_wtd_range,EA_mean
+# 1;  2; W * mK^-1;                                        0|sq|41|37|abd|mult; ((lambda^2) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(lambda^2\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda)^2 .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda)^2 * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 57 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+N1Ti1       ,  5.387500000000000e+00,  7.406521720268795e+00,  5.439348414110641e-01,  1.224780180000013e-02,  0.000000000000000e+00

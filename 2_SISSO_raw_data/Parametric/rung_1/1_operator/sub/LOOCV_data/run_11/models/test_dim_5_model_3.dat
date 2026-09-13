@@ -1,0 +1,19 @@
+# c0 + a0 * (|ThermalCond_std - ThermalCond_mean|) + a1 * (IP_std * lambda3) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (at_rad_wtd_mean - (9.970436e+02*w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.6686532171774; Max AE: 11.6686532171774
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  2.485010659462651e-02, -1.292086719191273e-01,  1.941118531938503e+05,  4.743874059598453e+02,  4.442292358846270e-01,  2.735818734206930e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W * mK^-1;                                        41|37|abd; (|ThermalCond_std - ThermalCond_mean|); $\left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)$; abs(ThermalCond_std - ThermalCond_mean); abs(newdata$ThermalCond_std - newdata$ThermalCond_mean); ThermalCond_std,ThermalCond_mean
+# 1;  1; eV;                                               23|3|mult; (IP_std * lambda3); $\left(IP_{std} lambda3\right)$; (IP_std .* lambda3); (newdata$IP_std * newdata$lambda3); IP_std,lambda3
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA;                                               14|1|sub:9.9704358206739e+02,0.0000000000000e+00; (at_rad_wtd_mean - (9.970436e+02*w_log)); $\left(at_{rad, wtd, mean} - \left(9.970e+02w_{log}\right)\right)$; (at_rad_wtd_mean - (9.970436e+02.*w_log)); (newdata$at_rad_wtd_mean - (9.970436e+02*newdata$w_log)); at_rad_wtd_mean,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 11 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+C1Si1       ,  1.075000000000000e+00,  1.274365321717744e+01,  1.400000000000000e+02,  3.358349400000000e-01,  6.443297272900001e-05,  2.405800900000000e-02, -3.905147720508171e+01

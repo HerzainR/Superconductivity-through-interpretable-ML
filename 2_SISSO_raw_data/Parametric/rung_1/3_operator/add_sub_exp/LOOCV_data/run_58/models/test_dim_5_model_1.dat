@@ -1,0 +1,19 @@
+# c0 + a0 * (IP_wtd_std * lambda4w_low) + a1 * (at_rad_wtd_range + 3.787210e-03*at_mass_wtd_mean) + a2 * (w_log^3) + a3 * (w_log * lambda) + a4 * (w_log / at_rad_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.07208033556433; Max AE: 3.07208033556433
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -7.502398849719710e+00,  5.427946386999644e+00,  1.906309979166164e+05,  5.622424534076572e+02, -5.029497854806485e+02, -1.066353014484870e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV^2;                                             24|2|mult; (IP_wtd_std * lambda4w_low); $\left(IP_{wtd, std} lambda4w_{low}\right)$; (IP_wtd_std .* lambda4w_low); (newdata$IP_wtd_std * newdata$lambda4w_low); IP_wtd_std,lambda4w_low
+# 1;  1; AA;                                               16|8|add:3.7872095091603e-03,0.0000000000000e+00; (at_rad_wtd_range + 3.787210e-03*at_mass_wtd_mean); $\left(at_{rad, wtd, range} + 0.00379at_{mass, wtd, mean}\right)$; (at_rad_wtd_range + (3.787210e-03.*at_mass_wtd_mean)); (newdata$at_rad_wtd_range + (3.787210e-03*newdata$at_mass_wtd_mean)); at_rad_wtd_range,at_mass_wtd_mean
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 4;  1; AA^-1 * eV;                                       1|13|div; (w_log / at_rad_mean); $\left(\frac{ w_{log} }{ at_{rad, mean} } \right)$; (w_log ./ at_rad_mean); (newdata$w_log / newdata$at_rad_mean); w_log,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 58 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Ga1         ,  5.527454545000000e+00,  2.455374209435669e+00,  0.000000000000000e+00,  2.640556086071840e-01,  2.406418480000000e-07,  8.193605999999999e-03,  5.098360655737705e-03

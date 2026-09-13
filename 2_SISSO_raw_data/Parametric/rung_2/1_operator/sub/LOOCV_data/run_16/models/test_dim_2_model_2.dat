@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_mass_range+1.135678e+03) / (lambda3+2.236862e-01)) - (2.318347e+03*((PE_wtd_std-4.340188e-01) / (IP_wtd_mean-1.050818e+01)))) + a1 * (((at_mass_range+3.365342e+01) / (lambda-2.475647e+00)) - (2.358861e+00*(1.0 / (at_rad_mean-1.123838e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.074508893657; Max AE: 11.074508893657
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -5.539104224472202e-04, -1.757978823509342e-02,  3.097918359641106e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; g * mol^-1;                                       9|3|div|30|20|div|sub:2.3183468174511e+03,0.0000000000000e+00,-4.3401875176044e-01,-1.0508178487251e+01,1.1356780518038e+03,2.2368616170532e-01; (((at_mass_range+1.135678e+03) / (lambda3+2.236862e-01)) - (2.318347e+03*((PE_wtd_std-4.340188e-01) / (IP_wtd_mean-1.050818e+01)))); $\left(\left(\frac{ at_{mass, range} +1.136e+03 }{ lambda3+2.237e-01 } \right) - \left(2.318e+03\left(\frac{ PE_{wtd, std} -4.340e-01 }{ IP_{wtd, mean}-1.051e+01 } \right)\right)\right)$; (((at_mass_range+1.135678e+03) ./ (lambda3+2.236862e-01)) - (2.318347e+03.*((PE_wtd_std-4.340188e-01) ./ (IP_wtd_mean-1.050818e+01)))); (((newdata$at_mass_range+1.135678e+03) / (newdata$lambda3+2.236862e-01)) - (2.318347e+03*((newdata$PE_wtd_std-4.340188e-01) / (newdata$IP_wtd_mean-1.050818e+01)))); at_mass_range,lambda3,PE_wtd_std,IP_wtd_mean
+# 1;  2; g * mol^-1;                                       9|0|div|13|inv|sub:2.3588612014200e+00,0.0000000000000e+00,1.0000000000000e+00,-1.1238380799779e+00,3.3653422426174e+01,-2.4756472956242e+00; (((at_mass_range+3.365342e+01) / (lambda-2.475647e+00)) - (2.358861e+00*(1.0 / (at_rad_mean-1.123838e+00)))); $\left(\left(\frac{ at_{mass, range} +3.365e+01 }{ lambda-2.476e+00 } \right) - \left(2.359e+00\left(\frac{1}{ at_{rad, mean}-1.124e+00 }\right)\right)\right)$; (((at_mass_range+3.365342e+01) ./ (lambda-2.475647e+00)) - (2.358861e+00.*(at_rad_mean-1.123838e+00).^(-1))); (((newdata$at_mass_range+3.365342e+01) / (newdata$lambda-2.475647e+00)) - (2.358861e+00*(newdata$at_rad_mean-1.123838e+00)^(-1))); at_mass_range,lambda,at_rad_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 16 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+S2Ta1       ,  1.488116666500000e+00,  1.256262556015696e+01,  3.078863725369242e+02, -5.480867313270185e+02

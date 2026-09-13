@@ -1,0 +1,15 @@
+# c0 + a0 * ((IP_mean * lambda4w_low) * (w_log^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.969759697829505; Max AE: 0.969759697829505
+# Coefficients
+# Task   a0                      c0
+# all ,  2.144005489972830e+06,  3.080915322997536e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^5;                                             19|2|mult|1|cb|mult; ((IP_mean * lambda4w_low) * (w_log^3)); $\left(\left(IP_{mean} lambda4w_{low}\right) \left(w_{log}^3\right)\right)$; ((IP_mean .* lambda4w_low) .* (w_log).^3); ((newdata$IP_mean * newdata$lambda4w_low) * (newdata$w_log)^3); IP_mean,lambda4w_low,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 48 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Rh1Se2      ,  4.350000000000000e+00,  3.380240302170495e+00,  1.396101738418364e-07

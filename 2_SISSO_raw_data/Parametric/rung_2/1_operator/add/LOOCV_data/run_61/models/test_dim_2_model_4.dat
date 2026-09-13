@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_rad_wtd_range-6.782346e-01) * (at_mass_wtd_range-3.223504e+02)) + 2.191097e+02*((PE_wtd_mean-2.293915e+00) / (IP_mean-9.213733e+00))) + a1 * (((V_molar+9.623469e+01) / (density-2.705209e+00)) + 2.523521e+02*((EA_wtd_range-7.409092e-01) * (lambda3-3.834316e-01)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.921983163302354; Max AE: 0.921983163302354
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -1.574132315066291e-02, -6.407647567996784e-03,  6.334179247033964e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * g * mol^-1;                                  16|10|mult|26|19|div|add:2.1910973566263e+02,0.0000000000000e+00,-2.2939146919767e+00,-9.2137331776382e+00,-6.7823461320562e-01,-3.2235038294209e+02; (((at_rad_wtd_range-6.782346e-01) * (at_mass_wtd_range-3.223504e+02)) + 2.191097e+02*((PE_wtd_mean-2.293915e+00) / (IP_mean-9.213733e+00))); $\left(\left(\left(at_{rad, wtd, range}-6.782e-01\right) * \left(at_{mass, wtd, range}-3.224e+02\right)\right) + 219.0\left(\frac{ PE_{wtd, mean} -2.294e+00 }{ IP_{mean}-9.214e+00 } \right)\right)$; (((at_rad_wtd_range-6.782346e-01) .* (at_mass_wtd_range-3.223504e+02)) + (2.191097e+02.*((PE_wtd_mean-2.293915e+00) ./ (IP_mean-9.213733e+00)))); (((newdata$at_rad_wtd_range-6.782346e-01) * (newdata$at_mass_wtd_range-3.223504e+02)) + (2.191097e+02*((newdata$PE_wtd_mean-2.293915e+00) / (newdata$IP_mean-9.213733e+00)))); at_rad_wtd_range,at_mass_wtd_range,PE_wtd_mean,IP_mean
+# 1;  2; cm^6 * g^-1 * mol^-1;                             6|5|div|34|3|mult|add:2.5235212985006e+02,0.0000000000000e+00,-7.4090916291511e-01,-3.8343156382148e-01,9.6234690765743e+01,-2.7052093619136e+00; (((V_molar+9.623469e+01) / (density-2.705209e+00)) + 2.523521e+02*((EA_wtd_range-7.409092e-01) * (lambda3-3.834316e-01))); $\left(\left(\frac{ V_{molar} +9.623e+01 }{ density-2.705e+00 } \right) + 252.0\left(\left(EA_{wtd, range}-7.409e-01\right) * \left(lambda3-3.834e-01\right)\right)\right)$; (((V_molar+9.623469e+01) ./ (density-2.705209e+00)) + (2.523521e+02.*((EA_wtd_range-7.409092e-01) .* (lambda3-3.834316e-01)))); (((newdata$V_molar+9.623469e+01) / (newdata$density-2.705209e+00)) + (2.523521e+02*((newdata$EA_wtd_range-7.409092e-01) * (newdata$lambda3-3.834316e-01)))); V_molar,density,EA_wtd_range,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 61 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Ba1Bi3      ,  5.745000000000000e+00,  4.823016836697646e+00,  1.672936590538115e+02, -1.751440175161513e+02

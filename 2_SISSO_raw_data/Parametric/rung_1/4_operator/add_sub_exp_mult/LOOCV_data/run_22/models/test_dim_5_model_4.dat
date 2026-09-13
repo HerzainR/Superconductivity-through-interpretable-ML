@@ -1,0 +1,19 @@
+# c0 + a0 * (EA_mean / at_mass_mean) + a1 * (ThermalCond_mean * PE_wtd_mean) + a2 * (w_log / lambda) + a3 * ((PE_wtd_std-4.849936e-01) * (lambda4w_low-3.309111e-02)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.52214430733747; Max AE: 2.52214430733747
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -1.134831748655129e+02,  1.132110095737661e-02, -1.159931816151652e+02, -1.258935982543616e+02,  1.916025252357064e+05,  5.171387226998882e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 1;  1; W * mK^-1;                                        37|26|mult; (ThermalCond_mean * PE_wtd_mean); $\left(ThermalCond_{mean} PE_{wtd, mean}\right)$; (ThermalCond_mean .* PE_wtd_mean); (newdata$ThermalCond_mean * newdata$PE_wtd_mean); ThermalCond_mean,PE_wtd_mean
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV;                                               30|2|mult:-4.8499357282573e-01,-3.3091114593697e-02; ((PE_wtd_std-4.849936e-01) * (lambda4w_low-3.309111e-02)); $\left(\left(PE_{wtd, std}-4.850e-01\right) * \left(lambda4w_{low}-3.309e-02\right)\right)$; ((PE_wtd_std-4.849936e-01) .* (lambda4w_low-3.309111e-02)); ((newdata$PE_wtd_std-4.849936e-01) * (newdata$lambda4w_low-3.309111e-02)); PE_wtd_std,lambda4w_low
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 22 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pd2Sc1Sn1   ,  2.122500000000000e+00,  4.644644307337472e+00,  6.225637897460476e-03,  9.211577375000000e+01,  1.160700913583945e-02, -3.130073352206680e-03,  4.654843749999999e-07

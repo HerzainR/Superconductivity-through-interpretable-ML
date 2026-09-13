@@ -1,0 +1,16 @@
+# c0 + a0 * (((at_mass_wtd_mean-7.247712e+01) / (w_log-2.966132e-02)) + 3.638543e+01*((ThermalCond_wtd_range-4.459977e+01) / (PE_mean-2.149976e+00))) + a1 * (((ThermalCond_wtd_range+1.737117e+01) / (at_mass_mean-1.791244e+01)) + 1.847434e+02*((EA_range-1.649434e+00) * (lambda4w_low-1.644085e-02)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 5.04849023735747; Max AE: 5.04849023735747
+# Coefficients
+# Task   a0                      a1                      c0
+# all , -8.774108768547357e-05, -1.650060123375433e-01,  3.688352438657359e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV^-1 * g * mol^-1;                               8|1|div|40|25|div|add:3.6385427905849e+01,0.0000000000000e+00,-4.4599771366174e+01,-2.1499761887390e+00,-7.2477117033963e+01,-2.9661317732983e-02; (((at_mass_wtd_mean-7.247712e+01) / (w_log-2.966132e-02)) + 3.638543e+01*((ThermalCond_wtd_range-4.459977e+01) / (PE_mean-2.149976e+00))); $\left(\left(\frac{ at_{mass, wtd, mean} -7.248e+01 }{ w_{log}-2.966e-02 } \right) + 36.4\left(\frac{ ThermalCond_{wtd, range} -4.460e+01 }{ PE_{mean}-2.150e+00 } \right)\right)$; (((at_mass_wtd_mean-7.247712e+01) ./ (w_log-2.966132e-02)) + (3.638543e+01.*((ThermalCond_wtd_range-4.459977e+01) ./ (PE_mean-2.149976e+00)))); (((newdata$at_mass_wtd_mean-7.247712e+01) / (newdata$w_log-2.966132e-02)) + (3.638543e+01*((newdata$ThermalCond_wtd_range-4.459977e+01) / (newdata$PE_mean-2.149976e+00)))); at_mass_wtd_mean,w_log,ThermalCond_wtd_range,PE_mean
+# 1;  2; W * g^-1 * mK^-1 * mol;                           40|7|div|33|2|mult|add:1.8474336415287e+02,0.0000000000000e+00,-1.6494343799105e+00,-1.6440852590970e-02,1.7371166186005e+01,-1.7912435948192e+01; (((ThermalCond_wtd_range+1.737117e+01) / (at_mass_mean-1.791244e+01)) + 1.847434e+02*((EA_range-1.649434e+00) * (lambda4w_low-1.644085e-02))); $\left(\left(\frac{ ThermalCond_{wtd, range} +1.737e+01 }{ at_{mass, mean}-1.791e+01 } \right) + 185.0\left(\left(EA_{range}-1.649e+00\right) * \left(lambda4w_{low}-1.644e-02\right)\right)\right)$; (((ThermalCond_wtd_range+1.737117e+01) ./ (at_mass_mean-1.791244e+01)) + (1.847434e+02.*((EA_range-1.649434e+00) .* (lambda4w_low-1.644085e-02)))); (((newdata$ThermalCond_wtd_range+1.737117e+01) / (newdata$at_mass_mean-1.791244e+01)) + (1.847434e+02*((newdata$EA_range-1.649434e+00) * (newdata$lambda4w_low-1.644085e-02)))); ThermalCond_wtd_range,at_mass_mean,EA_range,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 72 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C1Ta1       ,  8.637499999999999e+00,  3.589009762642533e+00, -2.812286480533633e+03,  2.097473575641660e+00

@@ -1,0 +1,15 @@
+# c0 + a0 * (exp(3.549033e+00*((at_mass_wtd_mean-1.879000e+01) / (PE_mean-2.520161e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 12.8735074409897; Max AE: 12.8735074409897
+# Coefficients
+# Task   a0                      c0
+# all ,  1.541384381614301e-05,  3.835492559010274e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         8|25|div|exp:3.5490333396760e+00,0.0000000000000e+00,-1.8790001476005e+01,-2.5201608984287e+00; (exp(3.549033e+00*((at_mass_wtd_mean-1.879000e+01) / (PE_mean-2.520161e+00)))); $\left(\exp{ \left(3.549e+00\left(\frac{ at_{mass, wtd, mean} -1.879e+01 }{ PE_{mean}-2.520e+00 } \right) \right)}\right)$; exp(3.549033e+00.*((at_mass_wtd_mean-1.879000e+01) ./ (PE_mean-2.520161e+00))); exp(3.549033e+00*((newdata$at_mass_wtd_mean-1.879000e+01) / (newdata$PE_mean-2.520161e+00))); at_mass_wtd_mean,PE_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  3.835492559010274e+00, 1.679093155444700e-168

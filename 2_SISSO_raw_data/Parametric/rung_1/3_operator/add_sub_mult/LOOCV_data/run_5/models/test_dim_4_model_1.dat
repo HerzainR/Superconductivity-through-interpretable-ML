@@ -1,0 +1,18 @@
+# c0 + a0 * ((L_avg-5.010904e+00) * (at_mass_range-6.162697e+01)) + a1 * (w_log / lambda) + a2 * ((lambda3-4.502434e-01) * (EA_std-8.338638e-01)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.4899235773991; Max AE: 3.4899235773991
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.413415219908496e-02, -1.233408246780331e+02, -9.152084874987259e-01,  2.018376058288245e+05,  5.058120223569444e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * g * mol^-1;                                  4|9|mult:-5.0109041426545e+00,-6.1626965667560e+01; ((L_avg-5.010904e+00) * (at_mass_range-6.162697e+01)); $\left(\left(L_{avg}-5.011e+00\right) * \left(at_{mass, range}-6.163e+01\right)\right)$; ((L_avg-5.010904e+00) .* (at_mass_range-6.162697e+01)); ((newdata$L_avg-5.010904e+00) * (newdata$at_mass_range-6.162697e+01)); L_avg,at_mass_range
+# 1;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 2;  1; eV;                                               3|35|mult:-4.5024344662189e-01,-8.3386376046657e-01; ((lambda3-4.502434e-01) * (EA_std-8.338638e-01)); $\left(\left(lambda3-4.502e-01\right) * \left(EA_{std}-8.339e-01\right)\right)$; ((lambda3-4.502434e-01) .* (EA_std-8.338638e-01)); ((newdata$lambda3-4.502434e-01) * (newdata$EA_std-8.338638e-01)); lambda3,EA_std
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 5 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Pt1Te1      ,  5.900000000000000e-01,  4.079923577399097e+00, -1.975601944001440e+00,  9.401080019636722e-03, -6.850888962104806e-02,  4.494550960000001e-07

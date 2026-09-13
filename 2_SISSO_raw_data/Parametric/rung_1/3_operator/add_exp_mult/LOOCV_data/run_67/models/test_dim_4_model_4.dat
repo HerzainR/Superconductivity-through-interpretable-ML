@@ -1,0 +1,18 @@
+# c0 + a0 * (w_log / lambda) + a1 * ((L_avg-4.749832e+00) * (at_mass_range-8.611258e+01)) + a2 * ((PE_wtd_range-4.533147e-01) * (lambda4w_low-4.348627e-02)) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.41221094640762; Max AE: 4.41221094640762
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.230600755121918e+02, -1.414630356491957e-02, -9.673985759949265e+01,  2.010869711052894e+05,  5.651816469584869e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 1;  1; AA * g * mol^-1;                                  4|9|mult:-4.7498322774710e+00,-8.6112584395377e+01; ((L_avg-4.749832e+00) * (at_mass_range-8.611258e+01)); $\left(\left(L_{avg}-4.750e+00\right) * \left(at_{mass, range}-8.611e+01\right)\right)$; ((L_avg-4.749832e+00) .* (at_mass_range-8.611258e+01)); ((newdata$L_avg-4.749832e+00) * (newdata$at_mass_range-8.611258e+01)); L_avg,at_mass_range
+# 2;  1; eV;                                               28|2|mult:-4.5331473154743e-01,-4.3486266069524e-02; ((PE_wtd_range-4.533147e-01) * (lambda4w_low-4.348627e-02)); $\left(\left(PE_{wtd, range}-4.533e-01\right) * \left(lambda4w_{low}-4.349e-02\right)\right)$; ((PE_wtd_range-4.533147e-01) .* (lambda4w_low-4.348627e-02)); ((newdata$PE_wtd_range-4.533147e-01) * (newdata$lambda4w_low-4.348627e-02)); PE_wtd_range,lambda4w_low
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 67 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Ag1B2       ,  6.700000000000000e+00,  2.287789053592378e+00,  2.730325594977369e-02, -1.565662588692546e+01,  1.592434207184699e-02,  6.539203000000002e-06

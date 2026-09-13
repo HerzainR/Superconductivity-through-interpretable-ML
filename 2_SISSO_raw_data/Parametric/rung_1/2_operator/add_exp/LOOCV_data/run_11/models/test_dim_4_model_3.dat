@@ -1,0 +1,18 @@
+# c0 + a0 * (IP_wtd_std * lambda3) + a1 * (w_log^3) + a2 * (w_log * lambda) + a3 * (exp(4.082826e+00*w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 9.39873429533385; Max AE: 9.39873429533385
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -1.502675302248289e-01,  1.940267352909068e+05,  4.872332168296497e+02, -9.769948109017614e+01,  1.013747731949082e+02, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               24|3|mult; (IP_wtd_std * lambda3); $\left(IP_{wtd, std} lambda3\right)$; (IP_wtd_std .* lambda3); (newdata$IP_wtd_std * newdata$lambda3); IP_wtd_std,lambda3
+# 1;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 2;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 3;  1; Unitless;                                         1|exp:4.0828259549549e+00,0.0000000000000e+00; (exp(4.082826e+00*w_log)); $\left(\exp{ \left(4.083e+00w_{log} \right)}\right)$; exp(4.082826e+00.*w_log); exp(4.082826e+00*newdata$w_log); w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 11 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C1Si1       ,  1.075000000000000e+00,  1.047373429533385e+01,  3.358349400000000e-01,  6.443297272900001e-05,  2.405800900000000e-02,  1.177837926955283e+00

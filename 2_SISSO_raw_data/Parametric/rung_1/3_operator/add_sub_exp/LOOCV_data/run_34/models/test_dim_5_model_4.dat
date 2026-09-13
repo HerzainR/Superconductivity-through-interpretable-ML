@@ -1,0 +1,19 @@
+# c0 + a0 * (lambda4w_low / ThermalCond_wtd_mean) + a1 * (EA_wtd_mean * lambda4w_low) + a2 * (EA_mean / at_mass_mean) + a3 * (w_log / lambda) + a4 * (w_log^2)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.43444019022269; Max AE: 4.43444019022269
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.214448066247395e+03,  7.703988607937815e+01, -1.437065457206690e+02, -2.297887259950299e+02,  1.448016647204810e+04,  6.226896053414082e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; W^-1 * eV * mK;                                   2|38|div; (lambda4w_low / ThermalCond_wtd_mean); $\left(\frac{ lambda4w_{low} }{ ThermalCond_{wtd, mean} } \right)$; (lambda4w_low ./ ThermalCond_wtd_mean); (newdata$lambda4w_low / newdata$ThermalCond_wtd_mean); lambda4w_low,ThermalCond_wtd_mean
+# 1;  1; eV^2;                                             32|2|mult; (EA_wtd_mean * lambda4w_low); $\left(EA_{wtd, mean} lambda4w_{low}\right)$; (EA_wtd_mean .* lambda4w_low); (newdata$EA_wtd_mean * newdata$lambda4w_low); EA_wtd_mean,lambda4w_low
+# 2;  1; eV * g^-1 * mol;                                  31|7|div; (EA_mean / at_mass_mean); $\left(\frac{ EA_{mean} }{ at_{mass, mean} } \right)$; (EA_mean ./ at_mass_mean); (newdata$EA_mean / newdata$at_mass_mean); EA_mean,at_mass_mean
+# 3;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 4;  1; eV^2;                                             1|sq; (w_log^2); $\left(w_{log}^2\right)$; (w_log)^2; (newdata$w_log)^2; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 34 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+N1Ni3Zn1    ,  3.000000000000000e+00,  7.434440190222689e+00,  1.137841686673898e-03,  6.140440800000000e-02,  8.371228004614713e-03,  6.265088618029795e-03,  1.132096000000000e-04

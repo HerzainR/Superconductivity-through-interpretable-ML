@@ -1,0 +1,17 @@
+# c0 + a0 * (|sin(PE_wtd_mean) - (PE_std * lambda)|) + a1 * ((density * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.35090419385163; Max AE: 3.35090419385163
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -4.658608742320403e+00,  7.755538077195860e-02, -7.050283784490141e+03,  6.429591775625685e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         26|sin|29|0|mult|abd; (|sin(PE_wtd_mean) - (PE_std * lambda)|); $\left(\left|\left(\sin{ PE_{wtd, mean} }\right) - \left(PE_{std} lambda\right)\right|\right)$; abs(sin(PE_wtd_mean) - (PE_std .* lambda)); abs(sin(newdata$PE_wtd_mean) - (newdata$PE_std * newdata$lambda)); PE_wtd_mean,PE_std,lambda
+# 1;  2; W * cm^-3 * eV * g * mK^-1;                       5|2|mult|41|37|abd|mult; ((density * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(density lambda4w_{low}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((density .* lambda4w_low) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$density * newdata$lambda4w_low) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); density,lambda4w_low,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 58 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ga1         ,  5.527454545000000e+00,  2.176550351148367e+00,  9.715269558223153e-01,  3.519066538000000e+00,  0.000000000000000e+00

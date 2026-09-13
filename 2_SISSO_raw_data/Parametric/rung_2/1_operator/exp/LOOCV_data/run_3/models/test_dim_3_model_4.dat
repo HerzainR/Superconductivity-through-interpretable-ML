@@ -1,0 +1,17 @@
+# c0 + a0 * ((exp(2.920382e-01*EA_mean)) / (PE_wtd_range + PE_wtd_mean)) + a1 * ((lambda3 / IP_wtd_mean) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.6932179309067; Max AE: 3.6932179309067
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all , -1.286823439064709e+01,  1.452422120790730e-01, -6.768829427107447e+03,  1.076019707432829e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         31|exp:2.9203822162700e-01,0.0000000000000e+00|28|26|add|div; ((exp(2.920382e-01*EA_mean)) / (PE_wtd_range + PE_wtd_mean)); $\left(\frac{ \left(\exp{ \left(2.920e-01EA_{mean} \right)}\right) }{ \left(PE_{wtd, range} + PE_{wtd, mean}\right) } \right)$; (exp(2.920382e-01.*EA_mean) ./ (PE_wtd_range + PE_wtd_mean)); (exp(2.920382e-01*newdata$EA_mean) / (newdata$PE_wtd_range + newdata$PE_wtd_mean)); EA_mean,PE_wtd_range,PE_wtd_mean
+# 1;  2; W * eV^-1 * mK^-1;                                3|20|div|41|37|abd|mult; ((lambda3 / IP_wtd_mean) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(\frac{ lambda3 }{ IP_{wtd, mean} } \right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((lambda3 ./ IP_wtd_mean) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$lambda3 / newdata$IP_wtd_mean) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); lambda3,IP_wtd_mean,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * eV^3 * mK^-1;                                 1|cb|38|37|sub|mult; ((w_log^3) * (ThermalCond_wtd_mean - ThermalCond_mean)); $\left(\left(w_{log}^3\right) \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right)\right)$; ((w_log).^3 .* (ThermalCond_wtd_mean - ThermalCond_mean)); ((newdata$w_log)^3 * (newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean)); w_log,ThermalCond_wtd_mean,ThermalCond_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 3 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Mo1       ,  2.500000000000000e-01,  3.943217930906702e+00,  5.375515205789940e-01,  6.909824561403508e-01,  0.000000000000000e+00

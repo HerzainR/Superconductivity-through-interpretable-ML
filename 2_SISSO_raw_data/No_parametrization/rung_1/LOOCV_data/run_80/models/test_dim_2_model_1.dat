@@ -1,0 +1,16 @@
+# c0 + a0 * (w_log * lambda) + a1 * sin(lambda)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 29.456393722977; Max AE: 29.456393722977
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  2.044088468000454e+02,  4.387725280028953e+00, -1.213782778213481e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; eV;                                               1|0|mult; (w_log * lambda); $\left(w_{log} lambda\right)$; (w_log .* lambda); (newdata$w_log * newdata$lambda); w_log,lambda
+# 1;  1; Unitless;                                         0|sin; sin(lambda); $\left(\sin{ lambda }\right)$; sin(lambda); sin(newdata$lambda); lambda;[-1.000000000000000e+00, 1.000000000000000e+00]
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 80 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+B2Mg0.98    ,  3.840000000000000e+01,  8.943606277023012e+00,  3.733142400000000e-02,  5.758144744140139e-01

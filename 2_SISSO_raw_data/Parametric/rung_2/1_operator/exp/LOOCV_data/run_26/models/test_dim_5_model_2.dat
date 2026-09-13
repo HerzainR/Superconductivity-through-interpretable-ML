@@ -1,0 +1,19 @@
+# c0 + a0 * ((at_mass_wtd_range / density) / (exp(1.330094e+00*L_avg))) + a1 * ((at_mass_wtd_mean^2) / (|PE_wtd_mean - lambda3|)) + a2 * ((at_rad_wtd_std^6) * (lambda3 * w_log)) + a3 * (exp(7.597505e+00*((EA_wtd_range-7.469091e-01) * (lambda4w_low-3.026363e-03)))) + a4 * (exp(1.035989e-05*((EA_std-1.005012e+04) / (density-2.742353e+00))))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.650953872212374; Max AE: 0.650953872212374
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  3.612860298873895e+01,  8.724511778800749e-05,  1.954334142068284e+04, -1.830887434327071e+01,  7.046578573226201e+00,  1.277120081686755e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; cm^3 * mol^-1;                                    10|5|div|4|exp:1.3300940921440e+00,0.0000000000000e+00|div; ((at_mass_wtd_range / density) / (exp(1.330094e+00*L_avg))); $\left(\frac{ \left(\frac{ at_{mass, wtd, range} }{ density } \right) }{ \left(\exp{ \left(1.330e+00L_{avg} \right)}\right) } \right)$; ((at_mass_wtd_range ./ density) ./ exp(1.330094e+00.*L_avg)); ((newdata$at_mass_wtd_range / newdata$density) / exp(1.330094e+00*newdata$L_avg)); at_mass_wtd_range,density,L_avg
+# 1;  2; g^2 * mol^-2;                                     8|sq|26|3|abd|div; ((at_mass_wtd_mean^2) / (|PE_wtd_mean - lambda3|)); $\left(\frac{ \left(at_{mass, wtd, mean}^2\right) }{ \left(\left|PE_{wtd, mean} - lambda3\right|\right) } \right)$; ((at_mass_wtd_mean)^2 ./ abs(PE_wtd_mean - lambda3)); ((newdata$at_mass_wtd_mean)^2 / abs(newdata$PE_wtd_mean - newdata$lambda3)); at_mass_wtd_mean,PE_wtd_mean,lambda3
+# 2;  2; AA^6 * eV;                                        18|sp|3|1|mult|mult; ((at_rad_wtd_std^6) * (lambda3 * w_log)); $\left(\left(at_{rad, wtd, std}^6\right) \left(lambda3 w_{log}\right)\right)$; ((at_rad_wtd_std).^6 .* (lambda3 .* w_log)); ((newdata$at_rad_wtd_std)^6 * (newdata$lambda3 * newdata$w_log)); at_rad_wtd_std,lambda3,w_log
+# 3;  2; Unitless;                                         34|2|mult|exp:7.5975046256331e+00,0.0000000000000e+00,-7.4690912865615e-01,-3.0263632902941e-03; (exp(7.597505e+00*((EA_wtd_range-7.469091e-01) * (lambda4w_low-3.026363e-03)))); $\left(\exp{ \left(7.598e+00\left(\left(EA_{wtd, range}-7.469e-01\right) * \left(lambda4w_{low}-3.026e-03\right)\right) \right)}\right)$; exp(7.597505e+00.*((EA_wtd_range-7.469091e-01) .* (lambda4w_low-3.026363e-03))); exp(7.597505e+00*((newdata$EA_wtd_range-7.469091e-01) * (newdata$lambda4w_low-3.026363e-03))); EA_wtd_range,lambda4w_low
+# 4;  2; Unitless;                                         35|5|div|exp:1.0359888351607e-05,0.0000000000000e+00,-1.0050122569862e+04,-2.7423534051335e+00; (exp(1.035989e-05*((EA_std-1.005012e+04) / (density-2.742353e+00)))); $\left(\exp{ \left(1.036e-05\left(\frac{ EA_{std} -1.005e+04 }{ density-2.742e+00 } \right) \right)}\right)$; exp(1.035989e-05.*((EA_std-1.005012e+04) ./ (density-2.742353e+00))); exp(1.035989e-05*((newdata$EA_std-1.005012e+04) / (newdata$density-2.742353e+00))); EA_std,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 26 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Be2Nb3      ,  2.300000000000000e+00,  1.649046127787626e+00,  4.237910434277385e-03,  2.352695970723790e+03,  2.405857427522601e-06,  1.005422971884473e+00,  9.764481556129019e-01

@@ -1,0 +1,18 @@
+# c0 + a0 * ((lambda-9.139352e+00) * (lambda3+1.001406e+02)) + a1 * ((PE_wtd_std-4.813810e-01) * (lambda4w_low-4.107131e-02)) + a2 * (w_log^3) + a3 * (w_log / at_mass_wtd_mean)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 16.8480129074279; Max AE: 16.8480129074279
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  3.885905543972876e-02, -9.320351926756123e+01,  3.271600794122944e+05, -1.012722448351382e+04,  3.709813396461106e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  1; Unitless;                                         0|3|mult:-9.1393524513427e+00,1.0014057209108e+02; ((lambda-9.139352e+00) * (lambda3+1.001406e+02)); $\left(\left(lambda-9.139e+00\right) * \left(lambda3+1.001e+02\right)\right)$; ((lambda-9.139352e+00) .* (lambda3+1.001406e+02)); ((newdata$lambda-9.139352e+00) * (newdata$lambda3+1.001406e+02)); lambda,lambda3
+# 1;  1; eV;                                               30|2|mult:-4.8138104005745e-01,-4.1071305358789e-02; ((PE_wtd_std-4.813810e-01) * (lambda4w_low-4.107131e-02)); $\left(\left(PE_{wtd, std}-4.814e-01\right) * \left(lambda4w_{low}-4.107e-02\right)\right)$; ((PE_wtd_std-4.813810e-01) .* (lambda4w_low-4.107131e-02)); ((newdata$PE_wtd_std-4.813810e-01) * (newdata$lambda4w_low-4.107131e-02)); PE_wtd_std,lambda4w_low
+# 2;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 3;  1; eV * g^-1 * mol;                                  1|8|div; (w_log / at_mass_wtd_mean); $\left(\frac{ w_{log} }{ at_{mass, wtd, mean} } \right)$; (w_log ./ at_mass_wtd_mean); (newdata$w_log / newdata$at_mass_wtd_mean); w_log,at_mass_wtd_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 78 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+C6Ca        ,  1.130300000000000e+01, -5.545012907427939e+00, -8.430929123728600e+02, -1.900820253845970e-03,  2.776307795200001e-05,  1.890101933172288e-03

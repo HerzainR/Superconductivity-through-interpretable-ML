@@ -1,0 +1,16 @@
+# c0 + a0 * ((((ThermalCond_wtd_mean-9.830862e+01) / (IP_mean-9.275420e+00))+1.032544e+02) * (((IP_wtd_std+4.643115e-02) * (at_mass_std-2.181499e+01))-1.016594e+02)) + a1 * ((((lambda+1.194072e+00) * (PE_range+3.713064e+01))-6.887666e+01) * (((EA_wtd_std-5.850223e+00) / (w_log-6.038964e-02))-9.299511e+01))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 4.04967329745499; Max AE: 4.04967329745499
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.358019218713747e-04,  6.410144281621854e-03,  4.587447792354144e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * g * mK^-1 * mol^-1;                           38|19|div|24|11|mult|mult:1.0325442770821e+02,-1.0165938336951e+02,4.6431148257972e-02,-2.1814989246254e+01,-9.8308618098497e+01,-9.2754204037919e+00; ((((ThermalCond_wtd_mean-9.830862e+01) / (IP_mean-9.275420e+00))+1.032544e+02) * (((IP_wtd_std+4.643115e-02) * (at_mass_std-2.181499e+01))-1.016594e+02)); $\left(\left(\left(\frac{ ThermalCond_{wtd, mean} -9.831e+01 }{ IP_{mean}-9.275e+00 } \right)+1.033e+02\right) * \left(\left(\left(IP_{wtd, std}+4.643e-02\right) * \left(at_{mass, std}-2.181e+01\right)\right)-1.017e+02\right)\right)$; ((((ThermalCond_wtd_mean-9.830862e+01) ./ (IP_mean-9.275420e+00))+1.032544e+02) .* (((IP_wtd_std+4.643115e-02) .* (at_mass_std-2.181499e+01))-1.016594e+02)); ((((newdata$ThermalCond_wtd_mean-9.830862e+01) / (newdata$IP_mean-9.275420e+00))+1.032544e+02) * (((newdata$IP_wtd_std+4.643115e-02) * (newdata$at_mass_std-2.181499e+01))-1.016594e+02)); ThermalCond_wtd_mean,IP_mean,IP_wtd_std,at_mass_std
+# 1;  2; Unitless;                                         0|27|mult|36|1|div|mult:-6.8876657064619e+01,-9.2995105082392e+01,-5.8502227626078e+00,-6.0389643752624e-02,1.1940716628936e+00,3.7130638609547e+01; ((((lambda+1.194072e+00) * (PE_range+3.713064e+01))-6.887666e+01) * (((EA_wtd_std-5.850223e+00) / (w_log-6.038964e-02))-9.299511e+01)); $\left(\left(\left(\left(lambda+1.194e+00\right) * \left(PE_{range}+3.713e+01\right)\right)-6.888e+01\right) * \left(\left(\frac{ EA_{wtd, std} -5.850e+00 }{ w_{log}-6.039e-02 } \right)-9.300e+01\right)\right)$; ((((lambda+1.194072e+00) .* (PE_range+3.713064e+01))-6.887666e+01) .* (((EA_wtd_std-5.850223e+00) ./ (w_log-6.038964e-02))-9.299511e+01)); ((((newdata$lambda+1.194072e+00) * (newdata$PE_range+3.713064e+01))-6.887666e+01) * (((newdata$EA_wtd_std-5.850223e+00) / (newdata$w_log-6.038964e-02))-9.299511e+01)); lambda,PE_range,EA_wtd_std,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  7.152173297454985e+00, -7.343422059735262e+03,  5.556780280496761e+02

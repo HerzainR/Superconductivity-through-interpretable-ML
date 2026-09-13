@@ -1,0 +1,18 @@
+# c0 + a0 * (at_rad_wtd_range / w_log) + a1 * ((lambda4w_low-4.220157e-02) * (at_rad_wtd_std-2.265105e-01)) + a2 * (w_log / lambda) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.04932389670009; Max AE: 2.04932389670009
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all , -4.876987239879087e-02, -2.462213094089783e+02, -1.905869272308696e+02,  2.126426781253745e+05,  7.556432389097291e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * eV^-1;                                       16|1|div; (at_rad_wtd_range / w_log); $\left(\frac{ at_{rad, wtd, range} }{ w_{log} } \right)$; (at_rad_wtd_range ./ w_log); (newdata$at_rad_wtd_range / newdata$w_log); at_rad_wtd_range,w_log
+# 1;  1; AA * eV;                                          2|18|mult:-4.2201573583876e-02,-2.2651052331701e-01; ((lambda4w_low-4.220157e-02) * (at_rad_wtd_std-2.265105e-01)); $\left(\left(lambda4w_{low}-4.220e-02\right) * \left(at_{rad, wtd, std}-2.265e-01\right)\right)$; ((lambda4w_low-4.220157e-02) .* (at_rad_wtd_std-2.265105e-01)); ((newdata$lambda4w_low-4.220157e-02) * (newdata$at_rad_wtd_std-2.265105e-01)); lambda4w_low,at_rad_wtd_std
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 39 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+In1Sb1      ,  3.320000000000000e+00,  5.369323896700088e+00,  2.435064935064935e+00,  4.985635864131008e-03,  4.672330097087379e-03,  2.337448960000000e-07

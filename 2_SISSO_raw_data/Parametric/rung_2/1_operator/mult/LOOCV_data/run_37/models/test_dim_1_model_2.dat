@@ -1,0 +1,15 @@
+# c0 + a0 * ((((PE_wtd_range-4.542531e-01) * (lambda4w_low-3.727935e-02))-5.025507e-02) * (((ThermalCond_wtd_std-4.076684e+01) / (density-2.667798e+00))+2.404215e+02))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.14965473919424; Max AE: 2.14965473919424
+# Coefficients
+# Task   a0                      c0
+# all , -5.624605619189703e-01, -2.406894890312630e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; W * cm^3 * eV * g^-1 * mK^-1;                     28|2|mult|42|5|div|mult:-5.0255067324585e-02,2.4042152278838e+02,-4.0766840048213e+01,-2.6677979133344e+00,-4.5425308214434e-01,-3.7279345406769e-02; ((((PE_wtd_range-4.542531e-01) * (lambda4w_low-3.727935e-02))-5.025507e-02) * (((ThermalCond_wtd_std-4.076684e+01) / (density-2.667798e+00))+2.404215e+02)); $\left(\left(\left(\left(PE_{wtd, range}-4.543e-01\right) * \left(lambda4w_{low}-3.728e-02\right)\right)-5.026e-02\right) * \left(\left(\frac{ ThermalCond_{wtd, std} -4.077e+01 }{ density-2.668e+00 } \right)+2.404e+02\right)\right)$; ((((PE_wtd_range-4.542531e-01) .* (lambda4w_low-3.727935e-02))-5.025507e-02) .* (((ThermalCond_wtd_std-4.076684e+01) ./ (density-2.667798e+00))+2.404215e+02)); ((((newdata$PE_wtd_range-4.542531e-01) * (newdata$lambda4w_low-3.727935e-02))-5.025507e-02) * (((newdata$ThermalCond_wtd_std-4.076684e+01) / (newdata$density-2.667798e+00))+2.404215e+02)); PE_wtd_range,lambda4w_low,ThermalCond_wtd_std,density
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 37 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      
+C2Y1        ,  3.150000000000000e+00,  5.299654739194239e+00, -1.370149331575197e+01

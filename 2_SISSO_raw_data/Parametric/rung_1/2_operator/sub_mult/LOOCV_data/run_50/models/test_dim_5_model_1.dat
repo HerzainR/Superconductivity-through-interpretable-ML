@@ -1,0 +1,19 @@
+# c0 + a0 * ((lambda4w_low-2.243104e-02) * (at_rad_wtd_std-2.312435e-01)) + a1 * ((L_avg-4.731577e+00) * (at_mass_range-8.896767e+01)) + a2 * (w_log / lambda) + a3 * (w_log^3) + a4 * (IP_wtd_mean - (1.558174e+03*w_log))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 3.28785854233928; Max AE: 3.28785854233928
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all , -2.034969362406066e+02, -1.542851620590774e-02, -2.543192789124077e+02,  1.843963607332375e+05, -1.871771049738443e-01,  5.564744426572237e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * eV;                                          2|18|mult:-2.2431041330256e-02,-2.3124352477728e-01; ((lambda4w_low-2.243104e-02) * (at_rad_wtd_std-2.312435e-01)); $\left(\left(lambda4w_{low}-2.243e-02\right) * \left(at_{rad, wtd, std}-2.312e-01\right)\right)$; ((lambda4w_low-2.243104e-02) .* (at_rad_wtd_std-2.312435e-01)); ((newdata$lambda4w_low-2.243104e-02) * (newdata$at_rad_wtd_std-2.312435e-01)); lambda4w_low,at_rad_wtd_std
+# 1;  1; AA * g * mol^-1;                                  4|9|mult:-4.7315768776009e+00,-8.8967672006736e+01; ((L_avg-4.731577e+00) * (at_mass_range-8.896767e+01)); $\left(\left(L_{avg}-4.732e+00\right) * \left(at_{mass, range}-8.897e+01\right)\right)$; ((L_avg-4.731577e+00) .* (at_mass_range-8.896767e+01)); ((newdata$L_avg-4.731577e+00) * (newdata$at_mass_range-8.896767e+01)); L_avg,at_mass_range
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# 4;  1; eV;                                               20|1|sub:1.5581743295077e+03,0.0000000000000e+00; (IP_wtd_mean - (1.558174e+03*w_log)); $\left(IP_{wtd, mean} - \left(1.558e+03w_{log}\right)\right)$; (IP_wtd_mean - (1.558174e+03.*w_log)); (newdata$IP_wtd_mean - (1.558174e+03*newdata$w_log)); IP_wtd_mean,w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 50 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+B2Nb1       ,  4.597500000000000e+00,  7.885358542339279e+00, -2.008595548577456e-03,  1.079824210076874e+01,  4.193283070596299e-02,  2.862453437900000e-05, -3.987955273964006e+01

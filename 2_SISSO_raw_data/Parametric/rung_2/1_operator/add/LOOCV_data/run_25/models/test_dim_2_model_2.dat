@@ -1,0 +1,16 @@
+# c0 + a0 * (((IP_wtd_range-7.708762e-02) * (at_mass_wtd_range+4.727511e+01)) + 9.740145e+01*(cos(2.745023e+00*lambda+2.878505e+00))) + a1 * (((IP_wtd_range-1.146231e+00) / (density-2.629543e+00)) + 2.623132e+01*((EA_std-8.267541e-01) * (lambda4w_low-7.833228e-03)))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.629432076607498; Max AE: 0.629432076607498
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  1.649910835694578e-02, -2.360579425978850e+00,  2.101375307135012e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV * g * mol^-1;                                  22|10|mult|0|cos|add:9.7401448228302e+01,0.0000000000000e+00,2.7450230565519e+00,2.8785045239538e+00,-7.7087623518057e-02,4.7275108033752e+01; (((IP_wtd_range-7.708762e-02) * (at_mass_wtd_range+4.727511e+01)) + 9.740145e+01*(cos(2.745023e+00*lambda+2.878505e+00))); $\left(\left(\left(IP_{wtd, range}-7.709e-02\right) * \left(at_{mass, wtd, range}+4.728e+01\right)\right) + 97.4\left(\cos{ \left(2.745e+00lambda+2.879e+00 \right)}\right)\right)$; (((IP_wtd_range-7.708762e-02) .* (at_mass_wtd_range+4.727511e+01)) + (9.740145e+01.*cos(2.745023e+00.*lambda+2.878505e+00))); (((newdata$IP_wtd_range-7.708762e-02) * (newdata$at_mass_wtd_range+4.727511e+01)) + (9.740145e+01*cos(2.745023e+00*newdata$lambda+2.878505e+00))); IP_wtd_range,at_mass_wtd_range,lambda
+# 1;  2; cm^3 * eV * g^-1;                                 22|5|div|35|2|mult|add:2.6231317618101e+01,0.0000000000000e+00,-8.2675414958120e-01,-7.8332284862504e-03,-1.1462310221570e+00,-2.6295433990196e+00; (((IP_wtd_range-1.146231e+00) / (density-2.629543e+00)) + 2.623132e+01*((EA_std-8.267541e-01) * (lambda4w_low-7.833228e-03))); $\left(\left(\frac{ IP_{wtd, range} -1.146e+00 }{ density-2.630e+00 } \right) + 26.2\left(\left(EA_{std}-8.268e-01\right) * \left(lambda4w_{low}-7.833e-03\right)\right)\right)$; (((IP_wtd_range-1.146231e+00) ./ (density-2.629543e+00)) + (2.623132e+01.*((EA_std-8.267541e-01) .* (lambda4w_low-7.833228e-03)))); (((newdata$IP_wtd_range-1.146231e+00) / (newdata$density-2.629543e+00)) + (2.623132e+01*((newdata$EA_std-8.267541e-01) * (newdata$lambda4w_low-7.833228e-03)))); IP_wtd_range,density,EA_std,lambda4w_low
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 25 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+C2Cl2Y2     ,  2.300000000000000e+00,  2.929432076607497e+00,  2.798610868885195e+02,  1.605284527303072e+00

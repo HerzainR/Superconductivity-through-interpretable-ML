@@ -1,0 +1,16 @@
+# c0 + a0 * (((IP_wtd_mean-7.219061e+00) * (at_rad_wtd_range-3.233598e-01)) + 1.214993e+00*|PE_wtd_std - (6.761041e-01*PE_wtd_mean-9.987870e-01)|) + a1 * (((w_log-9.752583e+01) / (density-2.710240e+00)) + 2.203205e+00*((lambda3-6.053101e+00)^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 15959.3098582857; Max AE: 15959.3098582857
+# Coefficients
+# Task   a0                      a1                      c0
+# all ,  5.283876207581772e+00,  9.461451483138351e-03,  5.522841847080564e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA * eV;                                          20|16|mult|30|26|abd|add:1.2149929404574e+00,0.0000000000000e+00,6.7610408353165e-01,-9.9878703963800e-01,-7.2190607637268e+00,-3.2335983469154e-01; (((IP_wtd_mean-7.219061e+00) * (at_rad_wtd_range-3.233598e-01)) + 1.214993e+00*|PE_wtd_std - (6.761041e-01*PE_wtd_mean-9.987870e-01)|); $\left(\left(\left(IP_{wtd, mean}-7.219e+00\right) * \left(at_{rad, wtd, range}-3.234e-01\right)\right) + 1.21\left(\left|PE_{wtd, std} - \left(6.761e-01PE_{wtd, mean}-9.988e-01\right)\right|\right)\right)$; (((IP_wtd_mean-7.219061e+00) .* (at_rad_wtd_range-3.233598e-01)) + (1.214993e+00.*abs(PE_wtd_std - (6.761041e-01.*PE_wtd_mean-9.987870e-01)))); (((newdata$IP_wtd_mean-7.219061e+00) * (newdata$at_rad_wtd_range-3.233598e-01)) + (1.214993e+00*abs(newdata$PE_wtd_std - (6.761041e-01*newdata$PE_wtd_mean-9.987870e-01)))); IP_wtd_mean,at_rad_wtd_range,PE_wtd_std,PE_wtd_mean
+# 1;  2; cm^3 * eV * g^-1;                                 1|5|div|3|cb|add:2.2032053697029e+00,0.0000000000000e+00,1.0000000000000e+00,-6.0531011492605e+00,-9.7525833585387e+01,-2.7102403886274e+00; (((w_log-9.752583e+01) / (density-2.710240e+00)) + 2.203205e+00*((lambda3-6.053101e+00)^3)); $\left(\left(\frac{ w_{log} -9.753e+01 }{ density-2.710e+00 } \right) + 2.20\left(\left(lambda3-6.053e+00\right)^3\right)\right)$; (((w_log-9.752583e+01) ./ (density-2.710240e+00)) + (2.203205e+00.*(lambda3-6.053101e+00).^3)); (((newdata$w_log-9.752583e+01) / (newdata$density-2.710240e+00)) + (2.203205e+00*(newdata$lambda3-6.053101e+00)^3)); w_log,density,lambda3
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 1 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      
+Se2Ta1      ,  1.250000000000000e-01,  1.595943485828567e+04, -1.857168120369718e-01,  1.686305039931447e+06

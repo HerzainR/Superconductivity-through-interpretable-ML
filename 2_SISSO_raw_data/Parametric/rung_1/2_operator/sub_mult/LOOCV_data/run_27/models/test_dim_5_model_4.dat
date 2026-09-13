@@ -1,0 +1,19 @@
+# c0 + a0 * (ThermalCond_mean * L_avg) + a1 * (at_mass_wtd_mean * w_log) + a2 * (w_log / lambda) + a3 * ((PE_std-5.118365e-01) * (lambda3-2.322668e+00)) + a4 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 2.07150088834629; Max AE: 2.07150088834629
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      a4                      c0
+# all ,  4.801440005740905e-03,  2.204453980525166e+00, -1.632591539919007e+02, -2.179796912659353e+00,  2.128515087929775e+05,  2.534751067114447e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 1;  1; eV * g * mol^-1;                                  8|1|mult; (at_mass_wtd_mean * w_log); $\left(at_{mass, wtd, mean} w_{log}\right)$; (at_mass_wtd_mean .* w_log); (newdata$at_mass_wtd_mean * newdata$w_log); at_mass_wtd_mean,w_log
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; Unitless;                                         29|3|mult:-5.1183647922551e-01,-2.3226678293166e+00; ((PE_std-5.118365e-01) * (lambda3-2.322668e+00)); $\left(\left(PE_{std}-5.118e-01\right) * \left(lambda3-2.323e+00\right)\right)$; ((PE_std-5.118365e-01) .* (lambda3-2.322668e+00)); ((newdata$PE_std-5.118365e-01) * (newdata$lambda3-2.322668e+00)); PE_std,lambda3
+# 4;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 27 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      ,  Feature 4 Value      
+Pb1Pd2Sc1   ,  2.400000000000000e+00,  4.471500888346293e+00,  1.909001000000000e+02,  3.939737400000000e-01,  3.420957868203097e-03, -3.235314362324800e-01,  2.314912500000000e-08

@@ -1,0 +1,18 @@
+# c0 + a0 * (ThermalCond_mean * L_avg) + a1 * (at_mass_wtd_range * w_log) + a2 * (w_log / lambda) + a3 * (w_log^3)
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 11.7680540799199; Max AE: 11.7680540799199
+# Coefficients
+# Task   a0                      a1                      a2                      a3                      c0
+# all ,  3.517255947733904e-03,  2.453011634209459e+00, -1.811590604296782e+02,  2.178312668746695e+05,  4.117646662187330e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  1; AA * W * mK^-1;                                   37|4|mult; (ThermalCond_mean * L_avg); $\left(ThermalCond_{mean} L_{avg}\right)$; (ThermalCond_mean .* L_avg); (newdata$ThermalCond_mean * newdata$L_avg); ThermalCond_mean,L_avg
+# 1;  1; eV * g * mol^-1;                                  10|1|mult; (at_mass_wtd_range * w_log); $\left(at_{mass, wtd, range} w_{log}\right)$; (at_mass_wtd_range .* w_log); (newdata$at_mass_wtd_range * newdata$w_log); at_mass_wtd_range,w_log
+# 2;  1; eV;                                               1|0|div; (w_log / lambda); $\left(\frac{ w_{log} }{ lambda } \right)$; (w_log ./ lambda); (newdata$w_log / newdata$lambda); w_log,lambda
+# 3;  1; eV^3;                                             1|cb; (w_log^3); $\left(w_{log}^3\right)$; (w_log).^3; (newdata$w_log)^3; w_log
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 79 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      ,  Feature 3 Value      
+Nb3Sn1      ,  1.670900000000000e+01,  4.940945920080132e+00,  3.170393100000000e+02,  1.003442680000000e-01,  4.310416493474105e-03,  1.115157653000000e-06

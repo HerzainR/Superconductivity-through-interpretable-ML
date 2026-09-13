@@ -1,0 +1,17 @@
+# c0 + a0 * ((w_log * lambda) * (PE_wtd_range * at_mass_wtd_mean)) + a1 * ((ThermalCond_wtd_range - ThermalCond_wtd_mean) * (PE_std - lambda3)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.80796151279124; Max AE: 1.80796151279124
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  5.088121041039954e+00,  1.664837975690970e-02, -8.524995243873684e+03,  2.254681194727254e+00, 
+# Feature Rung, Units, and Expressions
+# 0;  2; eV * g * mol^-1;                                  1|0|mult|28|8|mult|mult; ((w_log * lambda) * (PE_wtd_range * at_mass_wtd_mean)); $\left(\left(w_{log} lambda\right) \left(PE_{wtd, range} at_{mass, wtd, mean}\right)\right)$; ((w_log .* lambda) .* (PE_wtd_range .* at_mass_wtd_mean)); ((newdata$w_log * newdata$lambda) * (newdata$PE_wtd_range * newdata$at_mass_wtd_mean)); w_log,lambda,PE_wtd_range,at_mass_wtd_mean
+# 1;  2; W * mK^-1;                                        40|38|sub|29|3|sub|mult; ((ThermalCond_wtd_range - ThermalCond_wtd_mean) * (PE_std - lambda3)); $\left(\left(ThermalCond_{wtd, range} - ThermalCond_{wtd, mean}\right) \left(PE_{std} - lambda3\right)\right)$; ((ThermalCond_wtd_range - ThermalCond_wtd_mean) .* (PE_std - lambda3)); ((newdata$ThermalCond_wtd_range - newdata$ThermalCond_wtd_mean) * (newdata$PE_std - newdata$lambda3)); ThermalCond_wtd_range,ThermalCond_wtd_mean,PE_std,lambda3
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 36 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Pt0.25V0.75 ,  3.102500000000000e+00,  4.910461512791240e+00,  4.562111392228480e-01,  1.725313500000000e+01, -5.546757106305321e-06

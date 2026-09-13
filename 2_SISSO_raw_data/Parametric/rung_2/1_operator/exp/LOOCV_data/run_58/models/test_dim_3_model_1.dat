@@ -1,0 +1,17 @@
+# c0 + a0 * ((at_rad_wtd_std^6) * (lambda4w_low / lambda)) + a1 * (exp(7.594188e+00*((EA_wtd_std-7.923327e-01) * (lambda4w_low-4.856342e-03)))) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 1.26402256525508; Max AE: 1.26402256525508
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  1.957540360868214e+04, -1.713976233634143e+01, -8.401361331498681e+03,  2.002952088950303e+01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; AA^6 * eV;                                        18|sp|2|0|div|mult; ((at_rad_wtd_std^6) * (lambda4w_low / lambda)); $\left(\left(at_{rad, wtd, std}^6\right) \left(\frac{ lambda4w_{low} }{ lambda } \right)\right)$; ((at_rad_wtd_std).^6 .* (lambda4w_low ./ lambda)); ((newdata$at_rad_wtd_std)^6 * (newdata$lambda4w_low / newdata$lambda)); at_rad_wtd_std,lambda4w_low,lambda
+# 1;  2; Unitless;                                         36|2|mult|exp:7.5941881734012e+00,0.0000000000000e+00,-7.9233268131579e-01,-4.8563419032930e-03; (exp(7.594188e+00*((EA_wtd_std-7.923327e-01) * (lambda4w_low-4.856342e-03)))); $\left(\exp{ \left(7.594e+00\left(\left(EA_{wtd, std}-7.923e-01\right) * \left(lambda4w_{low}-4.856e-03\right)\right) \right)}\right)$; exp(7.594188e+00.*((EA_wtd_std-7.923327e-01) .* (lambda4w_low-4.856342e-03))); exp(7.594188e+00*((newdata$EA_wtd_std-7.923327e-01) * (newdata$lambda4w_low-4.856342e-03))); EA_wtd_std,lambda4w_low
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 58 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+Ga1         ,  5.527454545000000e+00,  4.263431979744923e+00,  0.000000000000000e+00,  9.198545814330970e-01,  0.000000000000000e+00

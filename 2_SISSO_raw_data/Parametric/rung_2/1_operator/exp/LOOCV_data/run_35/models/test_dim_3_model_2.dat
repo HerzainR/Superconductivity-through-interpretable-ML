@@ -1,0 +1,17 @@
+# c0 + a0 * (sin(lambda) + (PE_wtd_range^2)) + a1 * ((density * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)) + a2 * ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3))
+# Property Label: $Tc_{exp}$; Unit of the Property: K
+# RMSE: 0.641501245943377; Max AE: 0.641501245943377
+# Coefficients
+# Task   a0                      a1                      a2                      c0
+# all ,  3.876262604238055e+00,  7.926934602812823e-02, -8.473253164134523e+03,  2.247753820951684e-01, 
+# Feature Rung, Units, and Expressions
+# 0;  2; Unitless;                                         0|sin|28|sq|add; (sin(lambda) + (PE_wtd_range^2)); $\left(\left(\sin{ lambda }\right) + \left(PE_{wtd, range}^2\right)\right)$; (sin(lambda) + (PE_wtd_range)^2); (sin(newdata$lambda) + (newdata$PE_wtd_range)^2); lambda,PE_wtd_range
+# 1;  2; W * cm^-3 * eV * g * mK^-1;                       5|2|mult|41|37|abd|mult; ((density * lambda4w_low) * (|ThermalCond_std - ThermalCond_mean|)); $\left(\left(density lambda4w_{low}\right) \left(\left|ThermalCond_{std} - ThermalCond_{mean}\right|\right)\right)$; ((density .* lambda4w_low) .* abs(ThermalCond_std - ThermalCond_mean)); ((newdata$density * newdata$lambda4w_low) * abs(newdata$ThermalCond_std - newdata$ThermalCond_mean)); density,lambda4w_low,ThermalCond_std,ThermalCond_mean
+# 2;  2; W * g^-3 * mK^-1 * mol^3;                         38|37|sub|7|cb|div; ((ThermalCond_wtd_mean - ThermalCond_mean) / (at_mass_mean^3)); $\left(\frac{ \left(ThermalCond_{wtd, mean} - ThermalCond_{mean}\right) }{ \left(at_{mass, mean}^3\right) } \right)$; ((ThermalCond_wtd_mean - ThermalCond_mean) ./ (at_mass_mean).^3); ((newdata$ThermalCond_wtd_mean - newdata$ThermalCond_mean) / (newdata$at_mass_mean)^3); ThermalCond_wtd_mean,ThermalCond_mean,at_mass_mean
+# Number of Samples Per Task
+# Task, n_samples               
+# all , 1                     
+# Excluded Indexes: [ 35 ]
+
+# Sample ID , Property Value        ,  Property Value (EST) ,  Feature 0 Value      ,  Feature 1 Value      ,  Feature 2 Value      
+B1Hf1       ,  3.100000000000000e+00,  2.458498754056623e+00,  5.706044823135871e-01,  2.764064100000000e-01,  0.000000000000000e+00
